@@ -39,7 +39,7 @@ for instructions how to migrate the calling code
 ----- End Fatal Exception -------------------------------------------------
 ```
 
-##
+## Setup
 ```
 cmsrel CMSSW_12_3_0_pre2
 cd CMSSW_12_3_0_pre2/src
