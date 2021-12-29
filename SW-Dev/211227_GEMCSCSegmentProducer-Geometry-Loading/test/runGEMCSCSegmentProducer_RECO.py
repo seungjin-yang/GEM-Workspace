@@ -2,12 +2,12 @@
 # using:
 # Revision: 1.19
 # Source: /local/reps/CMSSW/CMSSW/Configuration/Applications/python/ConfigBuilder.py,v
-# with command line options: runGEMCSCSegmentProducer --conditions 122X_mcRun4_realistic_v4 --customise SLHCUpgradeSimulations/Configuration/aging.customise_aging_1000 --datatier GEN-SIM-RECO --era Phase2C11I13M9 --eventcontent FEVTDEBUGHLT --filein file:step3.root --fileout file:step4.root --geometry Extended2026D77 --no_exec --number -1 --step RECO
+# with command line options: runGEMCSCSegmentProducer --conditions auto:phase1_2021_realistic --datatier GEN-SIM-RECO --era Run3 --eventcontent RECOSIM --filein file:step3.root --fileout file:step4.root --geometry DB:Extended --no_exec --number -1 --step RECO
 import FWCore.ParameterSet.Config as cms
 
-from Configuration.Eras.Era_Phase2C11I13M9_cff import Phase2C11I13M9
+from Configuration.Eras.Era_Run3_cff import Run3
 
-process = cms.Process('GEMCSCSegmentRECO',Phase2C11I13M9)
+process = cms.Process('GEMCSCSegmentRECO',Run3)
 
 # import of standard configurations
 process.load('Configuration.StandardSequences.Services_cff')
@@ -15,8 +15,9 @@ process.load('SimGeneral.HepPDTESSource.pythiapdt_cfi')
 process.load('FWCore.MessageService.MessageLogger_cfi')
 process.load('Configuration.EventContent.EventContent_cff')
 process.load('SimGeneral.MixingModule.mixNoPU_cfi')
-process.load('Configuration.Geometry.GeometryExtended2026D77Reco_cff')
+process.load('Configuration.StandardSequences.GeometryRecoDB_cff')
 process.load('Configuration.StandardSequences.MagneticField_cff')
+process.load('Configuration.StandardSequences.Reconstruction_cff')
 process.load('Configuration.StandardSequences.EndOfProcess_cff')
 process.load('Configuration.StandardSequences.FrontierConditions_GlobalTag_cff')
 
@@ -73,50 +74,37 @@ process.configurationMetadata = cms.untracked.PSet(
 
 # Output definition
 
-process.FEVTDEBUGHLToutput = cms.OutputModule("PoolOutputModule",
+process.RECOSIMoutput = cms.OutputModule("PoolOutputModule",
     dataset = cms.untracked.PSet(
         dataTier = cms.untracked.string('GEN-SIM-RECO'),
         filterName = cms.untracked.string('')
     ),
     fileName = cms.untracked.string(options.outputFile),
-    outputCommands = process.FEVTDEBUGHLTEventContent.outputCommands,
+    outputCommands = process.RECOSIMEventContent.outputCommands,
     splitLevel = cms.untracked.int32(0)
 )
 
+# Additional output definition
 process.FEVTDEBUGHLToutput.outputCommands.extend([
     'keep  *_gemcscSegments_*_*'
 ])
 
-# Additional output definition
-
 # Other statements
 from Configuration.AlCa.GlobalTag import GlobalTag
-process.GlobalTag = GlobalTag(process.GlobalTag, '122X_mcRun4_realistic_v4', '')
+process.GlobalTag = GlobalTag(process.GlobalTag, 'auto:phase1_2021_realistic', '')
 
 # Path and EndPath definitions
 process.load('RecoLocalMuon.GEMCSCSegment.gemcscSegments_cfi')
 
 process.reconstruction_step = cms.Path(process.gemcscSegments)
 process.endjob_step = cms.EndPath(process.endOfProcess)
-process.FEVTDEBUGHLToutput_step = cms.EndPath(process.FEVTDEBUGHLToutput)
+process.RECOSIMoutput_step = cms.EndPath(process.RECOSIMoutput)
 
 # Schedule definition
-process.schedule = cms.Schedule(
-    process.reconstruction_step,
-    process.endjob_step,
-    process.FEVTDEBUGHLToutput_step)
+process.schedule = cms.Schedule(process.reconstruction_step,process.endjob_step,process.RECOSIMoutput_step)
 from PhysicsTools.PatAlgos.tools.helpers import associatePatAlgosToolsTask
 associatePatAlgosToolsTask(process)
 
-# customisation of the process.
-
-# Automatic addition of the customisation function from SLHCUpgradeSimulations.Configuration.aging
-from SLHCUpgradeSimulations.Configuration.aging import customise_aging_1000
-
-#call to customisation function customise_aging_1000 imported from SLHCUpgradeSimulations.Configuration.aging
-process = customise_aging_1000(process)
-
-# End of customisation functions
 
 
 # Customisation from command line
