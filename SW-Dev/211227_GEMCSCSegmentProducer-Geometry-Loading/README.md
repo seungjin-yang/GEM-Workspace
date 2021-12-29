@@ -42,20 +42,16 @@ for instructions how to migrate the calling code
 ## Reproduce
 `TODO`
 
-## Init
+## Setup
 ```bash
 SCRAM_ARCH=slc7_amd64_gcc900 cmsrel CMSSW_12_3_0_pre2
 cd CMSSW_12_3_0_pre2/src
 eval `scramv1 runtime -sh`
-git-cms-addpkg RecoLocalMuon/GEMCSCSegment
+# git-cms-addpkg RecoLocalMuon/GEMCSCSegment
+git-cms-merge-topic seungjin-yang:Fix-GEMCSCSegmentProducer-Geometry-Loading__from-CMSSW_12_3_0_pre2
 ```
 
 ## Test
-Plan
-2. 
-
-`TestGEMCSCSegmentAnalyzer` takes PSimHit as one of the inputs.
-
 [CMSSW_12_3_0_pre2__fullsim_PU_2021_14TeV-ZMM_14-00001](https://cms-pdmv.cern.ch/relval/relvals?prepid=CMSSW_12_3_0_pre2__fullsim_PU_2021_14TeV-ZMM_14-00001&shown=1023&page=0&limit=50)
 
 ```console
@@ -74,9 +70,8 @@ $ grep -z xrootd /cvmfs/cms.cern.ch/SITECONF/T2_CH_CERN/PhEDEx/storage.xml
 $ bash produce.sh 
 $ bash analyze.sh
 ```
+Then, check `plotting.ipynb`
 
-
-
-
-## Fix
-- main brainch: [seungjin-yang:Fix-GEMCSCSegmentProducer-Geometry-Loading__from-CMSSW_12_3_0_pre2](https://github.com/seungjin-yang/cmssw/tree/Fix-GEMCSCSegmentProducer-Geometry-Loading__from-CMSSW_12_3_0_pre2)
+## Result
+- Brainch: [seungjin-yang:Fix-GEMCSCSegmentProducer-Geometry-Loading__from-CMSSW_12_3_0_pre2](https://github.com/seungjin-yang/cmssw/tree/Fix-GEMCSCSegmentProducer-Geometry-Loading__from-CMSSW_12_3_0_pre2)
+- PR: `TODO`
