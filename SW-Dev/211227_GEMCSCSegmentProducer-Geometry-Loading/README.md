@@ -40,7 +40,7 @@ for instructions how to migrate the calling code
 ```
 
 ## Setup
-```
+```console
 cmsrel CMSSW_12_3_0_pre2
 cd CMSSW_12_3_0_pre2/src
 eval `scramv1 runtime -sh`
