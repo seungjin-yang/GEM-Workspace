@@ -73,5 +73,5 @@ $ bash analyze.sh
 Then, check `plotting.ipynb`
 
 ## Result
-- Brainch: [seungjin-yang:Fix-GEMCSCSegmentProducer-Geometry-Loading__from-CMSSW_12_3_0_pre2](https://github.com/seungjin-yang/cmssw/tree/Fix-GEMCSCSegmentProducer-Geometry-Loading__from-CMSSW_12_3_0_pre2)
+- Branch: [seungjin-yang:Fix-GEMCSCSegmentProducer-Geometry-Loading__from-CMSSW_12_3_0_pre2](https://github.com/seungjin-yang/cmssw/tree/Fix-GEMCSCSegmentProducer-Geometry-Loading__from-CMSSW_12_3_0_pre2)
 - PR: `TODO`
