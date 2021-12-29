@@ -24,6 +24,19 @@ find . -type f -name "*.h" -exec sed -i 's/DQMOffline_Muon_/DQM_GEM_/g' {} +
 
 #### Target
 ```console
+$ DATASET="/RelValZMM_14/CMSSW_12_3_0_pre2-122X_mcRun3_2021_realistic_v5-v1/GEN-SIM-RECO"
+$ FILELIST=filelist-2021-ZMM-step3.txt
+$ dasgoclient -query "file dataset=${DATASET}" > ${FILELIST}
+$ TESTFILE=$(head -n 1 ${FILELIST})
+$ dasgoclient -query="site file=${TESTFILE}"
+T1_DE_KIT_Disk
+T2_CH_CERN
+$ grep -z xrootd /cvmfs/cms.cern.ch/SITECONF/T2_CH_CERN/PhEDEx/storage.xml
+  <!-- Map any LFN with /store/ to xrootd on EOS -->
+  <lfn-to-pfn protocol="eos"
+    path-match="/+store/(.*)"
+    result="root://eoscms.cern.ch//eos/cms/store/$1"/>
+
 ```
 
 ## Result
