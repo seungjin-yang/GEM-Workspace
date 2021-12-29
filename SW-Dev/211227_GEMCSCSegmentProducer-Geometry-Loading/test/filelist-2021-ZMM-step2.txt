@@ -1,0 +1,9 @@
+/store/relval/CMSSW_12_3_0_pre2/RelValZMM_14/GEN-SIM-DIGI-RAW/122X_mcRun3_2021_realistic_v5-v1/2580000/6016a437-df24-4af6-be73-5a43d74ed5d6.root
+/store/relval/CMSSW_12_3_0_pre2/RelValZMM_14/GEN-SIM-DIGI-RAW/122X_mcRun3_2021_realistic_v5-v1/2580000/7c5c2c38-6b91-4a75-8f13-d0bbaa8c969a.root
+/store/relval/CMSSW_12_3_0_pre2/RelValZMM_14/GEN-SIM-DIGI-RAW/122X_mcRun3_2021_realistic_v5-v1/2580000/a78233e1-a12e-4a4d-98ad-ef6e81983d64.root
+/store/relval/CMSSW_12_3_0_pre2/RelValZMM_14/GEN-SIM-DIGI-RAW/122X_mcRun3_2021_realistic_v5-v1/2580000/4249c2a2-ec9a-453e-891f-66fe353838a7.root
+/store/relval/CMSSW_12_3_0_pre2/RelValZMM_14/GEN-SIM-DIGI-RAW/122X_mcRun3_2021_realistic_v5-v1/2580000/959f5918-f3a2-46ba-94f5-45642cd4c3d6.root
+/store/relval/CMSSW_12_3_0_pre2/RelValZMM_14/GEN-SIM-DIGI-RAW/122X_mcRun3_2021_realistic_v5-v1/2580000/65189bd3-a6f0-455e-ad28-cdc13fcb67ef.root
+/store/relval/CMSSW_12_3_0_pre2/RelValZMM_14/GEN-SIM-DIGI-RAW/122X_mcRun3_2021_realistic_v5-v1/2580000/04e1c2f8-9592-4401-9f2c-d0394206a55d.root
+/store/relval/CMSSW_12_3_0_pre2/RelValZMM_14/GEN-SIM-DIGI-RAW/122X_mcRun3_2021_realistic_v5-v1/2580000/26747084-2a24-4769-ba17-6a07da09b865.root
+/store/relval/CMSSW_12_3_0_pre2/RelValZMM_14/GEN-SIM-DIGI-RAW/122X_mcRun3_2021_realistic_v5-v1/2580000/18ad6797-be7c-44ea-8ac3-fa6d759e5632.root

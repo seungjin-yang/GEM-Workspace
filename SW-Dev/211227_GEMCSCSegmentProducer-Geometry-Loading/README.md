@@ -41,7 +41,7 @@ for instructions how to migrate the calling code
 
 ## Setup
 ```console
-cmsrel CMSSW_12_3_0_pre2
+SCRAM_ARCH=slc7_amd64_gcc900 cmsrel CMSSW_12_3_0_pre2
 cd CMSSW_12_3_0_pre2/src
 eval `scramv1 runtime -sh`
 git-cms-addpkg RecoLocalMuon/GEMCSCSegment
@@ -51,11 +51,9 @@ git-cms-addpkg RecoLocalMuon/GEMCSCSegment
 https://cms-pdmv.cern.ch/relval/relvals?prepid=CMSSW_12_3_0_pre2__fullsim_PU_2021_14TeV-ZMM_14-00001&shown=1023&page=0&limit=50
 
 ```console
-$ DATASET="/RelValZMM_14/CMSSW_12_3_0_pre2-PU_122X_mcRun3_2021_realistic_v5-v1/GEN-SIM-RECO"
-$ dasgoclient -query "file dataset=${DATASET}" > filelist.txt
+$ DATASET="/RelValZMM_14/CMSSW_12_3_0_pre2-122X_mcRun3_2021_realistic_v5-v1/GEN-SIM-DIGI-RAW"
+$ dasgoclient -query "file dataset=${DATASET}" > filelist-2021-ZMM-step2.txt
 $ TESTFILE=$(head -n 1 filelist.txt) 
-$ echo ${TESTFILE}
-/store/relval/CMSSW_12_3_0_pre2/RelValZMM_14/GEN-SIM-RECO/PU_122X_mcRun3_2021_realistic_v5-v1/2580000/98915170-30fa-4870-9f8d-5edc6dc922f2.root
 $ dasgoclient -query="site file=${TESTFILE}"
 T2_CH_CERN
 T2_IN_TIFR

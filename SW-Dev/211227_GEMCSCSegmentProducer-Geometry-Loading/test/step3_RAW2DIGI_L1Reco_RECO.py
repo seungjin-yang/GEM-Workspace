@@ -2,12 +2,12 @@
 # using:
 # Revision: 1.19
 # Source: /local/reps/CMSSW/CMSSW/Configuration/Applications/python/ConfigBuilder.py,v
-# with command line options: runGEMCSCSegmentProducer --conditions auto:phase1_2021_realistic --datatier GEN-SIM-RECO --era Run3 --eventcontent RECOSIM --filein file:step3.root --fileout file:step4.root --geometry DB:Extended --no_exec --number -1 --step RECO
+# with command line options: step3 --conditions auto:phase1_2021_realistic --datatier GEN-SIM-RECO --era Run3 --eventcontent RECOSIM --filein file:step2.root --fileout file:step3.root --geometry DB:Extended --no_exec --number -1 --step RAW2DIGI,L1Reco,RECO
 import FWCore.ParameterSet.Config as cms
 
 from Configuration.Eras.Era_Run3_cff import Run3
 
-process = cms.Process('GEMCSCSegmentRECO',Run3)
+process = cms.Process('RECO',Run3)
 
 # import of standard configurations
 process.load('Configuration.StandardSequences.Services_cff')
@@ -17,6 +17,8 @@ process.load('Configuration.EventContent.EventContent_cff')
 process.load('SimGeneral.MixingModule.mixNoPU_cfi')
 process.load('Configuration.StandardSequences.GeometryRecoDB_cff')
 process.load('Configuration.StandardSequences.MagneticField_cff')
+process.load('Configuration.StandardSequences.RawToDigi_cff')
+process.load('Configuration.StandardSequences.L1Reco_cff')
 process.load('Configuration.StandardSequences.Reconstruction_cff')
 process.load('Configuration.StandardSequences.EndOfProcess_cff')
 process.load('Configuration.StandardSequences.FrontierConditions_GlobalTag_cff')
@@ -67,7 +69,7 @@ process.options = cms.untracked.PSet(
 
 # Production Info
 process.configurationMetadata = cms.untracked.PSet(
-    annotation = cms.untracked.string('runGEMCSCSegmentProducer nevts:-1'),
+    annotation = cms.untracked.string('step3 nevts:-1'),
     name = cms.untracked.string('Applications'),
     version = cms.untracked.string('$Revision: 1.19 $')
 )
@@ -86,7 +88,8 @@ process.RECOSIMoutput = cms.OutputModule("PoolOutputModule",
 
 # Additional output definition
 process.RECOSIMoutput.outputCommands.extend([
-    'keep  *_gemcscSegments_*_*'
+    'keep *_g4SimHits_*_*',
+    'keep *_gemcscSegments_*_*',
 ])
 
 # Other statements
@@ -96,12 +99,21 @@ process.GlobalTag = GlobalTag(process.GlobalTag, 'auto:phase1_2021_realistic', '
 # Path and EndPath definitions
 process.load('RecoLocalMuon.GEMCSCSegment.gemcscSegments_cfi')
 
-process.reconstruction_step = cms.Path(process.gemcscSegments)
+process.raw2digi_step = cms.Path(process.RawToDigi)
+process.L1Reco_step = cms.Path(process.L1Reco)
+process.reconstruction_step = cms.Path(process.reconstruction)
+process.gemcscsegment_step = cms.Path(process.gemcscSegments)
 process.endjob_step = cms.EndPath(process.endOfProcess)
 process.RECOSIMoutput_step = cms.EndPath(process.RECOSIMoutput)
 
 # Schedule definition
-process.schedule = cms.Schedule(process.reconstruction_step,process.endjob_step,process.RECOSIMoutput_step)
+process.schedule = cms.Schedule(
+    process.raw2digi_step,
+    process.L1Reco_step,
+    process.reconstruction_step,
+    process.gemcscsegment_step,
+    process.endjob_step,
+    process.RECOSIMoutput_step)
 from PhysicsTools.PatAlgos.tools.helpers import associatePatAlgosToolsTask
 associatePatAlgosToolsTask(process)
 
