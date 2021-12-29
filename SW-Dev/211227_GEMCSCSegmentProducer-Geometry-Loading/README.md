@@ -39,9 +39,6 @@ for instructions how to migrate the calling code
 ----- End Fatal Exception -------------------------------------------------
 ```
 
-## Reproduce
-`TODO`
-
 ## Setup
 ```bash
 SCRAM_ARCH=slc7_amd64_gcc900 cmsrel CMSSW_12_3_0_pre2
