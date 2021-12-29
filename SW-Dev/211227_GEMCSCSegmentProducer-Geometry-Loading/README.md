@@ -39,8 +39,11 @@ for instructions how to migrate the calling code
 ----- End Fatal Exception -------------------------------------------------
 ```
 
-## Setup
-```console
+## Reproduce
+`TODO`
+
+## Init
+```bash
 SCRAM_ARCH=slc7_amd64_gcc900 cmsrel CMSSW_12_3_0_pre2
 cd CMSSW_12_3_0_pre2/src
 eval `scramv1 runtime -sh`
@@ -48,9 +51,15 @@ git-cms-addpkg RecoLocalMuon/GEMCSCSegment
 ```
 
 ## Test
-https://cms-pdmv.cern.ch/relval/relvals?prepid=CMSSW_12_3_0_pre2__fullsim_PU_2021_14TeV-ZMM_14-00001&shown=1023&page=0&limit=50
+Plan
+2. 
+
+`TestGEMCSCSegmentAnalyzer` takes PSimHit as one of the inputs.
+
+[CMSSW_12_3_0_pre2__fullsim_PU_2021_14TeV-ZMM_14-00001](https://cms-pdmv.cern.ch/relval/relvals?prepid=CMSSW_12_3_0_pre2__fullsim_PU_2021_14TeV-ZMM_14-00001&shown=1023&page=0&limit=50)
 
 ```console
+$ cd test
 $ DATASET="/RelValZMM_14/CMSSW_12_3_0_pre2-122X_mcRun3_2021_realistic_v5-v1/GEN-SIM-DIGI-RAW"
 $ dasgoclient -query "file dataset=${DATASET}" > filelist-2021-ZMM-step2.txt
 $ TESTFILE=$(head -n 1 filelist.txt) 
@@ -62,4 +71,12 @@ $ grep -z xrootd /cvmfs/cms.cern.ch/SITECONF/T2_CH_CERN/PhEDEx/storage.xml
   <lfn-to-pfn protocol="eos"
     path-match="/+store/(.*)"
     result="root://eoscms.cern.ch//eos/cms/store/$1"/>
+$ bash produce.sh 
+$ bash analyze.sh
 ```
+
+
+
+
+## Fix
+- main brainch: [seungjin-yang:Fix-GEMCSCSegmentProducer-Geometry-Loading__from-CMSSW_12_3_0_pre2](https://github.com/seungjin-yang/cmssw/tree/Fix-GEMCSCSegmentProducer-Geometry-Loading__from-CMSSW_12_3_0_pre2)
