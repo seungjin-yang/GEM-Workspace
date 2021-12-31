@@ -1,3 +1,0 @@
-/store/relval/CMSSW_12_3_0_pre2/RelValZMM_14/GEN-SIM-RECO/122X_mcRun3_2021_realistic_v5-v1/2580000/c14f40a6-2ca5-4355-9f6f-4a05b29c841d.root
-/store/relval/CMSSW_12_3_0_pre2/RelValZMM_14/GEN-SIM-RECO/122X_mcRun3_2021_realistic_v5-v1/2580000/3ef6705e-74f8-4c05-8ac3-1b2a99ef978e.root
-/store/relval/CMSSW_12_3_0_pre2/RelValZMM_14/GEN-SIM-RECO/122X_mcRun3_2021_realistic_v5-v1/2580000/45bd66b6-8b6c-4739-8035-4d4ab2dd361d.root

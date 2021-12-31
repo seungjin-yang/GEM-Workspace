@@ -1,0 +1,60 @@
+%MSG-s LegacyModules:  AfterModConstruction 31-Dec-2021 15:48:06 KST pre-events
+The following legacy modules are configured. Support for legacy modules
+is going to end soon. These modules need to be converted to have type
+edm::global, edm::stream, edm::one, or in rare cases edm::limited.
+  PhotonPostprocessing photonPostprocessing
+  PhotonPostprocessing pfPhotonPostprocessing
+  ConversionPostprocessing conversionPostprocessing
+  DQMHistNormalizer normalizePlotsZTT
+  DQMFEDIntegrityClient dqmFEDIntegrity
+  DQMMessageLoggerClient DQMMessageLoggerClient
+%MSG
+31-Dec-2021 15:48:08 KSTSuccessfully opened file file:step3_inDQM.root
+%MSG-w FastTimerServiceClient:   FastTimerServiceClient:dqmFastTimerServiceClient@endLumi  31-Dec-2021 15:48:30 KST Run: 1 Lumi: 1
+no lumiVsLS ME is available in HLT/LumiMonitoring
+%MSG
+%MSG-w FastTimerServiceClient:   FastTimerServiceClient:dqmFastTimerServiceClient@endLumi  31-Dec-2021 15:48:30 KST Run: 1 Lumi: 1
+no puVsLS ME is available in HLT/LumiMonitoring
+%MSG
+%MSG-e HcalDigisClient:  HcalDigisClient:hcaldigisClient@endProcessBlock  31-Dec-2021 15:48:40 KST post-events
+No maps histos found...
+%MSG
+%MSG-e HcalDigisClient:  HcalDigisClient:hcaldigisClient@endProcessBlock  31-Dec-2021 15:48:40 KST post-events
+Error in HcalDigisEndjob! HE
+%MSG
+%MSG-w FastTimerServiceClient:   FastTimerServiceClient:dqmFastTimerServiceClient@endProcessBlock  31-Dec-2021 15:48:40 KST post-events
+no lumiVsLS ME is available in HLT/LumiMonitoring
+%MSG
+%MSG-w FastTimerServiceClient:   FastTimerServiceClient:dqmFastTimerServiceClient@endProcessBlock  31-Dec-2021 15:48:40 KST post-events
+no puVsLS ME is available in HLT/LumiMonitoring
+%MSG
+DQMFileSaver::globalEndRun()
+
+=============================================
+
+MessageLogger Summary
+
+ type     category        sev    module        subroutine        count    total
+ ---- -------------------- -- ---------------- ----------------  -----    -----
+    1 FastTimerServiceClie -w FastTimerService                       2        2
+    2 FastTimerServiceClie -w FastTimerService                       2        2
+    3 HcalDigisClient      -e HcalDigisClient:                       2        2
+    4 LegacyModules        -s AfterModConstruc                       1        1
+    5 fileAction           -s AfterModBeginStr                       1        1
+
+ type    category    Examples: run/evt        run/evt          run/evt
+ ---- -------------------- ---------------- ---------------- ----------------
+    1 FastTimerServiceClient Run: 1 Lumi: 1   Run: 1 Lumi: 1   
+    2 FastTimerServiceClient post-events      post-events      
+    3 HcalDigisClient      post-events      post-events      
+    4 LegacyModules        pre-events                        
+    5 fileAction           BeforeEvents                      
+
+Severity    # Occurrences   Total Occurrences
+--------    -------------   -----------------
+Warning                 4                   4
+Error                   2                   2
+System                  2                   2
+
+dropped waiting message count 0
+31-Dec-2021 15:48:51 KSTClosed file

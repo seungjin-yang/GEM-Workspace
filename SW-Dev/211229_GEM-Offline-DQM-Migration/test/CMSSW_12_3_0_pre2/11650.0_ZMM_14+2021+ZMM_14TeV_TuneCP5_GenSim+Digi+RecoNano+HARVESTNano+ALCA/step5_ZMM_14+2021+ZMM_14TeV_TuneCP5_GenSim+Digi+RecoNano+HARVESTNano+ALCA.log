@@ -1,0 +1,53 @@
+31-Dec-2021 15:48:34 KST  Initiating request to open file file:step3.root
+31-Dec-2021 15:48:41 KST  Successfully opened file file:step3.root
+Begin processing the 1st record. Run 1, Event 1, LumiSection 1 on stream 0 at 31-Dec-2021 15:48:50.429 KST
+PersistencyIO    INFO  +++ Set Streamer to dd4hep::OpaqueDataBlock
+DD4hep           WARN  ++ Using globally Geant4 unit system (mm,ns,MeV)
+DD4CMS           INFO  +++ Processing the CMS detector description xml-memory-buffer
+Detector         INFO  *********** Created World volume with size: 101000 101000 450000
+Detector         INFO  +++ Patching names of anonymous shapes....
+DDDefinition     INFO  +++ Finished processing xml-memory-buffer
+%MSG-e TkDetLayers:  PostModuleEvent 31-Dec-2021 15:49:08 KST Run: 1 Event: 1
+ ForwardDiskSectorBuilderFromDet: Trying to build Petal Wedge from Dets at different z positions !! Delta_z = -0.951241
+%MSG
+%MSG-w Configuration:  HLTHighLevel:ALCARECOTkAlMinBiasNOTHLT  31-Dec-2021 15:49:08 KST Run: 1 Event: 1
+none of the requested paths and pattern match any HLT path - no events will be selected
+%MSG
+Begin processing the 2nd record. Run 1, Event 2, LumiSection 1 on stream 0 at 31-Dec-2021 15:49:08.781 KST
+%MSG-w Configuration:  HLTHighLevel:ALCARECOTkAlMinBiasNOTHLT  31-Dec-2021 15:49:08 KST Run: 1 Event: 2
+none of the requested paths and pattern match any HLT path - no events will be selected
+%MSG
+Begin processing the 3rd record. Run 1, Event 3, LumiSection 1 on stream 0 at 31-Dec-2021 15:49:08.829 KST
+Begin processing the 4th record. Run 1, Event 4, LumiSection 1 on stream 0 at 31-Dec-2021 15:49:08.909 KST
+Begin processing the 5th record. Run 1, Event 5, LumiSection 1 on stream 0 at 31-Dec-2021 15:49:09.029 KST
+Begin processing the 6th record. Run 1, Event 7, LumiSection 1 on stream 0 at 31-Dec-2021 15:49:09.040 KST
+Begin processing the 7th record. Run 1, Event 8, LumiSection 1 on stream 0 at 31-Dec-2021 15:49:09.069 KST
+Begin processing the 8th record. Run 1, Event 9, LumiSection 1 on stream 0 at 31-Dec-2021 15:49:09.086 KST
+Begin processing the 9th record. Run 1, Event 10, LumiSection 1 on stream 0 at 31-Dec-2021 15:49:09.113 KST
+31-Dec-2021 15:49:09 KST  Closed file file:step3.root
+
+=============================================
+
+MessageLogger Summary
+
+ type     category        sev    module        subroutine        count    total
+ ---- -------------------- -- ---------------- ----------------  -----    -----
+    1 Configuration        -w HLTHighLevel:ALC                       2        2
+    2 TkDetLayers          -e PostModuleEvent                        1        1
+    3 fileAction           -s file_close                             1        1
+    4 fileAction           -s file_open                              2        2
+
+ type    category    Examples: run/evt        run/evt          run/evt
+ ---- -------------------- ---------------- ---------------- ----------------
+    1 Configuration        1/1              1/2              
+    2 TkDetLayers          1/1                               
+    3 fileAction           PostGlobalEndRun                  
+    4 fileAction           pre-events       pre-events       
+
+Severity    # Occurrences   Total Occurrences
+--------    -------------   -----------------
+Warning                 2                   2
+Error                   1                   1
+System                  3                   3
+
+dropped waiting message count 0

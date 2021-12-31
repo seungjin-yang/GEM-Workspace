@@ -1,0 +1,218 @@
+	--- egmGsfElectronIDs:cutBasedElectronID-Fall17-94X-V1-loose added to patElectrons
+	--- egmGsfElectronIDs:cutBasedElectronID-Fall17-94X-V1-medium added to patElectrons
+	--- egmGsfElectronIDs:cutBasedElectronID-Fall17-94X-V1-tight added to patElectrons
+	--- egmGsfElectronIDs:cutBasedElectronID-Fall17-94X-V1-veto added to patElectrons
+	--- egmGsfElectronIDs:cutBasedElectronID-Fall17-94X-V2-loose added to patElectrons
+	--- egmGsfElectronIDs:cutBasedElectronID-Fall17-94X-V2-medium added to patElectrons
+	--- egmGsfElectronIDs:cutBasedElectronID-Fall17-94X-V2-tight added to patElectrons
+	--- egmGsfElectronIDs:cutBasedElectronID-Fall17-94X-V2-veto added to patElectrons
+	--- egmGsfElectronIDs:heepElectronID-HEEPV70 added to patElectrons
+	--- egmGsfElectronIDs:mvaEleID-Fall17-iso-V1-wp80 added to patElectrons
+	--- egmGsfElectronIDs:mvaEleID-Fall17-iso-V1-wp90 added to patElectrons
+	--- egmGsfElectronIDs:mvaEleID-Fall17-iso-V1-wpLoose added to patElectrons
+	--- egmGsfElectronIDs:mvaEleID-Fall17-noIso-V1-wp80 added to patElectrons
+	--- egmGsfElectronIDs:mvaEleID-Fall17-noIso-V1-wp90 added to patElectrons
+	--- egmGsfElectronIDs:mvaEleID-Fall17-noIso-V1-wpLoose added to patElectrons
+	--- egmGsfElectronIDs:mvaEleID-Fall17-iso-V2-wp80 added to patElectrons
+	--- egmGsfElectronIDs:mvaEleID-Fall17-iso-V2-wp90 added to patElectrons
+	--- egmGsfElectronIDs:mvaEleID-Fall17-iso-V2-wpHZZ added to patElectrons
+	--- egmGsfElectronIDs:mvaEleID-Fall17-iso-V2-wpLoose added to patElectrons
+	--- egmGsfElectronIDs:mvaEleID-Fall17-noIso-V2-wp80 added to patElectrons
+	--- egmGsfElectronIDs:mvaEleID-Fall17-noIso-V2-wp90 added to patElectrons
+	--- egmGsfElectronIDs:mvaEleID-Fall17-noIso-V2-wpLoose added to patElectrons
+	--- egmPhotonIDs:cutBasedPhotonID-Fall17-94X-V1-loose added to patPhotons
+	--- egmPhotonIDs:cutBasedPhotonID-Fall17-94X-V1-medium added to patPhotons
+	--- egmPhotonIDs:cutBasedPhotonID-Fall17-94X-V1-tight added to patPhotons
+	--- egmPhotonIDs:cutBasedPhotonID-Fall17-94X-V2-loose added to patPhotons
+	--- egmPhotonIDs:cutBasedPhotonID-Fall17-94X-V2-medium added to patPhotons
+	--- egmPhotonIDs:cutBasedPhotonID-Fall17-94X-V2-tight added to patPhotons
+	--- egmPhotonIDs:mvaPhoID-RunIIFall17-v1p1-wp80 added to patPhotons
+	--- egmPhotonIDs:mvaPhoID-RunIIFall17-v1p1-wp90 added to patPhotons
+	--- egmPhotonIDs:mvaPhoID-RunIIFall17-v2-wp80 added to patPhotons
+	--- egmPhotonIDs:mvaPhoID-RunIIFall17-v2-wp90 added to patPhotons
+	--- egmPhotonIDs:cutBasedPhotonID-Spring16-V2p2-loose added to patPhotons
+	--- egmPhotonIDs:cutBasedPhotonID-Spring16-V2p2-medium added to patPhotons
+	--- egmPhotonIDs:cutBasedPhotonID-Spring16-V2p2-tight added to patPhotons
+	--- egmPhotonIDs:mvaPhoID-Spring16-nonTrig-V1-wp80 added to patPhotons
+	--- egmPhotonIDs:mvaPhoID-Spring16-nonTrig-V1-wp90 added to patPhotons
+	--- egmGsfElectronIDs:cutBasedElectronID-Fall17-94X-V1-loose added to patElectrons
+	--- egmGsfElectronIDs:cutBasedElectronID-Fall17-94X-V1-medium added to patElectrons
+	--- egmGsfElectronIDs:cutBasedElectronID-Fall17-94X-V1-tight added to patElectrons
+	--- egmGsfElectronIDs:cutBasedElectronID-Fall17-94X-V1-veto added to patElectrons
+	--- egmGsfElectronIDs:cutBasedElectronID-Fall17-94X-V2-loose added to patElectrons
+	--- egmGsfElectronIDs:cutBasedElectronID-Fall17-94X-V2-medium added to patElectrons
+	--- egmGsfElectronIDs:cutBasedElectronID-Fall17-94X-V2-tight added to patElectrons
+	--- egmGsfElectronIDs:cutBasedElectronID-Fall17-94X-V2-veto added to patElectrons
+	--- egmGsfElectronIDs:heepElectronID-HEEPV70 added to patElectrons
+	--- egmGsfElectronIDs:mvaEleID-Fall17-iso-V1-wp80 added to patElectrons
+	--- egmGsfElectronIDs:mvaEleID-Fall17-iso-V1-wp90 added to patElectrons
+	--- egmGsfElectronIDs:mvaEleID-Fall17-iso-V1-wpLoose added to patElectrons
+	--- egmGsfElectronIDs:mvaEleID-Fall17-noIso-V1-wp80 added to patElectrons
+	--- egmGsfElectronIDs:mvaEleID-Fall17-noIso-V1-wp90 added to patElectrons
+	--- egmGsfElectronIDs:mvaEleID-Fall17-noIso-V1-wpLoose added to patElectrons
+	--- egmGsfElectronIDs:mvaEleID-Fall17-iso-V2-wp80 added to patElectrons
+	--- egmGsfElectronIDs:mvaEleID-Fall17-iso-V2-wp90 added to patElectrons
+	--- egmGsfElectronIDs:mvaEleID-Fall17-iso-V2-wpHZZ added to patElectrons
+	--- egmGsfElectronIDs:mvaEleID-Fall17-iso-V2-wpLoose added to patElectrons
+	--- egmGsfElectronIDs:mvaEleID-Fall17-noIso-V2-wp80 added to patElectrons
+	--- egmGsfElectronIDs:mvaEleID-Fall17-noIso-V2-wp90 added to patElectrons
+	--- egmGsfElectronIDs:mvaEleID-Fall17-noIso-V2-wpLoose added to patElectrons
+	--- egmPhotonIDs:cutBasedPhotonID-Fall17-94X-V1-loose added to patPhotons
+	--- egmPhotonIDs:cutBasedPhotonID-Fall17-94X-V1-medium added to patPhotons
+	--- egmPhotonIDs:cutBasedPhotonID-Fall17-94X-V1-tight added to patPhotons
+	--- egmPhotonIDs:cutBasedPhotonID-Fall17-94X-V2-loose added to patPhotons
+	--- egmPhotonIDs:cutBasedPhotonID-Fall17-94X-V2-medium added to patPhotons
+	--- egmPhotonIDs:cutBasedPhotonID-Fall17-94X-V2-tight added to patPhotons
+	--- egmPhotonIDs:mvaPhoID-RunIIFall17-v1p1-wp80 added to patPhotons
+	--- egmPhotonIDs:mvaPhoID-RunIIFall17-v1p1-wp90 added to patPhotons
+	--- egmPhotonIDs:mvaPhoID-RunIIFall17-v2-wp80 added to patPhotons
+	--- egmPhotonIDs:mvaPhoID-RunIIFall17-v2-wp90 added to patPhotons
+	--- egmPhotonIDs:cutBasedPhotonID-Spring16-V2p2-loose added to patPhotons
+	--- egmPhotonIDs:cutBasedPhotonID-Spring16-V2p2-medium added to patPhotons
+	--- egmPhotonIDs:cutBasedPhotonID-Spring16-V2p2-tight added to patPhotons
+	--- egmPhotonIDs:mvaPhoID-Spring16-nonTrig-V1-wp80 added to patPhotons
+	--- egmPhotonIDs:mvaPhoID-Spring16-nonTrig-V1-wp90 added to patPhotons
+31-Dec-2021 15:41:26 KST  Initiating request to open file file:step2.root
+31-Dec-2021 15:41:32 KST  Successfully opened file file:step2.root
+%MSG-w BTagSFProducer:  BTagSFProducer:btagWeightTable@ctor  31-Dec-2021 15:41:56 KST pre-events
+Skipped loading BTagCalibration for CMVA as it was marked as unavailable in the configuration file. Event weights will not be stored.
+
+%MSG
+2021-12-31 15:41:58.752356: I tensorflow/core/platform/cpu_feature_guard.cc:142] This TensorFlow binary is optimized with oneAPI Deep Neural Network Library (oneDNN) to use the following CPU instructions in performance-critical operations:  SSE4.1 SSE4.2 AVX
+To enable them in other operations, rebuild TensorFlow with the appropriate compiler flags.
+%MSG-e L1PrefireWeightProducer:  L1PrefiringWeightProducer:prefiringweight@ctor  31-Dec-2021 15:42:16 KST pre-events
+Photon map not found. All photons prefiring weights set to 0. 
+%MSG
+%MSG-e L1PrefireWeightProducer:  L1PrefiringWeightProducer:prefiringweight@ctor  31-Dec-2021 15:42:16 KST pre-events
+Jet map not found. All jets prefiring weights set to 0. 
+%MSG
+%MSG-w LogicError:  GenWeightsTableProducer:genWeightsTable@beginRun  31-Dec-2021 15:43:57 KST Run: 1
+::getByLabel: An attempt was made to read a Run product before endRun() was called.
+The product is of type 'LHERunInfoProduct'.
+The specified ModuleLabel was 'externalLHEProducer'.
+The specified productInstanceName was ''.
+
+%MSG
+%MSG-w LogicError:  GenWeightsTableProducer:genWeightsTable@beginRun  31-Dec-2021 15:43:57 KST Run: 1
+::getByLabel: An attempt was made to read a Run product before endRun() was called.
+The product is of type 'LHERunInfoProduct'.
+The specified ModuleLabel was 'source'.
+The specified productInstanceName was ''.
+
+%MSG
+%MSG-w LogicError:  HTXSRivetProducer:rivetProducerHTXS@beginRun  31-Dec-2021 15:43:57 KST Run: 1
+::getByLabel: An attempt was made to read a Run product before endRun() was called.
+The product is of type 'LHERunInfoProduct'.
+The specified ModuleLabel was 'externalLHEProducer'.
+The specified productInstanceName was ''.
+
+%MSG
+PersistencyIO    INFO  +++ Set Streamer to dd4hep::OpaqueDataBlock
+DD4hep           WARN  ++ Using globally Geant4 unit system (mm,ns,MeV)
+DD4CMS           INFO  +++ Processing the CMS detector description xml-memory-buffer
+Detector         INFO  *********** Created World volume with size: 101000 101000 450000
+Detector         INFO  +++ Patching names of anonymous shapes....
+DDDefinition     INFO  +++ Finished processing xml-memory-buffer
+%MSG-e TkDetLayers:  AfterModStreamBeginRun 31-Dec-2021 15:44:16 KST  Run: 1 Stream: 0
+ ForwardDiskSectorBuilderFromDet: Trying to build Petal Wedge from Dets at different z positions !! Delta_z = -0.951241
+%MSG
+Begin processing the 1st record. Run 1, Event 1, LumiSection 1 on stream 0 at 31-Dec-2021 15:44:27.896 KST
+%MSG-w LHETablesProducer:  GenWeightsTableProducer:genWeightsTable  31-Dec-2021 15:44:52 KST Run: 1 Event: 1
+No LHEEventProduct, so there will be no LHE Tables
+
+%MSG
+#--------------------------------------------------------------------------
+#                         FastJet release 3.4.0
+#                 M. Cacciari, G.P. Salam and G. Soyez                  
+#     A software package for jet finding and analysis at colliders      
+#                           http://fastjet.fr                           
+#	                                                                      
+# Please cite EPJC72(2012)1896 [arXiv:1111.6097] if you use this package
+# for scientific work and optionally PLB641(2006)57 [hep-ph/0512210].   
+#                                                                       
+# FastJet is provided without warranty under the GNU GPL v2 or higher.  
+# It uses T. Chan's closest pair algorithm, S. Fortune's Voronoi code
+# and 3rd party plugin jet algorithms. See COPYING file for details.
+#--------------------------------------------------------------------------
+Rivet.AnalysisHandler: INFO  Using named weights
+==============================================================
+========     HiggsTemplateCrossSections Initialization     =========
+==============================================================
+Rivet.Analysis.HiggsTemplateCrossSections: WARN  No HIGGSPRODMODE shell variable found. Needed when running Rivet stand-alone.
+==============================================================
+========             Higgs prod mode 0              =========
+========          Sucessful Initialization           =========
+==============================================================
+Rivet.Analysis.HiggsTemplateCrossSections: WARN  Unkown Higgs production mechanism. Cannot classify event. Classification for all events will most likely fail.
+Rivet.AnalysisHandler: INFO  Using named weights
+Begin processing the 2nd record. Run 1, Event 2, LumiSection 1 on stream 0 at 31-Dec-2021 15:44:59.719 KST
+Rivet.Analysis.HiggsTemplateCrossSections: WARN  Unkown Higgs production mechanism. Cannot classify event. Classification for all events will most likely fail.
+Begin processing the 3rd record. Run 1, Event 3, LumiSection 1 on stream 0 at 31-Dec-2021 15:45:02.427 KST
+Rivet.Analysis.HiggsTemplateCrossSections: WARN  Unkown Higgs production mechanism. Cannot classify event. Classification for all events will most likely fail.
+Begin processing the 4th record. Run 1, Event 4, LumiSection 1 on stream 0 at 31-Dec-2021 15:45:07.476 KST
+Rivet.Analysis.HiggsTemplateCrossSections: WARN  Unkown Higgs production mechanism. Cannot classify event. Classification for all events will most likely fail.
+Begin processing the 5th record. Run 1, Event 5, LumiSection 1 on stream 0 at 31-Dec-2021 15:45:11.298 KST
+Rivet.Analysis.HiggsTemplateCrossSections: WARN  Unkown Higgs production mechanism. Cannot classify event. Classification for all events will most likely fail.
+Begin processing the 6th record. Run 1, Event 7, LumiSection 1 on stream 0 at 31-Dec-2021 15:45:12.318 KST
+Rivet.Analysis.HiggsTemplateCrossSections: WARN  Unkown Higgs production mechanism. Cannot classify event. Classification for all events will most likely fail.
+Begin processing the 7th record. Run 1, Event 8, LumiSection 1 on stream 0 at 31-Dec-2021 15:45:14.501 KST
+Rivet.Analysis.HiggsTemplateCrossSections: WARN  Unkown Higgs production mechanism. Cannot classify event. Classification for all events will most likely fail.
+Begin processing the 8th record. Run 1, Event 9, LumiSection 1 on stream 0 at 31-Dec-2021 15:45:15.921 KST
+%MSG-w IncorrectMatching:   BasicGenParticleValidation:basicGenParticleValidation 31-Dec-2021 15:45:16 KST  Run: 1 Event: 9
+Incorrect number of matched indexes: GenParticle = 385 matched indexes = 384
+%MSG
+Rivet.Analysis.HiggsTemplateCrossSections: WARN  Unkown Higgs production mechanism. Cannot classify event. Classification for all events will most likely fail.
+Begin processing the 9th record. Run 1, Event 10, LumiSection 1 on stream 0 at 31-Dec-2021 15:45:17.401 KST
+Rivet.Analysis.HiggsTemplateCrossSections: WARN  Unkown Higgs production mechanism. Cannot classify event. Classification for all events will most likely fail.
+%MSG-w BSFitter:  AlcaBeamMonitor:AlcaBeamMonitor@endLumi  31-Dec-2021 15:45:21 KST Run: 1 Lumi: 1
+need at least 150 tracks to run beamline fitter.
+%MSG
+Rivet.Analysis.HiggsTemplateCrossSections: INFO   ====================================================== 
+Rivet.Analysis.HiggsTemplateCrossSections: INFO        Higgs Template X-Sec Categorization Tool          
+Rivet.Analysis.HiggsTemplateCrossSections: INFO                  Status Code Summary                     
+Rivet.Analysis.HiggsTemplateCrossSections: INFO   ====================================================== 
+Rivet.Analysis.HiggsTemplateCrossSections: INFO       >>>> All 0 events successfully categorized!
+Rivet.Analysis.HiggsTemplateCrossSections: INFO   ====================================================== 
+Rivet.Analysis.HiggsTemplateCrossSections: INFO   ====================================================== 
+31-Dec-2021 15:45:25 KST  Closed file file:step2.root
+
+=============================================
+
+MessageLogger Summary
+
+ type     category        sev    module        subroutine        count    total
+ ---- -------------------- -- ---------------- ----------------  -----    -----
+    1 BSFitter             -w AlcaBeamMonitor:                       1        1
+    2 BTagSFProducer       -w BTagSFProducer:b                       1        1
+    3 IncorrectMatching    -w BasicGenParticle                       1        1
+    4 LHETablesProducer    -w GenWeightsTableP                       1        1
+    5 LogicError           -w GenWeightsTableP                       2        2
+    6 LogicError           -w HTXSRivetProduce                       1        1
+    7 L1PrefireWeightProdu -e L1PrefiringWeigh                       2        2
+    8 TkDetLayers          -e AfterModStreamBe                       1        1
+    9 fileAction           -s file_close                             1        1
+   10 fileAction           -s file_open                              2        2
+
+ type    category    Examples: run/evt        run/evt          run/evt
+ ---- -------------------- ---------------- ---------------- ----------------
+    1 BSFitter             Run: 1 Lumi: 1                    
+    2 BTagSFProducer       pre-events                        
+    3 IncorrectMatching    1/9                               
+    4 LHETablesProducer    1/1                               
+    5 LogicError           Run: 1           Run: 1           
+    6 LogicError           Run: 1                            
+    7 L1PrefireWeightProducer pre-events       pre-events       
+    8 TkDetLayers          Run: 1 Stream: 0                  
+    9 fileAction           PostGlobalEndRun                  
+   10 fileAction           pre-events       pre-events       
+
+Severity    # Occurrences   Total Occurrences
+--------    -------------   -----------------
+Warning                 7                   7
+Error                   3                   3
+System                  3                   3
+
+dropped waiting message count 0
+
+The MCnet usage guidelines apply to Rivet: see http://www.montecarlonet.org/GUIDELINES
+Please acknowledge Rivet in results made using it, and cite https://arxiv.org/abs/1912.05451

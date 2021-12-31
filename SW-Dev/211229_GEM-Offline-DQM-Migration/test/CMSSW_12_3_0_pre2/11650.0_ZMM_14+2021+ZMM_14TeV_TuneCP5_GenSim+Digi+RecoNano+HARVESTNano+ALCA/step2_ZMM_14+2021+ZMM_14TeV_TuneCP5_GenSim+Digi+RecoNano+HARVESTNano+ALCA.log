@@ -1,0 +1,113 @@
+31-Dec-2021 15:35:31 KST  Initiating request to open file file:step1.root
+31-Dec-2021 15:35:33 KST  Successfully opened file file:step1.root
+PersistencyIO    INFO  +++ Set Streamer to dd4hep::OpaqueDataBlock
+DD4hep           WARN  ++ Using globally Geant4 unit system (mm,ns,MeV)
+DD4CMS           INFO  +++ Processing the CMS detector description xml-memory-buffer
+Detector         INFO  *********** Created World volume with size: 101000 101000 450000
+Detector         INFO  +++ Patching names of anonymous shapes....
+DDDefinition     INFO  +++ Finished processing xml-memory-buffer
+Begin processing the 1st record. Run 1, Event 1, LumiSection 1 on stream 0 at 31-Dec-2021 15:36:19.520 KST
+DTTSPhi::addTracoT: preview not present in TRACO trigger or its code=0  trigger not added!
+2021-12-31 15:36:35.905408: I tensorflow/core/platform/cpu_feature_guard.cc:142] This TensorFlow binary is optimized with oneAPI Deep Neural Network Library (oneDNN) to use the following CPU instructions in performance-critical operations:  SSE4.1 SSE4.2 AVX
+To enable them in other operations, rebuild TensorFlow with the appropriate compiler flags.
+%MSG-e L1T:  L1TDigiToRaw:gmtStage2Raw 31-Dec-2021 15:36:36 KST Run: 1 Event: 1
+Check constants for RegionalMuonShower fields! It looks like we're in danger of overwriting muon data in the packer!
+%MSG
+%MSG-e L1T:  L1TDigiToRaw:gmtStage2Raw 31-Dec-2021 15:36:36 KST Run: 1 Event: 1
+Check constants for RegionalMuonShower fields! It looks like we're in danger of overwriting muon data in the packer!
+%MSG
+%MSG-e L1T:  L1TDigiToRaw:gmtStage2Raw 31-Dec-2021 15:36:36 KST Run: 1 Event: 1
+Check constants for RegionalMuonShower fields! It looks like we're in danger of overwriting muon data in the packer!
+%MSG
+#--------------------------------------------------------------------------
+#                         FastJet release 3.4.0
+#                 M. Cacciari, G.P. Salam and G. Soyez                  
+#     A software package for jet finding and analysis at colliders      
+#                           http://fastjet.fr                           
+#	                                                                      
+# Please cite EPJC72(2012)1896 [arXiv:1111.6097] if you use this package
+# for scientific work and optionally PLB641(2006)57 [hep-ph/0512210].   
+#                                                                       
+# FastJet is provided without warranty under the GNU GPL v2 or higher.  
+# It uses T. Chan's closest pair algorithm, S. Fortune's Voronoi code
+# and 3rd party plugin jet algorithms. See COPYING file for details.
+#--------------------------------------------------------------------------
+%MSG-e TkDetLayers:  PostModuleEvent 31-Dec-2021 15:36:37 KST Run: 1 Event: 1
+ ForwardDiskSectorBuilderFromDet: Trying to build Petal Wedge from Dets at different z positions !! Delta_z = -0.951241
+%MSG
+Begin processing the 2nd record. Run 1, Event 2, LumiSection 1 on stream 0 at 31-Dec-2021 15:36:41.796 KST
+%MSG-e L1T:  L1TDigiToRaw:gmtStage2Raw 31-Dec-2021 15:36:43 KST Run: 1 Event: 2
+Check constants for RegionalMuonShower fields! It looks like we're in danger of overwriting muon data in the packer!
+%MSG
+%MSG-e L1T:  L1TDigiToRaw:gmtStage2Raw 31-Dec-2021 15:36:43 KST Run: 1 Event: 2
+Check constants for RegionalMuonShower fields! It looks like we're in danger of overwriting muon data in the packer!
+%MSG
+Begin processing the 3rd record. Run 1, Event 3, LumiSection 1 on stream 0 at 31-Dec-2021 15:36:45.014 KST
+%MSG-e L1T:  L1TDigiToRaw:gmtStage2Raw 31-Dec-2021 15:36:46 KST Run: 1 Event: 3
+Check constants for RegionalMuonShower fields! It looks like we're in danger of overwriting muon data in the packer!
+%MSG
+Begin processing the 4th record. Run 1, Event 4, LumiSection 1 on stream 0 at 31-Dec-2021 15:36:48.195 KST
+%MSG-e L1T:  L1TDigiToRaw:gmtStage2Raw 31-Dec-2021 15:36:50 KST Run: 1 Event: 4
+Check constants for RegionalMuonShower fields! It looks like we're in danger of overwriting muon data in the packer!
+%MSG
+%MSG-e L1T:  L1TDigiToRaw:gmtStage2Raw 31-Dec-2021 15:36:50 KST Run: 1 Event: 4
+Check constants for RegionalMuonShower fields! It looks like we're in danger of overwriting muon data in the packer!
+%MSG
+%MSG-e L1T:  L1TDigiToRaw:gmtStage2Raw 31-Dec-2021 15:36:50 KST Run: 1 Event: 4
+Check constants for RegionalMuonShower fields! It looks like we're in danger of overwriting muon data in the packer!
+%MSG
+Begin processing the 5th record. Run 1, Event 5, LumiSection 1 on stream 0 at 31-Dec-2021 15:36:51.776 KST
+Begin processing the 6th record. Run 1, Event 7, LumiSection 1 on stream 0 at 31-Dec-2021 15:36:53.992 KST
+%MSG-e L1T:  L1TDigiToRaw:gmtStage2Raw 31-Dec-2021 15:36:55 KST Run: 1 Event: 7
+Check constants for RegionalMuonShower fields! It looks like we're in danger of overwriting muon data in the packer!
+%MSG
+%MSG-e L1T:  L1TDigiToRaw:gmtStage2Raw 31-Dec-2021 15:36:55 KST Run: 1 Event: 7
+Check constants for RegionalMuonShower fields! It looks like we're in danger of overwriting muon data in the packer!
+%MSG
+Begin processing the 7th record. Run 1, Event 8, LumiSection 1 on stream 0 at 31-Dec-2021 15:36:56.766 KST
+%MSG-e L1T:  L1TDigiToRaw:gmtStage2Raw 31-Dec-2021 15:36:58 KST Run: 1 Event: 8
+Check constants for RegionalMuonShower fields! It looks like we're in danger of overwriting muon data in the packer!
+%MSG
+%MSG-e L1T:  L1TDigiToRaw:gmtStage2Raw 31-Dec-2021 15:36:58 KST Run: 1 Event: 8
+Check constants for RegionalMuonShower fields! It looks like we're in danger of overwriting muon data in the packer!
+%MSG
+%MSG-e L1T:  L1TDigiToRaw:gmtStage2Raw 31-Dec-2021 15:36:58 KST Run: 1 Event: 8
+Check constants for RegionalMuonShower fields! It looks like we're in danger of overwriting muon data in the packer!
+%MSG
+Begin processing the 8th record. Run 1, Event 9, LumiSection 1 on stream 0 at 31-Dec-2021 15:36:59.184 KST
+Begin processing the 9th record. Run 1, Event 10, LumiSection 1 on stream 0 at 31-Dec-2021 15:37:01.755 KST
+%MSG-e L1T:  L1TDigiToRaw:gmtStage2Raw 31-Dec-2021 15:37:03 KST Run: 1 Event: 10
+Check constants for RegionalMuonShower fields! It looks like we're in danger of overwriting muon data in the packer!
+%MSG
+%MSG-e L1T:  L1TDigiToRaw:gmtStage2Raw 31-Dec-2021 15:37:03 KST Run: 1 Event: 10
+Check constants for RegionalMuonShower fields! It looks like we're in danger of overwriting muon data in the packer!
+%MSG
+%MSG-e L1T:  L1TDigiToRaw:gmtStage2Raw 31-Dec-2021 15:37:03 KST Run: 1 Event: 10
+Check constants for RegionalMuonShower fields! It looks like we're in danger of overwriting muon data in the packer!
+%MSG
+31-Dec-2021 15:37:05 KST  Closed file file:step1.root
+
+=============================================
+
+MessageLogger Summary
+
+ type     category        sev    module        subroutine        count    total
+ ---- -------------------- -- ---------------- ----------------  -----    -----
+    1 L1T                  -e L1TDigiToRaw:gmt                      17       17
+    2 TkDetLayers          -e PostModuleEvent                        1        1
+    3 fileAction           -s file_close                             1        1
+    4 fileAction           -s file_open                              2        2
+
+ type    category    Examples: run/evt        run/evt          run/evt
+ ---- -------------------- ---------------- ---------------- ----------------
+    1 L1T                  1/1              1/1              1/10
+    2 TkDetLayers          1/1                               
+    3 fileAction           PostGlobalEndRun                  
+    4 fileAction           pre-events       pre-events       
+
+Severity    # Occurrences   Total Occurrences
+--------    -------------   -----------------
+Error                  18                  18
+System                  3                   3
+
+dropped waiting message count 0
