@@ -69,6 +69,9 @@ $ bash analyze.sh
 ```
 Then, check `plotting.ipynb`
 
+## NOTE
+- When running `TestGEMCSCSegmentAnalyzer`, got a lot of err msgs like `Error in <TROOT::WriteTObject>: The current directory (root) is not associated with a file. The object (yGEMPool_odd_newE_simhit) has not been written.`, where `yGEMPool_odd_newE_simhit` is the name of the histogram.
+
 ## Result
 - Branch: [seungjin-yang:Fix-GEMCSCSegmentProducer-Geometry-Loading__from-CMSSW_12_3_0_pre2](https://github.com/seungjin-yang/cmssw/tree/Fix-GEMCSCSegmentProducer-Geometry-Loading__from-CMSSW_12_3_0_pre2)
 - PR: `TODO`
