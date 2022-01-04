@@ -1,7 +1,5 @@
 #!/usr/bin/env sh
 
-
-
 cmsDriver.py step3  \
 	--step RAW2DIGI,L1Reco,RECO,DQM \
 	--conditions auto:phase1_2021_realistic \
