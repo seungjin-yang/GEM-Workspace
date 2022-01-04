@@ -1,0 +1,87 @@
+04-Jan-2022 16:09:46 KST  Initiating request to open file file:step1.root
+04-Jan-2022 16:09:48 KST  Successfully opened file file:step1.root
+Begin processing the 1st record. Run 1, Event 1, LumiSection 1 on stream 0 at 04-Jan-2022 16:12:50.455 KST
+#--------------------------------------------------------------------------
+#                         FastJet release 3.4.0
+#                 M. Cacciari, G.P. Salam and G. Soyez                  
+#     A software package for jet finding and analysis at colliders      
+#                           http://fastjet.fr                           
+#	                                                                      
+# Please cite EPJC72(2012)1896 [arXiv:1111.6097] if you use this package
+# for scientific work and optionally PLB641(2006)57 [hep-ph/0512210].   
+#                                                                       
+# FastJet is provided without warranty under the GNU GPL v2 or higher.  
+# It uses T. Chan's closest pair algorithm, S. Fortune's Voronoi code
+# and 3rd party plugin jet algorithms. See COPYING file for details.
+#--------------------------------------------------------------------------
+Begin processing the 2nd record. Run 1, Event 2, LumiSection 1 on stream 0 at 04-Jan-2022 16:13:36.352 KST
+%MSG-e L1T:  L1TDigiToRaw:gmtStage2Raw 04-Jan-2022 16:13:41 KST Run: 1 Event: 2
+Check constants for RegionalMuonShower fields! It looks like we're in danger of overwriting muon data in the packer!
+%MSG
+%MSG-e L1T:  L1TDigiToRaw:gmtStage2Raw 04-Jan-2022 16:13:41 KST Run: 1 Event: 2
+Check constants for RegionalMuonShower fields! It looks like we're in danger of overwriting muon data in the packer!
+%MSG
+Begin processing the 3rd record. Run 1, Event 3, LumiSection 1 on stream 0 at 04-Jan-2022 16:13:45.748 KST
+%MSG-e L1T:  L1TDigiToRaw:gmtStage2Raw 04-Jan-2022 16:13:51 KST Run: 1 Event: 3
+Check constants for RegionalMuonShower fields! It looks like we're in danger of overwriting muon data in the packer!
+%MSG
+Begin processing the 4th record. Run 1, Event 4, LumiSection 1 on stream 0 at 04-Jan-2022 16:13:55.610 KST
+%MSG-e L1T:  L1TDigiToRaw:gmtStage2Raw 04-Jan-2022 16:14:01 KST Run: 1 Event: 4
+Check constants for RegionalMuonShower fields! It looks like we're in danger of overwriting muon data in the packer!
+%MSG
+%MSG-e L1T:  L1TDigiToRaw:gmtStage2Raw 04-Jan-2022 16:14:01 KST Run: 1 Event: 4
+Check constants for RegionalMuonShower fields! It looks like we're in danger of overwriting muon data in the packer!
+%MSG
+Begin processing the 5th record. Run 1, Event 5, LumiSection 1 on stream 0 at 04-Jan-2022 16:14:05.538 KST
+Begin processing the 6th record. Run 1, Event 7, LumiSection 1 on stream 0 at 04-Jan-2022 16:14:13.928 KST
+%MSG-e L1T:  L1TDigiToRaw:gmtStage2Raw 04-Jan-2022 16:14:19 KST Run: 1 Event: 7
+Check constants for RegionalMuonShower fields! It looks like we're in danger of overwriting muon data in the packer!
+%MSG
+%MSG-e L1T:  L1TDigiToRaw:gmtStage2Raw 04-Jan-2022 16:14:19 KST Run: 1 Event: 7
+Check constants for RegionalMuonShower fields! It looks like we're in danger of overwriting muon data in the packer!
+%MSG
+Begin processing the 7th record. Run 1, Event 8, LumiSection 1 on stream 0 at 04-Jan-2022 16:14:23.283 KST
+%MSG-e L1T:  L1TDigiToRaw:gmtStage2Raw 04-Jan-2022 16:14:28 KST Run: 1 Event: 8
+Check constants for RegionalMuonShower fields! It looks like we're in danger of overwriting muon data in the packer!
+%MSG
+%MSG-e L1T:  L1TDigiToRaw:gmtStage2Raw 04-Jan-2022 16:14:28 KST Run: 1 Event: 8
+Check constants for RegionalMuonShower fields! It looks like we're in danger of overwriting muon data in the packer!
+%MSG
+%MSG-e L1T:  L1TDigiToRaw:gmtStage2Raw 04-Jan-2022 16:14:28 KST Run: 1 Event: 8
+Check constants for RegionalMuonShower fields! It looks like we're in danger of overwriting muon data in the packer!
+%MSG
+%MSG-e L1T:  L1TDigiToRaw:gmtStage2Raw 04-Jan-2022 16:14:28 KST Run: 1 Event: 8
+Check constants for RegionalMuonShower fields! It looks like we're in danger of overwriting muon data in the packer!
+%MSG
+Begin processing the 8th record. Run 1, Event 9, LumiSection 1 on stream 0 at 04-Jan-2022 16:14:31.439 KST
+Begin processing the 9th record. Run 1, Event 10, LumiSection 1 on stream 0 at 04-Jan-2022 16:14:40.055 KST
+%MSG-e L1T:  L1TDigiToRaw:gmtStage2Raw 04-Jan-2022 16:14:45 KST Run: 1 Event: 10
+Check constants for RegionalMuonShower fields! It looks like we're in danger of overwriting muon data in the packer!
+%MSG
+%MSG-e L1T:  L1TDigiToRaw:gmtStage2Raw 04-Jan-2022 16:14:45 KST Run: 1 Event: 10
+Check constants for RegionalMuonShower fields! It looks like we're in danger of overwriting muon data in the packer!
+%MSG
+04-Jan-2022 16:14:50 KST  Closed file file:step1.root
+
+=============================================
+
+MessageLogger Summary
+
+ type     category        sev    module        subroutine        count    total
+ ---- -------------------- -- ---------------- ----------------  -----    -----
+    1 L1T                  -e L1TDigiToRaw:gmt                      13       13
+    2 fileAction           -s file_close                             1        1
+    3 fileAction           -s file_open                              2        2
+
+ type    category    Examples: run/evt        run/evt          run/evt
+ ---- -------------------- ---------------- ---------------- ----------------
+    1 L1T                  1/2              1/2              1/10
+    2 fileAction           PostGlobalEndRun                  
+    3 fileAction           pre-events       pre-events       
+
+Severity    # Occurrences   Total Occurrences
+--------    -------------   -----------------
+Error                  13                  13
+System                  3                   3
+
+dropped waiting message count 0

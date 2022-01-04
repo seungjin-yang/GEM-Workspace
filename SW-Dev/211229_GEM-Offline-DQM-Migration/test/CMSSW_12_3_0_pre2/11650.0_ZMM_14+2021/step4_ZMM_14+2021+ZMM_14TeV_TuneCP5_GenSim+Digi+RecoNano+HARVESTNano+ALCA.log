@@ -1,0 +1,159 @@
+%MSG-s LegacyModules:  AfterModConstruction 04-Jan-2022 16:15:26 KST pre-events
+The following legacy modules are configured. Support for legacy modules
+is going to end soon. These modules need to be converted to have type
+edm::global, edm::stream, edm::one, or in rare cases edm::limited.
+  PhotonPostprocessing photonPostprocessing
+  PhotonPostprocessing pfPhotonPostprocessing
+  ConversionPostprocessing conversionPostprocessing
+  DQMHistNormalizer normalizePlotsZTT
+  DQMFEDIntegrityClient dqmFEDIntegrity
+  EgHLTOfflineSummaryClient egHLTOffDQMSummaryClient
+  DQMOfflineHLTEventInfoClient HLTOverallSummary
+  HLTInclusiveVBFClient hltInclusiveVBFClient
+  AlcaBeamMonitorClient AlcaBeamMonitorClient
+  DQMMessageLoggerClient DQMMessageLoggerClient
+  SiStripDaqInfo siStripDaqInfo
+  ESDaqInfoTask ecalPreshowerDaqInfoTask
+  SiStripDcsInfo siStripDcsInfo
+  ESDcsInfoTask ecalPreshowerDcsInfoTask
+  SiStripCertificationInfo siStripCertificationInfo
+  ESDataCertificationTask ecalPreshowerDataCertificationTask
+%MSG
+04-Jan-2022 16:15:28 KSTSuccessfully opened file file:step3_inDQM.root
+%MSG-e HLTConfigProvider:  EgHLTOfflineClient:egHLTOffDQMClient@beginRun  04-Jan-2022 16:17:24 KST Run: 1
+Falling back to ProcessName-only init using ProcessName 'HLT' !
+%MSG
+%MSG-e HLTConfigProvider:  EgHLTOfflineClient:egHLTOffDQMClient@beginRun  04-Jan-2022 16:17:24 KST Run: 1
+ Process name 'HLT' not found in registry!
+%MSG
+%MSG-e HLTConfigProvider:   EgHLTOfflineSummaryClient:egHLTOffDQMSummaryClient@beginRun  04-Jan-2022 16:17:24 KST Run: 1
+Falling back to ProcessName-only init using ProcessName 'HLT' !
+%MSG
+%MSG-e HLTConfigProvider:   EgHLTOfflineSummaryClient:egHLTOffDQMSummaryClient@beginRun  04-Jan-2022 16:17:24 KST Run: 1
+ Process name 'HLT' not found in registry!
+%MSG
+%MSG-e DQMGenericClient:  DQMGenericClient:fsqClient@endRun  04-Jan-2022 16:17:35 KST End Run: 1
+ DQMGenericClient::findAllSubdirectories ==> Missing folder HLT/FSQ !!!
+%MSG
+%MSG-e DQMGenericClient:  DQMGenericClient:fsqClient@endRun  04-Jan-2022 16:17:35 KST End Run: 1
+ DQMGenericClient::findAllSubdirectories ==> Missing folder HLT/FSQ !!!
+%MSG
+%MSG-e DQMGenericClient:  DQMGenericClient:fsqClient@endRun  04-Jan-2022 16:17:35 KST End Run: 1
+ DQMGenericClient::findAllSubdirectories ==> Missing folder HLT/FSQ !!!
+%MSG
+%MSG-e DQMGenericClient:  DQMGenericClient:fsqClient@endRun  04-Jan-2022 16:17:35 KST End Run: 1
+ DQMGenericClient::findAllSubdirectories ==> Missing folder HLT/FSQ !!!
+%MSG
+%MSG-e DQMGenericClient:  DQMGenericClient:fsqClient@endRun  04-Jan-2022 16:17:35 KST End Run: 1
+ DQMGenericClient::findAllSubdirectories ==> Missing folder HLT/FSQ !!!
+%MSG
+%MSG-e DQMGenericClient:  DQMGenericClient:HiJetClient@endRun  04-Jan-2022 16:17:35 KST End Run: 1
+ DQMGenericClient::findAllSubdirectories ==> Missing folder HLT/HI !!!
+%MSG
+%MSG-e DQMGenericClient:  DQMGenericClient:HiJetClient@endRun  04-Jan-2022 16:17:35 KST End Run: 1
+ DQMGenericClient::findAllSubdirectories ==> Missing folder HLT/HI !!!
+%MSG
+%MSG-e DQMGenericClient:  DQMGenericClient:HiJetClient@endRun  04-Jan-2022 16:17:35 KST End Run: 1
+ DQMGenericClient::findAllSubdirectories ==> Missing folder HLT/HI !!!
+%MSG
+%MSG-e DQMGenericClient:  DQMGenericClient:HiJetClient@endRun  04-Jan-2022 16:17:35 KST End Run: 1
+ DQMGenericClient::findAllSubdirectories ==> Missing folder HLT/HI !!!
+%MSG
+%MSG-e DQMGenericClient:  DQMGenericClient:HiJetClient@endRun  04-Jan-2022 16:17:35 KST End Run: 1
+ DQMGenericClient::findAllSubdirectories ==> Missing folder HLT/HI !!!
+%MSG
+%MSG-e DQMGenericClient:  DQMGenericClient:HiJetClient@endRun  04-Jan-2022 16:17:35 KST End Run: 1
+ DQMGenericClient::findAllSubdirectories ==> Missing folder HLT/HI !!!
+%MSG
+%MSG-e DQMGenericClient:  DQMGenericClient:HiJetClient@endRun  04-Jan-2022 16:17:35 KST End Run: 1
+ DQMGenericClient::findAllSubdirectories ==> Missing folder HLT/HI !!!
+%MSG
+%MSG-e DQMGenericClient:  DQMGenericClient:HiJetClient@endRun  04-Jan-2022 16:17:35 KST End Run: 1
+ DQMGenericClient::findAllSubdirectories ==> Missing folder HLT/HI !!!
+%MSG
+%MSG-e DQMGenericClient:  DQMGenericClient:HiJetClient@endRun  04-Jan-2022 16:17:35 KST End Run: 1
+ DQMGenericClient::findAllSubdirectories ==> Missing folder HLT/HI !!!
+%MSG
+%MSG-e DQMGenericClient:  DQMGenericClient:HiJetClient@endRun  04-Jan-2022 16:17:35 KST End Run: 1
+ DQMGenericClient::findAllSubdirectories ==> Missing folder HLT/HI !!!
+%MSG
+%MSG-e DQMGenericClient:  DQMGenericClient:HiJetClient@endRun  04-Jan-2022 16:17:35 KST End Run: 1
+ DQMGenericClient::findAllSubdirectories ==> Missing folder HLT/HI !!!
+%MSG
+%MSG-e DQMGenericClient:  DQMGenericClient:muonEfficiency@endRun  04-Jan-2022 16:17:35 KST End Run: 1
+ DQMGenericClient::findAllSubdirectories ==> Missing folder HLT/EXO/Muon !!!
+%MSG
+%MSG-e DQMGenericClient:  DQMGenericClient:vbftauEfficiency@endRun  04-Jan-2022 16:17:35 KST End Run: 1
+ DQMGenericClient::findAllSubdirectories ==> Missing folder HLT/HIG/VBFTau !!!
+%MSG
+%MSG-e DQMGenericClient:  DQMGenericClient:mssmHbbBtag@endRun  04-Jan-2022 16:17:35 KST End Run: 1
+ DQMGenericClient::findAllSubdirectories ==> Missing folder HLT/HIG/MssmHbb/semileptonic/BtagTrigger !!!
+%MSG
+%MSG-e DQMGenericClient:  DQMGenericClient:MssmHbbmuHLTEfficiency@endRun  04-Jan-2022 16:17:35 KST End Run: 1
+ DQMGenericClient::findAllSubdirectories ==> Missing folder HLT/HIG/MssmHbb/semileptonic !!!
+%MSG
+
+
+
+
+
+%MSG-w SiStripBadModuleFedErrService:   SiStripBadComponentInfo:siStripBadComponentInfo@endProcessBlock  04-Jan-2022 16:18:01 KST post-events
+Empty bad channel map from FED errors
+%MSG
+%MSG-e DQMCorrelationClient:   DQMCorrelationClient:pixelClusterVsLumiPXBarrel@endProcessBlock  04-Jan-2022 16:18:05 KST post-events
+MEs not found! HLT/Pixel/num_clusters_per_Lumisection_PXBarrel not found 
+%MSG
+%MSG-e DQMCorrelationClient:   DQMCorrelationClient:pixelClusterVsLumiPXForward@endProcessBlock  04-Jan-2022 16:18:05 KST post-events
+MEs not found! HLT/Pixel/num_clusters_per_Lumisection_PXForward not found 
+%MSG
+
+
+
+
+
+DQMFileSaver::globalEndRun()
+
+=============================================
+
+MessageLogger Summary
+
+ type     category        sev    module        subroutine        count    total
+ ---- -------------------- -- ---------------- ----------------  -----    -----
+    1 SiStripBadModuleFedE -w SiStripBadCompon                       1        1
+    2 DQMCorrelationClient -e DQMCorrelationCl                       1        1
+    3 DQMCorrelationClient -e DQMCorrelationCl                       1        1
+    4 DQMGenericClient     -e DQMGenericClient                      11       11
+    5 DQMGenericClient     -e DQMGenericClient                       1        1
+    6 DQMGenericClient     -e DQMGenericClient                       5        5
+    7 DQMGenericClient     -e DQMGenericClient                       1        1
+    8 DQMGenericClient     -e DQMGenericClient                       1        1
+    9 DQMGenericClient     -e DQMGenericClient                       1        1
+   10 HLTConfigProvider    -e EgHLTOfflineClie                       2        2
+   11 HLTConfigProvider    -e EgHLTOfflineSumm                       2        2
+   12 LegacyModules        -s AfterModConstruc                       1        1
+   13 fileAction           -s AfterModBeginStr                       1        1
+
+ type    category    Examples: run/evt        run/evt          run/evt
+ ---- -------------------- ---------------- ---------------- ----------------
+    1 SiStripBadModuleFedErrService post-events                       
+    2 DQMCorrelationClient post-events                       
+    3 DQMCorrelationClient post-events                       
+    4 DQMGenericClient     End Run: 1       End Run: 1       End Run: 1
+    5 DQMGenericClient     End Run: 1                        
+    6 DQMGenericClient     End Run: 1       End Run: 1       End Run: 1
+    7 DQMGenericClient     End Run: 1                        
+    8 DQMGenericClient     End Run: 1                        
+    9 DQMGenericClient     End Run: 1                        
+   10 HLTConfigProvider    Run: 1           Run: 1           
+   11 HLTConfigProvider    Run: 1           Run: 1           
+   12 LegacyModules        pre-events                        
+   13 fileAction           BeforeEvents                      
+
+Severity    # Occurrences   Total Occurrences
+--------    -------------   -----------------
+Warning                 1                   1
+Error                  26                  26
+System                  2                   2
+
+dropped waiting message count 0
+04-Jan-2022 16:18:38 KSTClosed file
