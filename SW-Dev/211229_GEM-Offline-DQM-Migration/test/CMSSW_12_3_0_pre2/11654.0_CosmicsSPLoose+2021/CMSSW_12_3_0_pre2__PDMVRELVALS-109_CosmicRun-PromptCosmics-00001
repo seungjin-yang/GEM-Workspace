@@ -1,0 +1,79 @@
+#!/bin/bash
+
+# Copied from https://cms-pdmv.cern.ch/relval/api/relvals/get_cmsdriver/CMSSW_12_3_0_pre2__PDMVRELVALS-109_CosmicRun-PromptCosmics-00001
+
+export SCRAM_ARCH=slc7_amd64_gcc10
+source /cvmfs/cms.cern.ch/cmsset_default.sh
+ORG_PWD=$(pwd)
+mkdir -p slc7_amd64_gcc10
+cd slc7_amd64_gcc10
+if [ ! -r CMSSW_12_3_0_pre2/src ] ; then scram p CMSSW CMSSW_12_3_0_pre2 ; fi
+cd CMSSW_12_3_0_pre2/src
+CMSSW_SRC=$(pwd)
+eval `scram runtime -sh`
+cd $ORG_PWD
+
+# Arguments for step 1:
+#   dataset: /ExpressCosmics/Commissioning2021-Express-v1/FEVT
+#   run: 343498, range: 1 - 10000
+
+# Command for step 1:
+echo "" > step1_files.txt
+dasgoclient --limit 0 --format json --query "lumi,file dataset=/ExpressCosmics/Commissioning2021-Express-v1/FEVT run=343498" | das-selected-lumis.py 1,10000 | sort -u >> step1_files.txt
+echo '{"343498": [[1, 10000]]}' > step1_lumi_ranges.txt
+
+# Arguments for step 2:
+# --conditions auto:run3_data_prompt
+# --customise Configuration/DataProcessing/RecoTLR.customisePrompt,Configuration/DataProcessing/RecoTLR.customiseCosmicData
+# --data
+# --datatier RECO,DQMIO
+# --era Run3
+# --eventcontent RECO,DQM
+# --filein "filelist:step1_files.txt"
+# --fileout "file:step2.root"
+# --lumiToProcess "step1_lumi_ranges.txt"
+# --nThreads 8
+# --no_exec
+# --number 10
+# --process reRECO
+# --python_filename step_2_cfg.py
+# --scenario cosmics
+# --step RAW2DIGI,L1Reco,RECO,DQM
+
+# Command for step 2:
+cmsDriver.py step2 --conditions auto:run3_data_prompt --customise Configuration/DataProcessing/RecoTLR.customisePrompt,Configuration/DataProcessing/RecoTLR.customiseCosmicData --data --datatier RECO,DQMIO --era Run3 --eventcontent RECO,DQM --filein "filelist:step1_files.txt" --fileout "file:step2.root" --lumiToProcess "step1_lumi_ranges.txt" --nThreads 8 --no_exec --number 10 --process reRECO --python_filename step_2_cfg.py --scenario cosmics --step RAW2DIGI,L1Reco,RECO,DQM || exit $?
+
+# Arguments for step 3:
+# --conditions auto:run3_data_prompt
+# --datatier ALCARECO
+# --era Run3
+# --eventcontent ALCARECO
+# --filein "file:step2.root"
+# --fileout "file:step3.root"
+# --nThreads 8
+# --no_exec
+# --number 10
+# --python_filename step_3_cfg.py
+# --scenario cosmics
+# --step ALCA:SiPixelCalCosmics+TkAlCosmics0T+SiStripCalCosmics+SiStripCalCosmicsNano+MuAlGlobalCosmics+HcalCalHOCosmics+DQM
+
+# Command for step 3:
+cmsDriver.py step3 --conditions auto:run3_data_prompt --datatier ALCARECO --era Run3 --eventcontent ALCARECO --filein "file:step2.root" --fileout "file:step3.root" --nThreads 8 --no_exec --number 10 --python_filename step_3_cfg.py --scenario cosmics --step ALCA:SiPixelCalCosmics+TkAlCosmics0T+SiStripCalCosmics+SiStripCalCosmicsNano+MuAlGlobalCosmics+HcalCalHOCosmics+DQM || exit $?
+
+# Arguments for step 4:
+# --conditions auto:run3_data_prompt
+# --data
+# --era Run3
+# --filein "file:step2_inDQM.root"
+# --fileout "file:step4.root"
+# --filetype DQM
+# --no_exec
+# --number 10
+# --python_filename step_4_cfg.py
+# --scenario cosmics
+# --step HARVESTING:dqmHarvestingFakeHLT
+
+# Command for step 4:
+cmsDriver.py step4 --conditions auto:run3_data_prompt --data --era Run3 --filein "file:step2_inDQM.root" --fileout "file:step4.root" --filetype DQM --no_exec --number 10 --python_filename step_4_cfg.py --scenario cosmics --step HARVESTING:dqmHarvestingFakeHLT || exit $?
+
+
