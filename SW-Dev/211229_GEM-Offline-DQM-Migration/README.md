@@ -25,4 +25,4 @@ find . -type f -name "*.h" -exec sed -i 's/DQMOffline_Muon_/DQM_GEM_/g' {} +
 
 ## Result
 - Branch: [seungjin-yang:Moving-GEM-Offline-DQM__from-CMSSW_12_3_0_pre2](https://github.com/seungjin-yang/cmssw/tree/Moving-GEM-Offline-DQM__from-CMSSW_12_3_0_pre2)
-- PR: `TODO`
+- PR: [Migrate to EventSetup with ESGetToken in GEMCSCSegmentProducer #36628](https://github.com/cms-sw/cmssw/pull/36628)
