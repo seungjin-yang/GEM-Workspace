@@ -1,3 +1,5 @@
+# Migration to EventSetup with ESGetToken in GEMCSCSegmentProducer
+
 ## Description
 Got [an exception](https://github.com/cms-sw/cmssw/blob/master/FWCore/Framework/src/EventSetupRecord.cc#L134-L140) while running step3 with GEMCSCSegment reco. Need to fix [GEMCSCSegmentProducer](https://github.com/cms-sw/cmssw/blob/master/RecoLocalMuon/GEMCSCSegment/plugins/GEMCSCSegmentProducer.cc#L39-L46), which still uses a deprecated pattern when loading geometry. 
 
