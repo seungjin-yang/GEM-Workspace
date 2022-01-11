@@ -74,4 +74,4 @@ Then, check `plotting.ipynb`
 
 ## Result
 - Branch: [seungjin-yang:Fix-GEMCSCSegmentProducer-Geometry-Loading__from-CMSSW_12_3_0_pre2](https://github.com/seungjin-yang/cmssw/tree/Fix-GEMCSCSegmentProducer-Geometry-Loading__from-CMSSW_12_3_0_pre2)
-- PR: [Fix gemcsc segment producer geometry loading from cmssw 12 3 0 pre2 #36628](https://github.com/cms-sw/cmssw/pull/36628)
+- PR: [Migrate to EventSetup with ESGetToken in GEMCSCSegmentProducer #36628](https://github.com/cms-sw/cmssw/pull/36628)
