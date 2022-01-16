@@ -13,7 +13,7 @@ cmsDriver.py UndergroundCosmicSPLooseMu_cfi  \
     --python_filename step1_GEN_SIM.py \
     --nStreams 2 \
     --nThreads 8 \
-> step1.log 2>&1 &
+> step1.log 2>&1
 
 cmsDriver.py step2  \
 	--step DIGI:pdigi_valid,L1,DIGI2RAW,HLT:@relval2021 \
@@ -28,7 +28,7 @@ cmsDriver.py step2  \
 	--fileout file:step2.root \
     --nStreams 2 \
     --nThreads 8 \
-> step2.log 2>&1 &
+> step2.log 2>&1
 
 cmsDriver.py step3  \
 	--step RAW2DIGI,L1Reco,RECO,DQM \
@@ -43,7 +43,7 @@ cmsDriver.py step3  \
 	--fileout file:step3.root \
     --nStreams 2 \
     --nThreads 8 \
-> step3.log 2>&1 &
+> step3.log 2>&1
 
 cmsDriver.py step4  \
 	--step HARVESTING:@standardDQM \
@@ -57,4 +57,4 @@ cmsDriver.py step4  \
 	--number -1 \
 	--filein file:step3_inDQM.root \
 	--fileout file:step4.root \
-> step4.log 2>&1 &
+> step4.log 2>&1

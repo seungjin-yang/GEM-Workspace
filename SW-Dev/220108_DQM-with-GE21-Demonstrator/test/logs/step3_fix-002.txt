@@ -1,0 +1,262 @@
+	--- egmGsfElectronIDs:cutBasedElectronID-Fall17-94X-V1-loose added to patElectrons
+	--- egmGsfElectronIDs:cutBasedElectronID-Fall17-94X-V1-medium added to patElectrons
+	--- egmGsfElectronIDs:cutBasedElectronID-Fall17-94X-V1-tight added to patElectrons
+	--- egmGsfElectronIDs:cutBasedElectronID-Fall17-94X-V1-veto added to patElectrons
+	--- egmGsfElectronIDs:cutBasedElectronID-Fall17-94X-V2-loose added to patElectrons
+	--- egmGsfElectronIDs:cutBasedElectronID-Fall17-94X-V2-medium added to patElectrons
+	--- egmGsfElectronIDs:cutBasedElectronID-Fall17-94X-V2-tight added to patElectrons
+	--- egmGsfElectronIDs:cutBasedElectronID-Fall17-94X-V2-veto added to patElectrons
+	--- egmGsfElectronIDs:heepElectronID-HEEPV70 added to patElectrons
+	--- egmGsfElectronIDs:mvaEleID-Fall17-iso-V1-wp80 added to patElectrons
+	--- egmGsfElectronIDs:mvaEleID-Fall17-iso-V1-wp90 added to patElectrons
+	--- egmGsfElectronIDs:mvaEleID-Fall17-iso-V1-wpLoose added to patElectrons
+	--- egmGsfElectronIDs:mvaEleID-Fall17-noIso-V1-wp80 added to patElectrons
+	--- egmGsfElectronIDs:mvaEleID-Fall17-noIso-V1-wp90 added to patElectrons
+	--- egmGsfElectronIDs:mvaEleID-Fall17-noIso-V1-wpLoose added to patElectrons
+	--- egmGsfElectronIDs:mvaEleID-Fall17-iso-V2-wp80 added to patElectrons
+	--- egmGsfElectronIDs:mvaEleID-Fall17-iso-V2-wp90 added to patElectrons
+	--- egmGsfElectronIDs:mvaEleID-Fall17-iso-V2-wpHZZ added to patElectrons
+	--- egmGsfElectronIDs:mvaEleID-Fall17-iso-V2-wpLoose added to patElectrons
+	--- egmGsfElectronIDs:mvaEleID-Fall17-noIso-V2-wp80 added to patElectrons
+	--- egmGsfElectronIDs:mvaEleID-Fall17-noIso-V2-wp90 added to patElectrons
+	--- egmGsfElectronIDs:mvaEleID-Fall17-noIso-V2-wpLoose added to patElectrons
+	--- egmPhotonIDs:cutBasedPhotonID-Fall17-94X-V1-loose added to patPhotons
+	--- egmPhotonIDs:cutBasedPhotonID-Fall17-94X-V1-medium added to patPhotons
+	--- egmPhotonIDs:cutBasedPhotonID-Fall17-94X-V1-tight added to patPhotons
+	--- egmPhotonIDs:cutBasedPhotonID-Fall17-94X-V2-loose added to patPhotons
+	--- egmPhotonIDs:cutBasedPhotonID-Fall17-94X-V2-medium added to patPhotons
+	--- egmPhotonIDs:cutBasedPhotonID-Fall17-94X-V2-tight added to patPhotons
+	--- egmPhotonIDs:mvaPhoID-RunIIFall17-v1p1-wp80 added to patPhotons
+	--- egmPhotonIDs:mvaPhoID-RunIIFall17-v1p1-wp90 added to patPhotons
+	--- egmPhotonIDs:mvaPhoID-RunIIFall17-v2-wp80 added to patPhotons
+	--- egmPhotonIDs:mvaPhoID-RunIIFall17-v2-wp90 added to patPhotons
+	--- egmPhotonIDs:cutBasedPhotonID-Spring16-V2p2-loose added to patPhotons
+	--- egmPhotonIDs:cutBasedPhotonID-Spring16-V2p2-medium added to patPhotons
+	--- egmPhotonIDs:cutBasedPhotonID-Spring16-V2p2-tight added to patPhotons
+	--- egmPhotonIDs:mvaPhoID-Spring16-nonTrig-V1-wp80 added to patPhotons
+	--- egmPhotonIDs:mvaPhoID-Spring16-nonTrig-V1-wp90 added to patPhotons
+10-Jan-2022 16:39:37 KST  Initiating request to open file file:step2.root
+10-Jan-2022 16:39:43 KST  Successfully opened file file:step2.root
+ Initialise Constructor 
+ InitStatistics() 
+InitStatistics(): vectors resized 
+InitStatistics(): main titles 1D DONE 
+InitStatistics(): main titles 2D DONE 
+InitStatistics(): main titles 1D DONE 
+InitStatistics(): names 1D DONE 
+InitStatistics(): names 2D DONE 
+InitStatistics(): DONE 
+ Initialise Constructor 
+ InitStatistics() 
+InitStatistics(): vectors resized 
+InitStatistics(): main titles 1D DONE 
+InitStatistics(): main titles 2D DONE 
+InitStatistics(): main titles 1D DONE 
+InitStatistics(): names 1D DONE 
+InitStatistics(): names 2D DONE 
+InitStatistics(): DONE 
+ Initialise Constructor 
+ InitStatistics() 
+InitStatistics(): vectors resized 
+InitStatistics(): main titles 1D DONE 
+InitStatistics(): main titles 2D DONE 
+InitStatistics(): main titles 1D DONE 
+InitStatistics(): names 1D DONE 
+InitStatistics(): names 2D DONE 
+InitStatistics(): DONE 
+ Initialise Constructor 
+ InitStatistics() 
+InitStatistics(): vectors resized 
+InitStatistics(): main titles 1D DONE 
+InitStatistics(): main titles 2D DONE 
+InitStatistics(): main titles 1D DONE 
+InitStatistics(): names 1D DONE 
+InitStatistics(): names 2D DONE 
+InitStatistics(): DONE 
+ Initialise Constructor 
+ InitStatistics() 
+InitStatistics(): vectors resized 
+InitStatistics(): main titles 1D DONE 
+InitStatistics(): main titles 2D DONE 
+InitStatistics(): main titles 1D DONE 
+InitStatistics(): names 1D DONE 
+InitStatistics(): names 2D DONE 
+InitStatistics(): DONE 
+ Initialise Constructor 
+ InitStatistics() 
+InitStatistics(): vectors resized 
+InitStatistics(): main titles 1D DONE 
+InitStatistics(): main titles 2D DONE 
+InitStatistics(): main titles 1D DONE 
+InitStatistics(): names 1D DONE 
+InitStatistics(): names 2D DONE 
+InitStatistics(): DONE 
+%MSG-w BTagSFProducer:  BTagSFProducer:btagWeightTable@ctor  10-Jan-2022 16:40:06 KST pre-events
+Skipped loading BTagCalibration for CMVA as it was marked as unavailable in the configuration file. Event weights will not be stored.
+
+%MSG
+2022-01-10 16:40:07.886598: I tensorflow/core/platform/cpu_feature_guard.cc:142] This TensorFlow binary is optimized with oneAPI Deep Neural Network Library (oneDNN) to use the following CPU instructions in performance-critical operations:  SSE4.1 SSE4.2 AVX
+To enable them in other operations, rebuild TensorFlow with the appropriate compiler flags.
+%MSG-e L1PrefireWeightProducer:  L1PrefiringWeightProducer:prefiringweight@ctor  10-Jan-2022 16:40:24 KST pre-events
+Photon map not found. All photons prefiring weights set to 0. 
+%MSG
+%MSG-e L1PrefireWeightProducer:  L1PrefiringWeightProducer:prefiringweight@ctor  10-Jan-2022 16:40:24 KST pre-events
+Jet map not found. All jets prefiring weights set to 0. 
+%MSG
+%MSG-w LogicError:  GenWeightsTableProducer:genWeightsTable@beginRun  10-Jan-2022 16:40:55 KST Run: 1
+::getByLabel: An attempt was made to read a Run product before endRun() was called.
+The product is of type 'LHERunInfoProduct'.
+The specified ModuleLabel was 'externalLHEProducer'.
+The specified productInstanceName was ''.
+
+%MSG
+%MSG-w LogicError:  GenWeightsTableProducer:genWeightsTable@beginRun  10-Jan-2022 16:40:55 KST Run: 1
+::getByLabel: An attempt was made to read a Run product before endRun() was called.
+The product is of type 'LHERunInfoProduct'.
+The specified ModuleLabel was 'source'.
+The specified productInstanceName was ''.
+
+%MSG
+%MSG-w LogicError:  HTXSRivetProducer:rivetProducerHTXS@beginRun  10-Jan-2022 16:40:55 KST Run: 1
+::getByLabel: An attempt was made to read a Run product before endRun() was called.
+The product is of type 'LHERunInfoProduct'.
+The specified ModuleLabel was 'externalLHEProducer'.
+The specified productInstanceName was ''.
+
+%MSG
+PersistencyIO    INFO  +++ Set Streamer to dd4hep::OpaqueDataBlock
+DD4hep           WARN  ++ Using globally Geant4 unit system (mm,ns,MeV)
+CompactLoader    INFO  +++ Processing compact file: /cms/ldap_home/slowmoyang/Projects/GEM/SW-Dev/220108_DQM-with-GE21-Demonstrator/CMSSW_12_3_X_2022-01-06-2300/src/Geometry/CMSCommonData/data/dd4hep/cmsExtendedGeometry2021.xml with flag (null)
+DD4CMS           INFO  +++ Processing the CMS detector description file:///cms/ldap_home/slowmoyang/Projects/GEM/SW-Dev/220108_DQM-with-GE21-Demonstrator/CMSSW_12_3_X_2022-01-06-2300/src/Geometry/CMSCommonData/data/dd4hep/cmsExtendedGeometry2021.xml
+Detector         INFO  *********** Created World volume with size: 101000 101000 450000
+PlacedVolume     INFO  REFLECTION: (x.Cross(y)).Dot(z):       -1 Parent: eregalgo:EFAW [TGeoVolume] Daughter: eregalgo:EHAWR [TGeoVolumeAssembly]
+DD4CMS           ERROR ++ FAILED  NOT ADDING SUBDETECTOR 00000000 = bhmalgo:DDBHMAngular
+Detector         INFO  +++ Patching names of anonymous shapes....
+DDDefinition     INFO  +++ Finished processing file:///cms/ldap_home/slowmoyang/Projects/GEM/SW-Dev/220108_DQM-with-GE21-Demonstrator/CMSSW_12_3_X_2022-01-06-2300/src/Geometry/CMSCommonData/data/dd4hep/cmsExtendedGeometry2021.xml
+%MSG-w GEMGeometryBuilder:  AfterModGlobalBeginRun 10-Jan-2022 16:41:18 KST  Run: 1
+Missing chamber  Re 1 Ri 1 St 2 La 1 Ch 16 Et 0 
+%MSG
+DD4hep           WARN  ++ Using globally Geant4 unit system (mm,ns,MeV)
+DD4CMS           INFO  +++ Processing the CMS detector description xml-memory-buffer
+Detector         INFO  *********** Created World volume with size: 101000 101000 450000
+Detector         INFO  +++ Patching names of anonymous shapes....
+DDDefinition     INFO  +++ Finished processing xml-memory-buffer
+%MSG-e TkDetLayers:  AfterModStreamBeginRun 10-Jan-2022 16:42:11 KST  Run: 1 Stream: 0
+ ForwardDiskSectorBuilderFromDet: Trying to build Petal Wedge from Dets at different z positions !! Delta_z = -0.951241
+%MSG
+[EfficiencyAnalyzer] Parameters initialization DONE
+[EfficiencyAnalyzer] Parameters initialization DONE
+[EfficiencyAnalyzer] Parameters initialization DONE
+[MuonRecoOneHLT]  beginRun 
+[MuonRecoOneHLT]  Is MuonEventFlag On? 1
+[EfficiencyAnalyzer] Parameters initialization DONE
+[EfficiencyAnalyzer] Parameters initialization DONE
+[EfficiencyAnalyzer] Parameters initialization DONE
+%MSG-w MonitorElement:   GEMEfficiencyAnalyzer:gemEfficiencyAnalyzerSta@streamBeginRun  10-Jan-2022 16:42:18 KST Run: 1 Stream: 0
+*** MonitorElement: WARNING:setBinLabel: attempting to set label of non-existent bin number for ME: GEM/Efficiency/type2/Efficiency/detector_GE21-P-L2 
+
+%MSG
+%MSG-w MonitorElement:   GEMEfficiencyAnalyzer:gemEfficiencyAnalyzerTightGlb@streamBeginRun  10-Jan-2022 16:42:18 KST Run: 1 Stream: 0
+*** MonitorElement: WARNING:setBinLabel: attempting to set label of non-existent bin number for ME: GEM/Efficiency/type1/Efficiency/detector_GE21-P-L2 
+
+%MSG
+%MSG-e GEMRecHitSource:  GEMRecHitSource:GEMRecHitSource@streamBeginRun  10-Jan-2022 16:42:20 KST Run: 1 Stream: 0
+WARNING: Cannot find the histogram corresponing to the given key
+
+%MSG
+%MSG-e GEMDigiSource:  GEMDigiSource:GEMDigiSource@streamBeginRun  10-Jan-2022 16:42:20 KST Run: 1 Stream: 0
+WARNING: Cannot find the histogram corresponing to the given key
+
+%MSG
+Begin processing the 1st record. Run 1, Event 1, LumiSection 1 on stream 0 at 10-Jan-2022 16:42:21.754 KST
+#--------------------------------------------------------------------------
+#                         FastJet release 3.4.0
+#                 M. Cacciari, G.P. Salam and G. Soyez                  
+#     A software package for jet finding and analysis at colliders      
+#                           http://fastjet.fr                           
+#	                                                                      
+# Please cite EPJC72(2012)1896 [arXiv:1111.6097] if you use this package
+# for scientific work and optionally PLB641(2006)57 [hep-ph/0512210].   
+#                                                                       
+# FastJet is provided without warranty under the GNU GPL v2 or higher.  
+# It uses T. Chan's closest pair algorithm, S. Fortune's Voronoi code
+# and 3rd party plugin jet algorithms. See COPYING file for details.
+#--------------------------------------------------------------------------
+%MSG-w LHETablesProducer:  GenWeightsTableProducer:genWeightsTable  10-Jan-2022 16:42:24 KST Run: 1 Event: 1
+No LHEEventProduct, so there will be no LHE Tables
+
+%MSG
+
+
+A fatal system signal has occurred: segmentation violation
+The following is the call stack containing the origin of the signal.
+
+Mon Jan 10 16:42:25 KST 2022
+Thread 5 (Thread 0x7f214bbff700 (LWP 3214724) "cmsRun"):
+#0  0x00007f222077ba35 in pthread_cond_wait@@GLIBC_2.3.2 () from /lib64/libpthread.so.0
+#1  0x00007f2220d71a7c in __gthread_cond_wait (__mutex=<optimized out>, __cond=<optimized out>) at /data/cmsbld/jenkins/workspace/auto-builds/CMSSW_12_3_0_pre2-slc7_amd64_gcc10/build/CMSSW_12_3_0_pre2-build/BUILD/slc7_amd64_gcc10/external/gcc/10.3.0-84898dea653199466402e67d73657f10/gcc-10.3.0/obj/x86_64-unknown-linux-gnu/libstdc++-v3/include/x86_64-unknown-linux-gnu/bits/gthr-default.h:865
+#2  std::condition_variable::wait (this=<optimized out>, __lock=...) at ../../../../../libstdc++-v3/src/c++11/condition_variable.cc:53
+#3  0x00007f21de27a94b in Eigen::ThreadPoolTempl<tensorflow::thread::EigenEnvironment>::WaitForWork(Eigen::EventCount::Waiter*, tensorflow::thread::EigenEnvironment::Task*) () from /cvmfs/cms-ib.cern.ch/week0/slc7_amd64_gcc10/cms/cmssw-patch/CMSSW_12_3_X_2022-01-06-2300/external/slc7_amd64_gcc10/lib/libtensorflow_cc.so.2
+#4  0x00007f21de27b198 in Eigen::ThreadPoolTempl<tensorflow::thread::EigenEnvironment>::WorkerLoop(int) () from /cvmfs/cms-ib.cern.ch/week0/slc7_amd64_gcc10/cms/cmssw-patch/CMSSW_12_3_X_2022-01-06-2300/external/slc7_amd64_gcc10/lib/libtensorflow_cc.so.2
+#5  0x00007f21de277a88 in std::_Function_handler<void (), tensorflow::thread::EigenEnvironment::CreateThread(std::function<void ()>)::{lambda()#1}>::_M_invoke(std::_Any_data const&) () from /cvmfs/cms-ib.cern.ch/week0/slc7_amd64_gcc10/cms/cmssw-patch/CMSSW_12_3_X_2022-01-06-2300/external/slc7_amd64_gcc10/lib/libtensorflow_cc.so.2
+#6  0x00007f21db0b5b61 in tensorflow::(anonymous namespace)::PThread::ThreadFn(void*) () from /cvmfs/cms-ib.cern.ch/week0/slc7_amd64_gcc10/cms/cmssw-patch/CMSSW_12_3_X_2022-01-06-2300/external/slc7_amd64_gcc10/lib/libtensorflow_framework.so.2
+#7  0x00007f2220777ea5 in start_thread () from /lib64/libpthread.so.0
+#8  0x00007f222049fb0d in clone () from /lib64/libc.so.6
+Thread 4 (Thread 0x7f214c9ff700 (LWP 3214718) "cmsRun"):
+#0  0x00007f222077ba35 in pthread_cond_wait@@GLIBC_2.3.2 () from /lib64/libpthread.so.0
+#1  0x00007f2220d71a7c in __gthread_cond_wait (__mutex=<optimized out>, __cond=<optimized out>) at /data/cmsbld/jenkins/workspace/auto-builds/CMSSW_12_3_0_pre2-slc7_amd64_gcc10/build/CMSSW_12_3_0_pre2-build/BUILD/slc7_amd64_gcc10/external/gcc/10.3.0-84898dea653199466402e67d73657f10/gcc-10.3.0/obj/x86_64-unknown-linux-gnu/libstdc++-v3/include/x86_64-unknown-linux-gnu/bits/gthr-default.h:865
+#2  std::condition_variable::wait (this=<optimized out>, __lock=...) at ../../../../../libstdc++-v3/src/c++11/condition_variable.cc:53
+#3  0x00007f21de27a94b in Eigen::ThreadPoolTempl<tensorflow::thread::EigenEnvironment>::WaitForWork(Eigen::EventCount::Waiter*, tensorflow::thread::EigenEnvironment::Task*) () from /cvmfs/cms-ib.cern.ch/week0/slc7_amd64_gcc10/cms/cmssw-patch/CMSSW_12_3_X_2022-01-06-2300/external/slc7_amd64_gcc10/lib/libtensorflow_cc.so.2
+#4  0x00007f21de27b198 in Eigen::ThreadPoolTempl<tensorflow::thread::EigenEnvironment>::WorkerLoop(int) () from /cvmfs/cms-ib.cern.ch/week0/slc7_amd64_gcc10/cms/cmssw-patch/CMSSW_12_3_X_2022-01-06-2300/external/slc7_amd64_gcc10/lib/libtensorflow_cc.so.2
+#5  0x00007f21de277a88 in std::_Function_handler<void (), tensorflow::thread::EigenEnvironment::CreateThread(std::function<void ()>)::{lambda()#1}>::_M_invoke(std::_Any_data const&) () from /cvmfs/cms-ib.cern.ch/week0/slc7_amd64_gcc10/cms/cmssw-patch/CMSSW_12_3_X_2022-01-06-2300/external/slc7_amd64_gcc10/lib/libtensorflow_cc.so.2
+#6  0x00007f21db0b5b61 in tensorflow::(anonymous namespace)::PThread::ThreadFn(void*) () from /cvmfs/cms-ib.cern.ch/week0/slc7_amd64_gcc10/cms/cmssw-patch/CMSSW_12_3_X_2022-01-06-2300/external/slc7_amd64_gcc10/lib/libtensorflow_framework.so.2
+#7  0x00007f2220777ea5 in start_thread () from /lib64/libpthread.so.0
+#8  0x00007f222049fb0d in clone () from /lib64/libc.so.6
+Thread 3 (Thread 0x7f214d608700 (LWP 3214716) "cmsRun"):
+#0  0x00007f222077ba35 in pthread_cond_wait@@GLIBC_2.3.2 () from /lib64/libpthread.so.0
+#1  0x00007f2220d71a7c in __gthread_cond_wait (__mutex=<optimized out>, __cond=<optimized out>) at /data/cmsbld/jenkins/workspace/auto-builds/CMSSW_12_3_0_pre2-slc7_amd64_gcc10/build/CMSSW_12_3_0_pre2-build/BUILD/slc7_amd64_gcc10/external/gcc/10.3.0-84898dea653199466402e67d73657f10/gcc-10.3.0/obj/x86_64-unknown-linux-gnu/libstdc++-v3/include/x86_64-unknown-linux-gnu/bits/gthr-default.h:865
+#2  std::condition_variable::wait (this=<optimized out>, __lock=...) at ../../../../../libstdc++-v3/src/c++11/condition_variable.cc:53
+#3  0x00007f21de27a94b in Eigen::ThreadPoolTempl<tensorflow::thread::EigenEnvironment>::WaitForWork(Eigen::EventCount::Waiter*, tensorflow::thread::EigenEnvironment::Task*) () from /cvmfs/cms-ib.cern.ch/week0/slc7_amd64_gcc10/cms/cmssw-patch/CMSSW_12_3_X_2022-01-06-2300/external/slc7_amd64_gcc10/lib/libtensorflow_cc.so.2
+#4  0x00007f21de27b198 in Eigen::ThreadPoolTempl<tensorflow::thread::EigenEnvironment>::WorkerLoop(int) () from /cvmfs/cms-ib.cern.ch/week0/slc7_amd64_gcc10/cms/cmssw-patch/CMSSW_12_3_X_2022-01-06-2300/external/slc7_amd64_gcc10/lib/libtensorflow_cc.so.2
+#5  0x00007f21de277a88 in std::_Function_handler<void (), tensorflow::thread::EigenEnvironment::CreateThread(std::function<void ()>)::{lambda()#1}>::_M_invoke(std::_Any_data const&) () from /cvmfs/cms-ib.cern.ch/week0/slc7_amd64_gcc10/cms/cmssw-patch/CMSSW_12_3_X_2022-01-06-2300/external/slc7_amd64_gcc10/lib/libtensorflow_cc.so.2
+#6  0x00007f21db0b5b61 in tensorflow::(anonymous namespace)::PThread::ThreadFn(void*) () from /cvmfs/cms-ib.cern.ch/week0/slc7_amd64_gcc10/cms/cmssw-patch/CMSSW_12_3_X_2022-01-06-2300/external/slc7_amd64_gcc10/lib/libtensorflow_framework.so.2
+#7  0x00007f2220777ea5 in start_thread () from /lib64/libpthread.so.0
+#8  0x00007f222049fb0d in clone () from /lib64/libc.so.6
+Thread 2 (Thread 0x7f21f318f700 (LWP 3207849) "cmsRun"):
+#0  0x00007f222077f1d9 in waitpid () from /lib64/libpthread.so.0
+#1  0x00007f2213570e57 in edm::service::cmssw_stacktrace_fork() () from /cvmfs/cms-ib.cern.ch/nweek-02714/slc7_amd64_gcc10/cms/cmssw/CMSSW_12_3_X_2022-01-02-0000/lib/slc7_amd64_gcc10/pluginFWCoreServicesPlugins.so
+#2  0x00007f22135719ca in edm::service::InitRootHandlers::stacktraceHelperThread() () from /cvmfs/cms-ib.cern.ch/nweek-02714/slc7_amd64_gcc10/cms/cmssw/CMSSW_12_3_X_2022-01-02-0000/lib/slc7_amd64_gcc10/pluginFWCoreServicesPlugins.so
+#3  0x00007f2220d76f90 in std::execute_native_thread_routine (__p=0x7f221c04cde0) at ../../../../../libstdc++-v3/src/c++11/thread.cc:80
+#4  0x00007f2220777ea5 in start_thread () from /lib64/libpthread.so.0
+#5  0x00007f222049fb0d in clone () from /lib64/libc.so.6
+Thread 1 (Thread 0x7f221e602540 (LWP 3199581) "cmsRun"):
+#0  0x00007f2220494ddd in poll () from /lib64/libc.so.6
+#1  0x00007f221357110f in full_read.constprop () from /cvmfs/cms-ib.cern.ch/nweek-02714/slc7_amd64_gcc10/cms/cmssw/CMSSW_12_3_X_2022-01-02-0000/lib/slc7_amd64_gcc10/pluginFWCoreServicesPlugins.so
+#2  0x00007f2213571a9c in edm::service::InitRootHandlers::stacktraceFromThread() () from /cvmfs/cms-ib.cern.ch/nweek-02714/slc7_amd64_gcc10/cms/cmssw/CMSSW_12_3_X_2022-01-02-0000/lib/slc7_amd64_gcc10/pluginFWCoreServicesPlugins.so
+#3  0x00007f22135743eb in sig_dostack_then_abort () from /cvmfs/cms-ib.cern.ch/nweek-02714/slc7_amd64_gcc10/cms/cmssw/CMSSW_12_3_X_2022-01-02-0000/lib/slc7_amd64_gcc10/pluginFWCoreServicesPlugins.so
+#4  <signal handler called>
+#5  boost::intrusive_ptr<Plane>::operator* (this=0x8) at /cvmfs/cms-ib.cern.ch/nweek-02714/slc7_amd64_gcc10/external/boost/1.75.0-d92e5fa723d0ea2c498d4ee58b805800/include/boost/smart_ptr/intrusive_ptr.hpp:191
+#6  GeomDet::surface (this=0x0) at /cvmfs/cms-ib.cern.ch/week0/slc7_amd64_gcc10/cms/cmssw-patch/CMSSW_12_3_X_2022-01-06-2300/src/Geometry/CommonTopologies/interface/GeomDet.h:37
+#7  GEMStripDigiValidation::analyzeSimHit (this=0x7f21ac74e600, simhit_container=..., digiSimLink=..., gem=0x7f211dbbfe80) at /cms/ldap_home/slowmoyang/Projects/GEM/SW-Dev/220108_DQM-with-GE21-Demonstrator/CMSSW_12_3_X_2022-01-06-2300/src/Validation/MuonGEMDigis/plugins/GEMStripDigiValidation.cc:303
+#8  0x00007f21aad00a99 in GEMStripDigiValidation::analyze (this=0x7f21ac74e600, event=..., setup=...) at /cms/ldap_home/slowmoyang/Projects/GEM/SW-Dev/220108_DQM-with-GE21-Demonstrator/CMSSW_12_3_X_2022-01-06-2300/src/Validation/MuonGEMDigis/plugins/GEMStripDigiValidation.cc:191
+#9  0x00007f2222ec5af3 in edm::stream::EDProducerAdaptorBase::doEvent(edm::EventTransitionInfo const&, edm::ActivityRegistry*, edm::ModuleCallingContext const*) () from /cvmfs/cms-ib.cern.ch/nweek-02714/slc7_amd64_gcc10/cms/cmssw/CMSSW_12_3_X_2022-01-02-0000/lib/slc7_amd64_gcc10/libFWCoreFramework.so
+#10 0x00007f2222eaee0f in edm::WorkerT<edm::stream::EDProducerAdaptorBase>::implDo(edm::EventTransitionInfo const&, edm::ModuleCallingContext const*) () from /cvmfs/cms-ib.cern.ch/nweek-02714/slc7_amd64_gcc10/cms/cmssw/CMSSW_12_3_X_2022-01-02-0000/lib/slc7_amd64_gcc10/libFWCoreFramework.so
+#11 0x00007f2222e0a3e5 in decltype ({parm#1}()) edm::convertException::wrap<edm::Worker::runModule<edm::OccurrenceTraits<edm::EventPrincipal, (edm::BranchActionType)1> >(edm::OccurrenceTraits<edm::EventPrincipal, (edm::BranchActionType)1>::TransitionInfoType const&, edm::StreamID, edm::ParentContext const&, edm::OccurrenceTraits<edm::EventPrincipal, (edm::BranchActionType)1>::Context const*)::{lambda()#1}>(edm::Worker::runModule<edm::OccurrenceTraits<edm::EventPrincipal, (edm::BranchActionType)1> >(edm::OccurrenceTraits<edm::EventPrincipal, (edm::BranchActionType)1>::TransitionInfoType const&, edm::StreamID, edm::ParentContext const&, edm::OccurrenceTraits<edm::EventPrincipal, (edm::BranchActionType)1>::Context const*)::{lambda()#1}) () from /cvmfs/cms-ib.cern.ch/nweek-02714/slc7_amd64_gcc10/cms/cmssw/CMSSW_12_3_X_2022-01-02-0000/lib/slc7_amd64_gcc10/libFWCoreFramework.so
+#12 0x00007f2222e0a6db in std::__exception_ptr::exception_ptr edm::Worker::runModuleAfterAsyncPrefetch<edm::OccurrenceTraits<edm::EventPrincipal, (edm::BranchActionType)1> >(std::__exception_ptr::exception_ptr const*, edm::OccurrenceTraits<edm::EventPrincipal, (edm::BranchActionType)1>::TransitionInfoType const&, edm::StreamID, edm::ParentContext const&, edm::OccurrenceTraits<edm::EventPrincipal, (edm::BranchActionType)1>::Context const*) () from /cvmfs/cms-ib.cern.ch/nweek-02714/slc7_amd64_gcc10/cms/cmssw/CMSSW_12_3_X_2022-01-02-0000/lib/slc7_amd64_gcc10/libFWCoreFramework.so
+#13 0x00007f2222e0ccc5 in edm::Worker::RunModuleTask<edm::OccurrenceTraits<edm::EventPrincipal, (edm::BranchActionType)1> >::execute() () from /cvmfs/cms-ib.cern.ch/nweek-02714/slc7_amd64_gcc10/cms/cmssw/CMSSW_12_3_X_2022-01-02-0000/lib/slc7_amd64_gcc10/libFWCoreFramework.so
+#14 0x00007f22230077d5 in tbb::detail::d1::function_task<edm::WaitingTaskList::announce()::{lambda()#1}>::execute(tbb::detail::d1::execution_data&) () from /cvmfs/cms-ib.cern.ch/nweek-02714/slc7_amd64_gcc10/cms/cmssw/CMSSW_12_3_X_2022-01-02-0000/lib/slc7_amd64_gcc10/libFWCoreConcurrency.so
+#15 0x00007f2221588b8c in tbb::detail::r1::task_dispatcher::local_wait_for_all<false, tbb::detail::r1::external_waiter> (waiter=..., t=0x7f212e127700, this=0x7f221cf37e00) at /data/cmsbld/jenkins/workspace/auto-builds/CMSSW_12_3_0_pre2-slc7_amd64_gcc10/build/CMSSW_12_3_0_pre2-build/BUILD/slc7_amd64_gcc10/external/tbb/v2021.4.0-948cf178e0e7563ed46ef2d4709d6819/tbb-v2021.4.0/src/tbb/task_dispatcher.h:322
+#16 tbb::detail::r1::task_dispatcher::local_wait_for_all<tbb::detail::r1::external_waiter> (waiter=..., t=<optimized out>, this=0x7f221cf37e00) at /data/cmsbld/jenkins/workspace/auto-builds/CMSSW_12_3_0_pre2-slc7_amd64_gcc10/build/CMSSW_12_3_0_pre2-build/BUILD/slc7_amd64_gcc10/external/tbb/v2021.4.0-948cf178e0e7563ed46ef2d4709d6819/tbb-v2021.4.0/src/tbb/task_dispatcher.h:463
+#17 tbb::detail::r1::task_dispatcher::execute_and_wait (t=<optimized out>, wait_ctx=..., w_ctx=...) at /data/cmsbld/jenkins/workspace/auto-builds/CMSSW_12_3_0_pre2-slc7_amd64_gcc10/build/CMSSW_12_3_0_pre2-build/BUILD/slc7_amd64_gcc10/external/tbb/v2021.4.0-948cf178e0e7563ed46ef2d4709d6819/tbb-v2021.4.0/src/tbb/task_dispatcher.cpp:168
+#18 0x00007f2222d7b1f8 in edm::EventProcessor::processLumis(std::shared_ptr<void> const&) () from /cvmfs/cms-ib.cern.ch/nweek-02714/slc7_amd64_gcc10/cms/cmssw/CMSSW_12_3_X_2022-01-02-0000/lib/slc7_amd64_gcc10/libFWCoreFramework.so
+#19 0x00007f2222d85f2b in edm::EventProcessor::runToCompletion() () from /cvmfs/cms-ib.cern.ch/nweek-02714/slc7_amd64_gcc10/cms/cmssw/CMSSW_12_3_X_2022-01-02-0000/lib/slc7_amd64_gcc10/libFWCoreFramework.so
+#20 0x000000000040a266 in tbb::detail::d1::task_arena_function<main::{lambda()#1}::operator()() const::{lambda()#1}, void>::operator()() const ()
+#21 0x00007f222157715b in tbb::detail::r1::task_arena_impl::execute (ta=..., d=...) at /data/cmsbld/jenkins/workspace/auto-builds/CMSSW_12_3_0_pre2-slc7_amd64_gcc10/build/CMSSW_12_3_0_pre2-build/BUILD/slc7_amd64_gcc10/external/tbb/v2021.4.0-948cf178e0e7563ed46ef2d4709d6819/tbb-v2021.4.0/src/tbb/arena.cpp:698
+#22 0x000000000040b094 in main::{lambda()#1}::operator()() const ()
+#23 0x000000000040971c in main ()
+
+Current Modules:
+
+Module: GEMStripDigiValidation:gemStripValidation (crashed)
+
+A fatal system signal has occurred: segmentation violation
