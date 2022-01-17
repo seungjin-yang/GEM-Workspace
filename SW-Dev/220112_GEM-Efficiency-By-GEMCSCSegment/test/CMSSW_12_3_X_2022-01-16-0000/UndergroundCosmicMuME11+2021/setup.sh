@@ -7,13 +7,30 @@ cd -
 PROJECT=220112_GEM-Efficiency-By-GEMCSCSegment
 SAMPLE=UndergroundCosmicMuME11+2021
 
-# gate
-OUTPUT_ROOT=/store/user/seyang/GEM/${PROJECT}/${CMSSW_VERSION}/${SAMPLE}
+if [[ $(hostname) == "gate" ]]; then
+    DATA_DIR=/store/user/seyang/GEM/
+elif [[ $(hostname) == "ui20.sdfarm.kr" ]]; then
+    DATA_DIR=/xrootd/store/user/seyang/GEM/
+else
+    echo "unkown hostname: $(hostname)"
+    exit 1
+fi
+
+OUTPUT_ROOT=${DATA_DIR}/${PROJECT}/${CMSSW_VERSION}/${SAMPLE}
 JOB_BATCH_NAME_PREFIX=${PROJECT}__${CMSSW_VERSION}__${SAMPLE}
 
 if [ ! -d ${OUTPUT_ROOT} ]
 then
-    mkdir -vp /store/user/seyang/GEM/${PROJECT}/${CMSSW_VERSION}/${SAMPLE}
+
+    if [[ $(hostname) == "gate" ]]; then
+        mkdir -vp ${OUTPUT_ROOT}
+    elif [[ $(hostname) == "ui20.sdfarm.kr" ]]; then
+        mkdir -vp /xrootd_user/slowmoyang/xrootd2/GEM/${PROJECT}/${CMSSW_VERSION}/${SAMPLE}
+    else
+        echo "unkown hostname: $(hostname)"
+        exit 1
+    fi
+
 fi
 
 ## helper functions
