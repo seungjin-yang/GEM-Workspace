@@ -19,21 +19,25 @@ fi
 OUTPUT_ROOT=${DATA_DIR}/${PROJECT}/${CMSSW_VERSION}/${SAMPLE}
 JOB_BATCH_NAME_PREFIX=${PROJECT}__${CMSSW_VERSION}__${SAMPLE}
 
-if [ ! -d ${OUTPUT_ROOT} ]
-then
-
-    if [[ $(hostname) == "gate" ]]; then
-        mkdir -vp ${OUTPUT_ROOT}
-    elif [[ $(hostname) == "ui20.sdfarm.kr" ]]; then
-        mkdir -vp /xrootd_user/slowmoyang/xrootd2/GEM/${PROJECT}/${CMSSW_VERSION}/${SAMPLE}
-    else
-        echo "unkown hostname: $(hostname)"
-        exit 1
-    fi
-
-fi
-
 ## helper functions
+function check_output_root() {
+    echo "check existence of OUTPUT_ROOT: ${OUTPUT_ROOT}"
+    if [ -d ${OUTPUT_ROOT} ]; then
+        echo "OUTPUT_ROOT found"
+    else
+        echo "OUTPUT_ROOT not found"
+        if [[ $(hostname) == "gate" ]]; then
+            mkdir -vp ${OUTPUT_ROOT}
+        elif [[ $(hostname) == "ui20.sdfarm.kr" ]]; then
+            mkdir -vp /xrootd_user/slowmoyang/xrootd2/GEM/${PROJECT}/${CMSSW_VERSION}/${SAMPLE}
+        else
+            echo "unkown hostname: $(hostname)"
+            exit 1
+        fi
+
+    fi
+}
+
 function print_var() {
     VAR=${1}
     echo "${VAR}=${!VAR}"
@@ -48,15 +52,34 @@ function check_log_dir() {
     fi
 }
 
+function get_step() {
+    CFG=${1}
+
+    STEP=$(basename ${CFG})
+
+    for SUFFIX in "_cfg.py" ".py"
+    do
+        if [[ ${STEP} == *${SUFFIX} ]]; then
+            STEP=${STEP/${SUFFIX}/""}
+            break
+        fi
+    done
+
+    # return
+    echo ${STEP}
+}
+
 function submit_empty() {
     CFG=${1}
     NUM_JOBS=${2}
 
-    STEP=${CFG/".py"/""}
+    local STEP=$(get_step ${CFG})
+
     JOB_BATCH_NAME=${JOB_BATCH_NAME_PREFIX}__${STEP}
     OUTPUT_DIR=${OUTPUT_ROOT}/${STEP}
     LOG_DIR=./logs/${STEP}
 
+    check_output_root
     check_log_dir ${LOG_DIR}
 
     COMMAND="gem-dqm-submit.py -o ${OUTPUT_DIR} -l ${LOG_DIR} -n ${NUM_JOBS} -b ${JOB_BATCH_NAME} ${CFG}"
@@ -68,14 +91,15 @@ function submit_pool() {
     PREV_CFG=${1}
     CFG=${2}
 
-    PREV_STEP=${PREV_CFG/".py"/""}
-    STEP=${CFG/".py"/""}
+    local PREV_STEP=$(get_step ${PREV_CFG})
+    local STEP=$(get_step ${CFG})
 
     JOB_BATCH_NAME=${JOB_BATCH_NAME_PREFIX}__${STEP}
     INPUT_DIR=${OUTPUT_ROOT}/${PREV_STEP}
     OUTPUT_DIR=${OUTPUT_ROOT}/${STEP}
     LOG_DIR=./logs/${STEP}
 
+    check_output_root
     check_log_dir ${LOG_DIR}
 
     COMMAND="gem-dqm-submit.py -i ${INPUT_DIR} -o ${OUTPUT_DIR} -l ${LOG_DIR} -b ${JOB_BATCH_NAME} ${CFG}"
