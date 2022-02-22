@@ -1,0 +1,2 @@
+/store/scratch/seyang/relval/CMSSW_12_2_0_pre3/RelValSingleMuPt10/GEN-SIM-DIGI-RAW/122X_mcRun3_2021_realistic_v5-v1/2580000/0e7ff673-5642-4bdf-b079-407797c633a6.root
+/store/scratch/seyang/relval/CMSSW_12_2_0_pre3/RelValSingleMuPt10/GEN-SIM-DIGI-RAW/122X_mcRun3_2021_realistic_v5-v1/2580000/f3c5aa14-0d1d-4130-96fc-b5206d65d707.root
