@@ -1,7 +1,8 @@
 # CMSSW_12_2_0_2021vsCMSSW_12_2_0_pre3_2021
 ## Description
 
-https://cms-pdmv.cern.ch/relmon/1643045342___CMSSW_12_2_0_2021vsCMSSW_12_2_0_pre3_2021/FullSimReport/RelValSingleMuPt10_122X_mcRun3_2021_realistic_v5/6dc6bd0fcc.html
+- https://cms-pdmv.cern.ch/relmon/1643045342___CMSSW_12_2_0_2021vsCMSSW_12_2_0_pre3_2021/FullSimReport/RelValSingleMuPt10_122X_mcRun3_2021_realistic_v5/6dc6bd0fcc.html
+- https://cmssdt.cern.ch/SDT/ReleaseNotes/CMSSW_12/CMSSW_12_2_0.html
 
 
 root://eoscms.cern.ch//eos/cms/
