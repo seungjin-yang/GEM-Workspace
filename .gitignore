@@ -240,3 +240,4 @@ cython_debug/
 
 # custom
 *.root
+**logs
