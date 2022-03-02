@@ -16,3 +16,5 @@ scram b distclean && scram b vclean && scram b clean
 scram b -j 8
 ```
 
+## Sample
+- https://cms-pdmv.cern.ch/relval/relvals?prepid=CMSSW_12_3_0_pre5__fullsim_PU_2021_14TeV-ZMM_14-00002&shown=1023&page=0&limit=50
