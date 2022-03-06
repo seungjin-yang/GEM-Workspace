@@ -1,0 +1,19 @@
+universe = vanilla
+getenv = True
+should_transfer_files = YES
+when_to_transfer_output = ON_EXIT
+
+executable = /cvmfs/cms.cern.ch/slc7_amd64_gcc10/cms/cmssw/CMSSW_12_3_0_pre5/bin/slc7_amd64_gcc10/cmsRun
+arguments = $(cfg_file)
+transfer_input_files = $(cfg_file)
+transfer_output_remaps = "step1.root = $(output_dir)/step1_$(ProcId).root"
+log = ./logs/condor.log
+output = ./logs/step1/job_$(ProcId).out
+error = ./logs/step1/job_$(ProcId).err
+
+JobBatchName = CMSSW_12_3_0_pre5__UndergroundCosmicMuNoFilterAt0T+2021__step1_GEN_SIM
+
+cfg_file = step1_GEN_SIM.py
+output_dir = /cms/scratch/slowmoyang/GEM/220112_GEM-Efficiency-By-GEMCSCSegment/CMSSW_12_3_0_pre5/UndergroundCosmicMuNoFilter0T+2021/step1_GEN_SIM/
+
+queue 2000
