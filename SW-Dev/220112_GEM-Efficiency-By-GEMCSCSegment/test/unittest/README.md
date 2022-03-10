@@ -1,3 +1,32 @@
+###
+https://cmssdt.cern.ch/SDT/jenkins-artifacts/pull-request-integration/PR-76b532/22948/unitTests/src/DQM/Integration/test/TestDQMOnlineClient-gem_dqm_sourceclient/testing.log
+```txt
+ 
+===== Test "TestDQMOnlineClient-gem_dqm_sourceclient" ====
++ [[ 1 -eq 0 ]]
++ [[ -z '' ]]
++ LOCAL_TEST_DIR=.
++ [[ -z '' ]]
++ CLIENTS_DIR=./src/DQM/Integration/python/clients
++ mkdir -p ./upload
++ cmsRun ./src/DQM/Integration/python/clients/gem_dqm_sourceclient-live_cfg.py unitTest=True
+----- Begin Fatal Exception 08-Mar-2022 20:26:15 CET-----------------------
+An exception of category 'ConfigFileReadError' occurred while
+   [0] Processing the python configuration file named ./src/DQM/Integration/python/clients/gem_dqm_sourceclient-live_cfg.py
+Exception Message:
+ unknown python problem occurred.
+AttributeError: 'Process' object has no attribute 'CSCIndexerESProducer'
+
+At:
+  ./src/DQM/Integration/python/clients/gem_dqm_sourceclient-live_cfg.py(51): <module>
+
+----- End Fatal Exception -------------------------------------------------
+
+---> test TestDQMOnlineClient-gem_dqm_sourceclient had ERRORS
+TestTime:25
+^^^^ End Test TestDQMOnlineClient-gem_dqm_sourceclient ^^^^
+```
+
 ```bash
 bash /cvmfs/cms-ci.cern.ch/week1/cms-sw/cmssw/37178/22948/install.sh
 scram b -k -j 16  runtests
