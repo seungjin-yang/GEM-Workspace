@@ -1,0 +1,64 @@
+%MSG-i ThreadStreamSetup:  (NoModuleName) 22-Mar-2022 17:56:59 KST pre-events
+setting # threads 2
+setting # streams 2
+%MSG
+22-Mar-2022 17:59:05 KST  Initiating request to open file file:step1.root
+22-Mar-2022 17:59:08 KST  Successfully opened file file:step1.root
+PersistencyIO    INFO  +++ Set Streamer to dd4hep::OpaqueDataBlock
+DD4hep           WARN  ++ Using globally Geant4 unit system (mm,ns,MeV)
+DD4CMS           INFO  +++ Processing the CMS detector description xml-memory-buffer
+Detector         INFO  *********** Created World volume with size: 101000 101000 450000
+Detector         INFO  +++ Patching names of anonymous shapes....
+DDDefinition     INFO  +++ Finished processing xml-memory-buffer
+Begin processing the 1st record. Run 1, Event 1, LumiSection 1 on stream 1 at 22-Mar-2022 18:05:34.880 KST
+Begin processing the 2nd record. Run 1, Event 2, LumiSection 1 on stream 0 at 22-Mar-2022 18:05:34.885 KST
+#--------------------------------------------------------------------------
+#                         FastJet release 3.4.0
+#                 M. Cacciari, G.P. Salam and G. Soyez                  
+#     A software package for jet finding and analysis at colliders      
+#                           http://fastjet.fr                           
+#	                                                                      
+# Please cite EPJC72(2012)1896 [arXiv:1111.6097] if you use this package
+# for scientific work and optionally PLB641(2006)57 [hep-ph/0512210].   
+#                                                                       
+# FastJet is provided without warranty under the GNU GPL v2 or higher.  
+# It uses T. Chan's closest pair algorithm, S. Fortune's Voronoi code
+# and 3rd party plugin jet algorithms. See COPYING file for details.
+#--------------------------------------------------------------------------
+2022-03-22 18:05:52.853136: I tensorflow/core/platform/cpu_feature_guard.cc:142] This TensorFlow binary is optimized with oneAPI Deep Neural Network Library (oneDNN) to use the following CPU instructions in performance-critical operations:  SSE4.1 SSE4.2 AVX
+To enable them in other operations, rebuild TensorFlow with the appropriate compiler flags.
+%MSG-e TkDetLayers:  PostModuleEvent 22-Mar-2022 18:05:55 KST Run: 1 Event: 2
+ ForwardDiskSectorBuilderFromDet: Trying to build Petal Wedge from Dets at different z positions !! Delta_z = -0.951241
+%MSG
+Begin processing the 3rd record. Run 1, Event 3, LumiSection 1 on stream 0 at 22-Mar-2022 18:05:58.608 KST
+Begin processing the 4th record. Run 1, Event 4, LumiSection 1 on stream 1 at 22-Mar-2022 18:05:59.344 KST
+Begin processing the 5th record. Run 1, Event 5, LumiSection 1 on stream 0 at 22-Mar-2022 18:06:02.323 KST
+Begin processing the 6th record. Run 1, Event 6, LumiSection 1 on stream 1 at 22-Mar-2022 18:06:03.187 KST
+Begin processing the 7th record. Run 1, Event 7, LumiSection 1 on stream 0 at 22-Mar-2022 18:06:06.080 KST
+Begin processing the 8th record. Run 1, Event 8, LumiSection 1 on stream 1 at 22-Mar-2022 18:06:06.828 KST
+Begin processing the 9th record. Run 1, Event 9, LumiSection 1 on stream 0 at 22-Mar-2022 18:06:09.393 KST
+Begin processing the 10th record. Run 1, Event 10, LumiSection 1 on stream 1 at 22-Mar-2022 18:06:10.375 KST
+22-Mar-2022 18:06:13 KST  Closed file file:step1.root
+
+=============================================
+
+MessageLogger Summary
+
+ type     category        sev    module        subroutine        count    total
+ ---- -------------------- -- ---------------- ----------------  -----    -----
+    1 TkDetLayers          -e PostModuleEvent                        1        1
+    2 fileAction           -s file_close                             1        1
+    3 fileAction           -s file_open                              2        2
+
+ type    category    Examples: run/evt        run/evt          run/evt
+ ---- -------------------- ---------------- ---------------- ----------------
+    1 TkDetLayers          1/2                               
+    2 fileAction           End Run: 1                        
+    3 fileAction           pre-events       pre-events       
+
+Severity    # Occurrences   Total Occurrences
+--------    -------------   -----------------
+Error                   1                   1
+System                  3                   3
+
+dropped waiting message count 0
