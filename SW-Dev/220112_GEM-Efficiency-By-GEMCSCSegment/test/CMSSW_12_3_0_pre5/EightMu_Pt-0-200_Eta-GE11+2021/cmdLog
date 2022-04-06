@@ -1,0 +1,20 @@
+
+# in: /pad/seyang/Projects/GEM-Workspace/SW-Dev/220112_GEM-Efficiency-By-GEMCSCSegment/test/CMSSW_12_3_0_pre5 dryRun for 'cd 11611.0_TenMuExtendedE_0_200+2021+TenMuExtendedE_0_200_pythia8_GenSim+Digi+RecoNano+HARVESTNano+ALCA
+ cmsDriver.py TenMuExtendedE_0_200_pythia8_cfi  -s GEN,SIM -n 10 --conditions auto:phase1_2021_realistic --beamspot Run3RoundOptics25ns13TeVLowSigmaZ --datatier GEN-SIM --eventcontent FEVTDEBUG --geometry DB:Extended --era Run3 --relval 10000,100 --fileout file:step1.root  > step1_TenMuExtendedE_0_200+2021+TenMuExtendedE_0_200_pythia8_GenSim+Digi+RecoNano+HARVESTNano+ALCA.log  2>&1
+ 
+
+# in: /pad/seyang/Projects/GEM-Workspace/SW-Dev/220112_GEM-Efficiency-By-GEMCSCSegment/test/CMSSW_12_3_0_pre5 dryRun for 'cd 11611.0_TenMuExtendedE_0_200+2021+TenMuExtendedE_0_200_pythia8_GenSim+Digi+RecoNano+HARVESTNano+ALCA
+ cmsDriver.py step2  -s DIGI:pdigi_valid,L1,DIGI2RAW,HLT:@relval2021 --conditions auto:phase1_2021_realistic --datatier GEN-SIM-DIGI-RAW -n 10 --eventcontent FEVTDEBUGHLT --geometry DB:Extended --era Run3 --filein  file:step1.root  --fileout file:step2.root  > step2_TenMuExtendedE_0_200+2021+TenMuExtendedE_0_200_pythia8_GenSim+Digi+RecoNano+HARVESTNano+ALCA.log  2>&1
+ 
+
+# in: /pad/seyang/Projects/GEM-Workspace/SW-Dev/220112_GEM-Efficiency-By-GEMCSCSegment/test/CMSSW_12_3_0_pre5 dryRun for 'cd 11611.0_TenMuExtendedE_0_200+2021+TenMuExtendedE_0_200_pythia8_GenSim+Digi+RecoNano+HARVESTNano+ALCA
+ cmsDriver.py step3  -s RAW2DIGI,L1Reco,RECO,RECOSIM,PAT,NANO,VALIDATION:@standardValidation+@miniAODValidation,DQM:@standardDQM+@ExtraHLT+@miniAODDQM+@nanoAODDQM --conditions auto:phase1_2021_realistic --datatier GEN-SIM-RECO,MINIAODSIM,NANOAODSIM,DQMIO -n 10 --eventcontent RECOSIM,MINIAODSIM,NANOEDMAODSIM,DQM --geometry DB:Extended --era Run3 --filein  file:step2.root  --fileout file:step3.root  > step3_TenMuExtendedE_0_200+2021+TenMuExtendedE_0_200_pythia8_GenSim+Digi+RecoNano+HARVESTNano+ALCA.log  2>&1
+ 
+
+# in: /pad/seyang/Projects/GEM-Workspace/SW-Dev/220112_GEM-Efficiency-By-GEMCSCSegment/test/CMSSW_12_3_0_pre5 dryRun for 'cd 11611.0_TenMuExtendedE_0_200+2021+TenMuExtendedE_0_200_pythia8_GenSim+Digi+RecoNano+HARVESTNano+ALCA
+ cmsDriver.py step4  -s HARVESTING:@standardValidation+@standardDQM+@ExtraHLT+@miniAODValidation+@miniAODDQM+@nanoAODDQM --conditions auto:phase1_2021_realistic --mc  --geometry DB:Extended --scenario pp --filetype DQM --era Run3 -n 100  --filein file:step3_inDQM.root --fileout file:step4.root  > step4_TenMuExtendedE_0_200+2021+TenMuExtendedE_0_200_pythia8_GenSim+Digi+RecoNano+HARVESTNano+ALCA.log  2>&1
+ 
+
+# in: /pad/seyang/Projects/GEM-Workspace/SW-Dev/220112_GEM-Efficiency-By-GEMCSCSegment/test/CMSSW_12_3_0_pre5 dryRun for 'cd 11611.0_TenMuExtendedE_0_200+2021+TenMuExtendedE_0_200_pythia8_GenSim+Digi+RecoNano+HARVESTNano+ALCA
+ cmsDriver.py step5  -s ALCA:SiPixelCalSingleMuonLoose+SiPixelCalSingleMuonTight+TkAlMuonIsolated+TkAlMinBias+MuAlOverlaps+EcalESAlign+TkAlZMuMu+TkAlDiMuonAndVertex+HcalCalHBHEMuonProducerFilter+TkAlUpsilonMuMu+TkAlJpsiMuMu+SiStripCalMinBias --conditions auto:phase1_2021_realistic --datatier ALCARECO -n 10 --eventcontent ALCARECO --geometry DB:Extended --filein file:step3.root --era Run3 --fileout file:step5.root  > step5_TenMuExtendedE_0_200+2021+TenMuExtendedE_0_200_pythia8_GenSim+Digi+RecoNano+HARVESTNano+ALCA.log  2>&1
+ 

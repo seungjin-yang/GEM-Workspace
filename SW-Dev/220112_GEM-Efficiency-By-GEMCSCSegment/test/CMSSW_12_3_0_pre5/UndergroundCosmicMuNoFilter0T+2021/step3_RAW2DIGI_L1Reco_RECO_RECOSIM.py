@@ -1,7 +1,7 @@
 # Auto generated configuration file
-# using: 
-# Revision: 1.19 
-# Source: /local/reps/CMSSW/CMSSW/Configuration/Applications/python/ConfigBuilder.py,v 
+# using:
+# Revision: 1.19
+# Source: /local/reps/CMSSW/CMSSW/Configuration/Applications/python/ConfigBuilder.py,v
 # with command line options: step3 --mc --conditions auto:phase1_2021_cosmics --era Run3 --scenario cosmics --geometry DB:Extended --magField 0T --no_exec --step RAW2DIGI,L1Reco,RECO,RECOSIM --datatier GEN-SIM-RECO --number -1 --eventcontent FEVT --filein file:step2.root --fileout file:step3.root
 import FWCore.ParameterSet.Config as cms
 
@@ -115,3 +115,20 @@ process = customiseLogErrorHarvesterUsingOutputCommands(process)
 from Configuration.StandardSequences.earlyDeleteSettings_cff import customiseEarlyDelete
 process = customiseEarlyDelete(process)
 # End adding early deletion
+
+process.FEVToutput.outputCommands.extend([
+    'keep *_*GEM*_*_*',
+    'keep *_*gem*_*_*',
+])
+process.load('RecoLocalMuon.GEMCSCSegment.gemcscSegments_cfi')
+process.gemcscsegment_step = cms.Path(process.gemcscSegments)
+process.schedule.insert(-2, process.gemcscsegment_step)
+
+from FWCore.ParameterSet.VarParsing import VarParsing
+options = VarParsing('analysis')
+options.parseArguments()
+process.source.fileNames = options.inputFiles
+process.FEVToutput.fileName = options.outputFile
+
+import socket
+print(f'hostname: {socket.gethostname()}')

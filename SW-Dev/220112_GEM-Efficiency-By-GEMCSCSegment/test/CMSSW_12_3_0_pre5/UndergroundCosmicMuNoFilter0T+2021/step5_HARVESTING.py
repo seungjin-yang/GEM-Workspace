@@ -1,7 +1,7 @@
 # Auto generated configuration file
-# using: 
-# Revision: 1.19 
-# Source: /local/reps/CMSSW/CMSSW/Configuration/Applications/python/ConfigBuilder.py,v 
+# using:
+# Revision: 1.19
+# Source: /local/reps/CMSSW/CMSSW/Configuration/Applications/python/ConfigBuilder.py,v
 # with command line options: step5 --mc --conditions auto:phase1_2021_cosmics --era Run3 --scenario cosmics --geometry DB:Extended --magField 0T --no_exec --step HARVESTING:gemEfficiencyAllClientsCosmics --mc --filetype DQM --number -1 --filein file:step4.root --fileout file:step5.root
 import FWCore.ParameterSet.Config as cms
 
@@ -76,15 +76,16 @@ from Configuration.AlCa.GlobalTag import GlobalTag
 process.GlobalTag = GlobalTag(process.GlobalTag, 'auto:phase1_2021_cosmics', '')
 
 # Path and EndPath definitions
-process.dqmHarvesting = cms.Path(process.DQMOfflineCosmics_SecondStep+process.DQMOfflineCosmics_Certification)
-process.dqmHarvestingFakeHLT = cms.Path(process.DQMOfflineCosmics_SecondStep_FakeHLT+process.DQMOfflineCosmics_Certification)
-process.dqmHarvestingPOG = cms.Path(process.DQMOfflineCosmics_SecondStep_PrePOG)
-process.validationHarvesting = cms.Path(process.postValidationCosmics)
 process.gemEfficiencyAllClientsCosmics_step = cms.Path(process.gemEfficiencyAllClientsCosmics)
+process.GEMDQMHarvester_step = cms.Path(process.GEMDQMHarvester)
 process.dqmsave_step = cms.Path(process.DQMSaver)
 
 # Schedule definition
-process.schedule = cms.Schedule(process.gemEfficiencyAllClientsCosmics_step,process.dqmsave_step)
+process.schedule = cms.Schedule(
+    process.gemEfficiencyAllClientsCosmics_step,
+    process.GEMDQMHarvester_step,
+    process.dqmsave_step
+)
 from PhysicsTools.PatAlgos.tools.helpers import associatePatAlgosToolsTask
 associatePatAlgosToolsTask(process)
 
@@ -96,3 +97,8 @@ associatePatAlgosToolsTask(process)
 from Configuration.StandardSequences.earlyDeleteSettings_cff import customiseEarlyDelete
 process = customiseEarlyDelete(process)
 # End adding early deletion
+
+from FWCore.ParameterSet.VarParsing import VarParsing
+options = VarParsing('analysis')
+options.parseArguments()
+process.source.fileNames = options.inputFiles

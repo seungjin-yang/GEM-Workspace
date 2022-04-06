@@ -1,7 +1,7 @@
 # Auto generated configuration file
-# using: 
-# Revision: 1.19 
-# Source: /local/reps/CMSSW/CMSSW/Configuration/Applications/python/ConfigBuilder.py,v 
+# using:
+# Revision: 1.19
+# Source: /local/reps/CMSSW/CMSSW/Configuration/Applications/python/ConfigBuilder.py,v
 # with command line options: step2 --mc --conditions auto:phase1_2021_cosmics --era Run3 --scenario cosmics --geometry DB:Extended --magField 0T --no_exec --step DIGI:pdigi_valid,L1,DIGI2RAW,HLT:@relval2021 --datatier GEN-SIM-DIGI-RAW --number -1 --eventcontent FEVTDEBUG --filein file:step1.root --fileout file:step2.root
 import FWCore.ParameterSet.Config as cms
 
@@ -130,7 +130,7 @@ associatePatAlgosToolsTask(process)
 # customisation of the process.
 
 # Automatic addition of the customisation function from HLTrigger.Configuration.customizeHLTforMC
-from HLTrigger.Configuration.customizeHLTforMC import customizeHLTforMC 
+from HLTrigger.Configuration.customizeHLTforMC import customizeHLTforMC
 
 #call to customisation function customizeHLTforMC imported from HLTrigger.Configuration.customizeHLTforMC
 process = customizeHLTforMC(process)
@@ -144,3 +144,8 @@ process = customizeHLTforMC(process)
 from Configuration.StandardSequences.earlyDeleteSettings_cff import customiseEarlyDelete
 process = customiseEarlyDelete(process)
 # End adding early deletion
+
+from FWCore.ParameterSet.VarParsing import VarParsing
+options = VarParsing('analysis')
+options.parseArguments()
+process.source.fileNames = options.inputFiles

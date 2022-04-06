@@ -79,7 +79,7 @@ process.GlobalTag = GlobalTag(process.GlobalTag, 'auto:phase1_2021_realistic', '
 process.load('DQM.GEM.GEMDQMHarvester_cfi')
 process.harvesting_step = cms.Path(process.GEMDQMHarvester)
 
-process.gemEfficiencyClients_step = cms.Path(process.gemEfficiencyClients)
+process.gemEfficiencyClients_step = cms.Path(process.gemEfficiencyAllClients)
 process.dqmsave_step = cms.Path(process.DQMSaver)
 
 # Schedule definition

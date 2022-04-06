@@ -24,4 +24,5 @@ scram b -j 8
 
 
 ## PRs
-- PR to master (12_3_X): [Add GE1/1 detection efficiency monitor using GEMCSCSegment #37178](https://github.com/cms-sw/cmssw/pull/37178)
+- PR to master (12_4_X): [Add GE1/1 detection efficiency monitor using GEMCSCSegment #37178](https://github.com/cms-sw/cmssw/pull/37178)
+- PR to 12_2_X

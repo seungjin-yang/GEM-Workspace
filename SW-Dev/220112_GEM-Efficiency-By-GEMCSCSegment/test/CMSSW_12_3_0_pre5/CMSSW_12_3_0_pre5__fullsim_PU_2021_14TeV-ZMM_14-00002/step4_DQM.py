@@ -91,7 +91,7 @@ from Configuration.AlCa.GlobalTag import GlobalTag
 process.GlobalTag = GlobalTag(process.GlobalTag, 'auto:phase1_2021_realistic', '')
 
 # Path and EndPath definitions
-process.dqmoffline_step = cms.EndPath(process.gemEfficiencySources)
+process.dqmoffline_step = cms.EndPath(process.gemEfficiencyAllSources)
 process.dqmoffline_1_step = cms.EndPath(process.gemEffByGEMCSCSegment)
 process.DQMoutput_step = cms.EndPath(process.DQMoutput)
 

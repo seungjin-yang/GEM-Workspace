@@ -1,7 +1,7 @@
 # Auto generated configuration file
-# using: 
-# Revision: 1.19 
-# Source: /local/reps/CMSSW/CMSSW/Configuration/Applications/python/ConfigBuilder.py,v 
+# using:
+# Revision: 1.19
+# Source: /local/reps/CMSSW/CMSSW/Configuration/Applications/python/ConfigBuilder.py,v
 # with command line options: step4 --mc --conditions auto:phase1_2021_cosmics --era Run3 --scenario cosmics --geometry DB:Extended --magField 0T --no_exec --step DQM:gemEfficiencyAllSourcesCosmics --datatier DQMIO --number -1 --eventcontent DQM --filein file:step3.root --fileout file:step4.root
 import FWCore.ParameterSet.Config as cms
 
@@ -88,10 +88,19 @@ process.GlobalTag = GlobalTag(process.GlobalTag, 'auto:phase1_2021_cosmics', '')
 
 # Path and EndPath definitions
 process.dqmoffline_step = cms.EndPath(process.gemEfficiencyAllSourcesCosmics)
+process.dqmoffline_1_step = cms.EndPath(process.gemEffByGEMCSCSegment)
+process.GEMDigiSource_step = cms.EndPath(process.GEMDigiSource)
+process.GEMRecHitSource_step = cms.EndPath(process.GEMRecHitSource)
 process.DQMoutput_step = cms.EndPath(process.DQMoutput)
 
 # Schedule definition
-process.schedule = cms.Schedule(process.dqmoffline_step,process.DQMoutput_step)
+process.schedule = cms.Schedule(
+    process.dqmoffline_step,
+    process.dqmoffline_1_step,
+    process.GEMDigiSource_step,
+    process.GEMRecHitSource_step,
+    process.DQMoutput_step
+)
 from PhysicsTools.PatAlgos.tools.helpers import associatePatAlgosToolsTask
 associatePatAlgosToolsTask(process)
 
@@ -103,3 +112,14 @@ associatePatAlgosToolsTask(process)
 from Configuration.StandardSequences.earlyDeleteSettings_cff import customiseEarlyDelete
 process = customiseEarlyDelete(process)
 # End adding early deletion
+
+from FWCore.ParameterSet.VarParsing import VarParsing
+options = VarParsing('analysis')
+options.parseArguments()
+process.source.fileNames = options.inputFiles
+
+process.gemEffByGEMCSCSegment.useMuon = True
+
+process.gemEfficiencyAnalyzerCosmicsGlb.useSkipLayer = False
+process.gemEfficiencyAnalyzerCosmicsSta.useSkipLayer = False
+process.gemEfficiencyAnalyzerCosmicsTrk.useSkipLayer = False

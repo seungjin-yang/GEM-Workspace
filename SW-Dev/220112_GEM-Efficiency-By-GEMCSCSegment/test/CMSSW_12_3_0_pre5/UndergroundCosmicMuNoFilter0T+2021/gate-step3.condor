@@ -1,0 +1,26 @@
+universe = vanilla
+getenv = True
+should_transfer_files = YES
+when_to_transfer_output = ON_EXIT
+
+executable = /cvmfs/cms.cern.ch/slc7_amd64_gcc10/cms/cmssw/CMSSW_12_3_0_pre5/bin/slc7_amd64_gcc10/cmsRun
+arguments = $(cfg_file) inputFiles=file:$(input_file)
+transfer_input_files = $(cfg_file)
+transfer_output_remaps = "output.root = $(output_dir)/output_$(ProcId).root"
+log = ./logs/$(cfg_name)/condor.log
+output = ./logs/$(cfg_name)/job_$(ProcId).out
+error = ./logs/$(cfg_name)/job_$(ProcId).err
+
+request_memory = 3GB
+request_disk = 1.5GB
+
+JobBatchName = CMSSW_12_3_0_pre5__UndergroundCosmicMuNoFilterAt0T+2021__$(cfg_name)
+output_root = /store/user/seyang/GEM/220112_GEM-Efficiency-By-GEMCSCSegment/CMSSW_12_3_0_pre5/UndergroundCosmicMuNoFilter0T+2021/
+
+cfg_file = ./step3_RAW2DIGI_L1Reco_RECO_RECOSIM.py
+cfg_name = $Fn(cfg_file)
+
+input_dir = $(output_root)/step2_DIGI_L1_DIGI2RAW_HLT
+output_dir = $(output_root)/$(cfg_name)
+
+queue input_file matching files $(input_dir)/*.root

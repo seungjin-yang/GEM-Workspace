@@ -1,0 +1,1567 @@
+******************************************************************************
+*Tree    :Events    :                                                        *
+*Entries :     1298 : Total =      3261597953 bytes  File  Size =  449570499 *
+*        :          : Tree compression factor =   7.26                       *
+******************************************************************************
+*Br    0 :EventAuxiliary : edm::EventAuxiliary                               *
+*Entries :     1298 : Total  Size=     147381 bytes  File Size  =      15686 *
+*Baskets :        2 : Basket Size=     145408 bytes  Compression=   9.36     *
+*............................................................................*
+*Br    1 :EventProductProvenance : vector<edm::StoredProductProvenance>      *
+*Entries :     1298 : Total  Size=    1725557 bytes  File Size  =      45280 *
+*Baskets :       12 : Basket Size=     145408 bytes  Compression=  38.09     *
+*............................................................................*
+*Br    2 :EventSelections : vector<edm::Hash<1> >                            *
+*Entries :     1298 : Total  Size=      73309 bytes  File Size  =       3688 *
+*Baskets :        1 : Basket Size=     145408 bytes  Compression=  19.73     *
+*............................................................................*
+*Br    3 :BranchListIndexes : vector<unsigned short>                         *
+*Entries :     1298 : Total  Size=      23995 bytes  File Size  =       3258 *
+*Baskets :        1 : Basket Size=     145408 bytes  Compression=   7.20     *
+*............................................................................*
+*Branch  :GenEventInfoProduct_generator__SIM.                                *
+*Entries :     1298 : BranchElement (see below)                              *
+*............................................................................*
+*Br    4 :GenEventInfoProduct_generator__SIM.present : Bool_t                *
+*Entries :     1298 : Total  Size=       2157 bytes  File Size  =        270 *
+*Baskets :        2 : Basket Size=      16384 bytes  Compression=   5.63     *
+*............................................................................*
+*Br    5 :GenEventInfoProduct_generator__SIM.obj : GenEventInfoProduct       *
+*Entries :     1298 : Total  Size=     125919 bytes  File Size  =       5100 *
+*Baskets :        6 : Basket Size=      16384 bytes  Compression=  24.57     *
+*............................................................................*
+*Branch  :edmHepMCProduct_generatorSmeared__SIM.                             *
+*Entries :     1298 : BranchElement (see below)                              *
+*............................................................................*
+*Br    6 :edmHepMCProduct_generatorSmeared__SIM.present : Bool_t             *
+*Entries :     1298 : Total  Size=       2175 bytes  File Size  =        276 *
+*Baskets :        2 : Basket Size=      16384 bytes  Compression=   5.53     *
+*............................................................................*
+*Br    7 :edmHepMCProduct_generatorSmeared__SIM.obj : edm::HepMCProduct      *
+*Entries :     1298 : Total  Size=    1441919 bytes  File Size  =     309748 *
+*Baskets :       52 : Basket Size=      16384 bytes  Compression=   4.65     *
+*............................................................................*
+*Branch  :edmRandomEngineStates_randomEngineStateProducer__SIM.              *
+*Entries :     1298 : BranchElement (see below)                              *
+*............................................................................*
+*Br    8 :edmRandomEngineStates_randomEngineStateProducer__SIM.present :     *
+*         | Bool_t                                                           *
+*Entries :     1298 : Total  Size=       2265 bytes  File Size  =        306 *
+*Baskets :        2 : Basket Size=      16384 bytes  Compression=   5.08     *
+*............................................................................*
+*Br    9 :edmRandomEngineStates_randomEngineStateProducer__SIM.obj : edm:    *
+*         | :RandomEngineStates                                              *
+*Entries :     1298 : Total  Size=    4181337 bytes  File Size  =     906465 *
+*Baskets :      144 : Basket Size=      16384 bytes  Compression=   4.61     *
+*............................................................................*
+*Branch  :edmTriggerResults_TriggerResults__SIM.                             *
+*Entries :     1298 : BranchElement (see below)                              *
+*............................................................................*
+*Br   10 :edmTriggerResults_TriggerResults__SIM.present : Bool_t             *
+*Entries :     1298 : Total  Size=       2175 bytes  File Size  =        276 *
+*Baskets :        2 : Basket Size=      16384 bytes  Compression=   5.53     *
+*............................................................................*
+*Br   11 :edmTriggerResults_TriggerResults__SIM.obj : edm::TriggerResults    *
+*Entries :     1298 : Total  Size=     101169 bytes  File Size  =       4843 *
+*Baskets :        5 : Basket Size=      16384 bytes  Compression=  20.76     *
+*............................................................................*
+*Branch  :PCaloHits_g4SimHits_CaloHitsTk_SIM.                                *
+*Entries :     1298 : BranchElement (see below)                              *
+*............................................................................*
+*Br   12 :PCaloHits_g4SimHits_CaloHitsTk_SIM.present : Bool_t                *
+*Entries :     1298 : Total  Size=       2157 bytes  File Size  =        270 *
+*Baskets :        2 : Basket Size=      16384 bytes  Compression=   5.63     *
+*............................................................................*
+*Br   13 :PCaloHits_g4SimHits_CaloHitsTk_SIM.obj : vector<PCaloHit>          *
+*Entries :     1298 : Total  Size=      21619 bytes  File Size  =       3181 *
+*Baskets :        2 : Basket Size=      16384 bytes  Compression=   6.60     *
+*............................................................................*
+*Branch  :PCaloHits_g4SimHits_CastorBU_SIM.                                  *
+*Entries :     1298 : BranchElement (see below)                              *
+*............................................................................*
+*Br   14 :PCaloHits_g4SimHits_CastorBU_SIM.present : Bool_t                  *
+*Entries :     1298 : Total  Size=       2145 bytes  File Size  =        266 *
+*Baskets :        2 : Basket Size=      16384 bytes  Compression=   5.70     *
+*............................................................................*
+*Br   15 :PCaloHits_g4SimHits_CastorBU_SIM.obj : vector<PCaloHit>            *
+*Entries :     1298 : Total  Size=      21607 bytes  File Size  =       3174 *
+*Baskets :        2 : Basket Size=      16384 bytes  Compression=   6.61     *
+*............................................................................*
+*Branch  :PCaloHits_g4SimHits_CastorFI_SIM.                                  *
+*Entries :     1298 : BranchElement (see below)                              *
+*............................................................................*
+*Br   16 :PCaloHits_g4SimHits_CastorFI_SIM.present : Bool_t                  *
+*Entries :     1298 : Total  Size=       2145 bytes  File Size  =        266 *
+*Baskets :        2 : Basket Size=      16384 bytes  Compression=   5.70     *
+*............................................................................*
+*Br   17 :PCaloHits_g4SimHits_CastorFI_SIM.obj : vector<PCaloHit>            *
+*Entries :     1298 : Total  Size=      21607 bytes  File Size  =       3174 *
+*Baskets :        2 : Basket Size=      16384 bytes  Compression=   6.61     *
+*............................................................................*
+*Branch  :PCaloHits_g4SimHits_CastorPL_SIM.                                  *
+*Entries :     1298 : BranchElement (see below)                              *
+*............................................................................*
+*Br   18 :PCaloHits_g4SimHits_CastorPL_SIM.present : Bool_t                  *
+*Entries :     1298 : Total  Size=       2145 bytes  File Size  =        266 *
+*Baskets :        2 : Basket Size=      16384 bytes  Compression=   5.70     *
+*............................................................................*
+*Br   19 :PCaloHits_g4SimHits_CastorPL_SIM.obj : vector<PCaloHit>            *
+*Entries :     1298 : Total  Size=      21607 bytes  File Size  =       3174 *
+*Baskets :        2 : Basket Size=      16384 bytes  Compression=   6.61     *
+*............................................................................*
+*Branch  :PCaloHits_g4SimHits_CastorTU_SIM.                                  *
+*Entries :     1298 : BranchElement (see below)                              *
+*............................................................................*
+*Br   20 :PCaloHits_g4SimHits_CastorTU_SIM.present : Bool_t                  *
+*Entries :     1298 : Total  Size=       2145 bytes  File Size  =        266 *
+*Baskets :        2 : Basket Size=      16384 bytes  Compression=   5.70     *
+*............................................................................*
+*Br   21 :PCaloHits_g4SimHits_CastorTU_SIM.obj : vector<PCaloHit>            *
+*Entries :     1298 : Total  Size=      21607 bytes  File Size  =       3174 *
+*Baskets :        2 : Basket Size=      16384 bytes  Compression=   6.61     *
+*............................................................................*
+*Branch  :PCaloHits_g4SimHits_ChamberHits_SIM.                               *
+*Entries :     1298 : BranchElement (see below)                              *
+*............................................................................*
+*Br   22 :PCaloHits_g4SimHits_ChamberHits_SIM.present : Bool_t               *
+*Entries :     1298 : Total  Size=       2163 bytes  File Size  =        272 *
+*Baskets :        2 : Basket Size=      16384 bytes  Compression=   5.60     *
+*............................................................................*
+*Br   23 :PCaloHits_g4SimHits_ChamberHits_SIM.obj : vector<PCaloHit>         *
+*Entries :     1298 : Total  Size=      21625 bytes  File Size  =       3166 *
+*Baskets :        2 : Basket Size=      16384 bytes  Compression=   6.63     *
+*............................................................................*
+*Branch  :PCaloHits_g4SimHits_EcalHitsEB_SIM.                                *
+*Entries :     1298 : BranchElement (see below)                              *
+*............................................................................*
+*Br   24 :PCaloHits_g4SimHits_EcalHitsEB_SIM.present : Bool_t                *
+*Entries :     1298 : Total  Size=       2157 bytes  File Size  =        270 *
+*Baskets :        2 : Basket Size=      16384 bytes  Compression=   5.63     *
+*............................................................................*
+*Br   25 :PCaloHits_g4SimHits_EcalHitsEB_SIM.obj : vector<PCaloHit>          *
+*Entries :     1298 : Total  Size=      88345 bytes  File Size  =      30518 *
+*Baskets :        4 : Basket Size=      16384 bytes  Compression=   2.87     *
+*............................................................................*
+*Branch  :PCaloHits_g4SimHits_EcalHitsEE_SIM.                                *
+*Entries :     1298 : BranchElement (see below)                              *
+*............................................................................*
+*Br   26 :PCaloHits_g4SimHits_EcalHitsEE_SIM.present : Bool_t                *
+*Entries :     1298 : Total  Size=       2157 bytes  File Size  =        270 *
+*Baskets :        2 : Basket Size=      16384 bytes  Compression=   5.63     *
+*............................................................................*
+*Br   27 :PCaloHits_g4SimHits_EcalHitsEE_SIM.obj : vector<PCaloHit>          *
+*Entries :     1298 : Total  Size=      57305 bytes  File Size  =      19520 *
+*Baskets :        4 : Basket Size=      16384 bytes  Compression=   2.90     *
+*............................................................................*
+*Branch  :PCaloHits_g4SimHits_EcalHitsES_SIM.                                *
+*Entries :     1298 : BranchElement (see below)                              *
+*............................................................................*
+*Br   28 :PCaloHits_g4SimHits_EcalHitsES_SIM.present : Bool_t                *
+*Entries :     1298 : Total  Size=       2157 bytes  File Size  =        270 *
+*Baskets :        2 : Basket Size=      16384 bytes  Compression=   5.63     *
+*............................................................................*
+*Br   29 :PCaloHits_g4SimHits_EcalHitsES_SIM.obj : vector<PCaloHit>          *
+*Entries :     1298 : Total  Size=      26438 bytes  File Size  =       5989 *
+*Baskets :        3 : Basket Size=      16384 bytes  Compression=   4.31     *
+*............................................................................*
+*Branch  :PCaloHits_g4SimHits_EcalTBH4BeamHits_SIM.                          *
+*Entries :     1298 : BranchElement (see below)                              *
+*............................................................................*
+*Br   30 :PCaloHits_g4SimHits_EcalTBH4BeamHits_SIM.present : Bool_t          *
+*Entries :     1298 : Total  Size=       2193 bytes  File Size  =        282 *
+*Baskets :        2 : Basket Size=      16384 bytes  Compression=   5.43     *
+*............................................................................*
+*Br   31 :PCaloHits_g4SimHits_EcalTBH4BeamHits_SIM.obj : vector<PCaloHit>    *
+*Entries :     1298 : Total  Size=      21655 bytes  File Size  =       3192 *
+*Baskets :        2 : Basket Size=      16384 bytes  Compression=   6.58     *
+*............................................................................*
+*Branch  :PCaloHits_g4SimHits_FibreHits_SIM.                                 *
+*Entries :     1298 : BranchElement (see below)                              *
+*............................................................................*
+*Br   32 :PCaloHits_g4SimHits_FibreHits_SIM.present : Bool_t                 *
+*Entries :     1298 : Total  Size=       2151 bytes  File Size  =        268 *
+*Baskets :        2 : Basket Size=      16384 bytes  Compression=   5.66     *
+*............................................................................*
+*Br   33 :PCaloHits_g4SimHits_FibreHits_SIM.obj : vector<PCaloHit>           *
+*Entries :     1298 : Total  Size=      21613 bytes  File Size  =       3179 *
+*Baskets :        2 : Basket Size=      16384 bytes  Compression=   6.60     *
+*............................................................................*
+*Branch  :PCaloHits_g4SimHits_HFNoseHits_SIM.                                *
+*Entries :     1298 : BranchElement (see below)                              *
+*............................................................................*
+*Br   34 :PCaloHits_g4SimHits_HFNoseHits_SIM.present : Bool_t                *
+*Entries :     1298 : Total  Size=       2157 bytes  File Size  =        270 *
+*Baskets :        2 : Basket Size=      16384 bytes  Compression=   5.63     *
+*............................................................................*
+*Br   35 :PCaloHits_g4SimHits_HFNoseHits_SIM.obj : vector<PCaloHit>          *
+*Entries :     1298 : Total  Size=      21619 bytes  File Size  =       3181 *
+*Baskets :        2 : Basket Size=      16384 bytes  Compression=   6.60     *
+*............................................................................*
+*Branch  :PCaloHits_g4SimHits_HGCHitsEE_SIM.                                 *
+*Entries :     1298 : BranchElement (see below)                              *
+*............................................................................*
+*Br   36 :PCaloHits_g4SimHits_HGCHitsEE_SIM.present : Bool_t                 *
+*Entries :     1298 : Total  Size=       2151 bytes  File Size  =        268 *
+*Baskets :        2 : Basket Size=      16384 bytes  Compression=   5.66     *
+*............................................................................*
+*Br   37 :PCaloHits_g4SimHits_HGCHitsEE_SIM.obj : vector<PCaloHit>           *
+*Entries :     1298 : Total  Size=      21613 bytes  File Size  =       3179 *
+*Baskets :        2 : Basket Size=      16384 bytes  Compression=   6.60     *
+*............................................................................*
+*Branch  :PCaloHits_g4SimHits_HGCHitsHEback_SIM.                             *
+*Entries :     1298 : BranchElement (see below)                              *
+*............................................................................*
+*Br   38 :PCaloHits_g4SimHits_HGCHitsHEback_SIM.present : Bool_t             *
+*Entries :     1298 : Total  Size=       2175 bytes  File Size  =        276 *
+*Baskets :        2 : Basket Size=      16384 bytes  Compression=   5.53     *
+*............................................................................*
+*Br   39 :PCaloHits_g4SimHits_HGCHitsHEback_SIM.obj : vector<PCaloHit>       *
+*Entries :     1298 : Total  Size=      21637 bytes  File Size  =       3189 *
+*Baskets :        2 : Basket Size=      16384 bytes  Compression=   6.59     *
+*............................................................................*
+*Branch  :PCaloHits_g4SimHits_HGCHitsHEfront_SIM.                            *
+*Entries :     1298 : BranchElement (see below)                              *
+*............................................................................*
+*Br   40 :PCaloHits_g4SimHits_HGCHitsHEfront_SIM.present : Bool_t            *
+*Entries :     1298 : Total  Size=       2181 bytes  File Size  =        278 *
+*Baskets :        2 : Basket Size=      16384 bytes  Compression=   5.50     *
+*............................................................................*
+*Br   41 :PCaloHits_g4SimHits_HGCHitsHEfront_SIM.obj : vector<PCaloHit>      *
+*Entries :     1298 : Total  Size=      21643 bytes  File Size  =       3190 *
+*Baskets :        2 : Basket Size=      16384 bytes  Compression=   6.58     *
+*............................................................................*
+*Branch  :PCaloHits_g4SimHits_HcalHits_SIM.                                  *
+*Entries :     1298 : BranchElement (see below)                              *
+*............................................................................*
+*Br   42 :PCaloHits_g4SimHits_HcalHits_SIM.present : Bool_t                  *
+*Entries :     1298 : Total  Size=       2145 bytes  File Size  =        266 *
+*Baskets :        2 : Basket Size=      16384 bytes  Compression=   5.70     *
+*............................................................................*
+*Br   43 :PCaloHits_g4SimHits_HcalHits_SIM.obj : vector<PCaloHit>            *
+*Entries :     1298 : Total  Size=     542613 bytes  File Size  =     222339 *
+*Baskets :       20 : Basket Size=      16384 bytes  Compression=   2.44     *
+*............................................................................*
+*Branch  :PCaloHits_g4SimHits_HcalTB06BeamHits_SIM.                          *
+*Entries :     1298 : BranchElement (see below)                              *
+*............................................................................*
+*Br   44 :PCaloHits_g4SimHits_HcalTB06BeamHits_SIM.present : Bool_t          *
+*Entries :     1298 : Total  Size=       2193 bytes  File Size  =        282 *
+*Baskets :        2 : Basket Size=      16384 bytes  Compression=   5.43     *
+*............................................................................*
+*Br   45 :PCaloHits_g4SimHits_HcalTB06BeamHits_SIM.obj : vector<PCaloHit>    *
+*Entries :     1298 : Total  Size=      21655 bytes  File Size  =       3192 *
+*Baskets :        2 : Basket Size=      16384 bytes  Compression=   6.58     *
+*............................................................................*
+*Branch  :PCaloHits_g4SimHits_TotemHitsT2Scint_SIM.                          *
+*Entries :     1298 : BranchElement (see below)                              *
+*............................................................................*
+*Br   46 :PCaloHits_g4SimHits_TotemHitsT2Scint_SIM.present : Bool_t          *
+*Entries :     1298 : Total  Size=       2193 bytes  File Size  =        282 *
+*Baskets :        2 : Basket Size=      16384 bytes  Compression=   5.43     *
+*............................................................................*
+*Br   47 :PCaloHits_g4SimHits_TotemHitsT2Scint_SIM.obj : vector<PCaloHit>    *
+*Entries :     1298 : Total  Size=      21655 bytes  File Size  =       3192 *
+*Baskets :        2 : Basket Size=      16384 bytes  Compression=   6.58     *
+*............................................................................*
+*Branch  :PCaloHits_g4SimHits_WedgeHits_SIM.                                 *
+*Entries :     1298 : BranchElement (see below)                              *
+*............................................................................*
+*Br   48 :PCaloHits_g4SimHits_WedgeHits_SIM.present : Bool_t                 *
+*Entries :     1298 : Total  Size=       2151 bytes  File Size  =        268 *
+*Baskets :        2 : Basket Size=      16384 bytes  Compression=   5.66     *
+*............................................................................*
+*Br   49 :PCaloHits_g4SimHits_WedgeHits_SIM.obj : vector<PCaloHit>           *
+*Entries :     1298 : Total  Size=      21613 bytes  File Size  =       3179 *
+*Baskets :        2 : Basket Size=      16384 bytes  Compression=   6.60     *
+*............................................................................*
+*Branch  :PCaloHits_g4SimHits_ZDCHITS_SIM.                                   *
+*Entries :     1298 : BranchElement (see below)                              *
+*............................................................................*
+*Br   50 :PCaloHits_g4SimHits_ZDCHITS_SIM.present : Bool_t                   *
+*Entries :     1298 : Total  Size=       2139 bytes  File Size  =        264 *
+*Baskets :        2 : Basket Size=      16384 bytes  Compression=   5.73     *
+*............................................................................*
+*Br   51 :PCaloHits_g4SimHits_ZDCHITS_SIM.obj : vector<PCaloHit>             *
+*Entries :     1298 : Total  Size=      21601 bytes  File Size  =       3157 *
+*Baskets :        2 : Basket Size=      16384 bytes  Compression=   6.65     *
+*............................................................................*
+*Branch  :PSimHits_g4SimHits_BCM1FHits_SIM.                                  *
+*Entries :     1298 : BranchElement (see below)                              *
+*............................................................................*
+*Br   52 :PSimHits_g4SimHits_BCM1FHits_SIM.present : Bool_t                  *
+*Entries :     1298 : Total  Size=       2145 bytes  File Size  =        266 *
+*Baskets :        2 : Basket Size=      16384 bytes  Compression=   5.70     *
+*............................................................................*
+*Br   53 :PSimHits_g4SimHits_BCM1FHits_SIM.obj : vector<PSimHit>             *
+*Entries :     1298 : Total  Size=      21607 bytes  File Size  =       3174 *
+*Baskets :        2 : Basket Size=      16384 bytes  Compression=   6.61     *
+*............................................................................*
+*Branch  :PSimHits_g4SimHits_BHMHits_SIM.                                    *
+*Entries :     1298 : BranchElement (see below)                              *
+*............................................................................*
+*Br   54 :PSimHits_g4SimHits_BHMHits_SIM.present : Bool_t                    *
+*Entries :     1298 : Total  Size=       2133 bytes  File Size  =        262 *
+*Baskets :        2 : Basket Size=      16384 bytes  Compression=   5.77     *
+*............................................................................*
+*Br   55 :PSimHits_g4SimHits_BHMHits_SIM.obj : vector<PSimHit>               *
+*Entries :     1298 : Total  Size=      21595 bytes  File Size  =       3174 *
+*Baskets :        2 : Basket Size=      16384 bytes  Compression=   6.61     *
+*............................................................................*
+*Branch  :PSimHits_g4SimHits_BSCHits_SIM.                                    *
+*Entries :     1298 : BranchElement (see below)                              *
+*............................................................................*
+*Br   56 :PSimHits_g4SimHits_BSCHits_SIM.present : Bool_t                    *
+*Entries :     1298 : Total  Size=       2133 bytes  File Size  =        262 *
+*Baskets :        2 : Basket Size=      16384 bytes  Compression=   5.77     *
+*............................................................................*
+*Br   57 :PSimHits_g4SimHits_BSCHits_SIM.obj : vector<PSimHit>               *
+*Entries :     1298 : Total  Size=      21595 bytes  File Size  =       3174 *
+*Baskets :        2 : Basket Size=      16384 bytes  Compression=   6.61     *
+*............................................................................*
+*Branch  :PSimHits_g4SimHits_CTPPSPixelHits_SIM.                             *
+*Entries :     1298 : BranchElement (see below)                              *
+*............................................................................*
+*Br   58 :PSimHits_g4SimHits_CTPPSPixelHits_SIM.present : Bool_t             *
+*Entries :     1298 : Total  Size=       2175 bytes  File Size  =        276 *
+*Baskets :        2 : Basket Size=      16384 bytes  Compression=   5.53     *
+*............................................................................*
+*Br   59 :PSimHits_g4SimHits_CTPPSPixelHits_SIM.obj : vector<PSimHit>        *
+*Entries :     1298 : Total  Size=      21637 bytes  File Size  =       3189 *
+*Baskets :        2 : Basket Size=      16384 bytes  Compression=   6.59     *
+*............................................................................*
+*Branch  :PSimHits_g4SimHits_CTPPSTimingHits_SIM.                            *
+*Entries :     1298 : BranchElement (see below)                              *
+*............................................................................*
+*Br   60 :PSimHits_g4SimHits_CTPPSTimingHits_SIM.present : Bool_t            *
+*Entries :     1298 : Total  Size=       2181 bytes  File Size  =        278 *
+*Baskets :        2 : Basket Size=      16384 bytes  Compression=   5.50     *
+*............................................................................*
+*Br   61 :PSimHits_g4SimHits_CTPPSTimingHits_SIM.obj : vector<PSimHit>       *
+*Entries :     1298 : Total  Size=      21643 bytes  File Size  =       3190 *
+*Baskets :        2 : Basket Size=      16384 bytes  Compression=   6.58     *
+*............................................................................*
+*Branch  :PSimHits_g4SimHits_FP420SI_SIM.                                    *
+*Entries :     1298 : BranchElement (see below)                              *
+*............................................................................*
+*Br   62 :PSimHits_g4SimHits_FP420SI_SIM.present : Bool_t                    *
+*Entries :     1298 : Total  Size=       2133 bytes  File Size  =        262 *
+*Baskets :        2 : Basket Size=      16384 bytes  Compression=   5.77     *
+*............................................................................*
+*Br   63 :PSimHits_g4SimHits_FP420SI_SIM.obj : vector<PSimHit>               *
+*Entries :     1298 : Total  Size=      21595 bytes  File Size  =       3174 *
+*Baskets :        2 : Basket Size=      16384 bytes  Compression=   6.61     *
+*............................................................................*
+*Branch  :PSimHits_g4SimHits_FastTimerHitsBarrel_SIM.                        *
+*Entries :     1298 : BranchElement (see below)                              *
+*............................................................................*
+*Br   64 :PSimHits_g4SimHits_FastTimerHitsBarrel_SIM.present : Bool_t        *
+*Entries :     1298 : Total  Size=       2205 bytes  File Size  =        286 *
+*Baskets :        2 : Basket Size=      16384 bytes  Compression=   5.37     *
+*............................................................................*
+*Br   65 :PSimHits_g4SimHits_FastTimerHitsBarrel_SIM.obj : vector<PSimHit>   *
+*Entries :     1298 : Total  Size=      21667 bytes  File Size  =       3201 *
+*Baskets :        2 : Basket Size=      16384 bytes  Compression=   6.56     *
+*............................................................................*
+*Branch  :PSimHits_g4SimHits_FastTimerHitsEndcap_SIM.                        *
+*Entries :     1298 : BranchElement (see below)                              *
+*............................................................................*
+*Br   66 :PSimHits_g4SimHits_FastTimerHitsEndcap_SIM.present : Bool_t        *
+*Entries :     1298 : Total  Size=       2205 bytes  File Size  =        286 *
+*Baskets :        2 : Basket Size=      16384 bytes  Compression=   5.37     *
+*............................................................................*
+*Br   67 :PSimHits_g4SimHits_FastTimerHitsEndcap_SIM.obj : vector<PSimHit>   *
+*Entries :     1298 : Total  Size=      21667 bytes  File Size  =       3201 *
+*Baskets :        2 : Basket Size=      16384 bytes  Compression=   6.56     *
+*............................................................................*
+*Branch  :PSimHits_g4SimHits_MuonCSCHits_SIM.                                *
+*Entries :     1298 : BranchElement (see below)                              *
+*............................................................................*
+*Br   68 :PSimHits_g4SimHits_MuonCSCHits_SIM.present : Bool_t                *
+*Entries :     1298 : Total  Size=       2157 bytes  File Size  =        270 *
+*Baskets :        2 : Basket Size=      16384 bytes  Compression=   5.63     *
+*............................................................................*
+*Br   69 :PSimHits_g4SimHits_MuonCSCHits_SIM.obj : vector<PSimHit>           *
+*Entries :     1298 : Total  Size=    4442611 bytes  File Size  =    1872780 *
+*Baskets :      166 : Basket Size=      16384 bytes  Compression=   2.37     *
+*............................................................................*
+*Branch  :PSimHits_g4SimHits_MuonDTHits_SIM.                                 *
+*Entries :     1298 : BranchElement (see below)                              *
+*............................................................................*
+*Br   70 :PSimHits_g4SimHits_MuonDTHits_SIM.present : Bool_t                 *
+*Entries :     1298 : Total  Size=       2151 bytes  File Size  =        268 *
+*Baskets :        2 : Basket Size=      16384 bytes  Compression=   5.66     *
+*............................................................................*
+*Br   71 :PSimHits_g4SimHits_MuonDTHits_SIM.obj : vector<PSimHit>            *
+*Entries :     1298 : Total  Size=    8787765 bytes  File Size  =    3690875 *
+*Baskets :      308 : Basket Size=      16384 bytes  Compression=   2.38     *
+*............................................................................*
+*Branch  :PSimHits_g4SimHits_MuonGEMHits_SIM.                                *
+*Entries :     1298 : BranchElement (see below)                              *
+*............................................................................*
+*Br   72 :PSimHits_g4SimHits_MuonGEMHits_SIM.present : Bool_t                *
+*Entries :     1298 : Total  Size=       2157 bytes  File Size  =        270 *
+*Baskets :        2 : Basket Size=      16384 bytes  Compression=   5.63     *
+*............................................................................*
+*Br   73 :PSimHits_g4SimHits_MuonGEMHits_SIM.obj : vector<PSimHit>           *
+*Entries :     1298 : Total  Size=     237319 bytes  File Size  =     100919 *
+*Baskets :       10 : Basket Size=      16384 bytes  Compression=   2.35     *
+*............................................................................*
+*Branch  :PSimHits_g4SimHits_MuonME0Hits_SIM.                                *
+*Entries :     1298 : BranchElement (see below)                              *
+*............................................................................*
+*Br   74 :PSimHits_g4SimHits_MuonME0Hits_SIM.present : Bool_t                *
+*Entries :     1298 : Total  Size=       2157 bytes  File Size  =        270 *
+*Baskets :        2 : Basket Size=      16384 bytes  Compression=   5.63     *
+*............................................................................*
+*Br   75 :PSimHits_g4SimHits_MuonME0Hits_SIM.obj : vector<PSimHit>           *
+*Entries :     1298 : Total  Size=      21619 bytes  File Size  =       3181 *
+*Baskets :        2 : Basket Size=      16384 bytes  Compression=   6.60     *
+*............................................................................*
+*Branch  :PSimHits_g4SimHits_MuonRPCHits_SIM.                                *
+*Entries :     1298 : BranchElement (see below)                              *
+*............................................................................*
+*Br   76 :PSimHits_g4SimHits_MuonRPCHits_SIM.present : Bool_t                *
+*Entries :     1298 : Total  Size=       2157 bytes  File Size  =        270 *
+*Baskets :        2 : Basket Size=      16384 bytes  Compression=   5.63     *
+*............................................................................*
+*Br   77 :PSimHits_g4SimHits_MuonRPCHits_SIM.obj : vector<PSimHit>           *
+*Entries :     1298 : Total  Size=    1297020 bytes  File Size  =     537592 *
+*Baskets :       45 : Basket Size=      16384 bytes  Compression=   2.41     *
+*............................................................................*
+*Branch  :PSimHits_g4SimHits_PLTHits_SIM.                                    *
+*Entries :     1298 : BranchElement (see below)                              *
+*............................................................................*
+*Br   78 :PSimHits_g4SimHits_PLTHits_SIM.present : Bool_t                    *
+*Entries :     1298 : Total  Size=       2133 bytes  File Size  =        262 *
+*Baskets :        2 : Basket Size=      16384 bytes  Compression=   5.77     *
+*............................................................................*
+*Br   79 :PSimHits_g4SimHits_PLTHits_SIM.obj : vector<PSimHit>               *
+*Entries :     1298 : Total  Size=      21595 bytes  File Size  =       3174 *
+*Baskets :        2 : Basket Size=      16384 bytes  Compression=   6.61     *
+*............................................................................*
+*Branch  :PSimHits_g4SimHits_TotemHitsRP_SIM.                                *
+*Entries :     1298 : BranchElement (see below)                              *
+*............................................................................*
+*Br   80 :PSimHits_g4SimHits_TotemHitsRP_SIM.present : Bool_t                *
+*Entries :     1298 : Total  Size=       2157 bytes  File Size  =        270 *
+*Baskets :        2 : Basket Size=      16384 bytes  Compression=   5.63     *
+*............................................................................*
+*Br   81 :PSimHits_g4SimHits_TotemHitsRP_SIM.obj : vector<PSimHit>           *
+*Entries :     1298 : Total  Size=      21619 bytes  File Size  =       3181 *
+*Baskets :        2 : Basket Size=      16384 bytes  Compression=   6.60     *
+*............................................................................*
+*Branch  :PSimHits_g4SimHits_TotemHitsT1_SIM.                                *
+*Entries :     1298 : BranchElement (see below)                              *
+*............................................................................*
+*Br   82 :PSimHits_g4SimHits_TotemHitsT1_SIM.present : Bool_t                *
+*Entries :     1298 : Total  Size=       2157 bytes  File Size  =        270 *
+*Baskets :        2 : Basket Size=      16384 bytes  Compression=   5.63     *
+*............................................................................*
+*Br   83 :PSimHits_g4SimHits_TotemHitsT1_SIM.obj : vector<PSimHit>           *
+*Entries :     1298 : Total  Size=      21619 bytes  File Size  =       3181 *
+*Baskets :        2 : Basket Size=      16384 bytes  Compression=   6.60     *
+*............................................................................*
+*Branch  :PSimHits_g4SimHits_TotemHitsT2Gem_SIM.                             *
+*Entries :     1298 : BranchElement (see below)                              *
+*............................................................................*
+*Br   84 :PSimHits_g4SimHits_TotemHitsT2Gem_SIM.present : Bool_t             *
+*Entries :     1298 : Total  Size=       2175 bytes  File Size  =        276 *
+*Baskets :        2 : Basket Size=      16384 bytes  Compression=   5.53     *
+*............................................................................*
+*Br   85 :PSimHits_g4SimHits_TotemHitsT2Gem_SIM.obj : vector<PSimHit>        *
+*Entries :     1298 : Total  Size=      21637 bytes  File Size  =       3189 *
+*Baskets :        2 : Basket Size=      16384 bytes  Compression=   6.59     *
+*............................................................................*
+*Branch  :PSimHits_g4SimHits_TrackerHitsPixelBarrelHighTof_SIM.              *
+*Entries :     1298 : BranchElement (see below)                              *
+*............................................................................*
+*Br   86 :PSimHits_g4SimHits_TrackerHitsPixelBarrelHighTof_SIM.present :     *
+*         | Bool_t                                                           *
+*Entries :     1298 : Total  Size=       2265 bytes  File Size  =        306 *
+*Baskets :        2 : Basket Size=      16384 bytes  Compression=   5.08     *
+*............................................................................*
+*Br   87 :PSimHits_g4SimHits_TrackerHitsPixelBarrelHighTof_SIM.obj :         *
+*         | vector<PSimHit>                                                  *
+*Entries :     1298 : Total  Size=      21727 bytes  File Size  =       3217 *
+*Baskets :        2 : Basket Size=      16384 bytes  Compression=   6.54     *
+*............................................................................*
+*Branch  :PSimHits_g4SimHits_TrackerHitsPixelBarrelLowTof_SIM.               *
+*Entries :     1298 : BranchElement (see below)                              *
+*............................................................................*
+*Br   88 :PSimHits_g4SimHits_TrackerHitsPixelBarrelLowTof_SIM.present :      *
+*         | Bool_t                                                           *
+*Entries :     1298 : Total  Size=       2259 bytes  File Size  =        304 *
+*Baskets :        2 : Basket Size=      16384 bytes  Compression=   5.11     *
+*............................................................................*
+*Br   89 :PSimHits_g4SimHits_TrackerHitsPixelBarrelLowTof_SIM.obj :          *
+*         | vector<PSimHit>                                                  *
+*Entries :     1298 : Total  Size=      21721 bytes  File Size  =       3208 *
+*Baskets :        2 : Basket Size=      16384 bytes  Compression=   6.56     *
+*............................................................................*
+*Branch  :PSimHits_g4SimHits_TrackerHitsPixelEndcapHighTof_SIM.              *
+*Entries :     1298 : BranchElement (see below)                              *
+*............................................................................*
+*Br   90 :PSimHits_g4SimHits_TrackerHitsPixelEndcapHighTof_SIM.present :     *
+*         | Bool_t                                                           *
+*Entries :     1298 : Total  Size=       2265 bytes  File Size  =        306 *
+*Baskets :        2 : Basket Size=      16384 bytes  Compression=   5.08     *
+*............................................................................*
+*Br   91 :PSimHits_g4SimHits_TrackerHitsPixelEndcapHighTof_SIM.obj :         *
+*         | vector<PSimHit>                                                  *
+*Entries :     1298 : Total  Size=      21727 bytes  File Size  =       3217 *
+*Baskets :        2 : Basket Size=      16384 bytes  Compression=   6.54     *
+*............................................................................*
+*Branch  :PSimHits_g4SimHits_TrackerHitsPixelEndcapLowTof_SIM.               *
+*Entries :     1298 : BranchElement (see below)                              *
+*............................................................................*
+*Br   92 :PSimHits_g4SimHits_TrackerHitsPixelEndcapLowTof_SIM.present :      *
+*         | Bool_t                                                           *
+*Entries :     1298 : Total  Size=       2259 bytes  File Size  =        304 *
+*Baskets :        2 : Basket Size=      16384 bytes  Compression=   5.11     *
+*............................................................................*
+*Br   93 :PSimHits_g4SimHits_TrackerHitsPixelEndcapLowTof_SIM.obj :          *
+*         | vector<PSimHit>                                                  *
+*Entries :     1298 : Total  Size=      21721 bytes  File Size  =       3208 *
+*Baskets :        2 : Basket Size=      16384 bytes  Compression=   6.56     *
+*............................................................................*
+*Branch  :PSimHits_g4SimHits_TrackerHitsTECHighTof_SIM.                      *
+*Entries :     1298 : BranchElement (see below)                              *
+*............................................................................*
+*Br   94 :PSimHits_g4SimHits_TrackerHitsTECHighTof_SIM.present : Bool_t      *
+*Entries :     1298 : Total  Size=       2217 bytes  File Size  =        290 *
+*Baskets :        2 : Basket Size=      16384 bytes  Compression=   5.31     *
+*............................................................................*
+*Br   95 :PSimHits_g4SimHits_TrackerHitsTECHighTof_SIM.obj : vector<PSimHit> *
+*Entries :     1298 : Total  Size=      58745 bytes  File Size  =      20156 *
+*Baskets :        4 : Basket Size=      16384 bytes  Compression=   2.88     *
+*............................................................................*
+*Branch  :PSimHits_g4SimHits_TrackerHitsTECLowTof_SIM.                       *
+*Entries :     1298 : BranchElement (see below)                              *
+*............................................................................*
+*Br   96 :PSimHits_g4SimHits_TrackerHitsTECLowTof_SIM.present : Bool_t       *
+*Entries :     1298 : Total  Size=       2211 bytes  File Size  =        288 *
+*Baskets :        2 : Basket Size=      16384 bytes  Compression=   5.34     *
+*............................................................................*
+*Br   97 :PSimHits_g4SimHits_TrackerHitsTECLowTof_SIM.obj : vector<PSimHit>  *
+*Entries :     1298 : Total  Size=      22193 bytes  File Size  =       3608 *
+*Baskets :        2 : Basket Size=      16384 bytes  Compression=   5.97     *
+*............................................................................*
+*Branch  :PSimHits_g4SimHits_TrackerHitsTIBHighTof_SIM.                      *
+*Entries :     1298 : BranchElement (see below)                              *
+*............................................................................*
+*Br   98 :PSimHits_g4SimHits_TrackerHitsTIBHighTof_SIM.present : Bool_t      *
+*Entries :     1298 : Total  Size=       2217 bytes  File Size  =        290 *
+*Baskets :        2 : Basket Size=      16384 bytes  Compression=   5.31     *
+*............................................................................*
+*Br   99 :PSimHits_g4SimHits_TrackerHitsTIBHighTof_SIM.obj : vector<PSimHit> *
+*Entries :     1298 : Total  Size=      23031 bytes  File Size  =       4027 *
+*Baskets :        2 : Basket Size=      16384 bytes  Compression=   5.56     *
+*............................................................................*
+*Branch  :PSimHits_g4SimHits_TrackerHitsTIBLowTof_SIM.                       *
+*Entries :     1298 : BranchElement (see below)                              *
+*............................................................................*
+*Br  100 :PSimHits_g4SimHits_TrackerHitsTIBLowTof_SIM.present : Bool_t       *
+*Entries :     1298 : Total  Size=       2211 bytes  File Size  =        288 *
+*Baskets :        2 : Basket Size=      16384 bytes  Compression=   5.34     *
+*............................................................................*
+*Br  101 :PSimHits_g4SimHits_TrackerHitsTIBLowTof_SIM.obj : vector<PSimHit>  *
+*Entries :     1298 : Total  Size=      21673 bytes  File Size  =       3183 *
+*Baskets :        2 : Basket Size=      16384 bytes  Compression=   6.60     *
+*............................................................................*
+*Branch  :PSimHits_g4SimHits_TrackerHitsTIDHighTof_SIM.                      *
+*Entries :     1298 : BranchElement (see below)                              *
+*............................................................................*
+*Br  102 :PSimHits_g4SimHits_TrackerHitsTIDHighTof_SIM.present : Bool_t      *
+*Entries :     1298 : Total  Size=       2217 bytes  File Size  =        290 *
+*Baskets :        2 : Basket Size=      16384 bytes  Compression=   5.31     *
+*............................................................................*
+*Br  103 :PSimHits_g4SimHits_TrackerHitsTIDHighTof_SIM.obj : vector<PSimHit> *
+*Entries :     1298 : Total  Size=      22407 bytes  File Size  =       3680 *
+*Baskets :        2 : Basket Size=      16384 bytes  Compression=   5.91     *
+*............................................................................*
+*Branch  :PSimHits_g4SimHits_TrackerHitsTIDLowTof_SIM.                       *
+*Entries :     1298 : BranchElement (see below)                              *
+*............................................................................*
+*Br  104 :PSimHits_g4SimHits_TrackerHitsTIDLowTof_SIM.present : Bool_t       *
+*Entries :     1298 : Total  Size=       2211 bytes  File Size  =        288 *
+*Baskets :        2 : Basket Size=      16384 bytes  Compression=   5.34     *
+*............................................................................*
+*Br  105 :PSimHits_g4SimHits_TrackerHitsTIDLowTof_SIM.obj : vector<PSimHit>  *
+*Entries :     1298 : Total  Size=      21673 bytes  File Size  =       3183 *
+*Baskets :        2 : Basket Size=      16384 bytes  Compression=   6.60     *
+*............................................................................*
+*Branch  :PSimHits_g4SimHits_TrackerHitsTOBHighTof_SIM.                      *
+*Entries :     1298 : BranchElement (see below)                              *
+*............................................................................*
+*Br  106 :PSimHits_g4SimHits_TrackerHitsTOBHighTof_SIM.present : Bool_t      *
+*Entries :     1298 : Total  Size=       2217 bytes  File Size  =        290 *
+*Baskets :        2 : Basket Size=      16384 bytes  Compression=   5.31     *
+*............................................................................*
+*Br  107 :PSimHits_g4SimHits_TrackerHitsTOBHighTof_SIM.obj : vector<PSimHit> *
+*Entries :     1298 : Total  Size=      28252 bytes  File Size  =       6635 *
+*Baskets :        3 : Basket Size=      16384 bytes  Compression=   4.16     *
+*............................................................................*
+*Branch  :PSimHits_g4SimHits_TrackerHitsTOBLowTof_SIM.                       *
+*Entries :     1298 : BranchElement (see below)                              *
+*............................................................................*
+*Br  108 :PSimHits_g4SimHits_TrackerHitsTOBLowTof_SIM.present : Bool_t       *
+*Entries :     1298 : Total  Size=       2211 bytes  File Size  =        288 *
+*Baskets :        2 : Basket Size=      16384 bytes  Compression=   5.34     *
+*............................................................................*
+*Br  109 :PSimHits_g4SimHits_TrackerHitsTOBLowTof_SIM.obj : vector<PSimHit>  *
+*Entries :     1298 : Total  Size=      21673 bytes  File Size  =       3183 *
+*Baskets :        2 : Basket Size=      16384 bytes  Compression=   6.60     *
+*............................................................................*
+*Branch  :SimTracks_g4SimHits__SIM.                                          *
+*Entries :     1298 : BranchElement (see below)                              *
+*............................................................................*
+*Br  110 :SimTracks_g4SimHits__SIM.present : Bool_t                          *
+*Entries :     1298 : Total  Size=       2097 bytes  File Size  =        250 *
+*Baskets :        2 : Basket Size=      16384 bytes  Compression=   6.00     *
+*............................................................................*
+*Br  111 :SimTracks_g4SimHits__SIM.obj : vector<SimTrack>                    *
+*Entries :     1298 : Total  Size=    2989323 bytes  File Size  =     818151 *
+*Baskets :       93 : Basket Size=      16384 bytes  Compression=   3.65     *
+*............................................................................*
+*Branch  :SimVertexs_g4SimHits__SIM.                                         *
+*Entries :     1298 : BranchElement (see below)                              *
+*............................................................................*
+*Br  112 :SimVertexs_g4SimHits__SIM.present : Bool_t                         *
+*Entries :     1298 : Total  Size=       2103 bytes  File Size  =        252 *
+*Baskets :        2 : Basket Size=      16384 bytes  Compression=   5.96     *
+*............................................................................*
+*Br  113 :SimVertexs_g4SimHits__SIM.obj : vector<SimVertex>                  *
+*Entries :     1298 : Total  Size=     825847 bytes  File Size  =     346005 *
+*Baskets :       27 : Basket Size=      16384 bytes  Compression=   2.38     *
+*............................................................................*
+*Branch  :CrossingFramePlaybackInfoNew_mix__HLT.                             *
+*Entries :     1298 : BranchElement (see below)                              *
+*............................................................................*
+*Br  114 :CrossingFramePlaybackInfoNew_mix__HLT.present : Bool_t             *
+*Entries :     1298 : Total  Size=       2061 bytes  File Size  =        142 *
+*Baskets :        1 : Basket Size=      16384 bytes  Compression=   9.94     *
+*............................................................................*
+*Br  115 :CrossingFramePlaybackInfoNew_mix__HLT.obj :                        *
+*         | CrossingFramePlaybackInfoNew                                     *
+*Entries :     1298 : Total  Size=     435253 bytes  File Size  =      10984 *
+*Baskets :       28 : Basket Size=      16384 bytes  Compression=  39.53     *
+*............................................................................*
+*Branch  :EBDigiCollection_simEcalDigis_ebDigis_HLT.                         *
+*Entries :     1298 : BranchElement (see below)                              *
+*............................................................................*
+*Br  116 :EBDigiCollection_simEcalDigis_ebDigis_HLT.present : Bool_t         *
+*Entries :     1298 : Total  Size=       2081 bytes  File Size  =        146 *
+*Baskets :        1 : Basket Size=      16384 bytes  Compression=   9.70     *
+*............................................................................*
+*Br  117 :EBDigiCollection_simEcalDigis_ebDigis_HLT.obj : EBDigiCollection   *
+*Entries :     1298 : Total  Size=    3544705 bytes  File Size  =    1496248 *
+*Baskets :      236 : Basket Size=      16384 bytes  Compression=   2.37     *
+*............................................................................*
+*Branch  :EEDigiCollection_simEcalDigis_eeDigis_HLT.                         *
+*Entries :     1298 : BranchElement (see below)                              *
+*............................................................................*
+*Br  118 :EEDigiCollection_simEcalDigis_eeDigis_HLT.present : Bool_t         *
+*Entries :     1298 : Total  Size=       2081 bytes  File Size  =        146 *
+*Baskets :        1 : Basket Size=      16384 bytes  Compression=   9.70     *
+*............................................................................*
+*Br  119 :EEDigiCollection_simEcalDigis_eeDigis_HLT.obj : EEDigiCollection   *
+*Entries :     1298 : Total  Size=    1074985 bytes  File Size  =     434321 *
+*Baskets :       68 : Basket Size=      16384 bytes  Compression=   2.47     *
+*............................................................................*
+*Branch  :ESDigiCollection_simEcalPreshowerDigis__HLT.                       *
+*Entries :     1298 : BranchElement (see below)                              *
+*............................................................................*
+*Br  120 :ESDigiCollection_simEcalPreshowerDigis__HLT.present : Bool_t       *
+*Entries :     1298 : Total  Size=       2091 bytes  File Size  =        148 *
+*Baskets :        1 : Basket Size=      16384 bytes  Compression=   9.58     *
+*............................................................................*
+*Br  121 :ESDigiCollection_simEcalPreshowerDigis__HLT.obj : ESDigiCollection *
+*Entries :     1298 : Total  Size=    2485005 bytes  File Size  =    1848084 *
+*Baskets :      162 : Basket Size=      16384 bytes  Compression=   1.34     *
+*............................................................................*
+*Branch  :FEDRawDataCollection_hltFEDSelectorL1__HLT.                        *
+*Entries :     1298 : BranchElement (see below)                              *
+*............................................................................*
+*Br  122 :FEDRawDataCollection_hltFEDSelectorL1__HLT.present : Bool_t        *
+*Entries :     1298 : Total  Size=       2086 bytes  File Size  =        147 *
+*Baskets :        1 : Basket Size=      16384 bytes  Compression=   9.64     *
+*............................................................................*
+*Br  123 :FEDRawDataCollection_hltFEDSelectorL1__HLT.obj :                   *
+*         | FEDRawDataCollection                                             *
+*Entries :     1298 : Total  Size=   22965987 bytes  File Size  =     538596 *
+*Baskets :     1298 : Basket Size=      16384 bytes  Compression=  42.59     *
+*............................................................................*
+*Branch  :FEDRawDataCollection_rawDataCollector__HLT.                        *
+*Entries :     1298 : BranchElement (see below)                              *
+*............................................................................*
+*Br  124 :FEDRawDataCollection_rawDataCollector__HLT.present : Bool_t        *
+*Entries :     1298 : Total  Size=       2086 bytes  File Size  =        147 *
+*Baskets :        1 : Basket Size=      16384 bytes  Compression=   9.64     *
+*............................................................................*
+*Br  125 :FEDRawDataCollection_rawDataCollector__HLT.obj :                   *
+*         | FEDRawDataCollection                                             *
+*Entries :     1298 : Total  Size=  735060075 bytes  File Size  =   96202380 *
+*Baskets :     1298 : Basket Size=      16384 bytes  Compression=   7.64     *
+*............................................................................*
+*Branch  :GlobalObjectMapRecord_hltGtStage2ObjectMap__HLT.                   *
+*Entries :     1298 : BranchElement (see below)                              *
+*............................................................................*
+*Br  126 :GlobalObjectMapRecord_hltGtStage2ObjectMap__HLT.present : Bool_t   *
+*Entries :     1298 : Total  Size=       2111 bytes  File Size  =        152 *
+*Baskets :        1 : Basket Size=      16384 bytes  Compression=   9.36     *
+*............................................................................*
+*Br  127 :GlobalObjectMapRecord_hltGtStage2ObjectMap__HLT.obj :              *
+*         | GlobalObjectMapRecord                                            *
+*Entries :     1298 : Total  Size=   55245395 bytes  File Size  =   11042328 *
+*Baskets :     1298 : Basket Size=      16384 bytes  Compression=   5.00     *
+*............................................................................*
+*Branch  :QIE10DataFrameHcalDataFrameContainer_simHcalDigis_HFQIE10DigiCollection_HLT. *
+*Entries :     1298 : BranchElement (see below)                              *
+*............................................................................*
+*Br  128 :QIE10DataFrameHcalDataFrameContainer_simHcalDigis_HFQIE10DigiCollection_HLT.present : *
+*         | Bool_t                                                           *
+*Entries :     1298 : Total  Size=       2251 bytes  File Size  =        180 *
+*Baskets :        1 : Basket Size=      16384 bytes  Compression=   8.06     *
+*............................................................................*
+*Br  129 :QIE10DataFrameHcalDataFrameContainer_simHcalDigis_HFQIE10DigiCollection_HLT.obj : *
+*         | HcalDataFrameContainer<QIE10DataFrame>                           *
+*Entries :     1298 : Total  Size=   90009117 bytes  File Size  =   19362710 *
+*Baskets :     1298 : Basket Size=      16384 bytes  Compression=   4.65     *
+*............................................................................*
+*Branch  :QIE10DataFrameHcalDataFrameContainer_simHcalUnsuppressedDigis_HFQIE10DigiCollection_HLT. *
+*Entries :     1298 : BranchElement (see below)                              *
+*............................................................................*
+*Br  130 :QIE10DataFrameHcalDataFrameContainer_simHcalUnsuppressedDigis_HFQIE10DigiCollection_HLT.present : *
+*         | Bool_t                                                           *
+*Entries :     1298 : Total  Size=       2311 bytes  File Size  =        192 *
+*Baskets :        1 : Basket Size=      16384 bytes  Compression=   7.61     *
+*............................................................................*
+*Br  131 :QIE10DataFrameHcalDataFrameContainer_simHcalUnsuppressedDigis_HFQIE10DigiCollection_HLT.obj : *
+*         | HcalDataFrameContainer<QIE10DataFrame>                           *
+*Entries :     1298 : Total  Size=   90024741 bytes  File Size  =   19379115 *
+*Baskets :     1298 : Basket Size=      16384 bytes  Compression=   4.64     *
+*............................................................................*
+*Branch  :QIE11DataFrameHcalDataFrameContainer_simHcalDigis_HBHEQIE11DigiCollection_HLT. *
+*Entries :     1298 : BranchElement (see below)                              *
+*............................................................................*
+*Br  132 :QIE11DataFrameHcalDataFrameContainer_simHcalDigis_HBHEQIE11DigiCollection_HLT.present : *
+*         | Bool_t                                                           *
+*Entries :     1298 : Total  Size=       2261 bytes  File Size  =        182 *
+*Baskets :        1 : Basket Size=      16384 bytes  Compression=   7.98     *
+*............................................................................*
+*Br  133 :QIE11DataFrameHcalDataFrameContainer_simHcalDigis_HBHEQIE11DigiCollection_HLT.obj : *
+*         | HcalDataFrameContainer<QIE11DataFrame>                           *
+*Entries :     1298 : Total  Size=    2369725 bytes  File Size  =     954901 *
+*Baskets :      154 : Basket Size=      16384 bytes  Compression=   2.48     *
+*............................................................................*
+*Branch  :QIE11DataFrameHcalDataFrameContainer_simHcalUnsuppressedDigis_HBHEQIE11DigiCollection_HLT. *
+*Entries :     1298 : BranchElement (see below)                              *
+*............................................................................*
+*Br  134 :QIE11DataFrameHcalDataFrameContainer_simHcalUnsuppressedDigis_HBHEQIE11DigiCollection_HLT.present : *
+*         | Bool_t                                                           *
+*Entries :     1298 : Total  Size=       2321 bytes  File Size  =        194 *
+*Baskets :        1 : Basket Size=      16384 bytes  Compression=   7.55     *
+*............................................................................*
+*Br  135 :QIE11DataFrameHcalDataFrameContainer_simHcalUnsuppressedDigis_HBHEQIE11DigiCollection_HLT.obj : *
+*         | HcalDataFrameContainer<QIE11DataFrame>                           *
+*Entries :     1298 : Total  Size=  575998545 bytes  File Size  =  129849449 *
+*Baskets :     1298 : Basket Size=      16384 bytes  Compression=   4.44     *
+*............................................................................*
+*Branch  :L1MuDTChambPhContainer_simDtTriggerPrimitiveDigis__HLT.            *
+*Entries :     1298 : BranchElement (see below)                              *
+*............................................................................*
+*Br  136 :L1MuDTChambPhContainer_simDtTriggerPrimitiveDigis__HLT.present :   *
+*         | Bool_t                                                           *
+*Entries :     1298 : Total  Size=       2146 bytes  File Size  =        159 *
+*Baskets :        1 : Basket Size=      16384 bytes  Compression=   8.99     *
+*............................................................................*
+*Br  137 :L1MuDTChambPhContainer_simDtTriggerPrimitiveDigis__HLT.obj :       *
+*         | L1MuDTChambPhContainer                                           *
+*Entries :     1298 : Total  Size=     214247 bytes  File Size  =      47808 *
+*Baskets :       14 : Basket Size=      16384 bytes  Compression=   4.46     *
+*............................................................................*
+*Branch  :L1MuDTChambThContainer_simDtTriggerPrimitiveDigis__HLT.            *
+*Entries :     1298 : BranchElement (see below)                              *
+*............................................................................*
+*Br  138 :L1MuDTChambThContainer_simDtTriggerPrimitiveDigis__HLT.present :   *
+*         | Bool_t                                                           *
+*Entries :     1298 : Total  Size=       2146 bytes  File Size  =        159 *
+*Baskets :        1 : Basket Size=      16384 bytes  Compression=   8.99     *
+*............................................................................*
+*Br  139 :L1MuDTChambThContainer_simDtTriggerPrimitiveDigis__HLT.obj :       *
+*         | L1MuDTChambThContainer                                           *
+*Entries :     1298 : Total  Size=      39382 bytes  File Size  =       6302 *
+*Baskets :        3 : Basket Size=      16384 bytes  Compression=   6.14     *
+*............................................................................*
+*Branch  :CSCDetIdCSCALCTDigiMuonDigiCollection_simCscTriggerPrimitiveDigis__HLT. *
+*Entries :     1298 : BranchElement (see below)                              *
+*............................................................................*
+*Br  140 :CSCDetIdCSCALCTDigiMuonDigiCollection_simCscTriggerPrimitiveDigis__HLT.present : *
+*         | Bool_t                                                           *
+*Entries :     1298 : Total  Size=       2226 bytes  File Size  =        175 *
+*Baskets :        1 : Basket Size=      16384 bytes  Compression=   8.26     *
+*............................................................................*
+*Br  141 :CSCDetIdCSCALCTDigiMuonDigiCollection_simCscTriggerPrimitiveDigis__HLT.obj : *
+*         | MuonDigiCollection<CSCDetId,CSCALCTDigi>                         *
+*Entries :     1298 : Total  Size=     270576 bytes  File Size  =      57357 *
+*Baskets :       17 : Basket Size=      16384 bytes  Compression=   4.70     *
+*............................................................................*
+*Branch  :CSCDetIdCSCCLCTDigiMuonDigiCollection_simCscTriggerPrimitiveDigis__HLT. *
+*Entries :     1298 : BranchElement (see below)                              *
+*............................................................................*
+*Br  142 :CSCDetIdCSCCLCTDigiMuonDigiCollection_simCscTriggerPrimitiveDigis__HLT.present : *
+*         | Bool_t                                                           *
+*Entries :     1298 : Total  Size=       2226 bytes  File Size  =        175 *
+*Baskets :        1 : Basket Size=      16384 bytes  Compression=   8.26     *
+*............................................................................*
+*Br  143 :CSCDetIdCSCCLCTDigiMuonDigiCollection_simCscTriggerPrimitiveDigis__HLT.obj : *
+*         | MuonDigiCollection<CSCDetId,CSCCLCTDigi>                         *
+*Entries :     1298 : Total  Size=     218971 bytes  File Size  =      46875 *
+*Baskets :       14 : Basket Size=      16384 bytes  Compression=   4.65     *
+*............................................................................*
+*Branch  :CSCDetIdCSCCLCTPreTriggerDigiMuonDigiCollection_simCscTriggerPrimitiveDigis__HLT. *
+*Entries :     1298 : BranchElement (see below)                              *
+*............................................................................*
+*Br  144 :CSCDetIdCSCCLCTPreTriggerDigiMuonDigiCollection_simCscTriggerPrimitiveDigis__HLT.present : *
+*         | Bool_t                                                           *
+*Entries :     1298 : Total  Size=       2276 bytes  File Size  =        185 *
+*Baskets :        1 : Basket Size=      16384 bytes  Compression=   7.86     *
+*............................................................................*
+*Br  145 :CSCDetIdCSCCLCTPreTriggerDigiMuonDigiCollection_simCscTriggerPrimitiveDigis__HLT.obj : *
+*         | MuonDigiCollection<CSCDetId,CSCCLCTPreTriggerDigi>               *
+*Entries :     1298 : Total  Size=     202602 bytes  File Size  =      43526 *
+*Baskets :       13 : Basket Size=      16384 bytes  Compression=   4.63     *
+*............................................................................*
+*Branch  :CSCDetIdCSCComparatorDigiMuonDigiCollection_simMuonCSCDigis_MuonCSCComparatorDigi_HLT. *
+*Entries :     1298 : BranchElement (see below)                              *
+*............................................................................*
+*Br  146 :CSCDetIdCSCComparatorDigiMuonDigiCollection_simMuonCSCDigis_MuonCSCComparatorDigi_HLT.present : *
+*         | Bool_t                                                           *
+*Entries :     1298 : Total  Size=       2301 bytes  File Size  =        190 *
+*Baskets :        1 : Basket Size=      16384 bytes  Compression=   7.68     *
+*............................................................................*
+*Br  147 :CSCDetIdCSCComparatorDigiMuonDigiCollection_simMuonCSCDigis_MuonCSCComparatorDigi_HLT.obj : *
+*         | MuonDigiCollection<CSCDetId,CSCComparatorDigi>                   *
+*Entries :     1298 : Total  Size=     615455 bytes  File Size  =     146795 *
+*Baskets :       39 : Basket Size=      16384 bytes  Compression=   4.18     *
+*............................................................................*
+*Branch  :CSCDetIdCSCCorrelatedLCTDigiMuonDigiCollection_simCscTriggerPrimitiveDigis__HLT. *
+*Entries :     1298 : BranchElement (see below)                              *
+*............................................................................*
+*Br  148 :CSCDetIdCSCCorrelatedLCTDigiMuonDigiCollection_simCscTriggerPrimitiveDigis__HLT.present : *
+*         | Bool_t                                                           *
+*Entries :     1298 : Total  Size=       2271 bytes  File Size  =        184 *
+*Baskets :        1 : Basket Size=      16384 bytes  Compression=   7.90     *
+*............................................................................*
+*Br  149 :CSCDetIdCSCCorrelatedLCTDigiMuonDigiCollection_simCscTriggerPrimitiveDigis__HLT.obj : *
+*         | MuonDigiCollection<CSCDetId,CSCCorrelatedLCTDigi>                *
+*Entries :     1298 : Total  Size=     407735 bytes  File Size  =      82335 *
+*Baskets :       26 : Basket Size=      16384 bytes  Compression=   4.94     *
+*............................................................................*
+*Branch  :CSCDetIdCSCCorrelatedLCTDigiMuonDigiCollection_simCscTriggerPrimitiveDigis_MPCSORTED_HLT. *
+*Entries :     1298 : BranchElement (see below)                              *
+*............................................................................*
+*Br  150 :CSCDetIdCSCCorrelatedLCTDigiMuonDigiCollection_simCscTriggerPrimitiveDigis_MPCSORTED_HLT.present : *
+*         | Bool_t                                                           *
+*Entries :     1298 : Total  Size=       2316 bytes  File Size  =        193 *
+*Baskets :        1 : Basket Size=      16384 bytes  Compression=   7.58     *
+*............................................................................*
+*Br  151 :CSCDetIdCSCCorrelatedLCTDigiMuonDigiCollection_simCscTriggerPrimitiveDigis_MPCSORTED_HLT.obj : *
+*         | MuonDigiCollection<CSCDetId,CSCCorrelatedLCTDigi>                *
+*Entries :     1298 : Total  Size=     408005 bytes  File Size  =      82962 *
+*Baskets :       26 : Basket Size=      16384 bytes  Compression=   4.90     *
+*............................................................................*
+*Branch  :CSCDetIdCSCShowerDigiMuonDigiCollection_simCscTriggerPrimitiveDigis__HLT. *
+*Entries :     1298 : BranchElement (see below)                              *
+*............................................................................*
+*Br  152 :CSCDetIdCSCShowerDigiMuonDigiCollection_simCscTriggerPrimitiveDigis__HLT.present : *
+*         | Bool_t                                                           *
+*Entries :     1298 : Total  Size=       2236 bytes  File Size  =        177 *
+*Baskets :        1 : Basket Size=      16384 bytes  Compression=   8.18     *
+*............................................................................*
+*Br  153 :CSCDetIdCSCShowerDigiMuonDigiCollection_simCscTriggerPrimitiveDigis__HLT.obj : *
+*         | MuonDigiCollection<CSCDetId,CSCShowerDigi>                       *
+*Entries :     1298 : Total  Size=      40580 bytes  File Size  =       4106 *
+*Baskets :        3 : Basket Size=      16384 bytes  Compression=   9.69     *
+*............................................................................*
+*Branch  :CSCDetIdCSCShowerDigiMuonDigiCollection_simCscTriggerPrimitiveDigis_Anode_HLT. *
+*Entries :     1298 : BranchElement (see below)                              *
+*............................................................................*
+*Br  154 :CSCDetIdCSCShowerDigiMuonDigiCollection_simCscTriggerPrimitiveDigis_Anode_HLT.present : *
+*         | Bool_t                                                           *
+*Entries :     1298 : Total  Size=       2261 bytes  File Size  =        182 *
+*Baskets :        1 : Basket Size=      16384 bytes  Compression=   7.98     *
+*............................................................................*
+*Br  155 :CSCDetIdCSCShowerDigiMuonDigiCollection_simCscTriggerPrimitiveDigis_Anode_HLT.obj : *
+*         | MuonDigiCollection<CSCDetId,CSCShowerDigi>                       *
+*Entries :     1298 : Total  Size=     389351 bytes  File Size  =      14219 *
+*Baskets :       25 : Basket Size=      16384 bytes  Compression=  27.30     *
+*............................................................................*
+*Branch  :CSCDetIdCSCShowerDigiMuonDigiCollection_simCscTriggerPrimitiveDigis_Cathode_HLT. *
+*Entries :     1298 : BranchElement (see below)                              *
+*............................................................................*
+*Br  156 :CSCDetIdCSCShowerDigiMuonDigiCollection_simCscTriggerPrimitiveDigis_Cathode_HLT.present : *
+*         | Bool_t                                                           *
+*Entries :     1298 : Total  Size=       2271 bytes  File Size  =        184 *
+*Baskets :        1 : Basket Size=      16384 bytes  Compression=   7.90     *
+*............................................................................*
+*Br  157 :CSCDetIdCSCShowerDigiMuonDigiCollection_simCscTriggerPrimitiveDigis_Cathode_HLT.obj : *
+*         | MuonDigiCollection<CSCDetId,CSCShowerDigi>                       *
+*Entries :     1298 : Total  Size=     366127 bytes  File Size  =      13423 *
+*Baskets :       23 : Basket Size=      16384 bytes  Compression=  27.20     *
+*............................................................................*
+*Branch  :CSCDetIdCSCStripDigiMuonDigiCollection_simMuonCSCDigis_MuonCSCStripDigi_HLT. *
+*Entries :     1298 : BranchElement (see below)                              *
+*............................................................................*
+*Br  158 :CSCDetIdCSCStripDigiMuonDigiCollection_simMuonCSCDigis_MuonCSCStripDigi_HLT.present : *
+*         | Bool_t                                                           *
+*Entries :     1298 : Total  Size=       2251 bytes  File Size  =        180 *
+*Baskets :        1 : Basket Size=      16384 bytes  Compression=   8.06     *
+*............................................................................*
+*Br  159 :CSCDetIdCSCStripDigiMuonDigiCollection_simMuonCSCDigis_MuonCSCStripDigi_HLT.obj : *
+*         | MuonDigiCollection<CSCDetId,CSCStripDigi>                        *
+*Entries :     1298 : Total  Size=   62010813 bytes  File Size  =    7015613 *
+*Baskets :     1231 : Basket Size=      16384 bytes  Compression=   8.84     *
+*............................................................................*
+*Branch  :CSCDetIdCSCWireDigiMuonDigiCollection_simMuonCSCDigis_MuonCSCWireDigi_HLT. *
+*Entries :     1298 : BranchElement (see below)                              *
+*............................................................................*
+*Br  160 :CSCDetIdCSCWireDigiMuonDigiCollection_simMuonCSCDigis_MuonCSCWireDigi_HLT.present : *
+*         | Bool_t                                                           *
+*Entries :     1298 : Total  Size=       2241 bytes  File Size  =        178 *
+*Baskets :        1 : Basket Size=      16384 bytes  Compression=   8.13     *
+*............................................................................*
+*Br  161 :CSCDetIdCSCWireDigiMuonDigiCollection_simMuonCSCDigis_MuonCSCWireDigi_HLT.obj : *
+*         | MuonDigiCollection<CSCDetId,CSCWireDigi>                         *
+*Entries :     1298 : Total  Size=     985141 bytes  File Size  =     218492 *
+*Baskets :       62 : Basket Size=      16384 bytes  Compression=   4.50     *
+*............................................................................*
+*Branch  :CSCDetIdintMuonDigiCollection_simCscTriggerPrimitiveDigis__HLT.    *
+*Entries :     1298 : BranchElement (see below)                              *
+*............................................................................*
+*Br  162 :CSCDetIdintMuonDigiCollection_simCscTriggerPrimitiveDigis__HLT.present : *
+*         | Bool_t                                                           *
+*Entries :     1298 : Total  Size=       2186 bytes  File Size  =        167 *
+*Baskets :        1 : Basket Size=      16384 bytes  Compression=   8.60     *
+*............................................................................*
+*Br  163 :CSCDetIdintMuonDigiCollection_simCscTriggerPrimitiveDigis__HLT.obj : *
+*         | MuonDigiCollection<CSCDetId,int>                                 *
+*Entries :     1298 : Total  Size=      77246 bytes  File Size  =      11243 *
+*Baskets :        5 : Basket Size=      16384 bytes  Compression=   6.81     *
+*............................................................................*
+*Branch  :DTLayerIdDTDigiMuonDigiCollection_simMuonDTDigis__HLT.             *
+*Entries :     1298 : BranchElement (see below)                              *
+*............................................................................*
+*Br  164 :DTLayerIdDTDigiMuonDigiCollection_simMuonDTDigis__HLT.present :    *
+*         | Bool_t                                                           *
+*Entries :     1298 : Total  Size=       2141 bytes  File Size  =        158 *
+*Baskets :        1 : Basket Size=      16384 bytes  Compression=   9.04     *
+*............................................................................*
+*Br  165 :DTLayerIdDTDigiMuonDigiCollection_simMuonDTDigis__HLT.obj :        *
+*         | MuonDigiCollection<DTLayerId,DTDigi>                             *
+*Entries :     1298 : Total  Size=    1907853 bytes  File Size  =     364816 *
+*Baskets :      122 : Basket Size=      16384 bytes  Compression=   5.22     *
+*............................................................................*
+*Branch  :DTLayerIdDTDigiSimLinkMuonDigiCollection_simMuonDTDigis__HLT.      *
+*Entries :     1298 : BranchElement (see below)                              *
+*............................................................................*
+*Br  166 :DTLayerIdDTDigiSimLinkMuonDigiCollection_simMuonDTDigis__HLT.present : *
+*         | Bool_t                                                           *
+*Entries :     1298 : Total  Size=       2176 bytes  File Size  =        165 *
+*Baskets :        1 : Basket Size=      16384 bytes  Compression=   8.70     *
+*............................................................................*
+*Br  167 :DTLayerIdDTDigiSimLinkMuonDigiCollection_simMuonDTDigis__HLT.obj : *
+*         | MuonDigiCollection<DTLayerId,DTDigiSimLink>                      *
+*Entries :     1298 : Total  Size=    2653471 bytes  File Size  =     439943 *
+*Baskets :      172 : Basket Size=      16384 bytes  Compression=   6.02     *
+*............................................................................*
+*Branch  :GEMDetIdGEMCoPadDigiMuonDigiCollection_simCscTriggerPrimitiveDigis__HLT. *
+*Entries :     1298 : BranchElement (see below)                              *
+*............................................................................*
+*Br  168 :GEMDetIdGEMCoPadDigiMuonDigiCollection_simCscTriggerPrimitiveDigis__HLT.present : *
+*         | Bool_t                                                           *
+*Entries :     1298 : Total  Size=       2231 bytes  File Size  =        176 *
+*Baskets :        1 : Basket Size=      16384 bytes  Compression=   8.22     *
+*............................................................................*
+*Br  169 :GEMDetIdGEMCoPadDigiMuonDigiCollection_simCscTriggerPrimitiveDigis__HLT.obj : *
+*         | MuonDigiCollection<GEMDetId,GEMCoPadDigi>                        *
+*Entries :     1298 : Total  Size=      41539 bytes  File Size  =       4488 *
+*Baskets :        3 : Basket Size=      16384 bytes  Compression=   9.08     *
+*............................................................................*
+*Branch  :GEMDetIdGEMDigiMuonDigiCollection_simMuonGEMDigis__HLT.            *
+*Entries :     1298 : BranchElement (see below)                              *
+*............................................................................*
+*Br  170 :GEMDetIdGEMDigiMuonDigiCollection_simMuonGEMDigis__HLT.present :   *
+*         | Bool_t                                                           *
+*Entries :     1298 : Total  Size=       2146 bytes  File Size  =        159 *
+*Baskets :        1 : Basket Size=      16384 bytes  Compression=   8.99     *
+*............................................................................*
+*Br  171 :GEMDetIdGEMDigiMuonDigiCollection_simMuonGEMDigis__HLT.obj :       *
+*         | MuonDigiCollection<GEMDetId,GEMDigi>                             *
+*Entries :     1298 : Total  Size=      79683 bytes  File Size  =      16995 *
+*Baskets :        6 : Basket Size=      16384 bytes  Compression=   4.65     *
+*............................................................................*
+*Branch  :RPCDetIdRPCDigiMuonDigiCollection_simMuonRPCDigis__HLT.            *
+*Entries :     1298 : BranchElement (see below)                              *
+*............................................................................*
+*Br  172 :RPCDetIdRPCDigiMuonDigiCollection_simMuonRPCDigis__HLT.present :   *
+*         | Bool_t                                                           *
+*Entries :     1298 : Total  Size=       2146 bytes  File Size  =        159 *
+*Baskets :        1 : Basket Size=      16384 bytes  Compression=   8.99     *
+*............................................................................*
+*Br  173 :RPCDetIdRPCDigiMuonDigiCollection_simMuonRPCDigis__HLT.obj :       *
+*         | MuonDigiCollection<RPCDetId,RPCDigi>                             *
+*Entries :     1298 : Total  Size=    1245947 bytes  File Size  =     132528 *
+*Baskets :       79 : Basket Size=      16384 bytes  Compression=   9.39     *
+*............................................................................*
+*Branch  :double_hltScoutingPFPacker_pfMetPhi_HLT.                           *
+*Entries :     1298 : BranchElement (see below)                              *
+*............................................................................*
+*Br  174 :double_hltScoutingPFPacker_pfMetPhi_HLT.present : Bool_t           *
+*Entries :     1298 : Total  Size=       2071 bytes  File Size  =        144 *
+*Baskets :        1 : Basket Size=      16384 bytes  Compression=   9.82     *
+*............................................................................*
+*Br  175 :double_hltScoutingPFPacker_pfMetPhi_HLT.obj : Double_t             *
+*Entries :     1298 : Total  Size=      11137 bytes  File Size  =        202 *
+*Baskets :        1 : Basket Size=      16384 bytes  Compression=  51.96     *
+*............................................................................*
+*Branch  :double_hltScoutingPFPacker_pfMetPt_HLT.                            *
+*Entries :     1298 : BranchElement (see below)                              *
+*............................................................................*
+*Br  176 :double_hltScoutingPFPacker_pfMetPt_HLT.present : Bool_t            *
+*Entries :     1298 : Total  Size=       2066 bytes  File Size  =        143 *
+*Baskets :        1 : Basket Size=      16384 bytes  Compression=   9.88     *
+*............................................................................*
+*Br  177 :double_hltScoutingPFPacker_pfMetPt_HLT.obj : Double_t              *
+*Entries :     1298 : Total  Size=      11132 bytes  File Size  =        203 *
+*Baskets :        1 : Basket Size=      16384 bytes  Compression=  51.70     *
+*............................................................................*
+*Branch  :double_hltScoutingPFPacker_rho_HLT.                                *
+*Entries :     1298 : BranchElement (see below)                              *
+*............................................................................*
+*Br  178 :double_hltScoutingPFPacker_rho_HLT.present : Bool_t                *
+*Entries :     1298 : Total  Size=       2046 bytes  File Size  =        139 *
+*Baskets :        1 : Basket Size=      16384 bytes  Compression=  10.14     *
+*............................................................................*
+*Br  179 :double_hltScoutingPFPacker_rho_HLT.obj : Double_t                  *
+*Entries :     1298 : Total  Size=      11112 bytes  File Size  =        171 *
+*Baskets :        1 : Basket Size=      16384 bytes  Compression=  61.35     *
+*............................................................................*
+*Branch  :GEMDigiSimLinkedmDetSetVector_simMuonGEMDigis_GEM_HLT.             *
+*Entries :     1298 : BranchElement (see below)                              *
+*............................................................................*
+*Br  180 :GEMDigiSimLinkedmDetSetVector_simMuonGEMDigis_GEM_HLT.present :    *
+*         | Bool_t                                                           *
+*Entries :     1298 : Total  Size=       2141 bytes  File Size  =        158 *
+*Baskets :        1 : Basket Size=      16384 bytes  Compression=   9.04     *
+*............................................................................*
+*Br  181 :GEMDigiSimLinkedmDetSetVector_simMuonGEMDigis_GEM_HLT.obj : edm:   *
+*         | :DetSetVector<GEMDigiSimLink>                                    *
+*Entries :     1298 : Total  Size=   12496981 bytes  File Size  =    3762728 *
+*Baskets :     1298 : Basket Size=      16384 bytes  Compression=   3.31     *
+*............................................................................*
+*Branch  :PixelDigiedmDetSetVector_simSiPixelDigis__HLT.                     *
+*Entries :     1298 : BranchElement (see below)                              *
+*............................................................................*
+*Br  182 :PixelDigiedmDetSetVector_simSiPixelDigis__HLT.present : Bool_t     *
+*Entries :     1298 : Total  Size=       2101 bytes  File Size  =        150 *
+*Baskets :        1 : Basket Size=      16384 bytes  Compression=   9.47     *
+*............................................................................*
+*Br  183 :PixelDigiedmDetSetVector_simSiPixelDigis__HLT.obj : edm:           *
+*         | :DetSetVector<PixelDigi>                                         *
+*Entries :     1298 : Total  Size=      78557 bytes  File Size  =      29911 *
+*Baskets :        6 : Basket Size=      16384 bytes  Compression=   2.60     *
+*............................................................................*
+*Branch  :PixelDigiSimLinkedmDetSetVector_simSiPixelDigis__HLT.              *
+*Entries :     1298 : BranchElement (see below)                              *
+*............................................................................*
+*Br  184 :PixelDigiSimLinkedmDetSetVector_simSiPixelDigis__HLT.present :     *
+*         | Bool_t                                                           *
+*Entries :     1298 : Total  Size=       2136 bytes  File Size  =        157 *
+*Baskets :        1 : Basket Size=      16384 bytes  Compression=   9.09     *
+*............................................................................*
+*Br  185 :PixelDigiSimLinkedmDetSetVector_simSiPixelDigis__HLT.obj : edm:    *
+*         | :DetSetVector<PixelDigiSimLink>                                  *
+*Entries :     1298 : Total  Size=      45357 bytes  File Size  =       4058 *
+*Baskets :        4 : Basket Size=      16384 bytes  Compression=  11.01     *
+*............................................................................*
+*Branch  :RPCDigiSimLinkedmDetSetVector_simMuonRPCDigis_RPCDigiSimLink_HLT.  *
+*Entries :     1298 : BranchElement (see below)                              *
+*............................................................................*
+*Br  186 :RPCDigiSimLinkedmDetSetVector_simMuonRPCDigis_RPCDigiSimLink_HLT.present : *
+*         | Bool_t                                                           *
+*Entries :     1298 : Total  Size=       2196 bytes  File Size  =        169 *
+*Baskets :        1 : Basket Size=      16384 bytes  Compression=   8.51     *
+*............................................................................*
+*Br  187 :RPCDigiSimLinkedmDetSetVector_simMuonRPCDigis_RPCDigiSimLink_HLT.obj : *
+*         | edm::DetSetVector<RPCDigiSimLink>                                *
+*Entries :     1298 : Total  Size=   30111675 bytes  File Size  =    9897525 *
+*Baskets :     1298 : Basket Size=      16384 bytes  Compression=   3.04     *
+*............................................................................*
+*Branch  :SiStripDigiedmDetSetVector_simSiStripDigis_ZeroSuppressed_HLT.     *
+*Entries :     1298 : BranchElement (see below)                              *
+*............................................................................*
+*Br  188 :SiStripDigiedmDetSetVector_simSiStripDigis_ZeroSuppressed_HLT.present : *
+*         | Bool_t                                                           *
+*Entries :     1298 : Total  Size=       2181 bytes  File Size  =        166 *
+*Baskets :        1 : Basket Size=      16384 bytes  Compression=   8.65     *
+*............................................................................*
+*Br  189 :SiStripDigiedmDetSetVector_simSiStripDigis_ZeroSuppressed_HLT.obj : *
+*         | edm::DetSetVector<SiStripDigi>                                   *
+*Entries :     1298 : Total  Size=  127910209 bytes  File Size  =   61553972 *
+*Baskets :     1298 : Basket Size=      16384 bytes  Compression=   2.08     *
+*............................................................................*
+*Branch  :SiStripRawDigiedmDetSetVector_simSiStripDigis_ProcessedRaw_HLT.    *
+*Entries :     1298 : BranchElement (see below)                              *
+*............................................................................*
+*Br  190 :SiStripRawDigiedmDetSetVector_simSiStripDigis_ProcessedRaw_HLT.present : *
+*         | Bool_t                                                           *
+*Entries :     1298 : Total  Size=       2186 bytes  File Size  =        167 *
+*Baskets :        1 : Basket Size=      16384 bytes  Compression=   8.60     *
+*............................................................................*
+*Br  191 :SiStripRawDigiedmDetSetVector_simSiStripDigis_ProcessedRaw_HLT.obj : *
+*         | edm::DetSetVector<SiStripRawDigi>                                *
+*Entries :     1298 : Total  Size=      45437 bytes  File Size  =       4104 *
+*Baskets :        4 : Basket Size=      16384 bytes  Compression=  10.89     *
+*............................................................................*
+*Branch  :SiStripRawDigiedmDetSetVector_simSiStripDigis_ScopeMode_HLT.       *
+*Entries :     1298 : BranchElement (see below)                              *
+*............................................................................*
+*Br  192 :SiStripRawDigiedmDetSetVector_simSiStripDigis_ScopeMode_HLT.present : *
+*         | Bool_t                                                           *
+*Entries :     1298 : Total  Size=       2171 bytes  File Size  =        164 *
+*Baskets :        1 : Basket Size=      16384 bytes  Compression=   8.74     *
+*............................................................................*
+*Br  193 :SiStripRawDigiedmDetSetVector_simSiStripDigis_ScopeMode_HLT.obj :  *
+*         | edm::DetSetVector<SiStripRawDigi>                                *
+*Entries :     1298 : Total  Size=      45413 bytes  File Size  =       4076 *
+*Baskets :        4 : Basket Size=      16384 bytes  Compression=  10.96     *
+*............................................................................*
+*Branch  :SiStripRawDigiedmDetSetVector_simSiStripDigis_StripAPVBaselines_HLT. *
+*Entries :     1298 : BranchElement (see below)                              *
+*............................................................................*
+*Br  194 :SiStripRawDigiedmDetSetVector_simSiStripDigis_StripAPVBaselines_HLT.present : *
+*         | Bool_t                                                           *
+*Entries :     1298 : Total  Size=       2211 bytes  File Size  =        172 *
+*Baskets :        1 : Basket Size=      16384 bytes  Compression=   8.38     *
+*............................................................................*
+*Br  195 :SiStripRawDigiedmDetSetVector_simSiStripDigis_StripAPVBaselines_HLT.obj : *
+*         | edm::DetSetVector<SiStripRawDigi>                                *
+*Entries :     1298 : Total  Size=      45477 bytes  File Size  =       4111 *
+*Baskets :        4 : Basket Size=      16384 bytes  Compression=  10.88     *
+*............................................................................*
+*Branch  :SiStripRawDigiedmDetSetVector_simSiStripDigis_StripAmplitudes_HLT. *
+*Entries :     1298 : BranchElement (see below)                              *
+*............................................................................*
+*Br  196 :SiStripRawDigiedmDetSetVector_simSiStripDigis_StripAmplitudes_HLT.present : *
+*         | Bool_t                                                           *
+*Entries :     1298 : Total  Size=       2201 bytes  File Size  =        170 *
+*Baskets :        1 : Basket Size=      16384 bytes  Compression=   8.47     *
+*............................................................................*
+*Br  197 :SiStripRawDigiedmDetSetVector_simSiStripDigis_StripAmplitudes_HLT.obj : *
+*         | edm::DetSetVector<SiStripRawDigi>                                *
+*Entries :     1298 : Total  Size=      45461 bytes  File Size  =       4103 *
+*Baskets :        4 : Basket Size=      16384 bytes  Compression=  10.90     *
+*............................................................................*
+*Branch  :SiStripRawDigiedmDetSetVector_simSiStripDigis_StripAmplitudesPostAPV_HLT. *
+*Entries :     1298 : BranchElement (see below)                              *
+*............................................................................*
+*Br  198 :SiStripRawDigiedmDetSetVector_simSiStripDigis_StripAmplitudesPostAPV_HLT.present : *
+*         | Bool_t                                                           *
+*Entries :     1298 : Total  Size=       2236 bytes  File Size  =        177 *
+*Baskets :        1 : Basket Size=      16384 bytes  Compression=   8.18     *
+*............................................................................*
+*Br  199 :SiStripRawDigiedmDetSetVector_simSiStripDigis_StripAmplitudesPostAPV_HLT.obj : *
+*         | edm::DetSetVector<SiStripRawDigi>                                *
+*Entries :     1298 : Total  Size=      45517 bytes  File Size  =       4150 *
+*Baskets :        4 : Basket Size=      16384 bytes  Compression=  10.78     *
+*............................................................................*
+*Branch  :SiStripRawDigiedmDetSetVector_simSiStripDigis_VirginRaw_HLT.       *
+*Entries :     1298 : BranchElement (see below)                              *
+*............................................................................*
+*Br  200 :SiStripRawDigiedmDetSetVector_simSiStripDigis_VirginRaw_HLT.present : *
+*         | Bool_t                                                           *
+*Entries :     1298 : Total  Size=       2171 bytes  File Size  =        164 *
+*Baskets :        1 : Basket Size=      16384 bytes  Compression=   8.74     *
+*............................................................................*
+*Br  201 :SiStripRawDigiedmDetSetVector_simSiStripDigis_VirginRaw_HLT.obj :  *
+*         | edm::DetSetVector<SiStripRawDigi>                                *
+*Entries :     1298 : Total  Size=      45413 bytes  File Size  =       4076 *
+*Baskets :        4 : Basket Size=      16384 bytes  Compression=  10.96     *
+*............................................................................*
+*Branch  :StripDigiSimLinkedmDetSetVector_simSiStripDigis__HLT.              *
+*Entries :     1298 : BranchElement (see below)                              *
+*............................................................................*
+*Br  202 :StripDigiSimLinkedmDetSetVector_simSiStripDigis__HLT.present :     *
+*         | Bool_t                                                           *
+*Entries :     1298 : Total  Size=       2136 bytes  File Size  =        157 *
+*Baskets :        1 : Basket Size=      16384 bytes  Compression=   9.09     *
+*............................................................................*
+*Br  203 :StripDigiSimLinkedmDetSetVector_simSiStripDigis__HLT.obj : edm:    *
+*         | :DetSetVector<StripDigiSimLink>                                  *
+*Entries :     1298 : Total  Size=      71962 bytes  File Size  =      10945 *
+*Baskets :        5 : Basket Size=      16384 bytes  Compression=   6.51     *
+*............................................................................*
+*Branch  :StripDigiSimLinkedmDetSetVector_simMuonCSCDigis_MuonCSCStripDigiSimLinks_HLT. *
+*Entries :     1298 : BranchElement (see below)                              *
+*............................................................................*
+*Br  204 :StripDigiSimLinkedmDetSetVector_simMuonCSCDigis_MuonCSCStripDigiSimLinks_HLT.present : *
+*         | Bool_t                                                           *
+*Entries :     1298 : Total  Size=       2256 bytes  File Size  =        181 *
+*Baskets :        1 : Basket Size=      16384 bytes  Compression=   8.02     *
+*............................................................................*
+*Br  205 :StripDigiSimLinkedmDetSetVector_simMuonCSCDigis_MuonCSCStripDigiSimLinks_HLT.obj : *
+*         | edm::DetSetVector<StripDigiSimLink>                              *
+*Entries :     1298 : Total  Size=    4661806 bytes  File Size  =     685162 *
+*Baskets :      303 : Basket Size=      16384 bytes  Compression=   6.79     *
+*............................................................................*
+*Branch  :StripDigiSimLinkedmDetSetVector_simMuonCSCDigis_MuonCSCWireDigiSimLinks_HLT. *
+*Entries :     1298 : BranchElement (see below)                              *
+*............................................................................*
+*Br  206 :StripDigiSimLinkedmDetSetVector_simMuonCSCDigis_MuonCSCWireDigiSimLinks_HLT.present : *
+*         | Bool_t                                                           *
+*Entries :     1298 : Total  Size=       2251 bytes  File Size  =        180 *
+*Baskets :        1 : Basket Size=      16384 bytes  Compression=   8.06     *
+*............................................................................*
+*Br  207 :StripDigiSimLinkedmDetSetVector_simMuonCSCDigis_MuonCSCWireDigiSimLinks_HLT.obj : *
+*         | edm::DetSetVector<StripDigiSimLink>                              *
+*Entries :     1298 : Total  Size=    1219879 bytes  File Size  =     270581 *
+*Baskets :       77 : Basket Size=      16384 bytes  Compression=   4.50     *
+*............................................................................*
+*Branch  :edmRandomEngineStates_randomEngineStateProducer__HLT.              *
+*Entries :     1298 : BranchElement (see below)                              *
+*............................................................................*
+*Br  208 :edmRandomEngineStates_randomEngineStateProducer__HLT.present :     *
+*         | Bool_t                                                           *
+*Entries :     1298 : Total  Size=       2136 bytes  File Size  =        157 *
+*Baskets :        1 : Basket Size=      16384 bytes  Compression=   9.09     *
+*............................................................................*
+*Br  209 :edmRandomEngineStates_randomEngineStateProducer__HLT.obj : edm:    *
+*         | :RandomEngineStates                                              *
+*Entries :     1298 : Total  Size=    1478886 bytes  File Size  =     892923 *
+*Baskets :       93 : Basket Size=      16384 bytes  Compression=   1.65     *
+*............................................................................*
+*Branch  :EBSrFlagsSorted_simEcalDigis_ebSrFlags_HLT.                        *
+*Entries :     1298 : BranchElement (see below)                              *
+*............................................................................*
+*Br  210 :EBSrFlagsSorted_simEcalDigis_ebSrFlags_HLT.present : Bool_t        *
+*Entries :     1298 : Total  Size=       2086 bytes  File Size  =        147 *
+*Baskets :        1 : Basket Size=      16384 bytes  Compression=   9.64     *
+*............................................................................*
+*Br  211 :EBSrFlagsSorted_simEcalDigis_ebSrFlags_HLT.obj : edm:              *
+*         | :SortedCollection<EBSrFlag,edm::StrictWeakOrdering<EBSrFlag> >   *
+*Entries :     1298 : Total  Size=   54232211 bytes  File Size  =    7586810 *
+*Baskets :     1298 : Basket Size=      16384 bytes  Compression=   7.14     *
+*............................................................................*
+*Branch  :EESrFlagsSorted_simEcalDigis_eeSrFlags_HLT.                        *
+*Entries :     1298 : BranchElement (see below)                              *
+*............................................................................*
+*Br  212 :EESrFlagsSorted_simEcalDigis_eeSrFlags_HLT.present : Bool_t        *
+*Entries :     1298 : Total  Size=       2086 bytes  File Size  =        147 *
+*Baskets :        1 : Basket Size=      16384 bytes  Compression=   9.64     *
+*............................................................................*
+*Br  213 :EESrFlagsSorted_simEcalDigis_eeSrFlags_HLT.obj : edm:              *
+*         | :SortedCollection<EESrFlag,edm::StrictWeakOrdering<EESrFlag> >   *
+*Entries :     1298 : Total  Size=   13983827 bytes  File Size  =    2017196 *
+*Baskets :     1298 : Basket Size=      16384 bytes  Compression=   6.92     *
+*............................................................................*
+*Branch  :EcalTriggerPrimitiveDigisSorted_simEcalTriggerPrimitiveDigis__HLT. *
+*Entries :     1298 : BranchElement (see below)                              *
+*............................................................................*
+*Br  214 :EcalTriggerPrimitiveDigisSorted_simEcalTriggerPrimitiveDigis__HLT.present : *
+*         | Bool_t                                                           *
+*Entries :     1298 : Total  Size=       2201 bytes  File Size  =        170 *
+*Baskets :        1 : Basket Size=      16384 bytes  Compression=   8.47     *
+*............................................................................*
+*Br  215 :EcalTriggerPrimitiveDigisSorted_simEcalTriggerPrimitiveDigis__HLT.obj : *
+*         | edm::SortedCollection<EcalTriggerPrimitiveDigi,edm:              *
+*         | :StrictWeakOrdering<EcalTriggerPrimitiveDigi> >                  *
+*Entries :     1298 : Total  Size=  335201277 bytes  File Size  =   14916543 *
+*Baskets :     1298 : Basket Size=      16384 bytes  Compression=  22.47     *
+*............................................................................*
+*Branch  :HBHEDataFramesSorted_simHcalDigis__HLT.                            *
+*Entries :     1298 : BranchElement (see below)                              *
+*............................................................................*
+*Br  216 :HBHEDataFramesSorted_simHcalDigis__HLT.present : Bool_t            *
+*Entries :     1298 : Total  Size=       2066 bytes  File Size  =        143 *
+*Baskets :        1 : Basket Size=      16384 bytes  Compression=   9.88     *
+*............................................................................*
+*Br  217 :HBHEDataFramesSorted_simHcalDigis__HLT.obj : edm:                  *
+*         | :SortedCollection<HBHEDataFrame,edm:                             *
+*         | :StrictWeakOrdering<HBHEDataFrame> >                             *
+*Entries :     1298 : Total  Size=      29550 bytes  File Size  =       3648 *
+*Baskets :        3 : Basket Size=      16384 bytes  Compression=   7.93     *
+*............................................................................*
+*Branch  :HBHEDataFramesSorted_simHcalUnsuppressedDigis__HLT.                *
+*Entries :     1298 : BranchElement (see below)                              *
+*............................................................................*
+*Br  218 :HBHEDataFramesSorted_simHcalUnsuppressedDigis__HLT.present : Bool_t*
+*Entries :     1298 : Total  Size=       2126 bytes  File Size  =        155 *
+*Baskets :        1 : Basket Size=      16384 bytes  Compression=   9.19     *
+*............................................................................*
+*Br  219 :HBHEDataFramesSorted_simHcalUnsuppressedDigis__HLT.obj : edm:      *
+*         | :SortedCollection<HBHEDataFrame,edm:                             *
+*         | :StrictWeakOrdering<HBHEDataFrame> >                             *
+*Entries :     1298 : Total  Size=      29634 bytes  File Size  =       3688 *
+*Baskets :        3 : Basket Size=      16384 bytes  Compression=   7.85     *
+*............................................................................*
+*Branch  :HFDataFramesSorted_simHcalDigis__HLT.                              *
+*Entries :     1298 : BranchElement (see below)                              *
+*............................................................................*
+*Br  220 :HFDataFramesSorted_simHcalDigis__HLT.present : Bool_t              *
+*Entries :     1298 : Total  Size=       2056 bytes  File Size  =        141 *
+*Baskets :        1 : Basket Size=      16384 bytes  Compression=  10.01     *
+*............................................................................*
+*Br  221 :HFDataFramesSorted_simHcalDigis__HLT.obj : edm:                    *
+*         | :SortedCollection<HFDataFrame,edm:                               *
+*         | :StrictWeakOrdering<HFDataFrame> >                               *
+*Entries :     1298 : Total  Size=      29536 bytes  File Size  =       3642 *
+*Baskets :        3 : Basket Size=      16384 bytes  Compression=   7.94     *
+*............................................................................*
+*Branch  :HFDataFramesSorted_simHcalUnsuppressedDigis__HLT.                  *
+*Entries :     1298 : BranchElement (see below)                              *
+*............................................................................*
+*Br  222 :HFDataFramesSorted_simHcalUnsuppressedDigis__HLT.present : Bool_t  *
+*Entries :     1298 : Total  Size=       2116 bytes  File Size  =        153 *
+*Baskets :        1 : Basket Size=      16384 bytes  Compression=   9.30     *
+*............................................................................*
+*Br  223 :HFDataFramesSorted_simHcalUnsuppressedDigis__HLT.obj : edm:        *
+*         | :SortedCollection<HFDataFrame,edm:                               *
+*         | :StrictWeakOrdering<HFDataFrame> >                               *
+*Entries :     1298 : Total  Size=      29620 bytes  File Size  =       3679 *
+*Baskets :        3 : Basket Size=      16384 bytes  Compression=   7.87     *
+*............................................................................*
+*Branch  :HODataFramesSorted_simHcalDigis__HLT.                              *
+*Entries :     1298 : BranchElement (see below)                              *
+*............................................................................*
+*Br  224 :HODataFramesSorted_simHcalDigis__HLT.present : Bool_t              *
+*Entries :     1298 : Total  Size=       2056 bytes  File Size  =        141 *
+*Baskets :        1 : Basket Size=      16384 bytes  Compression=  10.01     *
+*............................................................................*
+*Br  225 :HODataFramesSorted_simHcalDigis__HLT.obj : edm:                    *
+*         | :SortedCollection<HODataFrame,edm:                               *
+*         | :StrictWeakOrdering<HODataFrame> >                               *
+*Entries :     1298 : Total  Size=    1132334 bytes  File Size  =     148605 *
+*Baskets :       71 : Basket Size=      16384 bytes  Compression=   7.61     *
+*............................................................................*
+*Branch  :HODataFramesSorted_simHcalUnsuppressedDigis__HLT.                  *
+*Entries :     1298 : BranchElement (see below)                              *
+*............................................................................*
+*Br  226 :HODataFramesSorted_simHcalUnsuppressedDigis__HLT.present : Bool_t  *
+*Entries :     1298 : Total  Size=       2116 bytes  File Size  =        153 *
+*Baskets :        1 : Basket Size=      16384 bytes  Compression=   9.30     *
+*............................................................................*
+*Br  227 :HODataFramesSorted_simHcalUnsuppressedDigis__HLT.obj : edm:        *
+*         | :SortedCollection<HODataFrame,edm:                               *
+*         | :StrictWeakOrdering<HODataFrame> >                               *
+*Entries :     1298 : Total  Size=  319841975 bytes  File Size  =   25032590 *
+*Baskets :     1298 : Basket Size=      16384 bytes  Compression=  12.78     *
+*............................................................................*
+*Branch  :HcalTriggerPrimitiveDigisSorted_simHcalTriggerPrimitiveDigis__HLT. *
+*Entries :     1298 : BranchElement (see below)                              *
+*............................................................................*
+*Br  228 :HcalTriggerPrimitiveDigisSorted_simHcalTriggerPrimitiveDigis__HLT.present : *
+*         | Bool_t                                                           *
+*Entries :     1298 : Total  Size=       2201 bytes  File Size  =        170 *
+*Baskets :        1 : Basket Size=      16384 bytes  Compression=   8.47     *
+*............................................................................*
+*Br  229 :HcalTriggerPrimitiveDigisSorted_simHcalTriggerPrimitiveDigis__HLT.obj : *
+*         | edm::SortedCollection<HcalTriggerPrimitiveDigi,edm:              *
+*         | :StrictWeakOrdering<HcalTriggerPrimitiveDigi> >                  *
+*Entries :     1298 : Total  Size=  651445997 bytes  File Size  =   17711061 *
+*Baskets :     1298 : Basket Size=      16384 bytes  Compression=  36.78     *
+*............................................................................*
+*Branch  :ZDCDataFramesSorted_simHcalUnsuppressedDigis__HLT.                 *
+*Entries :     1298 : BranchElement (see below)                              *
+*............................................................................*
+*Br  230 :ZDCDataFramesSorted_simHcalUnsuppressedDigis__HLT.present : Bool_t *
+*Entries :     1298 : Total  Size=       2121 bytes  File Size  =        154 *
+*Baskets :        1 : Basket Size=      16384 bytes  Compression=   9.25     *
+*............................................................................*
+*Br  231 :ZDCDataFramesSorted_simHcalUnsuppressedDigis__HLT.obj : edm:       *
+*         | :SortedCollection<ZDCDataFrame,edm:                              *
+*         | :StrictWeakOrdering<ZDCDataFrame> >                              *
+*Entries :     1298 : Total  Size=    3316991 bytes  File Size  =      86109 *
+*Baskets :      217 : Basket Size=      16384 bytes  Compression=  38.46     *
+*............................................................................*
+*Branch  :edmTriggerResults_TriggerResults__HLT.                             *
+*Entries :     1298 : BranchElement (see below)                              *
+*............................................................................*
+*Br  232 :edmTriggerResults_TriggerResults__HLT.present : Bool_t             *
+*Entries :     1298 : Total  Size=       2061 bytes  File Size  =        142 *
+*Baskets :        1 : Basket Size=      16384 bytes  Compression=   9.94     *
+*............................................................................*
+*Br  233 :edmTriggerResults_TriggerResults__HLT.obj : edm::TriggerResults    *
+*Entries :     1298 : Total  Size=    1964095 bytes  File Size  =      68354 *
+*Baskets :      130 : Basket Size=      16384 bytes  Compression=  28.69     *
+*............................................................................*
+*Branch  :PixelFEDChanneledmNewDetSetVector_simSiPixelDigis__HLT.            *
+*Entries :     1298 : BranchElement (see below)                              *
+*............................................................................*
+*Br  234 :PixelFEDChanneledmNewDetSetVector_simSiPixelDigis__HLT.present :   *
+*         | Bool_t                                                           *
+*Entries :     1298 : Total  Size=       2146 bytes  File Size  =        159 *
+*Baskets :        1 : Basket Size=      16384 bytes  Compression=   8.99     *
+*............................................................................*
+*Br  235 :PixelFEDChanneledmNewDetSetVector_simSiPixelDigis__HLT.obj :       *
+*         | edmNew::DetSetVector<PixelFEDChannel>                            *
+*Entries :     1298 : Total  Size=      58353 bytes  File Size  =       3838 *
+*Baskets :        4 : Basket Size=      16384 bytes  Compression=  15.02     *
+*............................................................................*
+*Branch  :DcsStatuss_hltScalersRawToDigi__HLT.                               *
+*Entries :     1298 : BranchElement (see below)                              *
+*............................................................................*
+*Br  236 :DcsStatuss_hltScalersRawToDigi__HLT.present : Bool_t               *
+*Entries :     1298 : Total  Size=       2051 bytes  File Size  =        140 *
+*Baskets :        1 : Basket Size=      16384 bytes  Compression=  10.07     *
+*............................................................................*
+*Br  237 :DcsStatuss_hltScalersRawToDigi__HLT.obj : vector<DcsStatus>        *
+*Entries :     1298 : Total  Size=      21625 bytes  File Size  =       3181 *
+*Baskets :        2 : Basket Size=      16384 bytes  Compression=   6.60     *
+*............................................................................*
+*Branch  :Run3ScoutingElectrons_hltScoutingEgammaPacker__HLT.                *
+*Entries :     1298 : BranchElement (see below)                              *
+*............................................................................*
+*Br  238 :Run3ScoutingElectrons_hltScoutingEgammaPacker__HLT.present : Bool_t*
+*Entries :     1298 : Total  Size=       2126 bytes  File Size  =        155 *
+*Baskets :        1 : Basket Size=      16384 bytes  Compression=   9.19     *
+*............................................................................*
+*Br  239 :Run3ScoutingElectrons_hltScoutingEgammaPacker__HLT.obj :           *
+*         | vector<Run3ScoutingElectron>                                     *
+*Entries :     1298 : Total  Size=      21715 bytes  File Size  =       3230 *
+*Baskets :        2 : Basket Size=      16384 bytes  Compression=   6.51     *
+*............................................................................*
+*Branch  :Run3ScoutingMuons_hltScoutingMuonPacker__HLT.                      *
+*Entries :     1298 : BranchElement (see below)                              *
+*............................................................................*
+*Br  240 :Run3ScoutingMuons_hltScoutingMuonPacker__HLT.present : Bool_t      *
+*Entries :     1298 : Total  Size=       2096 bytes  File Size  =        149 *
+*Baskets :        1 : Basket Size=      16384 bytes  Compression=   9.52     *
+*............................................................................*
+*Br  241 :Run3ScoutingMuons_hltScoutingMuonPacker__HLT.obj :                 *
+*         | vector<Run3ScoutingMuon>                                         *
+*Entries :     1298 : Total  Size=      21679 bytes  File Size  =       3212 *
+*Baskets :        2 : Basket Size=      16384 bytes  Compression=   6.54     *
+*............................................................................*
+*Branch  :Run3ScoutingPFJets_hltScoutingPFPacker__HLT.                       *
+*Entries :     1298 : BranchElement (see below)                              *
+*............................................................................*
+*Br  242 :Run3ScoutingPFJets_hltScoutingPFPacker__HLT.present : Bool_t       *
+*Entries :     1298 : Total  Size=       2091 bytes  File Size  =        148 *
+*Baskets :        1 : Basket Size=      16384 bytes  Compression=   9.58     *
+*............................................................................*
+*Br  243 :Run3ScoutingPFJets_hltScoutingPFPacker__HLT.obj :                  *
+*         | vector<Run3ScoutingPFJet>                                        *
+*Entries :     1298 : Total  Size=      21673 bytes  File Size  =       3189 *
+*Baskets :        2 : Basket Size=      16384 bytes  Compression=   6.59     *
+*............................................................................*
+*Branch  :Run3ScoutingParticles_hltScoutingPFPacker__HLT.                    *
+*Entries :     1298 : BranchElement (see below)                              *
+*............................................................................*
+*Br  244 :Run3ScoutingParticles_hltScoutingPFPacker__HLT.present : Bool_t    *
+*Entries :     1298 : Total  Size=       2106 bytes  File Size  =        151 *
+*Baskets :        1 : Basket Size=      16384 bytes  Compression=   9.41     *
+*............................................................................*
+*Br  245 :Run3ScoutingParticles_hltScoutingPFPacker__HLT.obj :               *
+*         | vector<Run3ScoutingParticle>                                     *
+*Entries :     1298 : Total  Size=      21691 bytes  File Size  =       3220 *
+*Baskets :        2 : Basket Size=      16384 bytes  Compression=   6.53     *
+*............................................................................*
+*Branch  :Run3ScoutingPhotons_hltScoutingEgammaPacker__HLT.                  *
+*Entries :     1298 : BranchElement (see below)                              *
+*............................................................................*
+*Br  246 :Run3ScoutingPhotons_hltScoutingEgammaPacker__HLT.present : Bool_t  *
+*Entries :     1298 : Total  Size=       2116 bytes  File Size  =        153 *
+*Baskets :        1 : Basket Size=      16384 bytes  Compression=   9.30     *
+*............................................................................*
+*Br  247 :Run3ScoutingPhotons_hltScoutingEgammaPacker__HLT.obj :             *
+*         | vector<Run3ScoutingPhoton>                                       *
+*Entries :     1298 : Total  Size=      21703 bytes  File Size  =       3221 *
+*Baskets :        2 : Basket Size=      16384 bytes  Compression=   6.53     *
+*............................................................................*
+*Branch  :Run3ScoutingTracks_hltScoutingTrackPacker__HLT.                    *
+*Entries :     1298 : BranchElement (see below)                              *
+*............................................................................*
+*Br  248 :Run3ScoutingTracks_hltScoutingTrackPacker__HLT.present : Bool_t    *
+*Entries :     1298 : Total  Size=       2106 bytes  File Size  =        151 *
+*Baskets :        1 : Basket Size=      16384 bytes  Compression=   9.41     *
+*............................................................................*
+*Br  249 :Run3ScoutingTracks_hltScoutingTrackPacker__HLT.obj :               *
+*         | vector<Run3ScoutingTrack>                                        *
+*Entries :     1298 : Total  Size=      21691 bytes  File Size  =       3222 *
+*Baskets :        2 : Basket Size=      16384 bytes  Compression=   6.52     *
+*............................................................................*
+*Branch  :Run3ScoutingVertexs_hltScoutingMuonPacker_displacedVtx_HLT.        *
+*Entries :     1298 : BranchElement (see below)                              *
+*............................................................................*
+*Br  250 :Run3ScoutingVertexs_hltScoutingMuonPacker_displacedVtx_HLT.present : *
+*         | Bool_t                                                           *
+*Entries :     1298 : Total  Size=       2166 bytes  File Size  =        163 *
+*Baskets :        1 : Basket Size=      16384 bytes  Compression=   8.79     *
+*............................................................................*
+*Br  251 :Run3ScoutingVertexs_hltScoutingMuonPacker_displacedVtx_HLT.obj :   *
+*         | vector<Run3ScoutingVertex>                                       *
+*Entries :     1298 : Total  Size=      21763 bytes  File Size  =       3246 *
+*Baskets :        2 : Basket Size=      16384 bytes  Compression=   6.48     *
+*............................................................................*
+*Branch  :Run3ScoutingVertexs_hltScoutingPrimaryVertexPacker_primaryVtx_HLT. *
+*Entries :     1298 : BranchElement (see below)                              *
+*............................................................................*
+*Br  252 :Run3ScoutingVertexs_hltScoutingPrimaryVertexPacker_primaryVtx_HLT.present : *
+*         | Bool_t                                                           *
+*Entries :     1298 : Total  Size=       2201 bytes  File Size  =        170 *
+*Baskets :        1 : Basket Size=      16384 bytes  Compression=   8.47     *
+*............................................................................*
+*Br  253 :Run3ScoutingVertexs_hltScoutingPrimaryVertexPacker_primaryVtx_HLT.obj : *
+*         | vector<Run3ScoutingVertex>                                       *
+*Entries :     1298 : Total  Size=      70269 bytes  File Size  =       4667 *
+*Baskets :        5 : Basket Size=      16384 bytes  Compression=  14.90     *
+*............................................................................*
+*Branch  :TrackingParticles_mix_MergedTrackTruth_HLT.                        *
+*Entries :     1298 : BranchElement (see below)                              *
+*............................................................................*
+*Br  254 :TrackingParticles_mix_MergedTrackTruth_HLT.present : Bool_t        *
+*Entries :     1298 : Total  Size=       2086 bytes  File Size  =        147 *
+*Baskets :        1 : Basket Size=      16384 bytes  Compression=   9.64     *
+*............................................................................*
+*Br  255 :TrackingParticles_mix_MergedTrackTruth_HLT.obj :                   *
+*         | vector<TrackingParticle>                                         *
+*Entries :     1298 : Total  Size=    4129181 bytes  File Size  =     949015 *
+*Baskets :      229 : Basket Size=      16384 bytes  Compression=   4.35     *
+*............................................................................*
+*Branch  :TrackingVertexs_mix_MergedTrackTruth_HLT.                          *
+*Entries :     1298 : BranchElement (see below)                              *
+*............................................................................*
+*Br  256 :TrackingVertexs_mix_MergedTrackTruth_HLT.present : Bool_t          *
+*Entries :     1298 : Total  Size=       2076 bytes  File Size  =        145 *
+*Baskets :        1 : Basket Size=      16384 bytes  Compression=   9.76     *
+*............................................................................*
+*Br  257 :TrackingVertexs_mix_MergedTrackTruth_HLT.obj :                     *
+*         | vector<TrackingVertex>                                           *
+*Entries :     1298 : Total  Size=    2533942 bytes  File Size  =     456574 *
+*Baskets :      146 : Basket Size=      16384 bytes  Compression=   5.54     *
+*............................................................................*
+*Branch  :int6stdbitsetstdpairs_mix_AffectedAPVList_HLT.                     *
+*Entries :     1298 : BranchElement (see below)                              *
+*............................................................................*
+*Br  258 :int6stdbitsetstdpairs_mix_AffectedAPVList_HLT.present : Bool_t     *
+*Entries :     1298 : Total  Size=       2101 bytes  File Size  =        150 *
+*Baskets :        1 : Basket Size=      16384 bytes  Compression=   9.47     *
+*............................................................................*
+*Br  259 :int6stdbitsetstdpairs_mix_AffectedAPVList_HLT.obj :                *
+*         | vector<pair<int,bitset<6> > >                                    *
+*Entries :     1298 : Total  Size=      26877 bytes  File Size  =       2969 *
+*Baskets :        2 : Basket Size=      16384 bytes  Compression=   8.83     *
+*............................................................................*
+*Branch  :triggerTriggerEvent_hltTriggerSummaryAOD__HLT.                     *
+*Entries :     1298 : BranchElement (see below)                              *
+*............................................................................*
+*Br  260 :triggerTriggerEvent_hltTriggerSummaryAOD__HLT.present : Bool_t     *
+*Entries :     1298 : Total  Size=       2101 bytes  File Size  =        150 *
+*Baskets :        1 : Basket Size=      16384 bytes  Compression=   9.47     *
+*............................................................................*
+*Br  261 :triggerTriggerEvent_hltTriggerSummaryAOD__HLT.obj : trigger:       *
+*         | :TriggerEvent                                                    *
+*Entries :     1298 : Total  Size=   15131955 bytes  File Size  =    4172149 *
+*Baskets :     1298 : Basket Size=      16384 bytes  Compression=   3.62     *
+*............................................................................*

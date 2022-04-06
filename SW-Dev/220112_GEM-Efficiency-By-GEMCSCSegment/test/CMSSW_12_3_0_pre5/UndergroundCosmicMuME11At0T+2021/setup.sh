@@ -1,10 +1,10 @@
 #!/bin/sh
-PROJECT_HOME=/pad/seyang/Projects/GEM-Workspace/SW-Dev/220112_GEM-Efficiency-By-GEMCSCSegment/
-CMSSW_VERSION=CMSSW_12_3_0_pre5
-SAMPLE=UndergroundCosmicMuME11At0T+2021
-
-CMSSW_BASE=${PROJECT_HOME}/${CMSSW_VERSION}
+TASK_HOME=$(dirname `readlink -f ${BASH_SOURCE[0]}`)
+SAMPLE=$(basename ${TASK_HOME})
+PROJECT_HOME=$(dirname $(dirname $(dirname ${TASK_HOME})))
 PROJECT=$(basename ${PROJECT_HOME})
+CMSSW_VERSION=$(basename $(dirname ${TASK_HOME}))
+CMSSW_BASE=${PROJECT_HOME}/${CMSSW_VERSION}
 
 if [ ! -d ${CMSSW_BASE} ]; then
     echo "CMSSW_BASE NOT FOUND: ${CMSSW_BASE}"
@@ -114,6 +114,9 @@ function submit_pool() {
 
     # check_output_root # FIXME
     check_log_dir ${LOG_DIR}
+
+    rm -f ${LOG_DIR}/*
+    rm -f ${OUTPUT_DIR}/*
 
     COMMAND="gem-dqm-submit.py -i ${INPUT_DIR} -o ${OUTPUT_DIR} -l ${LOG_DIR} -b ${JOB_BATCH_NAME} ${CFG}"
     echo ${COMMAND}

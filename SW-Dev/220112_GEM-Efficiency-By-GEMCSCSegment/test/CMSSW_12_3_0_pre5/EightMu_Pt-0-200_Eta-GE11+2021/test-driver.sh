@@ -1,0 +1,11 @@
+cmsDriver.py step3  \
+	--step RAW2DIGI,L1Reco,RECO,RECOSIM,PAT \
+	--conditions auto:phase1_2021_realistic \
+	--datatier GEN-SIM-RECO \
+	--number -1 \
+	--eventcontent RECOSIM \
+	--geometry DB:Extended \
+	--era Run3 \
+	--filein  file:step2.root  \
+	--fileout file:step3.root \
+    --no_exec
