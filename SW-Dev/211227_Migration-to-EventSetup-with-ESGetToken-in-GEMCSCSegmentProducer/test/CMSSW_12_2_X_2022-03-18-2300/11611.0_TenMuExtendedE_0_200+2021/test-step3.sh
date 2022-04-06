@@ -6,7 +6,7 @@ NAME=${NAME/".py"/""}
 
 LOG_FILE=./logs/test-${NAME}.log
 
-NUM_THREADS=2
+NUM_THREADS=10
 
 cmsRun -n ${NUM_THREADS} ${CFG_FILE} > ${LOG_FILE} 2>&1 &
 tail -f ${LOG_FILE}

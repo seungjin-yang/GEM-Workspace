@@ -21,7 +21,7 @@ options = VarParsing('analysis')
 options.parseArguments()
 
 process.maxEvents = cms.untracked.PSet(
-    input = cms.untracked.int32(options.maxEvents),
+    input = cms.untracked.int32(-1),
     output = cms.optional.untracked.allowed(cms.int32,cms.PSet)
 )
 
@@ -29,9 +29,9 @@ process.source = cms.Source("PoolSource",
     fileNames = cms.untracked.vstring(options.inputFiles),
 )
 
-process.gemcscs = cms.EDAnalyzer('TestGEMCSCSegmentAnalyzer',
+process.TestGEMCSCSegmentAnalyzer = cms.EDAnalyzer('TestGEMCSCSegmentAnalyzer',
     RootFileName = cms.untracked.string("TestGEMCSCSegmentHistograms.root"),
     Debug = cms.untracked.bool(True),
 )
 
-process.p = cms.Path(process.gemcscs)
+process.p = cms.Path(process.TestGEMCSCSegmentAnalyzer)

@@ -117,3 +117,9 @@ process = customiseEarlyDelete(process)
 process.load('RecoLocalMuon.GEMCSCSegment.gemcscSegments_cfi')
 process.gemcscSegments_step = cms.Path(process.gemcscSegments)
 process.schedule.insert(3, process.gemcscSegments_step)
+
+process.RECOSIMoutput.outputCommands.extend([
+    'keep *_g4SimHits_*_*',
+    'keep *_gemcscSegments_*_*',
+])
+
