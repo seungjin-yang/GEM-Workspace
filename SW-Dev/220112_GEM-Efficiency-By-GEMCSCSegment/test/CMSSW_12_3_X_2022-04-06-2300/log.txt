@@ -1,0 +1,874 @@
+Querying DAS for files...
+the query is file run=344518 dataset=/ExpressCosmics/Commissioning2021-Express-v1/FEVT lumi=1
+DAS succeeded after 1 attempts 0
+found files:  ['/store/express/Commissioning2021/ExpressCosmics/FEVT/Express-v1/000/344/518/00000/8ae6d6f6-7859-4089-84dd-4a5d89deb5df.root']
+edmFileUtil --catalog file:/cvmfs/cms-ib.cern.ch/SITECONF/local/PhEDEx/storage.xml?protocol=xrootd --events /store/express/Commissioning2021/ExpressCosmics/FEVT/Express-v1/000/344/518/00000/8ae6d6f6-7859-4089-84dd-4a5d89deb5df.root | tail -n +9 | head -n -5 | awk '{ print $3 }'
+the query is file run=344518 dataset=/ExpressCosmics/Commissioning2021-Express-v1/FEVT lumi=2
+DAS succeeded after 1 attempts 0
+found files:  ['/store/express/Commissioning2021/ExpressCosmics/FEVT/Express-v1/000/344/518/00000/8ae6d6f6-7859-4089-84dd-4a5d89deb5df.root']
+edmFileUtil --catalog file:/cvmfs/cms-ib.cern.ch/SITECONF/local/PhEDEx/storage.xml?protocol=xrootd --events /store/express/Commissioning2021/ExpressCosmics/FEVT/Express-v1/000/344/518/00000/8ae6d6f6-7859-4089-84dd-4a5d89deb5df.root | tail -n +9 | head -n -5 | awk '{ print $3 }'
+Got 2 files.
+Loaded configuration file from: []
+dqmRunConfig: cms.PSet(
+    collectorHost = cms.untracked.string('127.0.0.1'),
+    collectorPort = cms.untracked.int32(9190),
+    type = cms.untracked.string('userarea')
+)
+Final Source settings: cms.Source("PoolSource",
+    dropDescendantsOfDroppedBranches = cms.untracked.bool(True),
+    eventsToProcess = cms.untracked.VEventRange("344518:1:31462-344518:1:31963", "344518:2:31462-344518:2:31963"),
+    fileNames = cms.untracked.vstring(
+        '/store/express/Commissioning2021/ExpressCosmics/FEVT/Express-v1/000/344/518/00000/8ae6d6f6-7859-4089-84dd-4a5d89deb5df.root',
+        '/store/express/Commissioning2021/ExpressCosmics/FEVT/Express-v1/000/344/518/00000/8ae6d6f6-7859-4089-84dd-4a5d89deb5df.root'
+    ),
+    inputCommands = cms.untracked.vstring(
+        'drop *',
+        'keep FEDRawDataCollection_rawDataCollector_*_*',
+        'keep GlobalObjectMapRecord_hltGtStage2ObjectMap_*_*',
+        'keep edmTriggerResults_TriggerResults_*_*'
+    ),
+    secondaryFileNames = cms.untracked.vstring()
+)
+
+Monitoring file not found, disabling.
+07-Apr-2022 17:18:27 CEST  Initiating request to open file root://eoscms.cern.ch//eos/cms/store/express/Commissioning2021/ExpressCosmics/FEVT/Express-v1/000/344/518/00000/8ae6d6f6-7859-4089-84dd-4a5d89deb5df.root
+%MSG-w XrdAdaptor:  file_open 07-Apr-2022 17:18:29 CEST pre-events
+Data is served from cern.ch instead of original site eoscms
+%MSG
+07-Apr-2022 17:18:34 CEST  Successfully opened file root://eoscms.cern.ch//eos/cms/store/express/Commissioning2021/ExpressCosmics/FEVT/Express-v1/000/344/518/00000/8ae6d6f6-7859-4089-84dd-4a5d89deb5df.root
+Begin processing the 1st record. Run 344518, Event 31571, LumiSection 2 on stream 0 at 07-Apr-2022 17:18:38.628 CEST
+Begin processing the 2nd record. Run 344518, Event 31572, LumiSection 2 on stream 0 at 07-Apr-2022 17:18:39.250 CEST
+Begin processing the 3rd record. Run 344518, Event 31573, LumiSection 2 on stream 0 at 07-Apr-2022 17:18:39.262 CEST
+Begin processing the 4th record. Run 344518, Event 31676, LumiSection 2 on stream 0 at 07-Apr-2022 17:18:39.280 CEST
+Begin processing the 5th record. Run 344518, Event 31884, LumiSection 2 on stream 0 at 07-Apr-2022 17:18:39.290 CEST
+Begin processing the 6th record. Run 344518, Event 31472, LumiSection 2 on stream 0 at 07-Apr-2022 17:18:39.381 CEST
+Begin processing the 7th record. Run 344518, Event 31578, LumiSection 2 on stream 0 at 07-Apr-2022 17:18:39.475 CEST
+Begin processing the 8th record. Run 344518, Event 31580, LumiSection 2 on stream 0 at 07-Apr-2022 17:18:39.487 CEST
+Begin processing the 9th record. Run 344518, Event 31685, LumiSection 2 on stream 0 at 07-Apr-2022 17:18:39.493 CEST
+Begin processing the 10th record. Run 344518, Event 31581, LumiSection 2 on stream 0 at 07-Apr-2022 17:18:39.504 CEST
+Begin processing the 11th record. Run 344518, Event 31583, LumiSection 2 on stream 0 at 07-Apr-2022 17:18:39.511 CEST
+Begin processing the 12th record. Run 344518, Event 31786, LumiSection 2 on stream 0 at 07-Apr-2022 17:18:39.521 CEST
+Begin processing the 13th record. Run 344518, Event 31688, LumiSection 2 on stream 0 at 07-Apr-2022 17:18:39.527 CEST
+Begin processing the 14th record. Run 344518, Event 31790, LumiSection 2 on stream 0 at 07-Apr-2022 17:18:39.538 CEST
+Begin processing the 15th record. Run 344518, Event 31789, LumiSection 2 on stream 0 at 07-Apr-2022 17:18:39.544 CEST
+Begin processing the 16th record. Run 344518, Event 31893, LumiSection 2 on stream 0 at 07-Apr-2022 17:18:39.553 CEST
+Begin processing the 17th record. Run 344518, Event 31894, LumiSection 2 on stream 0 at 07-Apr-2022 17:18:39.559 CEST
+Begin processing the 18th record. Run 344518, Event 31896, LumiSection 2 on stream 0 at 07-Apr-2022 17:18:39.568 CEST
+Begin processing the 19th record. Run 344518, Event 31588, LumiSection 2 on stream 0 at 07-Apr-2022 17:18:39.576 CEST
+Begin processing the 20th record. Run 344518, Event 31590, LumiSection 2 on stream 0 at 07-Apr-2022 17:18:39.632 CEST
+Begin processing the 21st record. Run 344518, Event 31793, LumiSection 2 on stream 0 at 07-Apr-2022 17:18:39.638 CEST
+Begin processing the 22nd record. Run 344518, Event 31799, LumiSection 2 on stream 0 at 07-Apr-2022 17:18:39.647 CEST
+Begin processing the 23rd record. Run 344518, Event 31797, LumiSection 2 on stream 0 at 07-Apr-2022 17:18:39.653 CEST
+Begin processing the 24th record. Run 344518, Event 31903, LumiSection 2 on stream 0 at 07-Apr-2022 17:18:39.663 CEST
+Begin processing the 25th record. Run 344518, Event 31901, LumiSection 2 on stream 0 at 07-Apr-2022 17:18:39.668 CEST
+Begin processing the 26th record. Run 344518, Event 31539, LumiSection 2 on stream 0 at 07-Apr-2022 17:18:39.742 CEST
+Begin processing the 27th record. Run 344518, Event 31642, LumiSection 2 on stream 0 at 07-Apr-2022 17:18:39.754 CEST
+Begin processing the 28th record. Run 344518, Event 31537, LumiSection 2 on stream 0 at 07-Apr-2022 17:18:39.764 CEST
+Begin processing the 29th record. Run 344518, Event 31646, LumiSection 2 on stream 0 at 07-Apr-2022 17:18:39.771 CEST
+Begin processing the 30th record. Run 344518, Event 31643, LumiSection 2 on stream 0 at 07-Apr-2022 17:18:39.781 CEST
+Begin processing the 31st record. Run 344518, Event 31752, LumiSection 2 on stream 0 at 07-Apr-2022 17:18:39.787 CEST
+Begin processing the 32nd record. Run 344518, Event 31850, LumiSection 2 on stream 0 at 07-Apr-2022 17:18:39.797 CEST
+Begin processing the 33rd record. Run 344518, Event 31555, LumiSection 2 on stream 0 at 07-Apr-2022 17:18:39.934 CEST
+Begin processing the 34th record. Run 344518, Event 31554, LumiSection 2 on stream 0 at 07-Apr-2022 17:18:39.945 CEST
+Begin processing the 35th record. Run 344518, Event 31560, LumiSection 2 on stream 0 at 07-Apr-2022 17:18:39.951 CEST
+Begin processing the 36th record. Run 344518, Event 31766, LumiSection 2 on stream 0 at 07-Apr-2022 17:18:39.960 CEST
+Begin processing the 37th record. Run 344518, Event 31865, LumiSection 2 on stream 0 at 07-Apr-2022 17:18:39.966 CEST
+Begin processing the 38th record. Run 344518, Event 31868, LumiSection 2 on stream 0 at 07-Apr-2022 17:18:39.977 CEST
+Begin processing the 39th record. Run 344518, Event 31462, LumiSection 2 on stream 0 at 07-Apr-2022 17:18:40.052 CEST
+Begin processing the 40th record. Run 344518, Event 31566, LumiSection 2 on stream 0 at 07-Apr-2022 17:18:40.069 CEST
+Begin processing the 41st record. Run 344518, Event 31561, LumiSection 2 on stream 0 at 07-Apr-2022 17:18:40.079 CEST
+Begin processing the 42nd record. Run 344518, Event 31774, LumiSection 2 on stream 0 at 07-Apr-2022 17:18:40.085 CEST
+Begin processing the 43rd record. Run 344518, Event 31775, LumiSection 2 on stream 0 at 07-Apr-2022 17:18:40.095 CEST
+Begin processing the 44th record. Run 344518, Event 31880, LumiSection 2 on stream 0 at 07-Apr-2022 17:18:40.101 CEST
+Begin processing the 45th record. Run 344518, Event 31636, LumiSection 2 on stream 0 at 07-Apr-2022 17:18:40.226 CEST
+Begin processing the 46th record. Run 344518, Event 31535, LumiSection 2 on stream 0 at 07-Apr-2022 17:18:40.236 CEST
+Begin processing the 47th record. Run 344518, Event 31534, LumiSection 2 on stream 0 at 07-Apr-2022 17:18:40.249 CEST
+Begin processing the 48th record. Run 344518, Event 31638, LumiSection 2 on stream 0 at 07-Apr-2022 17:18:40.256 CEST
+Begin processing the 49th record. Run 344518, Event 31844, LumiSection 2 on stream 0 at 07-Apr-2022 17:18:40.265 CEST
+Begin processing the 50th record. Run 344518, Event 31744, LumiSection 2 on stream 0 at 07-Apr-2022 17:18:40.275 CEST
+Begin processing the 51st record. Run 344518, Event 31952, LumiSection 2 on stream 0 at 07-Apr-2022 17:18:40.281 CEST
+Begin processing the 52nd record. Run 344518, Event 31512, LumiSection 2 on stream 0 at 07-Apr-2022 17:18:40.365 CEST
+Begin processing the 53rd record. Run 344518, Event 31508, LumiSection 2 on stream 0 at 07-Apr-2022 17:18:40.375 CEST
+Begin processing the 54th record. Run 344518, Event 31714, LumiSection 2 on stream 0 at 07-Apr-2022 17:18:40.382 CEST
+Begin processing the 55th record. Run 344518, Event 31713, LumiSection 2 on stream 0 at 07-Apr-2022 17:18:40.391 CEST
+Begin processing the 56th record. Run 344518, Event 31715, LumiSection 2 on stream 0 at 07-Apr-2022 17:18:40.399 CEST
+Begin processing the 57th record. Run 344518, Event 31716, LumiSection 2 on stream 0 at 07-Apr-2022 17:18:40.408 CEST
+Begin processing the 58th record. Run 344518, Event 31719, LumiSection 2 on stream 0 at 07-Apr-2022 17:18:40.414 CEST
+Begin processing the 59th record. Run 344518, Event 31819, LumiSection 2 on stream 0 at 07-Apr-2022 17:18:40.425 CEST
+Begin processing the 60th record. Run 344518, Event 31921, LumiSection 2 on stream 0 at 07-Apr-2022 17:18:40.431 CEST
+Begin processing the 61st record. Run 344518, Event 31821, LumiSection 2 on stream 0 at 07-Apr-2022 17:18:40.449 CEST
+Begin processing the 62nd record. Run 344518, Event 31822, LumiSection 2 on stream 0 at 07-Apr-2022 17:18:40.455 CEST
+Begin processing the 63rd record. Run 344518, Event 31925, LumiSection 2 on stream 0 at 07-Apr-2022 17:18:40.465 CEST
+Begin processing the 64th record. Run 344518, Event 31490, LumiSection 2 on stream 0 at 07-Apr-2022 17:18:40.571 CEST
+Begin processing the 65th record. Run 344518, Event 31906, LumiSection 2 on stream 0 at 07-Apr-2022 17:18:40.674 CEST
+Begin processing the 66th record. Run 344518, Event 31805, LumiSection 2 on stream 0 at 07-Apr-2022 17:18:40.685 CEST
+Begin processing the 67th record. Run 344518, Event 31905, LumiSection 2 on stream 0 at 07-Apr-2022 17:18:40.697 CEST
+Begin processing the 68th record. Run 344518, Event 31907, LumiSection 2 on stream 0 at 07-Apr-2022 17:18:40.703 CEST
+Begin processing the 69th record. Run 344518, Event 31909, LumiSection 2 on stream 0 at 07-Apr-2022 17:18:40.713 CEST
+Begin processing the 70th record. Run 344518, Event 31910, LumiSection 2 on stream 0 at 07-Apr-2022 17:18:40.720 CEST
+Begin processing the 71st record. Run 344518, Event 31499, LumiSection 2 on stream 0 at 07-Apr-2022 17:18:40.790 CEST
+Begin processing the 72nd record. Run 344518, Event 31602, LumiSection 2 on stream 0 at 07-Apr-2022 17:18:40.800 CEST
+Begin processing the 73rd record. Run 344518, Event 31709, LumiSection 2 on stream 0 at 07-Apr-2022 17:18:40.811 CEST
+Begin processing the 74th record. Run 344518, Event 31605, LumiSection 2 on stream 0 at 07-Apr-2022 17:18:40.818 CEST
+Begin processing the 75th record. Run 344518, Event 31809, LumiSection 2 on stream 0 at 07-Apr-2022 17:18:40.828 CEST
+Begin processing the 76th record. Run 344518, Event 31814, LumiSection 2 on stream 0 at 07-Apr-2022 17:18:40.836 CEST
+Begin processing the 77th record. Run 344518, Event 31917, LumiSection 2 on stream 0 at 07-Apr-2022 17:18:40.847 CEST
+Begin processing the 78th record. Run 344518, Event 31812, LumiSection 2 on stream 0 at 07-Apr-2022 17:18:40.853 CEST
+Begin processing the 79th record. Run 344518, Event 31524, LumiSection 2 on stream 0 at 07-Apr-2022 17:18:41.008 CEST
+Begin processing the 80th record. Run 344518, Event 31523, LumiSection 2 on stream 0 at 07-Apr-2022 17:18:41.019 CEST
+Begin processing the 81st record. Run 344518, Event 31527, LumiSection 2 on stream 0 at 07-Apr-2022 17:18:41.025 CEST
+Begin processing the 82nd record. Run 344518, Event 31528, LumiSection 2 on stream 0 at 07-Apr-2022 17:18:41.035 CEST
+Begin processing the 83rd record. Run 344518, Event 31630, LumiSection 2 on stream 0 at 07-Apr-2022 17:18:41.042 CEST
+Begin processing the 84th record. Run 344518, Event 31626, LumiSection 2 on stream 0 at 07-Apr-2022 17:18:41.052 CEST
+Begin processing the 85th record. Run 344518, Event 31735, LumiSection 2 on stream 0 at 07-Apr-2022 17:18:41.058 CEST
+Begin processing the 86th record. Run 344518, Event 31833, LumiSection 2 on stream 0 at 07-Apr-2022 17:18:41.068 CEST
+Begin processing the 87th record. Run 344518, Event 31736, LumiSection 2 on stream 0 at 07-Apr-2022 17:18:41.075 CEST
+Begin processing the 88th record. Run 344518, Event 31940, LumiSection 2 on stream 0 at 07-Apr-2022 17:18:41.086 CEST
+Begin processing the 89th record. Run 344518, Event 31840, LumiSection 2 on stream 0 at 07-Apr-2022 17:18:41.093 CEST
+Begin processing the 90th record. Run 344518, Event 31942, LumiSection 2 on stream 0 at 07-Apr-2022 17:18:41.101 CEST
+Begin processing the 91st record. Run 344518, Event 31828, LumiSection 2 on stream 0 at 07-Apr-2022 17:18:41.169 CEST
+Begin processing the 92nd record. Run 344518, Event 31931, LumiSection 2 on stream 0 at 07-Apr-2022 17:18:41.179 CEST
+Begin processing the 93rd record. Run 344518, Event 31654, LumiSection 2 on stream 0 at 07-Apr-2022 17:18:41.190 CEST
+Begin processing the 94th record. Run 344518, Event 31754, LumiSection 2 on stream 0 at 07-Apr-2022 17:18:41.257 CEST
+Begin processing the 95th record. Run 344518, Event 31546, LumiSection 2 on stream 0 at 07-Apr-2022 17:18:41.265 CEST
+Begin processing the 96th record. Run 344518, Event 31756, LumiSection 2 on stream 0 at 07-Apr-2022 17:18:41.276 CEST
+Begin processing the 97th record. Run 344518, Event 31862, LumiSection 2 on stream 0 at 07-Apr-2022 17:18:41.283 CEST
+Begin processing the 98th record. Run 344518, Event 31962, LumiSection 2 on stream 0 at 07-Apr-2022 17:18:41.293 CEST
+Begin processing the 99th record. Run 344518, Event 31963, LumiSection 2 on stream 0 at 07-Apr-2022 17:18:41.299 CEST
+Begin processing the 100th record. Run 344518, Event 31857, LumiSection 2 on stream 0 at 07-Apr-2022 17:18:41.310 CEST
+07-Apr-2022 17:18:41 CEST  Closed file root://eoscms.cern.ch//eos/cms/store/express/Commissioning2021/ExpressCosmics/FEVT/Express-v1/000/344/518/00000/8ae6d6f6-7859-4089-84dd-4a5d89deb5df.root
+07-Apr-2022 17:18:41 CEST  Initiating request to open file root://eoscms.cern.ch//eos/cms/store/express/Commissioning2021/ExpressCosmics/FEVT/Express-v1/000/344/518/00000/8ae6d6f6-7859-4089-84dd-4a5d89deb5df.root
+%MSG-w XrdAdaptor:  file_open 07-Apr-2022 17:18:43 CEST PostProcessEvent
+Data is served from cern.ch instead of original site eoscms
+%MSG
+07-Apr-2022 17:18:43 CEST  Successfully opened file root://eoscms.cern.ch//eos/cms/store/express/Commissioning2021/ExpressCosmics/FEVT/Express-v1/000/344/518/00000/8ae6d6f6-7859-4089-84dd-4a5d89deb5df.root
+%MSG-w DuplicateEvent:  PostStreamBeginLumi 07-Apr-2022 17:18:43 CEST  PostStreamBeginLumi
+Duplicate Events found in entire set of input files.
+Both events were from run 344518 and luminosity block 2 with event number 31571.
+The duplicate was from file root://eoscms.cern.ch//eos/cms/store/express/Commissioning2021/ExpressCosmics/FEVT/Express-v1/000/344/518/00000/8ae6d6f6-7859-4089-84dd-4a5d89deb5df.root.
+The duplicate will be skipped.
+
+%MSG
+%MSG-w DuplicateEvent:  PostStreamBeginLumi 07-Apr-2022 17:18:43 CEST  PostStreamBeginLumi
+Duplicate Events found in entire set of input files.
+Both events were from run 344518 and luminosity block 2 with event number 31572.
+The duplicate was from file root://eoscms.cern.ch//eos/cms/store/express/Commissioning2021/ExpressCosmics/FEVT/Express-v1/000/344/518/00000/8ae6d6f6-7859-4089-84dd-4a5d89deb5df.root.
+The duplicate will be skipped.
+
+%MSG
+%MSG-w DuplicateEvent:  PostStreamBeginLumi 07-Apr-2022 17:18:43 CEST  PostStreamBeginLumi
+Duplicate Events found in entire set of input files.
+Both events were from run 344518 and luminosity block 2 with event number 31573.
+The duplicate was from file root://eoscms.cern.ch//eos/cms/store/express/Commissioning2021/ExpressCosmics/FEVT/Express-v1/000/344/518/00000/8ae6d6f6-7859-4089-84dd-4a5d89deb5df.root.
+The duplicate will be skipped.
+
+%MSG
+%MSG-w DuplicateEvent:  PostStreamBeginLumi 07-Apr-2022 17:18:43 CEST  PostStreamBeginLumi
+Duplicate Events found in entire set of input files.
+Both events were from run 344518 and luminosity block 2 with event number 31676.
+The duplicate was from file root://eoscms.cern.ch//eos/cms/store/express/Commissioning2021/ExpressCosmics/FEVT/Express-v1/000/344/518/00000/8ae6d6f6-7859-4089-84dd-4a5d89deb5df.root.
+The duplicate will be skipped.
+
+%MSG
+%MSG-w DuplicateEvent:  PostStreamBeginLumi 07-Apr-2022 17:18:43 CEST  PostStreamBeginLumi
+Duplicate Events found in entire set of input files.
+Both events were from run 344518 and luminosity block 2 with event number 31884.
+The duplicate was from file root://eoscms.cern.ch//eos/cms/store/express/Commissioning2021/ExpressCosmics/FEVT/Express-v1/000/344/518/00000/8ae6d6f6-7859-4089-84dd-4a5d89deb5df.root.
+The duplicate will be skipped.
+
+%MSG
+%MSG-w DuplicateEvent:  PostStreamBeginLumi 07-Apr-2022 17:18:43 CEST  PostStreamBeginLumi
+Duplicate Events found in entire set of input files.
+Both events were from run 344518 and luminosity block 2 with event number 31472.
+The duplicate was from file root://eoscms.cern.ch//eos/cms/store/express/Commissioning2021/ExpressCosmics/FEVT/Express-v1/000/344/518/00000/8ae6d6f6-7859-4089-84dd-4a5d89deb5df.root.
+The duplicate will be skipped.
+
+%MSG
+%MSG-w DuplicateEvent:  PostStreamBeginLumi 07-Apr-2022 17:18:43 CEST  PostStreamBeginLumi
+Duplicate Events found in entire set of input files.
+Both events were from run 344518 and luminosity block 2 with event number 31578.
+The duplicate was from file root://eoscms.cern.ch//eos/cms/store/express/Commissioning2021/ExpressCosmics/FEVT/Express-v1/000/344/518/00000/8ae6d6f6-7859-4089-84dd-4a5d89deb5df.root.
+The duplicate will be skipped.
+
+%MSG
+%MSG-w DuplicateEvent:  PostStreamBeginLumi 07-Apr-2022 17:18:43 CEST  PostStreamBeginLumi
+Duplicate Events found in entire set of input files.
+Both events were from run 344518 and luminosity block 2 with event number 31580.
+The duplicate was from file root://eoscms.cern.ch//eos/cms/store/express/Commissioning2021/ExpressCosmics/FEVT/Express-v1/000/344/518/00000/8ae6d6f6-7859-4089-84dd-4a5d89deb5df.root.
+The duplicate will be skipped.
+
+%MSG
+%MSG-w DuplicateEvent:  PostStreamBeginLumi 07-Apr-2022 17:18:43 CEST  PostStreamBeginLumi
+Duplicate Events found in entire set of input files.
+Both events were from run 344518 and luminosity block 2 with event number 31685.
+The duplicate was from file root://eoscms.cern.ch//eos/cms/store/express/Commissioning2021/ExpressCosmics/FEVT/Express-v1/000/344/518/00000/8ae6d6f6-7859-4089-84dd-4a5d89deb5df.root.
+The duplicate will be skipped.
+
+%MSG
+%MSG-w DuplicateEvent:  PostStreamBeginLumi 07-Apr-2022 17:18:43 CEST  PostStreamBeginLumi
+Duplicate Events found in entire set of input files.
+Both events were from run 344518 and luminosity block 2 with event number 31581.
+The duplicate was from file root://eoscms.cern.ch//eos/cms/store/express/Commissioning2021/ExpressCosmics/FEVT/Express-v1/000/344/518/00000/8ae6d6f6-7859-4089-84dd-4a5d89deb5df.root.
+The duplicate will be skipped.
+
+%MSG
+%MSG-w DuplicateEvent:  PostStreamBeginLumi 07-Apr-2022 17:18:43 CEST  PostStreamBeginLumi
+Duplicate Events found in entire set of input files.
+Both events were from run 344518 and luminosity block 2 with event number 31583.
+The duplicate was from file root://eoscms.cern.ch//eos/cms/store/express/Commissioning2021/ExpressCosmics/FEVT/Express-v1/000/344/518/00000/8ae6d6f6-7859-4089-84dd-4a5d89deb5df.root.
+The duplicate will be skipped.
+
+%MSG
+%MSG-w DuplicateEvent:  PostStreamBeginLumi 07-Apr-2022 17:18:43 CEST  PostStreamBeginLumi
+Duplicate Events found in entire set of input files.
+Both events were from run 344518 and luminosity block 2 with event number 31786.
+The duplicate was from file root://eoscms.cern.ch//eos/cms/store/express/Commissioning2021/ExpressCosmics/FEVT/Express-v1/000/344/518/00000/8ae6d6f6-7859-4089-84dd-4a5d89deb5df.root.
+The duplicate will be skipped.
+
+%MSG
+%MSG-w DuplicateEvent:  PostStreamBeginLumi 07-Apr-2022 17:18:43 CEST  PostStreamBeginLumi
+Duplicate Events found in entire set of input files.
+Both events were from run 344518 and luminosity block 2 with event number 31688.
+The duplicate was from file root://eoscms.cern.ch//eos/cms/store/express/Commissioning2021/ExpressCosmics/FEVT/Express-v1/000/344/518/00000/8ae6d6f6-7859-4089-84dd-4a5d89deb5df.root.
+The duplicate will be skipped.
+
+%MSG
+%MSG-w DuplicateEvent:  PostStreamBeginLumi 07-Apr-2022 17:18:43 CEST  PostStreamBeginLumi
+Duplicate Events found in entire set of input files.
+Both events were from run 344518 and luminosity block 2 with event number 31790.
+The duplicate was from file root://eoscms.cern.ch//eos/cms/store/express/Commissioning2021/ExpressCosmics/FEVT/Express-v1/000/344/518/00000/8ae6d6f6-7859-4089-84dd-4a5d89deb5df.root.
+The duplicate will be skipped.
+
+%MSG
+%MSG-w DuplicateEvent:  PostStreamBeginLumi 07-Apr-2022 17:18:43 CEST  PostStreamBeginLumi
+Duplicate Events found in entire set of input files.
+Both events were from run 344518 and luminosity block 2 with event number 31789.
+The duplicate was from file root://eoscms.cern.ch//eos/cms/store/express/Commissioning2021/ExpressCosmics/FEVT/Express-v1/000/344/518/00000/8ae6d6f6-7859-4089-84dd-4a5d89deb5df.root.
+The duplicate will be skipped.
+
+%MSG
+%MSG-w DuplicateEvent:  PostStreamBeginLumi 07-Apr-2022 17:18:43 CEST  PostStreamBeginLumi
+Duplicate Events found in entire set of input files.
+Both events were from run 344518 and luminosity block 2 with event number 31893.
+The duplicate was from file root://eoscms.cern.ch//eos/cms/store/express/Commissioning2021/ExpressCosmics/FEVT/Express-v1/000/344/518/00000/8ae6d6f6-7859-4089-84dd-4a5d89deb5df.root.
+The duplicate will be skipped.
+
+%MSG
+%MSG-w DuplicateEvent:  PostStreamBeginLumi 07-Apr-2022 17:18:43 CEST  PostStreamBeginLumi
+Duplicate Events found in entire set of input files.
+Both events were from run 344518 and luminosity block 2 with event number 31894.
+The duplicate was from file root://eoscms.cern.ch//eos/cms/store/express/Commissioning2021/ExpressCosmics/FEVT/Express-v1/000/344/518/00000/8ae6d6f6-7859-4089-84dd-4a5d89deb5df.root.
+The duplicate will be skipped.
+
+%MSG
+%MSG-w DuplicateEvent:  PostStreamBeginLumi 07-Apr-2022 17:18:43 CEST  PostStreamBeginLumi
+Duplicate Events found in entire set of input files.
+Both events were from run 344518 and luminosity block 2 with event number 31896.
+The duplicate was from file root://eoscms.cern.ch//eos/cms/store/express/Commissioning2021/ExpressCosmics/FEVT/Express-v1/000/344/518/00000/8ae6d6f6-7859-4089-84dd-4a5d89deb5df.root.
+The duplicate will be skipped.
+
+%MSG
+%MSG-w DuplicateEvent:  PostStreamBeginLumi 07-Apr-2022 17:18:43 CEST  PostStreamBeginLumi
+Duplicate Events found in entire set of input files.
+Both events were from run 344518 and luminosity block 2 with event number 31588.
+The duplicate was from file root://eoscms.cern.ch//eos/cms/store/express/Commissioning2021/ExpressCosmics/FEVT/Express-v1/000/344/518/00000/8ae6d6f6-7859-4089-84dd-4a5d89deb5df.root.
+The duplicate will be skipped.
+
+%MSG
+%MSG-w DuplicateEvent:  PostStreamBeginLumi 07-Apr-2022 17:18:43 CEST  PostStreamBeginLumi
+Duplicate Events found in entire set of input files.
+Both events were from run 344518 and luminosity block 2 with event number 31590.
+The duplicate was from file root://eoscms.cern.ch//eos/cms/store/express/Commissioning2021/ExpressCosmics/FEVT/Express-v1/000/344/518/00000/8ae6d6f6-7859-4089-84dd-4a5d89deb5df.root.
+The duplicate will be skipped.
+
+%MSG
+%MSG-w DuplicateEvent:  PostStreamBeginLumi 07-Apr-2022 17:18:43 CEST  PostStreamBeginLumi
+Duplicate Events found in entire set of input files.
+Both events were from run 344518 and luminosity block 2 with event number 31793.
+The duplicate was from file root://eoscms.cern.ch//eos/cms/store/express/Commissioning2021/ExpressCosmics/FEVT/Express-v1/000/344/518/00000/8ae6d6f6-7859-4089-84dd-4a5d89deb5df.root.
+The duplicate will be skipped.
+
+%MSG
+%MSG-w DuplicateEvent:  PostStreamBeginLumi 07-Apr-2022 17:18:43 CEST  PostStreamBeginLumi
+Duplicate Events found in entire set of input files.
+Both events were from run 344518 and luminosity block 2 with event number 31799.
+The duplicate was from file root://eoscms.cern.ch//eos/cms/store/express/Commissioning2021/ExpressCosmics/FEVT/Express-v1/000/344/518/00000/8ae6d6f6-7859-4089-84dd-4a5d89deb5df.root.
+The duplicate will be skipped.
+
+%MSG
+%MSG-w DuplicateEvent:  PostStreamBeginLumi 07-Apr-2022 17:18:43 CEST  PostStreamBeginLumi
+Duplicate Events found in entire set of input files.
+Both events were from run 344518 and luminosity block 2 with event number 31797.
+The duplicate was from file root://eoscms.cern.ch//eos/cms/store/express/Commissioning2021/ExpressCosmics/FEVT/Express-v1/000/344/518/00000/8ae6d6f6-7859-4089-84dd-4a5d89deb5df.root.
+The duplicate will be skipped.
+
+%MSG
+%MSG-w DuplicateEvent:  PostStreamBeginLumi 07-Apr-2022 17:18:43 CEST  PostStreamBeginLumi
+Duplicate Events found in entire set of input files.
+Both events were from run 344518 and luminosity block 2 with event number 31903.
+The duplicate was from file root://eoscms.cern.ch//eos/cms/store/express/Commissioning2021/ExpressCosmics/FEVT/Express-v1/000/344/518/00000/8ae6d6f6-7859-4089-84dd-4a5d89deb5df.root.
+The duplicate will be skipped.
+
+%MSG
+%MSG-w DuplicateEvent:  PostStreamBeginLumi 07-Apr-2022 17:18:43 CEST  PostStreamBeginLumi
+Duplicate Events found in entire set of input files.
+Both events were from run 344518 and luminosity block 2 with event number 31901.
+The duplicate was from file root://eoscms.cern.ch//eos/cms/store/express/Commissioning2021/ExpressCosmics/FEVT/Express-v1/000/344/518/00000/8ae6d6f6-7859-4089-84dd-4a5d89deb5df.root.
+The duplicate will be skipped.
+
+%MSG
+%MSG-w DuplicateEvent:  PostStreamBeginLumi 07-Apr-2022 17:18:43 CEST  PostStreamBeginLumi
+Duplicate Events found in entire set of input files.
+Both events were from run 344518 and luminosity block 2 with event number 31539.
+The duplicate was from file root://eoscms.cern.ch//eos/cms/store/express/Commissioning2021/ExpressCosmics/FEVT/Express-v1/000/344/518/00000/8ae6d6f6-7859-4089-84dd-4a5d89deb5df.root.
+The duplicate will be skipped.
+
+%MSG
+%MSG-w DuplicateEvent:  PostStreamBeginLumi 07-Apr-2022 17:18:43 CEST  PostStreamBeginLumi
+Duplicate Events found in entire set of input files.
+Both events were from run 344518 and luminosity block 2 with event number 31642.
+The duplicate was from file root://eoscms.cern.ch//eos/cms/store/express/Commissioning2021/ExpressCosmics/FEVT/Express-v1/000/344/518/00000/8ae6d6f6-7859-4089-84dd-4a5d89deb5df.root.
+The duplicate will be skipped.
+
+%MSG
+%MSG-w DuplicateEvent:  PostStreamBeginLumi 07-Apr-2022 17:18:43 CEST  PostStreamBeginLumi
+Duplicate Events found in entire set of input files.
+Both events were from run 344518 and luminosity block 2 with event number 31537.
+The duplicate was from file root://eoscms.cern.ch//eos/cms/store/express/Commissioning2021/ExpressCosmics/FEVT/Express-v1/000/344/518/00000/8ae6d6f6-7859-4089-84dd-4a5d89deb5df.root.
+The duplicate will be skipped.
+
+%MSG
+%MSG-w DuplicateEvent:  PostStreamBeginLumi 07-Apr-2022 17:18:43 CEST  PostStreamBeginLumi
+Duplicate Events found in entire set of input files.
+Both events were from run 344518 and luminosity block 2 with event number 31646.
+The duplicate was from file root://eoscms.cern.ch//eos/cms/store/express/Commissioning2021/ExpressCosmics/FEVT/Express-v1/000/344/518/00000/8ae6d6f6-7859-4089-84dd-4a5d89deb5df.root.
+The duplicate will be skipped.
+
+%MSG
+%MSG-w DuplicateEvent:  PostStreamBeginLumi 07-Apr-2022 17:18:43 CEST  PostStreamBeginLumi
+Duplicate Events found in entire set of input files.
+Both events were from run 344518 and luminosity block 2 with event number 31643.
+The duplicate was from file root://eoscms.cern.ch//eos/cms/store/express/Commissioning2021/ExpressCosmics/FEVT/Express-v1/000/344/518/00000/8ae6d6f6-7859-4089-84dd-4a5d89deb5df.root.
+The duplicate will be skipped.
+
+%MSG
+%MSG-w DuplicateEvent:  PostStreamBeginLumi 07-Apr-2022 17:18:43 CEST  PostStreamBeginLumi
+Duplicate Events found in entire set of input files.
+Both events were from run 344518 and luminosity block 2 with event number 31752.
+The duplicate was from file root://eoscms.cern.ch//eos/cms/store/express/Commissioning2021/ExpressCosmics/FEVT/Express-v1/000/344/518/00000/8ae6d6f6-7859-4089-84dd-4a5d89deb5df.root.
+The duplicate will be skipped.
+
+%MSG
+%MSG-w DuplicateEvent:  PostStreamBeginLumi 07-Apr-2022 17:18:43 CEST  PostStreamBeginLumi
+Duplicate Events found in entire set of input files.
+Both events were from run 344518 and luminosity block 2 with event number 31850.
+The duplicate was from file root://eoscms.cern.ch//eos/cms/store/express/Commissioning2021/ExpressCosmics/FEVT/Express-v1/000/344/518/00000/8ae6d6f6-7859-4089-84dd-4a5d89deb5df.root.
+The duplicate will be skipped.
+
+%MSG
+%MSG-w DuplicateEvent:  PostStreamBeginLumi 07-Apr-2022 17:18:43 CEST  PostStreamBeginLumi
+Duplicate Events found in entire set of input files.
+Both events were from run 344518 and luminosity block 2 with event number 31555.
+The duplicate was from file root://eoscms.cern.ch//eos/cms/store/express/Commissioning2021/ExpressCosmics/FEVT/Express-v1/000/344/518/00000/8ae6d6f6-7859-4089-84dd-4a5d89deb5df.root.
+The duplicate will be skipped.
+
+%MSG
+%MSG-w DuplicateEvent:  PostStreamBeginLumi 07-Apr-2022 17:18:43 CEST  PostStreamBeginLumi
+Duplicate Events found in entire set of input files.
+Both events were from run 344518 and luminosity block 2 with event number 31554.
+The duplicate was from file root://eoscms.cern.ch//eos/cms/store/express/Commissioning2021/ExpressCosmics/FEVT/Express-v1/000/344/518/00000/8ae6d6f6-7859-4089-84dd-4a5d89deb5df.root.
+The duplicate will be skipped.
+
+%MSG
+%MSG-w DuplicateEvent:  PostStreamBeginLumi 07-Apr-2022 17:18:43 CEST  PostStreamBeginLumi
+Duplicate Events found in entire set of input files.
+Both events were from run 344518 and luminosity block 2 with event number 31560.
+The duplicate was from file root://eoscms.cern.ch//eos/cms/store/express/Commissioning2021/ExpressCosmics/FEVT/Express-v1/000/344/518/00000/8ae6d6f6-7859-4089-84dd-4a5d89deb5df.root.
+The duplicate will be skipped.
+
+%MSG
+%MSG-w DuplicateEvent:  PostStreamBeginLumi 07-Apr-2022 17:18:43 CEST  PostStreamBeginLumi
+Duplicate Events found in entire set of input files.
+Both events were from run 344518 and luminosity block 2 with event number 31766.
+The duplicate was from file root://eoscms.cern.ch//eos/cms/store/express/Commissioning2021/ExpressCosmics/FEVT/Express-v1/000/344/518/00000/8ae6d6f6-7859-4089-84dd-4a5d89deb5df.root.
+The duplicate will be skipped.
+
+%MSG
+%MSG-w DuplicateEvent:  PostStreamBeginLumi 07-Apr-2022 17:18:43 CEST  PostStreamBeginLumi
+Duplicate Events found in entire set of input files.
+Both events were from run 344518 and luminosity block 2 with event number 31865.
+The duplicate was from file root://eoscms.cern.ch//eos/cms/store/express/Commissioning2021/ExpressCosmics/FEVT/Express-v1/000/344/518/00000/8ae6d6f6-7859-4089-84dd-4a5d89deb5df.root.
+The duplicate will be skipped.
+
+%MSG
+%MSG-w DuplicateEvent:  PostStreamBeginLumi 07-Apr-2022 17:18:43 CEST  PostStreamBeginLumi
+Duplicate Events found in entire set of input files.
+Both events were from run 344518 and luminosity block 2 with event number 31868.
+The duplicate was from file root://eoscms.cern.ch//eos/cms/store/express/Commissioning2021/ExpressCosmics/FEVT/Express-v1/000/344/518/00000/8ae6d6f6-7859-4089-84dd-4a5d89deb5df.root.
+The duplicate will be skipped.
+
+%MSG
+%MSG-w DuplicateEvent:  PostStreamBeginLumi 07-Apr-2022 17:18:43 CEST  PostStreamBeginLumi
+Duplicate Events found in entire set of input files.
+Both events were from run 344518 and luminosity block 2 with event number 31462.
+The duplicate was from file root://eoscms.cern.ch//eos/cms/store/express/Commissioning2021/ExpressCosmics/FEVT/Express-v1/000/344/518/00000/8ae6d6f6-7859-4089-84dd-4a5d89deb5df.root.
+The duplicate will be skipped.
+
+%MSG
+%MSG-w DuplicateEvent:  PostStreamBeginLumi 07-Apr-2022 17:18:43 CEST  PostStreamBeginLumi
+Duplicate Events found in entire set of input files.
+Both events were from run 344518 and luminosity block 2 with event number 31566.
+The duplicate was from file root://eoscms.cern.ch//eos/cms/store/express/Commissioning2021/ExpressCosmics/FEVT/Express-v1/000/344/518/00000/8ae6d6f6-7859-4089-84dd-4a5d89deb5df.root.
+The duplicate will be skipped.
+
+%MSG
+%MSG-w DuplicateEvent:  PostStreamBeginLumi 07-Apr-2022 17:18:43 CEST  PostStreamBeginLumi
+Duplicate Events found in entire set of input files.
+Both events were from run 344518 and luminosity block 2 with event number 31561.
+The duplicate was from file root://eoscms.cern.ch//eos/cms/store/express/Commissioning2021/ExpressCosmics/FEVT/Express-v1/000/344/518/00000/8ae6d6f6-7859-4089-84dd-4a5d89deb5df.root.
+The duplicate will be skipped.
+
+%MSG
+%MSG-w DuplicateEvent:  PostStreamBeginLumi 07-Apr-2022 17:18:43 CEST  PostStreamBeginLumi
+Duplicate Events found in entire set of input files.
+Both events were from run 344518 and luminosity block 2 with event number 31774.
+The duplicate was from file root://eoscms.cern.ch//eos/cms/store/express/Commissioning2021/ExpressCosmics/FEVT/Express-v1/000/344/518/00000/8ae6d6f6-7859-4089-84dd-4a5d89deb5df.root.
+The duplicate will be skipped.
+
+%MSG
+%MSG-w DuplicateEvent:  PostStreamBeginLumi 07-Apr-2022 17:18:43 CEST  PostStreamBeginLumi
+Duplicate Events found in entire set of input files.
+Both events were from run 344518 and luminosity block 2 with event number 31775.
+The duplicate was from file root://eoscms.cern.ch//eos/cms/store/express/Commissioning2021/ExpressCosmics/FEVT/Express-v1/000/344/518/00000/8ae6d6f6-7859-4089-84dd-4a5d89deb5df.root.
+The duplicate will be skipped.
+
+%MSG
+%MSG-w DuplicateEvent:  PostStreamBeginLumi 07-Apr-2022 17:18:43 CEST  PostStreamBeginLumi
+Duplicate Events found in entire set of input files.
+Both events were from run 344518 and luminosity block 2 with event number 31880.
+The duplicate was from file root://eoscms.cern.ch//eos/cms/store/express/Commissioning2021/ExpressCosmics/FEVT/Express-v1/000/344/518/00000/8ae6d6f6-7859-4089-84dd-4a5d89deb5df.root.
+The duplicate will be skipped.
+
+%MSG
+%MSG-w DuplicateEvent:  PostStreamBeginLumi 07-Apr-2022 17:18:43 CEST  PostStreamBeginLumi
+Duplicate Events found in entire set of input files.
+Both events were from run 344518 and luminosity block 2 with event number 31636.
+The duplicate was from file root://eoscms.cern.ch//eos/cms/store/express/Commissioning2021/ExpressCosmics/FEVT/Express-v1/000/344/518/00000/8ae6d6f6-7859-4089-84dd-4a5d89deb5df.root.
+The duplicate will be skipped.
+
+%MSG
+%MSG-w DuplicateEvent:  PostStreamBeginLumi 07-Apr-2022 17:18:43 CEST  PostStreamBeginLumi
+Duplicate Events found in entire set of input files.
+Both events were from run 344518 and luminosity block 2 with event number 31535.
+The duplicate was from file root://eoscms.cern.ch//eos/cms/store/express/Commissioning2021/ExpressCosmics/FEVT/Express-v1/000/344/518/00000/8ae6d6f6-7859-4089-84dd-4a5d89deb5df.root.
+The duplicate will be skipped.
+
+%MSG
+%MSG-w DuplicateEvent:  PostStreamBeginLumi 07-Apr-2022 17:18:43 CEST  PostStreamBeginLumi
+Duplicate Events found in entire set of input files.
+Both events were from run 344518 and luminosity block 2 with event number 31534.
+The duplicate was from file root://eoscms.cern.ch//eos/cms/store/express/Commissioning2021/ExpressCosmics/FEVT/Express-v1/000/344/518/00000/8ae6d6f6-7859-4089-84dd-4a5d89deb5df.root.
+The duplicate will be skipped.
+
+%MSG
+%MSG-w DuplicateEvent:  PostStreamBeginLumi 07-Apr-2022 17:18:43 CEST  PostStreamBeginLumi
+Duplicate Events found in entire set of input files.
+Both events were from run 344518 and luminosity block 2 with event number 31638.
+The duplicate was from file root://eoscms.cern.ch//eos/cms/store/express/Commissioning2021/ExpressCosmics/FEVT/Express-v1/000/344/518/00000/8ae6d6f6-7859-4089-84dd-4a5d89deb5df.root.
+The duplicate will be skipped.
+
+%MSG
+%MSG-w DuplicateEvent:  PostStreamBeginLumi 07-Apr-2022 17:18:43 CEST  PostStreamBeginLumi
+Duplicate Events found in entire set of input files.
+Both events were from run 344518 and luminosity block 2 with event number 31844.
+The duplicate was from file root://eoscms.cern.ch//eos/cms/store/express/Commissioning2021/ExpressCosmics/FEVT/Express-v1/000/344/518/00000/8ae6d6f6-7859-4089-84dd-4a5d89deb5df.root.
+The duplicate will be skipped.
+
+%MSG
+%MSG-w DuplicateEvent:  PostStreamBeginLumi 07-Apr-2022 17:18:43 CEST  PostStreamBeginLumi
+Duplicate Events found in entire set of input files.
+Both events were from run 344518 and luminosity block 2 with event number 31744.
+The duplicate was from file root://eoscms.cern.ch//eos/cms/store/express/Commissioning2021/ExpressCosmics/FEVT/Express-v1/000/344/518/00000/8ae6d6f6-7859-4089-84dd-4a5d89deb5df.root.
+The duplicate will be skipped.
+
+%MSG
+%MSG-w DuplicateEvent:  PostStreamBeginLumi 07-Apr-2022 17:18:43 CEST  PostStreamBeginLumi
+Duplicate Events found in entire set of input files.
+Both events were from run 344518 and luminosity block 2 with event number 31952.
+The duplicate was from file root://eoscms.cern.ch//eos/cms/store/express/Commissioning2021/ExpressCosmics/FEVT/Express-v1/000/344/518/00000/8ae6d6f6-7859-4089-84dd-4a5d89deb5df.root.
+The duplicate will be skipped.
+
+%MSG
+%MSG-w DuplicateEvent:  PostStreamBeginLumi 07-Apr-2022 17:18:43 CEST  PostStreamBeginLumi
+Duplicate Events found in entire set of input files.
+Both events were from run 344518 and luminosity block 2 with event number 31512.
+The duplicate was from file root://eoscms.cern.ch//eos/cms/store/express/Commissioning2021/ExpressCosmics/FEVT/Express-v1/000/344/518/00000/8ae6d6f6-7859-4089-84dd-4a5d89deb5df.root.
+The duplicate will be skipped.
+
+%MSG
+%MSG-w DuplicateEvent:  PostStreamBeginLumi 07-Apr-2022 17:18:43 CEST  PostStreamBeginLumi
+Duplicate Events found in entire set of input files.
+Both events were from run 344518 and luminosity block 2 with event number 31508.
+The duplicate was from file root://eoscms.cern.ch//eos/cms/store/express/Commissioning2021/ExpressCosmics/FEVT/Express-v1/000/344/518/00000/8ae6d6f6-7859-4089-84dd-4a5d89deb5df.root.
+The duplicate will be skipped.
+
+%MSG
+%MSG-w DuplicateEvent:  PostStreamBeginLumi 07-Apr-2022 17:18:43 CEST  PostStreamBeginLumi
+Duplicate Events found in entire set of input files.
+Both events were from run 344518 and luminosity block 2 with event number 31714.
+The duplicate was from file root://eoscms.cern.ch//eos/cms/store/express/Commissioning2021/ExpressCosmics/FEVT/Express-v1/000/344/518/00000/8ae6d6f6-7859-4089-84dd-4a5d89deb5df.root.
+The duplicate will be skipped.
+
+%MSG
+%MSG-w DuplicateEvent:  PostStreamBeginLumi 07-Apr-2022 17:18:43 CEST  PostStreamBeginLumi
+Duplicate Events found in entire set of input files.
+Both events were from run 344518 and luminosity block 2 with event number 31713.
+The duplicate was from file root://eoscms.cern.ch//eos/cms/store/express/Commissioning2021/ExpressCosmics/FEVT/Express-v1/000/344/518/00000/8ae6d6f6-7859-4089-84dd-4a5d89deb5df.root.
+The duplicate will be skipped.
+
+%MSG
+%MSG-w DuplicateEvent:  PostStreamBeginLumi 07-Apr-2022 17:18:43 CEST  PostStreamBeginLumi
+Duplicate Events found in entire set of input files.
+Both events were from run 344518 and luminosity block 2 with event number 31715.
+The duplicate was from file root://eoscms.cern.ch//eos/cms/store/express/Commissioning2021/ExpressCosmics/FEVT/Express-v1/000/344/518/00000/8ae6d6f6-7859-4089-84dd-4a5d89deb5df.root.
+The duplicate will be skipped.
+
+%MSG
+%MSG-w DuplicateEvent:  PostStreamBeginLumi 07-Apr-2022 17:18:43 CEST  PostStreamBeginLumi
+Duplicate Events found in entire set of input files.
+Both events were from run 344518 and luminosity block 2 with event number 31716.
+The duplicate was from file root://eoscms.cern.ch//eos/cms/store/express/Commissioning2021/ExpressCosmics/FEVT/Express-v1/000/344/518/00000/8ae6d6f6-7859-4089-84dd-4a5d89deb5df.root.
+The duplicate will be skipped.
+
+%MSG
+%MSG-w DuplicateEvent:  PostStreamBeginLumi 07-Apr-2022 17:18:43 CEST  PostStreamBeginLumi
+Duplicate Events found in entire set of input files.
+Both events were from run 344518 and luminosity block 2 with event number 31719.
+The duplicate was from file root://eoscms.cern.ch//eos/cms/store/express/Commissioning2021/ExpressCosmics/FEVT/Express-v1/000/344/518/00000/8ae6d6f6-7859-4089-84dd-4a5d89deb5df.root.
+The duplicate will be skipped.
+
+%MSG
+%MSG-w DuplicateEvent:  PostStreamBeginLumi 07-Apr-2022 17:18:43 CEST  PostStreamBeginLumi
+Duplicate Events found in entire set of input files.
+Both events were from run 344518 and luminosity block 2 with event number 31819.
+The duplicate was from file root://eoscms.cern.ch//eos/cms/store/express/Commissioning2021/ExpressCosmics/FEVT/Express-v1/000/344/518/00000/8ae6d6f6-7859-4089-84dd-4a5d89deb5df.root.
+The duplicate will be skipped.
+
+%MSG
+%MSG-w DuplicateEvent:  PostStreamBeginLumi 07-Apr-2022 17:18:43 CEST  PostStreamBeginLumi
+Duplicate Events found in entire set of input files.
+Both events were from run 344518 and luminosity block 2 with event number 31921.
+The duplicate was from file root://eoscms.cern.ch//eos/cms/store/express/Commissioning2021/ExpressCosmics/FEVT/Express-v1/000/344/518/00000/8ae6d6f6-7859-4089-84dd-4a5d89deb5df.root.
+The duplicate will be skipped.
+
+%MSG
+%MSG-w DuplicateEvent:  PostStreamBeginLumi 07-Apr-2022 17:18:43 CEST  PostStreamBeginLumi
+Duplicate Events found in entire set of input files.
+Both events were from run 344518 and luminosity block 2 with event number 31821.
+The duplicate was from file root://eoscms.cern.ch//eos/cms/store/express/Commissioning2021/ExpressCosmics/FEVT/Express-v1/000/344/518/00000/8ae6d6f6-7859-4089-84dd-4a5d89deb5df.root.
+The duplicate will be skipped.
+
+%MSG
+%MSG-w DuplicateEvent:  PostStreamBeginLumi 07-Apr-2022 17:18:43 CEST  PostStreamBeginLumi
+Duplicate Events found in entire set of input files.
+Both events were from run 344518 and luminosity block 2 with event number 31822.
+The duplicate was from file root://eoscms.cern.ch//eos/cms/store/express/Commissioning2021/ExpressCosmics/FEVT/Express-v1/000/344/518/00000/8ae6d6f6-7859-4089-84dd-4a5d89deb5df.root.
+The duplicate will be skipped.
+
+%MSG
+%MSG-w DuplicateEvent:  PostStreamBeginLumi 07-Apr-2022 17:18:43 CEST  PostStreamBeginLumi
+Duplicate Events found in entire set of input files.
+Both events were from run 344518 and luminosity block 2 with event number 31925.
+The duplicate was from file root://eoscms.cern.ch//eos/cms/store/express/Commissioning2021/ExpressCosmics/FEVT/Express-v1/000/344/518/00000/8ae6d6f6-7859-4089-84dd-4a5d89deb5df.root.
+The duplicate will be skipped.
+
+%MSG
+%MSG-w DuplicateEvent:  PostStreamBeginLumi 07-Apr-2022 17:18:43 CEST  PostStreamBeginLumi
+Duplicate Events found in entire set of input files.
+Both events were from run 344518 and luminosity block 2 with event number 31490.
+The duplicate was from file root://eoscms.cern.ch//eos/cms/store/express/Commissioning2021/ExpressCosmics/FEVT/Express-v1/000/344/518/00000/8ae6d6f6-7859-4089-84dd-4a5d89deb5df.root.
+The duplicate will be skipped.
+
+%MSG
+%MSG-w DuplicateEvent:  PostStreamBeginLumi 07-Apr-2022 17:18:43 CEST  PostStreamBeginLumi
+Duplicate Events found in entire set of input files.
+Both events were from run 344518 and luminosity block 2 with event number 31906.
+The duplicate was from file root://eoscms.cern.ch//eos/cms/store/express/Commissioning2021/ExpressCosmics/FEVT/Express-v1/000/344/518/00000/8ae6d6f6-7859-4089-84dd-4a5d89deb5df.root.
+The duplicate will be skipped.
+
+%MSG
+%MSG-w DuplicateEvent:  PostStreamBeginLumi 07-Apr-2022 17:18:43 CEST  PostStreamBeginLumi
+Duplicate Events found in entire set of input files.
+Both events were from run 344518 and luminosity block 2 with event number 31805.
+The duplicate was from file root://eoscms.cern.ch//eos/cms/store/express/Commissioning2021/ExpressCosmics/FEVT/Express-v1/000/344/518/00000/8ae6d6f6-7859-4089-84dd-4a5d89deb5df.root.
+The duplicate will be skipped.
+
+%MSG
+%MSG-w DuplicateEvent:  PostStreamBeginLumi 07-Apr-2022 17:18:43 CEST  PostStreamBeginLumi
+Duplicate Events found in entire set of input files.
+Both events were from run 344518 and luminosity block 2 with event number 31905.
+The duplicate was from file root://eoscms.cern.ch//eos/cms/store/express/Commissioning2021/ExpressCosmics/FEVT/Express-v1/000/344/518/00000/8ae6d6f6-7859-4089-84dd-4a5d89deb5df.root.
+The duplicate will be skipped.
+
+%MSG
+%MSG-w DuplicateEvent:  PostStreamBeginLumi 07-Apr-2022 17:18:43 CEST  PostStreamBeginLumi
+Duplicate Events found in entire set of input files.
+Both events were from run 344518 and luminosity block 2 with event number 31907.
+The duplicate was from file root://eoscms.cern.ch//eos/cms/store/express/Commissioning2021/ExpressCosmics/FEVT/Express-v1/000/344/518/00000/8ae6d6f6-7859-4089-84dd-4a5d89deb5df.root.
+The duplicate will be skipped.
+
+%MSG
+%MSG-w DuplicateEvent:  PostStreamBeginLumi 07-Apr-2022 17:18:43 CEST  PostStreamBeginLumi
+Duplicate Events found in entire set of input files.
+Both events were from run 344518 and luminosity block 2 with event number 31909.
+The duplicate was from file root://eoscms.cern.ch//eos/cms/store/express/Commissioning2021/ExpressCosmics/FEVT/Express-v1/000/344/518/00000/8ae6d6f6-7859-4089-84dd-4a5d89deb5df.root.
+The duplicate will be skipped.
+
+%MSG
+%MSG-w DuplicateEvent:  PostStreamBeginLumi 07-Apr-2022 17:18:43 CEST  PostStreamBeginLumi
+Duplicate Events found in entire set of input files.
+Both events were from run 344518 and luminosity block 2 with event number 31910.
+The duplicate was from file root://eoscms.cern.ch//eos/cms/store/express/Commissioning2021/ExpressCosmics/FEVT/Express-v1/000/344/518/00000/8ae6d6f6-7859-4089-84dd-4a5d89deb5df.root.
+The duplicate will be skipped.
+
+%MSG
+%MSG-w DuplicateEvent:  PostStreamBeginLumi 07-Apr-2022 17:18:43 CEST  PostStreamBeginLumi
+Duplicate Events found in entire set of input files.
+Both events were from run 344518 and luminosity block 2 with event number 31499.
+The duplicate was from file root://eoscms.cern.ch//eos/cms/store/express/Commissioning2021/ExpressCosmics/FEVT/Express-v1/000/344/518/00000/8ae6d6f6-7859-4089-84dd-4a5d89deb5df.root.
+The duplicate will be skipped.
+
+%MSG
+%MSG-w DuplicateEvent:  PostStreamBeginLumi 07-Apr-2022 17:18:43 CEST  PostStreamBeginLumi
+Duplicate Events found in entire set of input files.
+Both events were from run 344518 and luminosity block 2 with event number 31602.
+The duplicate was from file root://eoscms.cern.ch//eos/cms/store/express/Commissioning2021/ExpressCosmics/FEVT/Express-v1/000/344/518/00000/8ae6d6f6-7859-4089-84dd-4a5d89deb5df.root.
+The duplicate will be skipped.
+
+%MSG
+%MSG-w DuplicateEvent:  PostStreamBeginLumi 07-Apr-2022 17:18:43 CEST  PostStreamBeginLumi
+Duplicate Events found in entire set of input files.
+Both events were from run 344518 and luminosity block 2 with event number 31709.
+The duplicate was from file root://eoscms.cern.ch//eos/cms/store/express/Commissioning2021/ExpressCosmics/FEVT/Express-v1/000/344/518/00000/8ae6d6f6-7859-4089-84dd-4a5d89deb5df.root.
+The duplicate will be skipped.
+
+%MSG
+%MSG-w DuplicateEvent:  PostStreamBeginLumi 07-Apr-2022 17:18:43 CEST  PostStreamBeginLumi
+Duplicate Events found in entire set of input files.
+Both events were from run 344518 and luminosity block 2 with event number 31605.
+The duplicate was from file root://eoscms.cern.ch//eos/cms/store/express/Commissioning2021/ExpressCosmics/FEVT/Express-v1/000/344/518/00000/8ae6d6f6-7859-4089-84dd-4a5d89deb5df.root.
+The duplicate will be skipped.
+
+%MSG
+%MSG-w DuplicateEvent:  PostStreamBeginLumi 07-Apr-2022 17:18:43 CEST  PostStreamBeginLumi
+Duplicate Events found in entire set of input files.
+Both events were from run 344518 and luminosity block 2 with event number 31809.
+The duplicate was from file root://eoscms.cern.ch//eos/cms/store/express/Commissioning2021/ExpressCosmics/FEVT/Express-v1/000/344/518/00000/8ae6d6f6-7859-4089-84dd-4a5d89deb5df.root.
+The duplicate will be skipped.
+
+%MSG
+%MSG-w DuplicateEvent:  PostStreamBeginLumi 07-Apr-2022 17:18:43 CEST  PostStreamBeginLumi
+Duplicate Events found in entire set of input files.
+Both events were from run 344518 and luminosity block 2 with event number 31814.
+The duplicate was from file root://eoscms.cern.ch//eos/cms/store/express/Commissioning2021/ExpressCosmics/FEVT/Express-v1/000/344/518/00000/8ae6d6f6-7859-4089-84dd-4a5d89deb5df.root.
+The duplicate will be skipped.
+
+%MSG
+%MSG-w DuplicateEvent:  PostStreamBeginLumi 07-Apr-2022 17:18:43 CEST  PostStreamBeginLumi
+Duplicate Events found in entire set of input files.
+Both events were from run 344518 and luminosity block 2 with event number 31917.
+The duplicate was from file root://eoscms.cern.ch//eos/cms/store/express/Commissioning2021/ExpressCosmics/FEVT/Express-v1/000/344/518/00000/8ae6d6f6-7859-4089-84dd-4a5d89deb5df.root.
+The duplicate will be skipped.
+
+%MSG
+%MSG-w DuplicateEvent:  PostStreamBeginLumi 07-Apr-2022 17:18:43 CEST  PostStreamBeginLumi
+Duplicate Events found in entire set of input files.
+Both events were from run 344518 and luminosity block 2 with event number 31812.
+The duplicate was from file root://eoscms.cern.ch//eos/cms/store/express/Commissioning2021/ExpressCosmics/FEVT/Express-v1/000/344/518/00000/8ae6d6f6-7859-4089-84dd-4a5d89deb5df.root.
+The duplicate will be skipped.
+
+%MSG
+%MSG-w DuplicateEvent:  PostStreamBeginLumi 07-Apr-2022 17:18:43 CEST  PostStreamBeginLumi
+Duplicate Events found in entire set of input files.
+Both events were from run 344518 and luminosity block 2 with event number 31524.
+The duplicate was from file root://eoscms.cern.ch//eos/cms/store/express/Commissioning2021/ExpressCosmics/FEVT/Express-v1/000/344/518/00000/8ae6d6f6-7859-4089-84dd-4a5d89deb5df.root.
+The duplicate will be skipped.
+
+%MSG
+%MSG-w DuplicateEvent:  PostStreamBeginLumi 07-Apr-2022 17:18:43 CEST  PostStreamBeginLumi
+Duplicate Events found in entire set of input files.
+Both events were from run 344518 and luminosity block 2 with event number 31523.
+The duplicate was from file root://eoscms.cern.ch//eos/cms/store/express/Commissioning2021/ExpressCosmics/FEVT/Express-v1/000/344/518/00000/8ae6d6f6-7859-4089-84dd-4a5d89deb5df.root.
+The duplicate will be skipped.
+
+%MSG
+%MSG-w DuplicateEvent:  PostStreamBeginLumi 07-Apr-2022 17:18:43 CEST  PostStreamBeginLumi
+Duplicate Events found in entire set of input files.
+Both events were from run 344518 and luminosity block 2 with event number 31527.
+The duplicate was from file root://eoscms.cern.ch//eos/cms/store/express/Commissioning2021/ExpressCosmics/FEVT/Express-v1/000/344/518/00000/8ae6d6f6-7859-4089-84dd-4a5d89deb5df.root.
+The duplicate will be skipped.
+
+%MSG
+%MSG-w DuplicateEvent:  PostStreamBeginLumi 07-Apr-2022 17:18:43 CEST  PostStreamBeginLumi
+Duplicate Events found in entire set of input files.
+Both events were from run 344518 and luminosity block 2 with event number 31528.
+The duplicate was from file root://eoscms.cern.ch//eos/cms/store/express/Commissioning2021/ExpressCosmics/FEVT/Express-v1/000/344/518/00000/8ae6d6f6-7859-4089-84dd-4a5d89deb5df.root.
+The duplicate will be skipped.
+
+%MSG
+%MSG-w DuplicateEvent:  PostStreamBeginLumi 07-Apr-2022 17:18:43 CEST  PostStreamBeginLumi
+Duplicate Events found in entire set of input files.
+Both events were from run 344518 and luminosity block 2 with event number 31630.
+The duplicate was from file root://eoscms.cern.ch//eos/cms/store/express/Commissioning2021/ExpressCosmics/FEVT/Express-v1/000/344/518/00000/8ae6d6f6-7859-4089-84dd-4a5d89deb5df.root.
+The duplicate will be skipped.
+
+%MSG
+%MSG-w DuplicateEvent:  PostStreamBeginLumi 07-Apr-2022 17:18:43 CEST  PostStreamBeginLumi
+Duplicate Events found in entire set of input files.
+Both events were from run 344518 and luminosity block 2 with event number 31626.
+The duplicate was from file root://eoscms.cern.ch//eos/cms/store/express/Commissioning2021/ExpressCosmics/FEVT/Express-v1/000/344/518/00000/8ae6d6f6-7859-4089-84dd-4a5d89deb5df.root.
+The duplicate will be skipped.
+
+%MSG
+%MSG-w DuplicateEvent:  PostStreamBeginLumi 07-Apr-2022 17:18:43 CEST  PostStreamBeginLumi
+Duplicate Events found in entire set of input files.
+Both events were from run 344518 and luminosity block 2 with event number 31735.
+The duplicate was from file root://eoscms.cern.ch//eos/cms/store/express/Commissioning2021/ExpressCosmics/FEVT/Express-v1/000/344/518/00000/8ae6d6f6-7859-4089-84dd-4a5d89deb5df.root.
+The duplicate will be skipped.
+
+%MSG
+%MSG-w DuplicateEvent:  PostStreamBeginLumi 07-Apr-2022 17:18:43 CEST  PostStreamBeginLumi
+Duplicate Events found in entire set of input files.
+Both events were from run 344518 and luminosity block 2 with event number 31833.
+The duplicate was from file root://eoscms.cern.ch//eos/cms/store/express/Commissioning2021/ExpressCosmics/FEVT/Express-v1/000/344/518/00000/8ae6d6f6-7859-4089-84dd-4a5d89deb5df.root.
+The duplicate will be skipped.
+
+%MSG
+%MSG-w DuplicateEvent:  PostStreamBeginLumi 07-Apr-2022 17:18:43 CEST  PostStreamBeginLumi
+Duplicate Events found in entire set of input files.
+Both events were from run 344518 and luminosity block 2 with event number 31736.
+The duplicate was from file root://eoscms.cern.ch//eos/cms/store/express/Commissioning2021/ExpressCosmics/FEVT/Express-v1/000/344/518/00000/8ae6d6f6-7859-4089-84dd-4a5d89deb5df.root.
+The duplicate will be skipped.
+
+%MSG
+%MSG-w DuplicateEvent:  PostStreamBeginLumi 07-Apr-2022 17:18:43 CEST  PostStreamBeginLumi
+Duplicate Events found in entire set of input files.
+Both events were from run 344518 and luminosity block 2 with event number 31940.
+The duplicate was from file root://eoscms.cern.ch//eos/cms/store/express/Commissioning2021/ExpressCosmics/FEVT/Express-v1/000/344/518/00000/8ae6d6f6-7859-4089-84dd-4a5d89deb5df.root.
+The duplicate will be skipped.
+
+%MSG
+%MSG-w DuplicateEvent:  PostStreamBeginLumi 07-Apr-2022 17:18:43 CEST  PostStreamBeginLumi
+Duplicate Events found in entire set of input files.
+Both events were from run 344518 and luminosity block 2 with event number 31840.
+The duplicate was from file root://eoscms.cern.ch//eos/cms/store/express/Commissioning2021/ExpressCosmics/FEVT/Express-v1/000/344/518/00000/8ae6d6f6-7859-4089-84dd-4a5d89deb5df.root.
+The duplicate will be skipped.
+
+%MSG
+%MSG-w DuplicateEvent:  PostStreamBeginLumi 07-Apr-2022 17:18:43 CEST  PostStreamBeginLumi
+Duplicate Events found in entire set of input files.
+Both events were from run 344518 and luminosity block 2 with event number 31942.
+The duplicate was from file root://eoscms.cern.ch//eos/cms/store/express/Commissioning2021/ExpressCosmics/FEVT/Express-v1/000/344/518/00000/8ae6d6f6-7859-4089-84dd-4a5d89deb5df.root.
+The duplicate will be skipped.
+
+%MSG
+%MSG-w DuplicateEvent:  PostStreamBeginLumi 07-Apr-2022 17:18:43 CEST  PostStreamBeginLumi
+Duplicate Events found in entire set of input files.
+Both events were from run 344518 and luminosity block 2 with event number 31828.
+The duplicate was from file root://eoscms.cern.ch//eos/cms/store/express/Commissioning2021/ExpressCosmics/FEVT/Express-v1/000/344/518/00000/8ae6d6f6-7859-4089-84dd-4a5d89deb5df.root.
+The duplicate will be skipped.
+
+%MSG
+%MSG-w DuplicateEvent:  PostStreamBeginLumi 07-Apr-2022 17:18:43 CEST  PostStreamBeginLumi
+Duplicate Events found in entire set of input files.
+Both events were from run 344518 and luminosity block 2 with event number 31931.
+The duplicate was from file root://eoscms.cern.ch//eos/cms/store/express/Commissioning2021/ExpressCosmics/FEVT/Express-v1/000/344/518/00000/8ae6d6f6-7859-4089-84dd-4a5d89deb5df.root.
+The duplicate will be skipped.
+
+%MSG
+%MSG-w DuplicateEvent:  PostStreamBeginLumi 07-Apr-2022 17:18:43 CEST  PostStreamBeginLumi
+Duplicate Events found in entire set of input files.
+Both events were from run 344518 and luminosity block 2 with event number 31654.
+The duplicate was from file root://eoscms.cern.ch//eos/cms/store/express/Commissioning2021/ExpressCosmics/FEVT/Express-v1/000/344/518/00000/8ae6d6f6-7859-4089-84dd-4a5d89deb5df.root.
+The duplicate will be skipped.
+
+%MSG
+%MSG-w DuplicateEvent:  PostStreamBeginLumi 07-Apr-2022 17:18:43 CEST  PostStreamBeginLumi
+Duplicate Events found in entire set of input files.
+Both events were from run 344518 and luminosity block 2 with event number 31754.
+The duplicate was from file root://eoscms.cern.ch//eos/cms/store/express/Commissioning2021/ExpressCosmics/FEVT/Express-v1/000/344/518/00000/8ae6d6f6-7859-4089-84dd-4a5d89deb5df.root.
+The duplicate will be skipped.
+
+%MSG
+%MSG-w DuplicateEvent:  PostStreamBeginLumi 07-Apr-2022 17:18:43 CEST  PostStreamBeginLumi
+Duplicate Events found in entire set of input files.
+Both events were from run 344518 and luminosity block 2 with event number 31546.
+The duplicate was from file root://eoscms.cern.ch//eos/cms/store/express/Commissioning2021/ExpressCosmics/FEVT/Express-v1/000/344/518/00000/8ae6d6f6-7859-4089-84dd-4a5d89deb5df.root.
+The duplicate will be skipped.
+
+%MSG
+%MSG-w DuplicateEvent:  PostStreamBeginLumi 07-Apr-2022 17:18:43 CEST  PostStreamBeginLumi
+Duplicate Events found in entire set of input files.
+Both events were from run 344518 and luminosity block 2 with event number 31756.
+The duplicate was from file root://eoscms.cern.ch//eos/cms/store/express/Commissioning2021/ExpressCosmics/FEVT/Express-v1/000/344/518/00000/8ae6d6f6-7859-4089-84dd-4a5d89deb5df.root.
+The duplicate will be skipped.
+
+%MSG
+%MSG-w DuplicateEvent:  PostStreamBeginLumi 07-Apr-2022 17:18:43 CEST  PostStreamBeginLumi
+Duplicate Events found in entire set of input files.
+Both events were from run 344518 and luminosity block 2 with event number 31862.
+The duplicate was from file root://eoscms.cern.ch//eos/cms/store/express/Commissioning2021/ExpressCosmics/FEVT/Express-v1/000/344/518/00000/8ae6d6f6-7859-4089-84dd-4a5d89deb5df.root.
+The duplicate will be skipped.
+
+%MSG
+%MSG-w DuplicateEvent:  PostStreamBeginLumi 07-Apr-2022 17:18:43 CEST  PostStreamBeginLumi
+Duplicate Events found in entire set of input files.
+Both events were from run 344518 and luminosity block 2 with event number 31962.
+The duplicate was from file root://eoscms.cern.ch//eos/cms/store/express/Commissioning2021/ExpressCosmics/FEVT/Express-v1/000/344/518/00000/8ae6d6f6-7859-4089-84dd-4a5d89deb5df.root.
+The duplicate will be skipped.
+
+%MSG
+%MSG-w DuplicateEvent:  PostStreamBeginLumi 07-Apr-2022 17:18:43 CEST  PostStreamBeginLumi
+Duplicate Events found in entire set of input files.
+Both events were from run 344518 and luminosity block 2 with event number 31963.
+The duplicate was from file root://eoscms.cern.ch//eos/cms/store/express/Commissioning2021/ExpressCosmics/FEVT/Express-v1/000/344/518/00000/8ae6d6f6-7859-4089-84dd-4a5d89deb5df.root.
+The duplicate will be skipped.
+
+%MSG
+%MSG-w DuplicateEvent:  PostStreamBeginLumi 07-Apr-2022 17:18:43 CEST  PostStreamBeginLumi
+Duplicate Events found in entire set of input files.
+Both events were from run 344518 and luminosity block 2 with event number 31857.
+The duplicate was from file root://eoscms.cern.ch//eos/cms/store/express/Commissioning2021/ExpressCosmics/FEVT/Express-v1/000/344/518/00000/8ae6d6f6-7859-4089-84dd-4a5d89deb5df.root.
+The duplicate will be skipped.
+
+%MSG
+07-Apr-2022 17:18:44 CEST  Writing DQM Root file: ./upload/DQM_V0001_GEM_R000344518.root
+DQMFileSaver::globalEndRun()
+07-Apr-2022 17:18:44 CEST  Closed file root://eoscms.cern.ch//eos/cms/store/express/Commissioning2021/ExpressCosmics/FEVT/Express-v1/000/344/518/00000/8ae6d6f6-7859-4089-84dd-4a5d89deb5df.root
+
+=============================================
+
+MessageLogger Summary
+
+ type     category        sev    module        subroutine        count    total
+ ---- -------------------- -- ---------------- ----------------  -----    -----
+    1 DuplicateEvent       -w PostStreamBeginL                     100      100
+    2 XrdAdaptor           -w file_open                              2        2
+    3 fileAction           -s DQMFileSaverOnli                       1        1
+    4 fileAction           -s file_close                             2        2
+    5 fileAction           -s file_open                              4        4
+
+ type    category    Examples: run/evt        run/evt          run/evt
+ ---- -------------------- ---------------- ---------------- ----------------
+    1 DuplicateEvent       PostStreamBeginL PostStreamBeginL PostStreamBeginL
+    2 XrdAdaptor           pre-events       PostProcessEvent 
+    3 fileAction           End Run: 344518                   
+    4 fileAction           PostProcessEvent PostGlobalEndRun 
+    5 fileAction           pre-events       pre-events       PostProcessEvent
+
+Severity    # Occurrences   Total Occurrences
+--------    -------------   -----------------
+Warning               102                 102
+System                  7                   7
+
+dropped waiting message count 0
