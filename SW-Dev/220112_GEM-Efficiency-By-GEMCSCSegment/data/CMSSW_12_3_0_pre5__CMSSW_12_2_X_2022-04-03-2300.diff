@@ -1,0 +1,137 @@
+diff -r CMSSW_12_3_0_pre5/DQM/GEM/plugins/GEMEffByGEMCSCSegmentClient.h CMSSW_12_2_X_2022-04-03-2300/DQM/GEM/plugins/GEMEffByGEMCSCSegmentClient.h
+15a16
+> 
+diff -r CMSSW_12_3_0_pre5/DQM/GEM/plugins/GEMEffByGEMCSCSegmentSource.cc CMSSW_12_2_X_2022-04-03-2300/DQM/GEM/plugins/GEMEffByGEMCSCSegmentSource.cc
+2c2
+< 
+---
+> #include "FWCore/Utilities/interface/Likely.h"
+3a4
+> #include <algorithm> // std::clamp
+6,7c7
+<     : GEMOfflineDQMBase(parameter_set),
+<       kGEMTokenBeginRun_(esConsumes<edm::Transition::BeginRun>()),
+---
+>     : kGEMTokenBeginRun_(esConsumes<edm::Transition::BeginRun>()),
+256,257c256
+<   // TODO fillMEWithinLimits
+<   const double reduced_chi2 = std::min(gemcsc_segment.chi2() / gemcsc_segment.degreesOfFreedom(), 2.9999);
+---
+>   const double reduced_chi2 = gemcsc_segment.chi2() / gemcsc_segment.degreesOfFreedom();
+264c263
+<   fillME(me_reduced_chi2_, key, reduced_chi2);
+---
+>   fillMEWithinLimits(me_reduced_chi2_, key, reduced_chi2);
+268c267
+<     fillME(me_reduced_chi2_matched_, key, reduced_chi2);
+---
+>     fillMEWithinLimits(me_reduced_chi2_matched_, key, reduced_chi2);
+338a338,385
+> }
+> 
+> bool GEMEffByGEMCSCSegmentSource::hasMEKey(const MEMap& me_map, const GEMDetId& key) {
+>   bool has_key = true;
+> 
+>   if UNLIKELY (me_map.find(key) == me_map.end()) {
+>     const std::string hint = me_map.empty() ? "empty" : me_map.begin()->second->getName();
+>     edm::LogError(kLogCategory_) << "got an invalid key: " << key << ", hint=" << hint;
+>     has_key = false;
+> 
+>   }
+> 
+>   return has_key;
+> }
+> 
+> void GEMEffByGEMCSCSegmentSource::fillME(dqm::impl::MonitorElement* me, const double x) {
+>   if (me) {
+>     me->Fill(x);
+> 
+>   } else {
+>     edm::LogError(kLogCategory_) << "MonitorElement is nullptr";
+> 
+>   }
+> }
+> 
+> void GEMEffByGEMCSCSegmentSource::fillME(MEMap& me_map, const GEMDetId& key, const double x) {
+>   if (hasMEKey(me_map, key)) {
+>     me_map[key]->Fill(x);
+>   }
+> }
+> 
+> // https://github.com/cms-sw/cmssw/blob/CMSSW_12_0_0_pre3/DQMOffline/L1Trigger/src/L1TFillWithinLimits.cc
+> void GEMEffByGEMCSCSegmentSource::fillMEWithinLimits(dqm::impl::MonitorElement* me, const double x) {
+>   if (me) {
+>     const double xlow = me->getAxisMin(1);
+>     const double xup = me->getAxisMax(1) - kEps_;
+>     me->Fill(std::clamp(x, xlow, xup));
+> 
+>   } else {
+>     edm::LogError(kLogCategory_) << "MonitorElement is nullptr";
+> 
+>   }
+> }
+> 
+> void GEMEffByGEMCSCSegmentSource::fillMEWithinLimits(MEMap& me_map, const GEMDetId& key, const double x) {
+>   if (hasMEKey(me_map, key)) {
+>     fillMEWithinLimits(me_map[key], x);
+>   }
+diff -r CMSSW_12_3_0_pre5/DQM/GEM/plugins/GEMEffByGEMCSCSegmentSource.h CMSSW_12_2_X_2022-04-03-2300/DQM/GEM/plugins/GEMEffByGEMCSCSegmentSource.h
+11,12c11,16
+< 
+< #include "DQM/GEM/interface/GEMOfflineDQMBase.h"
+---
+> #include "FWCore/MessageLogger/interface/MessageLogger.h"
+> #include "DQMServices/Core/interface/DQMEDAnalyzer.h"
+> #include "DQMServices/Core/interface/DQMStore.h"
+> #include "CondFormats/GEMObjects/interface/GEMeMap.h"
+> #include "DataFormats/MuonDetId/interface/GEMDetId.h"
+> #include "Geometry/GEMGeometry/interface/GEMGeometry.h"
+23c27
+< class GEMEffByGEMCSCSegmentSource : public GEMOfflineDQMBase {
+---
+> class GEMEffByGEMCSCSegmentSource : public DQMEDAnalyzer {
+29a34,45
+>   // NOTE
+>   using MEMap = std::map<GEMDetId, dqm::impl::MonitorElement*>;
+>   bool hasMEKey(const MEMap&, const GEMDetId&);
+>   void fillME(dqm::impl::MonitorElement*, const double);
+>   void fillME(MEMap& me_map, const GEMDetId& key, const double);
+>   void fillMEWithinLimits(dqm::impl::MonitorElement*, const double);
+>   void fillMEWithinLimits(MEMap&, const GEMDetId&, const double);
+>   template <typename T>
+>   inline bool checkRefs(const std::vector<T*>&);
+>   inline GEMDetId getReStLaKey(const GEMDetId&);
+>   const double kEps_ = std::numeric_limits<double>::epsilon();
+> 
+67a84,96
+> 
+> template <typename T>
+> inline bool GEMEffByGEMCSCSegmentSource::checkRefs(const std::vector<T*>& refs) {
+>   if (refs.empty())
+>     return false;
+>   if (refs.front() == nullptr)
+>     return false;
+>   return true;
+> }
+> 
+> inline GEMDetId GEMEffByGEMCSCSegmentSource::getReStLaKey(const GEMDetId& id) {
+>   return GEMDetId{id.region(), 1, id.station(), id.layer(), 0, 0};
+> }
+diff -r CMSSW_12_3_0_pre5/DQM/GEM/plugins/SealModule.cc CMSSW_12_2_X_2022-04-03-2300/DQM/GEM/plugins/SealModule.cc
+4,5d3
+< #include "DQM/GEM/plugins/GEMEfficiencyAnalyzer.h"
+< #include "DQM/GEM/plugins/GEMEfficiencyHarvester.h"
+9,10d6
+< DEFINE_FWK_MODULE(GEMEfficiencyAnalyzer);
+< DEFINE_FWK_MODULE(GEMEfficiencyHarvester);
+diff -r CMSSW_12_3_0_pre5/DQM/Integration/python/clients/gem_dqm_sourceclient-live_cfg.py CMSSW_12_2_X_2022-04-03-2300/DQM/Integration/python/clients/gem_dqm_sourceclient-live_cfg.py
+4,5c4,5
+< from Configuration.StandardSequences.Eras import eras
+< process = cms.Process('GEMDQM', eras.Run3)
+---
+> from Configuration.Eras.Era_Run3_cff import Run3
+> process = cms.Process('GEMDQM', Run3)
+9c9
+<     unitTest=True
+---
+>     unitTest = True

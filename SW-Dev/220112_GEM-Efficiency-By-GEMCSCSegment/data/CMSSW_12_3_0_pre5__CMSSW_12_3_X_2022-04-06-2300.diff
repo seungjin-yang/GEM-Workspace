@@ -1,0 +1,11 @@
+diff -r CMSSW_12_3_0_pre5/DQM/Integration/python/clients/gem_dqm_sourceclient-live_cfg.py CMSSW_12_3_X_2022-04-06-2300/DQM/Integration/python/clients/gem_dqm_sourceclient-live_cfg.py
+4,5c4,5
+< from Configuration.StandardSequences.Eras import eras
+< process = cms.Process('GEMDQM', eras.Run3)
+---
+> from Configuration.Eras.Era_Run3_cff import Run3
+> process = cms.Process('GEMDQM', Run3)
+9c9
+<     unitTest=True
+---
+>     unitTest = True
