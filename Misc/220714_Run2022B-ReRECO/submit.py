@@ -6,8 +6,12 @@ import subprocess
 from pathlib import Path
 import argparse
 
-CONFIG_DIR = Path('/pad/seyang/Projects/GEM-Workspace/Misc/220714_Run2022B-ReRECO/data/reco_config')
+PROJECT_DIR = Path(__file__).parent
+CONFIG_DIR = PROJECT_DIR / 'data' / 'reco_config'
 assert CONFIG_DIR.exists(), CONFIG_DIR
+
+CRAB_CONFIG_FILE = PROJECT_DIR / 'crabConfig.py'
+assert CRAB_CONFIG_FILE.exists(), CRAB_CONFIG_FILE
 
 
 def download_config(run):
@@ -91,7 +95,7 @@ def submit(request_path, dry_run=False):
 
         args = (
             'crab', 'submit',
-            '--config', '/pad/seyang/Projects/GEM-Workspace/Misc/220714_Run2022B-ReRECO/crabConfig.py',
+            '--config', str(CRAB_CONFIG_FILE),
             'General.workArea=./crabWorkArea/',
             f'General.requestName={request_name}',
             f'JobType.psetName={pset_name}',
