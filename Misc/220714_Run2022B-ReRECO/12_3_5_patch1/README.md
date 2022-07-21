@@ -2,7 +2,6 @@
 
 -------------------------------------------------------------------------------
 
-## request_00: 354507+SingleMuon
 ## request_00: Francesco 2nd | /SingleMuon/{LogError,ZMu}/RAW-RECO | adding GEM obj
 - [x] pset
 - [x] submit
