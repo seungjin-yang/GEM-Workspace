@@ -4,6 +4,7 @@ import importlib.util
 import json
 import subprocess
 from pathlib import Path
+import argparse
 
 CONFIG_DIR = Path('/pad/seyang/Projects/GEM-Workspace/Misc/220714_Run2022B-ReRECO/data/reco_config')
 assert CONFIG_DIR.exists(), CONFIG_DIR
@@ -104,3 +105,16 @@ def submit(request_path, dry_run=False):
             continue
 
         subprocess.run(args)
+
+
+def main():
+    parser = argparse.ArgumentParser()
+    parser.add_argument("-r", "--request-path", type=str, required=True, help="a json file")
+    parser.add_argument("-d", "--dry-run", action="store_true", default=False, help="dry run")
+    args = parser.parse_args()
+
+    submit(args.request_path, args.dry_run)
+
+
+if __name__ == '__main__':
+    main()
