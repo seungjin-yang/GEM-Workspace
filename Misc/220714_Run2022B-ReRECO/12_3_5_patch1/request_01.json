@@ -1,0 +1,13 @@
+{
+    "cmssw": "CMSSW_12_3_5_patch1",
+    "scram_arch": "slc7_amd64_gcc10",
+    "scenario": "ppEra_Run3",
+    "global_tag": "123X_dataRun3_Prompt_v11",
+    "run": [
+        354509
+    ],
+    "dataset": [
+        "/MinimumBias/TODO/TODO"
+    ],
+    "pset_name": "./reRECO_ppEra_Run3_cfg.py"
+}

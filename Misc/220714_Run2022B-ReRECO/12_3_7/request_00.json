@@ -1,0 +1,21 @@
+{
+    "cmssw": "CMSSW_12_3_7",
+    "scram_arch": "slc7_amd64_gcc10",
+    "scenario": "ppEra_Run3",
+    "global_tag": "123X_dataRun3_Prompt_v12",
+    "run": [
+        355374,
+        355375,
+        355376,
+        355379,
+        355380,
+        355381,
+        355382,
+        355383
+    ],
+    "dataset": [
+        "/SingleMuon/Run2022B-ZMu-PromptReco-v1/RAW-RECO",
+        "/SingleMuon/Run2022B-LogError-PromptReco-v1/RAW-RECO"
+    ],
+    "pset_name": "./reRECO_ppEra_Run3_cfg.py"
+}

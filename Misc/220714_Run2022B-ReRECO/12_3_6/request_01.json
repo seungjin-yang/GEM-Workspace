@@ -1,0 +1,13 @@
+{
+    "cmssw": "CMSSW_12_3_6",
+    "scram_arch": "slc7_amd64_gcc10",
+    "scenario": "ppEra_Run3",
+    "global_tag": "123X_dataRun3_Prompt_v12",
+    "run": [
+        354510
+    ],
+    "dataset": [
+        "/MinimumBias/Run2022B-v1/RAW"
+    ],
+    "pset_name": ""
+}
