@@ -1,6 +1,6 @@
 - https://cmsoms.cern.ch/cms/runs/report?cms_run=357801
-- https://cmsweb.cern.ch/dqm/offline/start?runnr=357801;sampletype=offline_data;workspace=GEM;dataset=/StreamExpress/Run2022B-Express-v1/DQMIO
-- https://cmsweb.cern.ch/t0wmadatasvc/prod/express_config?run=357801
+- https://cmsweb.cern.ch/dqm/offline/start?runnr=357801;sampletype=offline_data;workspace=GEM;dataset=/StreamExpress/Run2022C-Express-v1/DQMIO
+- https://cmsweb.cern.ch/t0wmadatasvc/prod/reco_config?run=357801
 - https://github.com/dmwm/T0/blob/f6c2c9a/etc/ProdOfflineConfiguration.py
 
 
