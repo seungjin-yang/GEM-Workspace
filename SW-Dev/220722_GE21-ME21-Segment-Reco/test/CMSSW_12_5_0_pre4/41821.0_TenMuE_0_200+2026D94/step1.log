@@ -1,0 +1,1355 @@
+
+**************************************************************
+ Geant4 version Name: geant4-10-07-patch-02 [MT]   (11-June-2021)
+  << in Multi-threaded mode >> 
+                       Copyright : Geant4 Collaboration
+                      References : NIM A 506 (2003), 250-303
+                                 : IEEE-TNS 53 (2006), 270-278
+                                 : NIM A 835 (2016), 186-225
+                             WWW : http://geant4.org/
+**************************************************************
+
+
+ *------------------------------------------------------------------------------------* 
+ |                                                                                    | 
+ |  *------------------------------------------------------------------------------*  | 
+ |  |                                                                              |  | 
+ |  |                                                                              |  | 
+ |  |   PPP   Y   Y  TTTTT  H   H  III    A      Welcome to the Lund Monte Carlo!  |  | 
+ |  |   P  P   Y Y     T    H   H   I    A A     This is PYTHIA version 8.306      |  | 
+ |  |   PPP     Y      T    HHHHH   I   AAAAA    Last date of change: 28 Jun 2021  |  | 
+ |  |   P       Y      T    H   H   I   A   A                                      |  | 
+ |  |   P       Y      T    H   H  III  A   A    Now is 31 Jul 2022 at 22:27:26    |  | 
+ |  |                                                                              |  | 
+ |  |   Program documentation and an archive of historic versions is found on:     |  | 
+ |  |                                                                              |  | 
+ |  |                               https://pythia.org/                            |  | 
+ |  |                                                                              |  | 
+ |  |   PYTHIA is authored by a collaboration consisting of:                       |  | 
+ |  |                                                                              |  | 
+ |  |   Christian Bierlich, Nishita Desai, Leif Gellersen, Ilkka Helenius, Philip  |  | 
+ |  |   Ilten, Leif Lönnblad, Stephen Mrenna, Stefan Prestel, Christian Preuss,    |  | 
+ |  |   Torbjörn Sjöstrand, Peter Skands, Marius Utheim and Rob Verheyen.          |  | 
+ |  |                                                                              |  | 
+ |  |   The complete list of authors, including contact information and            |  | 
+ |  |   affiliations, can be found on https://pythia.org/.                         |  | 
+ |  |   Problems or bugs should be reported on email at authors@pythia.org.        |  | 
+ |  |                                                                              |  | 
+ |  |   The main program reference is 'An Introduction to PYTHIA 8.2',             |  | 
+ |  |   T. Sjöstrand et al, Comput. Phys. Commun. 191 (2015) 159                   |  | 
+ |  |   [arXiv:1410.3012 [hep-ph]]                                                 |  | 
+ |  |                                                                              |  | 
+ |  |   The main physics reference is the 'PYTHIA 6.4 Physics and Manual',         |  | 
+ |  |   T. Sjöstrand, S. Mrenna and P. Skands, JHEP05 (2006) 026 [hep-ph/0603175]  |  | 
+ |  |                                                                              |  | 
+ |  |   PYTHIA is released under the GNU General Public Licence version 2 or later.|  | 
+ |  |   Please respect the MCnet Guidelines for Event Generator Authors and Users. |  | 
+ |  |                                                                              |  | 
+ |  |   Disclaimer: this program comes without any guarantees.                     |  | 
+ |  |   Beware of errors and use common sense when interpreting results.           |  | 
+ |  |                                                                              |  | 
+ |  |   Copyright (C) 2021 Torbjörn Sjöstrand                                      |  | 
+ |  |                                                                              |  | 
+ |  |                                                                              |  | 
+ |  *------------------------------------------------------------------------------*  | 
+ |                                                                                    | 
+ *------------------------------------------------------------------------------------* 
+
+
+ *------------------------------------------------------------------------------------* 
+ |                                                                                    | 
+ |  *------------------------------------------------------------------------------*  | 
+ |  |                                                                              |  | 
+ |  |                                                                              |  | 
+ |  |   PPP   Y   Y  TTTTT  H   H  III    A      Welcome to the Lund Monte Carlo!  |  | 
+ |  |   P  P   Y Y     T    H   H   I    A A     This is PYTHIA version 8.306      |  | 
+ |  |   PPP     Y      T    HHHHH   I   AAAAA    Last date of change: 28 Jun 2021  |  | 
+ |  |   P       Y      T    H   H   I   A   A                                      |  | 
+ |  |   P       Y      T    H   H  III  A   A    Now is 31 Jul 2022 at 22:27:26    |  | 
+ |  |                                                                              |  | 
+ |  |   Program documentation and an archive of historic versions is found on:     |  | 
+ |  |                                                                              |  | 
+ |  |                               https://pythia.org/                            |  | 
+ |  |                                                                              |  | 
+ |  |   PYTHIA is authored by a collaboration consisting of:                       |  | 
+ |  |                                                                              |  | 
+ |  |   Christian Bierlich, Nishita Desai, Leif Gellersen, Ilkka Helenius, Philip  |  | 
+ |  |   Ilten, Leif Lönnblad, Stephen Mrenna, Stefan Prestel, Christian Preuss,    |  | 
+ |  |   Torbjörn Sjöstrand, Peter Skands, Marius Utheim and Rob Verheyen.          |  | 
+ |  |                                                                              |  | 
+ |  |   The complete list of authors, including contact information and            |  | 
+ |  |   affiliations, can be found on https://pythia.org/.                         |  | 
+ |  |   Problems or bugs should be reported on email at authors@pythia.org.        |  | 
+ |  |                                                                              |  | 
+ |  |   The main program reference is 'An Introduction to PYTHIA 8.2',             |  | 
+ |  |   T. Sjöstrand et al, Comput. Phys. Commun. 191 (2015) 159                   |  | 
+ |  |   [arXiv:1410.3012 [hep-ph]]                                                 |  | 
+ |  |                                                                              |  | 
+ |  |   The main physics reference is the 'PYTHIA 6.4 Physics and Manual',         |  | 
+ |  |   T. Sjöstrand, S. Mrenna and P. Skands, JHEP05 (2006) 026 [hep-ph/0603175]  |  | 
+ |  |                                                                              |  | 
+ |  |   PYTHIA is released under the GNU General Public Licence version 2 or later.|  | 
+ |  |   Please respect the MCnet Guidelines for Event Generator Authors and Users. |  | 
+ |  |                                                                              |  | 
+ |  |   Disclaimer: this program comes without any guarantees.                     |  | 
+ |  |   Beware of errors and use common sense when interpreting results.           |  | 
+ |  |                                                                              |  | 
+ |  |   Copyright (C) 2021 Torbjörn Sjöstrand                                      |  | 
+ |  |                                                                              |  | 
+ |  |                                                                              |  | 
+ |  *------------------------------------------------------------------------------*  | 
+ |                                                                                    | 
+ *------------------------------------------------------------------------------------* 
+
+
+ *-------  PYTHIA Flag + Mode + Parm + Word + FVec + MVec + PVec + WVec Settings (changes only)  ------------------* 
+ |                                                                                                                 | 
+ | Name                                          |                      Now |      Default         Min         Max | 
+ |                                               |                          |                                      | 
+ | Next:numberShowEvent                          |                        0 |            1           0             | 
+ | ProcessLevel:all                              |                      off |           on                         | 
+ |                                                                                                                 | 
+ *-------  End PYTHIA Flag + Mode + Parm + Word + FVec + MVec + PVec + WVec Settings  -----------------------------* 
+
+ --------  PYTHIA Particle Data Table (changed only)  ------------------------------------------------------------------------------
+ 
+      id   name            antiName         spn chg col      m0        mWidth      mMin       mMax       tau0    res dec ext vis wid
+             no onMode   bRatio   meMode     products 
+
+ no particle data has been changed from its default value 
+
+ --------  End PYTHIA Particle Data Table  -----------------------------------------------------------------------------------------
+
+
+ *-------  PYTHIA Flag + Mode + Parm + Word + FVec + MVec + PVec + WVec Settings (changes only)  ------------------* 
+ |                                                                                                                 | 
+ | Name                                          |                      Now |      Default         Min         Max | 
+ |                                               |                          |                                      | 
+ | Next:numberShowEvent                          |                        0 |            1           0             | 
+ | ProcessLevel:all                              |                      off |           on                         | 
+ |                                                                                                                 | 
+ *-------  End PYTHIA Flag + Mode + Parm + Word + FVec + MVec + PVec + WVec Settings  -----------------------------* 
+
+ --------  PYTHIA Particle Data Table (changed only)  ------------------------------------------------------------------------------
+ 
+      id   name            antiName         spn chg col      m0        mWidth      mMin       mMax       tau0    res dec ext vis wid
+             no onMode   bRatio   meMode     products 
+
+ no particle data has been changed from its default value 
+
+ --------  End PYTHIA Particle Data Table  -----------------------------------------------------------------------------------------
+
+Begin processing the 1st record. Run 1, Event 1, LumiSection 1 on stream 0 at 31-Jul-2022 22:27:27.541 KST
+
+ --------  PYTHIA Event Listing  (complete event)  ---------------------------------------------------------------------------------
+ 
+    no         id  name            status     mothers   daughters     colours      p_x        p_y        p_z         e          m 
+     0         90  (system)           -11     0     0     0     0     0     0      0.000      0.000      0.000   3585.916   3585.916
+     1        990  (Pomeron)          -11     0     0     2    13     0     0      0.000      0.000      0.000  15000.000  15000.000
+     2        -13  mu+                  1     1     0     0     0     0     0     42.342    -32.388    231.934    237.982      0.106
+     3         13  mu-                  1     1     0     0     0     0     0    -42.342     32.388   -231.934    237.982      0.106
+     4        -13  mu+                  1     1     0     0     0     0     0    -13.931     13.126     49.689     53.248      0.106
+     5         13  mu-                  1     1     0     0     0     0     0     13.931    -13.126    -49.689     53.248      0.106
+     6        -13  mu+                  1     1     0     0     0     0     0   -149.109   -119.399    421.302    462.585      0.106
+     7         13  mu-                  1     1     0     0     0     0     0    149.109    119.399   -421.302    462.585      0.106
+     8         13  mu-                  1     1     0     0     0     0     0    -78.648   -143.483    612.601    634.077      0.106
+     9        -13  mu+                  1     1     0     0     0     0     0     78.648    143.483   -612.601    634.077      0.106
+    10         13  mu-                  1     1     0     0     0     0     0    -51.165     41.521    281.397    289.009      0.106
+    11        -13  mu+                  1     1     0     0     0     0     0     51.165    -41.521   -281.397    289.009      0.106
+    12         13  mu-                  1     1     0     0     0     0     0     25.144     -6.653    113.105    116.057      0.106
+    13        -13  mu+                  1     1     0     0     0     0     0    -25.144      6.653   -113.105    116.057      0.106
+                                   Charge sum:  0.000           Momentum sum:      0.000      0.000      0.000   3585.916   3585.916
+
+ --------  End PYTHIA Event Listing  -----------------------------------------------------------------------------------------------
+#--------------------------------------------------------------------------
+#                         FastJet release 3.4.0
+#                 M. Cacciari, G.P. Salam and G. Soyez                  
+#     A software package for jet finding and analysis at colliders      
+#                           http://fastjet.fr                           
+#	                                                                      
+# Please cite EPJC72(2012)1896 [arXiv:1111.6097] if you use this package
+# for scientific work and optionally PLB641(2006)57 [hep-ph/0512210].   
+#                                                                       
+# FastJet is provided without warranty under the GNU GPL v2 or higher.  
+# It uses T. Chan's closest pair algorithm, S. Fortune's Voronoi code
+# and 3rd party plugin jet algorithms. See COPYING file for details.
+#--------------------------------------------------------------------------
+Begin processing the 2nd record. Run 1, Event 2, LumiSection 1 on stream 0 at 31-Jul-2022 22:27:30.735 KST
+Begin processing the 3rd record. Run 1, Event 3, LumiSection 1 on stream 0 at 31-Jul-2022 22:27:37.786 KST
+Begin processing the 4th record. Run 1, Event 4, LumiSection 1 on stream 0 at 31-Jul-2022 22:27:40.340 KST
+Begin processing the 5th record. Run 1, Event 5, LumiSection 1 on stream 0 at 31-Jul-2022 22:27:43.195 KST
+Begin processing the 6th record. Run 1, Event 6, LumiSection 1 on stream 0 at 31-Jul-2022 22:27:46.432 KST
+Begin processing the 7th record. Run 1, Event 7, LumiSection 1 on stream 0 at 31-Jul-2022 22:27:49.046 KST
+Begin processing the 8th record. Run 1, Event 8, LumiSection 1 on stream 0 at 31-Jul-2022 22:27:50.685 KST
+Begin processing the 9th record. Run 1, Event 9, LumiSection 1 on stream 0 at 31-Jul-2022 22:27:57.811 KST
+Begin processing the 10th record. Run 1, Event 10, LumiSection 1 on stream 0 at 31-Jul-2022 22:28:00.882 KST
+Begin processing the 11th record. Run 1, Event 11, LumiSection 1 on stream 0 at 31-Jul-2022 22:28:02.797 KST
+Begin processing the 12th record. Run 1, Event 12, LumiSection 1 on stream 0 at 31-Jul-2022 22:28:08.868 KST
+Begin processing the 13th record. Run 1, Event 13, LumiSection 1 on stream 0 at 31-Jul-2022 22:28:10.406 KST
+Begin processing the 14th record. Run 1, Event 14, LumiSection 1 on stream 0 at 31-Jul-2022 22:28:14.976 KST
+Begin processing the 15th record. Run 1, Event 15, LumiSection 1 on stream 0 at 31-Jul-2022 22:28:17.855 KST
+Begin processing the 16th record. Run 1, Event 16, LumiSection 1 on stream 0 at 31-Jul-2022 22:28:21.432 KST
+Begin processing the 17th record. Run 1, Event 17, LumiSection 1 on stream 0 at 31-Jul-2022 22:28:24.104 KST
+Begin processing the 18th record. Run 1, Event 18, LumiSection 1 on stream 0 at 31-Jul-2022 22:28:26.501 KST
+Begin processing the 19th record. Run 1, Event 19, LumiSection 1 on stream 0 at 31-Jul-2022 22:28:28.899 KST
+Begin processing the 20th record. Run 1, Event 20, LumiSection 1 on stream 0 at 31-Jul-2022 22:28:32.475 KST
+Begin processing the 21st record. Run 1, Event 21, LumiSection 1 on stream 0 at 31-Jul-2022 22:28:35.268 KST
+Begin processing the 22nd record. Run 1, Event 22, LumiSection 1 on stream 0 at 31-Jul-2022 22:28:37.782 KST
+Begin processing the 23rd record. Run 1, Event 23, LumiSection 1 on stream 0 at 31-Jul-2022 22:28:40.406 KST
+Begin processing the 24th record. Run 1, Event 24, LumiSection 1 on stream 0 at 31-Jul-2022 22:28:42.827 KST
+Begin processing the 25th record. Run 1, Event 25, LumiSection 1 on stream 0 at 31-Jul-2022 22:28:52.033 KST
+Begin processing the 26th record. Run 1, Event 26, LumiSection 1 on stream 0 at 31-Jul-2022 22:28:57.103 KST
+Begin processing the 27th record. Run 1, Event 27, LumiSection 1 on stream 0 at 31-Jul-2022 22:28:59.194 KST
+Begin processing the 28th record. Run 1, Event 28, LumiSection 1 on stream 0 at 31-Jul-2022 22:29:02.149 KST
+Begin processing the 29th record. Run 1, Event 29, LumiSection 1 on stream 0 at 31-Jul-2022 22:29:04.290 KST
+Begin processing the 30th record. Run 1, Event 30, LumiSection 1 on stream 0 at 31-Jul-2022 22:29:06.852 KST
+Begin processing the 31st record. Run 1, Event 31, LumiSection 1 on stream 0 at 31-Jul-2022 22:29:12.056 KST
+Begin processing the 32nd record. Run 1, Event 32, LumiSection 1 on stream 0 at 31-Jul-2022 22:29:14.332 KST
+Begin processing the 33rd record. Run 1, Event 33, LumiSection 1 on stream 0 at 31-Jul-2022 22:29:16.897 KST
+Begin processing the 34th record. Run 1, Event 34, LumiSection 1 on stream 0 at 31-Jul-2022 22:29:20.469 KST
+Begin processing the 35th record. Run 1, Event 35, LumiSection 1 on stream 0 at 31-Jul-2022 22:29:23.065 KST
+Begin processing the 36th record. Run 1, Event 36, LumiSection 1 on stream 0 at 31-Jul-2022 22:29:27.029 KST
+Begin processing the 37th record. Run 1, Event 37, LumiSection 1 on stream 0 at 31-Jul-2022 22:29:29.266 KST
+Begin processing the 38th record. Run 1, Event 38, LumiSection 1 on stream 0 at 31-Jul-2022 22:29:31.018 KST
+Begin processing the 39th record. Run 1, Event 39, LumiSection 1 on stream 0 at 31-Jul-2022 22:29:33.340 KST
+Begin processing the 40th record. Run 1, Event 40, LumiSection 1 on stream 0 at 31-Jul-2022 22:29:36.979 KST
+Begin processing the 41st record. Run 1, Event 41, LumiSection 1 on stream 0 at 31-Jul-2022 22:29:39.457 KST
+Begin processing the 42nd record. Run 1, Event 42, LumiSection 1 on stream 0 at 31-Jul-2022 22:29:42.426 KST
+Begin processing the 43rd record. Run 1, Event 43, LumiSection 1 on stream 0 at 31-Jul-2022 22:29:45.823 KST
+Begin processing the 44th record. Run 1, Event 44, LumiSection 1 on stream 0 at 31-Jul-2022 22:29:50.231 KST
+Begin processing the 45th record. Run 1, Event 45, LumiSection 1 on stream 0 at 31-Jul-2022 22:29:54.780 KST
+Begin processing the 46th record. Run 1, Event 46, LumiSection 1 on stream 0 at 31-Jul-2022 22:29:58.226 KST
+Begin processing the 47th record. Run 1, Event 47, LumiSection 1 on stream 0 at 31-Jul-2022 22:30:00.342 KST
+Begin processing the 48th record. Run 1, Event 48, LumiSection 1 on stream 0 at 31-Jul-2022 22:30:03.118 KST
+Begin processing the 49th record. Run 1, Event 49, LumiSection 1 on stream 0 at 31-Jul-2022 22:30:04.989 KST
+Begin processing the 50th record. Run 1, Event 50, LumiSection 1 on stream 0 at 31-Jul-2022 22:30:07.757 KST
+Begin processing the 51st record. Run 1, Event 51, LumiSection 1 on stream 0 at 31-Jul-2022 22:30:10.746 KST
+Begin processing the 52nd record. Run 1, Event 52, LumiSection 1 on stream 0 at 31-Jul-2022 22:30:14.605 KST
+Begin processing the 53rd record. Run 1, Event 53, LumiSection 1 on stream 0 at 31-Jul-2022 22:30:16.188 KST
+Begin processing the 54th record. Run 1, Event 54, LumiSection 1 on stream 0 at 31-Jul-2022 22:30:19.314 KST
+Begin processing the 55th record. Run 1, Event 55, LumiSection 1 on stream 0 at 31-Jul-2022 22:30:22.428 KST
+Begin processing the 56th record. Run 1, Event 56, LumiSection 1 on stream 0 at 31-Jul-2022 22:30:24.584 KST
+Begin processing the 57th record. Run 1, Event 57, LumiSection 1 on stream 0 at 31-Jul-2022 22:30:26.623 KST
+Begin processing the 58th record. Run 1, Event 58, LumiSection 1 on stream 0 at 31-Jul-2022 22:30:28.511 KST
+Begin processing the 59th record. Run 1, Event 59, LumiSection 1 on stream 0 at 31-Jul-2022 22:30:30.626 KST
+Begin processing the 60th record. Run 1, Event 60, LumiSection 1 on stream 0 at 31-Jul-2022 22:30:32.751 KST
+Begin processing the 61st record. Run 1, Event 61, LumiSection 1 on stream 0 at 31-Jul-2022 22:30:35.449 KST
+Begin processing the 62nd record. Run 1, Event 62, LumiSection 1 on stream 0 at 31-Jul-2022 22:30:37.894 KST
+Begin processing the 63rd record. Run 1, Event 63, LumiSection 1 on stream 0 at 31-Jul-2022 22:30:40.061 KST
+Begin processing the 64th record. Run 1, Event 64, LumiSection 1 on stream 0 at 31-Jul-2022 22:30:42.474 KST
+Begin processing the 65th record. Run 1, Event 65, LumiSection 1 on stream 0 at 31-Jul-2022 22:30:44.429 KST
+Begin processing the 66th record. Run 1, Event 66, LumiSection 1 on stream 0 at 31-Jul-2022 22:30:46.098 KST
+Begin processing the 67th record. Run 1, Event 67, LumiSection 1 on stream 0 at 31-Jul-2022 22:30:49.111 KST
+Begin processing the 68th record. Run 1, Event 68, LumiSection 1 on stream 0 at 31-Jul-2022 22:30:50.853 KST
+Begin processing the 69th record. Run 1, Event 69, LumiSection 1 on stream 0 at 31-Jul-2022 22:30:52.958 KST
+Begin processing the 70th record. Run 1, Event 70, LumiSection 1 on stream 0 at 31-Jul-2022 22:30:58.448 KST
+Begin processing the 71st record. Run 1, Event 71, LumiSection 1 on stream 0 at 31-Jul-2022 22:31:02.674 KST
+Begin processing the 72nd record. Run 1, Event 72, LumiSection 1 on stream 0 at 31-Jul-2022 22:31:04.358 KST
+Begin processing the 73rd record. Run 1, Event 73, LumiSection 1 on stream 0 at 31-Jul-2022 22:31:06.675 KST
+Begin processing the 74th record. Run 1, Event 74, LumiSection 1 on stream 0 at 31-Jul-2022 22:31:08.590 KST
+Begin processing the 75th record. Run 1, Event 75, LumiSection 1 on stream 0 at 31-Jul-2022 22:31:14.358 KST
+Begin processing the 76th record. Run 1, Event 76, LumiSection 1 on stream 0 at 31-Jul-2022 22:31:16.713 KST
+Begin processing the 77th record. Run 1, Event 77, LumiSection 1 on stream 0 at 31-Jul-2022 22:31:19.139 KST
+Begin processing the 78th record. Run 1, Event 78, LumiSection 1 on stream 0 at 31-Jul-2022 22:31:24.658 KST
+Begin processing the 79th record. Run 1, Event 79, LumiSection 1 on stream 0 at 31-Jul-2022 22:31:27.411 KST
+Begin processing the 80th record. Run 1, Event 80, LumiSection 1 on stream 0 at 31-Jul-2022 22:31:29.530 KST
+Begin processing the 81st record. Run 1, Event 81, LumiSection 1 on stream 0 at 31-Jul-2022 22:31:34.449 KST
+Begin processing the 82nd record. Run 1, Event 82, LumiSection 1 on stream 0 at 31-Jul-2022 22:31:38.625 KST
+Begin processing the 83rd record. Run 1, Event 83, LumiSection 1 on stream 0 at 31-Jul-2022 22:31:41.475 KST
+Begin processing the 84th record. Run 1, Event 84, LumiSection 1 on stream 0 at 31-Jul-2022 22:31:44.449 KST
+Begin processing the 85th record. Run 1, Event 85, LumiSection 1 on stream 0 at 31-Jul-2022 22:31:47.525 KST
+Begin processing the 86th record. Run 1, Event 86, LumiSection 1 on stream 0 at 31-Jul-2022 22:31:53.219 KST
+Begin processing the 87th record. Run 1, Event 87, LumiSection 1 on stream 0 at 31-Jul-2022 22:31:55.957 KST
+Begin processing the 88th record. Run 1, Event 88, LumiSection 1 on stream 0 at 31-Jul-2022 22:32:00.334 KST
+Begin processing the 89th record. Run 1, Event 89, LumiSection 1 on stream 0 at 31-Jul-2022 22:32:02.131 KST
+Begin processing the 90th record. Run 1, Event 90, LumiSection 1 on stream 0 at 31-Jul-2022 22:32:04.545 KST
+Begin processing the 91st record. Run 1, Event 91, LumiSection 1 on stream 0 at 31-Jul-2022 22:32:06.580 KST
+Begin processing the 92nd record. Run 1, Event 92, LumiSection 1 on stream 0 at 31-Jul-2022 22:32:09.526 KST
+Begin processing the 93rd record. Run 1, Event 93, LumiSection 1 on stream 0 at 31-Jul-2022 22:32:12.323 KST
+Begin processing the 94th record. Run 1, Event 94, LumiSection 1 on stream 0 at 31-Jul-2022 22:32:14.682 KST
+Begin processing the 95th record. Run 1, Event 95, LumiSection 1 on stream 0 at 31-Jul-2022 22:32:16.867 KST
+Begin processing the 96th record. Run 1, Event 96, LumiSection 1 on stream 0 at 31-Jul-2022 22:32:19.434 KST
+Begin processing the 97th record. Run 1, Event 97, LumiSection 1 on stream 0 at 31-Jul-2022 22:32:21.148 KST
+Begin processing the 98th record. Run 1, Event 98, LumiSection 1 on stream 0 at 31-Jul-2022 22:32:23.750 KST
+Begin processing the 99th record. Run 1, Event 99, LumiSection 1 on stream 0 at 31-Jul-2022 22:32:28.394 KST
+Begin processing the 100th record. Run 1, Event 100, LumiSection 1 on stream 0 at 31-Jul-2022 22:32:31.522 KST
+Begin processing the 101st record. Run 1, Event 101, LumiSection 1 on stream 0 at 31-Jul-2022 22:32:33.849 KST
+Begin processing the 102nd record. Run 1, Event 102, LumiSection 1 on stream 0 at 31-Jul-2022 22:32:37.786 KST
+Begin processing the 103rd record. Run 1, Event 103, LumiSection 1 on stream 0 at 31-Jul-2022 22:32:40.582 KST
+Begin processing the 104th record. Run 1, Event 104, LumiSection 1 on stream 0 at 31-Jul-2022 22:32:46.613 KST
+Begin processing the 105th record. Run 1, Event 105, LumiSection 1 on stream 0 at 31-Jul-2022 22:32:48.014 KST
+Begin processing the 106th record. Run 1, Event 106, LumiSection 1 on stream 0 at 31-Jul-2022 22:32:50.272 KST
+Begin processing the 107th record. Run 1, Event 107, LumiSection 1 on stream 0 at 31-Jul-2022 22:32:52.470 KST
+Begin processing the 108th record. Run 1, Event 108, LumiSection 1 on stream 0 at 31-Jul-2022 22:32:54.814 KST
+Begin processing the 109th record. Run 1, Event 109, LumiSection 1 on stream 0 at 31-Jul-2022 22:32:59.486 KST
+Begin processing the 110th record. Run 1, Event 110, LumiSection 1 on stream 0 at 31-Jul-2022 22:33:08.355 KST
+Begin processing the 111th record. Run 1, Event 111, LumiSection 1 on stream 0 at 31-Jul-2022 22:33:12.526 KST
+Begin processing the 112th record. Run 1, Event 112, LumiSection 1 on stream 0 at 31-Jul-2022 22:33:14.388 KST
+Begin processing the 113th record. Run 1, Event 113, LumiSection 1 on stream 0 at 31-Jul-2022 22:33:23.122 KST
+Begin processing the 114th record. Run 1, Event 114, LumiSection 1 on stream 0 at 31-Jul-2022 22:33:25.360 KST
+Begin processing the 115th record. Run 1, Event 115, LumiSection 1 on stream 0 at 31-Jul-2022 22:33:27.074 KST
+Begin processing the 116th record. Run 1, Event 116, LumiSection 1 on stream 0 at 31-Jul-2022 22:33:30.190 KST
+Begin processing the 117th record. Run 1, Event 117, LumiSection 1 on stream 0 at 31-Jul-2022 22:33:33.146 KST
+Begin processing the 118th record. Run 1, Event 118, LumiSection 1 on stream 0 at 31-Jul-2022 22:33:35.221 KST
+Begin processing the 119th record. Run 1, Event 119, LumiSection 1 on stream 0 at 31-Jul-2022 22:33:37.322 KST
+Begin processing the 120th record. Run 1, Event 120, LumiSection 1 on stream 0 at 31-Jul-2022 22:33:41.779 KST
+Begin processing the 121st record. Run 1, Event 121, LumiSection 1 on stream 0 at 31-Jul-2022 22:33:44.562 KST
+Begin processing the 122nd record. Run 1, Event 122, LumiSection 1 on stream 0 at 31-Jul-2022 22:33:48.720 KST
+Begin processing the 123rd record. Run 1, Event 123, LumiSection 1 on stream 0 at 31-Jul-2022 22:33:58.151 KST
+Begin processing the 124th record. Run 1, Event 124, LumiSection 1 on stream 0 at 31-Jul-2022 22:34:00.470 KST
+Begin processing the 125th record. Run 1, Event 125, LumiSection 1 on stream 0 at 31-Jul-2022 22:34:05.497 KST
+Begin processing the 126th record. Run 1, Event 126, LumiSection 1 on stream 0 at 31-Jul-2022 22:34:09.440 KST
+Begin processing the 127th record. Run 1, Event 127, LumiSection 1 on stream 0 at 31-Jul-2022 22:34:11.232 KST
+Begin processing the 128th record. Run 1, Event 128, LumiSection 1 on stream 0 at 31-Jul-2022 22:34:14.313 KST
+Begin processing the 129th record. Run 1, Event 129, LumiSection 1 on stream 0 at 31-Jul-2022 22:34:17.205 KST
+Begin processing the 130th record. Run 1, Event 130, LumiSection 1 on stream 0 at 31-Jul-2022 22:34:24.594 KST
+Begin processing the 131st record. Run 1, Event 131, LumiSection 1 on stream 0 at 31-Jul-2022 22:34:29.406 KST
+Begin processing the 132nd record. Run 1, Event 132, LumiSection 1 on stream 0 at 31-Jul-2022 22:34:36.184 KST
+Begin processing the 133rd record. Run 1, Event 133, LumiSection 1 on stream 0 at 31-Jul-2022 22:34:38.329 KST
+Begin processing the 134th record. Run 1, Event 134, LumiSection 1 on stream 0 at 31-Jul-2022 22:34:41.975 KST
+Begin processing the 135th record. Run 1, Event 135, LumiSection 1 on stream 0 at 31-Jul-2022 22:34:44.491 KST
+Begin processing the 136th record. Run 1, Event 136, LumiSection 1 on stream 0 at 31-Jul-2022 22:34:46.865 KST
+Begin processing the 137th record. Run 1, Event 137, LumiSection 1 on stream 0 at 31-Jul-2022 22:34:49.236 KST
+Begin processing the 138th record. Run 1, Event 138, LumiSection 1 on stream 0 at 31-Jul-2022 22:34:56.703 KST
+Begin processing the 139th record. Run 1, Event 139, LumiSection 1 on stream 0 at 31-Jul-2022 22:35:00.350 KST
+Begin processing the 140th record. Run 1, Event 140, LumiSection 1 on stream 0 at 31-Jul-2022 22:35:03.539 KST
+Begin processing the 141st record. Run 1, Event 141, LumiSection 1 on stream 0 at 31-Jul-2022 22:35:06.301 KST
+Begin processing the 142nd record. Run 1, Event 142, LumiSection 1 on stream 0 at 31-Jul-2022 22:35:08.432 KST
+Begin processing the 143rd record. Run 1, Event 143, LumiSection 1 on stream 0 at 31-Jul-2022 22:35:13.894 KST
+Begin processing the 144th record. Run 1, Event 144, LumiSection 1 on stream 0 at 31-Jul-2022 22:35:15.673 KST
+Begin processing the 145th record. Run 1, Event 145, LumiSection 1 on stream 0 at 31-Jul-2022 22:35:17.393 KST
+Begin processing the 146th record. Run 1, Event 146, LumiSection 1 on stream 0 at 31-Jul-2022 22:35:20.400 KST
+Begin processing the 147th record. Run 1, Event 147, LumiSection 1 on stream 0 at 31-Jul-2022 22:35:23.957 KST
+Begin processing the 148th record. Run 1, Event 148, LumiSection 1 on stream 0 at 31-Jul-2022 22:35:25.824 KST
+Begin processing the 149th record. Run 1, Event 149, LumiSection 1 on stream 0 at 31-Jul-2022 22:35:28.090 KST
+Begin processing the 150th record. Run 1, Event 150, LumiSection 1 on stream 0 at 31-Jul-2022 22:35:29.409 KST
+Begin processing the 151st record. Run 1, Event 151, LumiSection 1 on stream 0 at 31-Jul-2022 22:35:31.344 KST
+Begin processing the 152nd record. Run 1, Event 152, LumiSection 1 on stream 0 at 31-Jul-2022 22:35:32.900 KST
+Begin processing the 153rd record. Run 1, Event 153, LumiSection 1 on stream 0 at 31-Jul-2022 22:35:35.094 KST
+Begin processing the 154th record. Run 1, Event 154, LumiSection 1 on stream 0 at 31-Jul-2022 22:35:37.343 KST
+Begin processing the 155th record. Run 1, Event 155, LumiSection 1 on stream 0 at 31-Jul-2022 22:35:40.601 KST
+Begin processing the 156th record. Run 1, Event 156, LumiSection 1 on stream 0 at 31-Jul-2022 22:35:44.675 KST
+Begin processing the 157th record. Run 1, Event 157, LumiSection 1 on stream 0 at 31-Jul-2022 22:35:47.219 KST
+Begin processing the 158th record. Run 1, Event 158, LumiSection 1 on stream 0 at 31-Jul-2022 22:35:50.293 KST
+Begin processing the 159th record. Run 1, Event 159, LumiSection 1 on stream 0 at 31-Jul-2022 22:35:52.418 KST
+Begin processing the 160th record. Run 1, Event 160, LumiSection 1 on stream 0 at 31-Jul-2022 22:35:54.511 KST
+Begin processing the 161st record. Run 1, Event 161, LumiSection 1 on stream 0 at 31-Jul-2022 22:35:58.620 KST
+Begin processing the 162nd record. Run 1, Event 162, LumiSection 1 on stream 0 at 31-Jul-2022 22:36:01.005 KST
+Begin processing the 163rd record. Run 1, Event 163, LumiSection 1 on stream 0 at 31-Jul-2022 22:36:08.275 KST
+Begin processing the 164th record. Run 1, Event 164, LumiSection 1 on stream 0 at 31-Jul-2022 22:36:12.128 KST
+Begin processing the 165th record. Run 1, Event 165, LumiSection 1 on stream 0 at 31-Jul-2022 22:36:14.824 KST
+Begin processing the 166th record. Run 1, Event 166, LumiSection 1 on stream 0 at 31-Jul-2022 22:36:16.875 KST
+Begin processing the 167th record. Run 1, Event 167, LumiSection 1 on stream 0 at 31-Jul-2022 22:36:18.963 KST
+Begin processing the 168th record. Run 1, Event 168, LumiSection 1 on stream 0 at 31-Jul-2022 22:36:20.789 KST
+Begin processing the 169th record. Run 1, Event 169, LumiSection 1 on stream 0 at 31-Jul-2022 22:36:23.495 KST
+Begin processing the 170th record. Run 1, Event 170, LumiSection 1 on stream 0 at 31-Jul-2022 22:36:27.960 KST
+Begin processing the 171st record. Run 1, Event 171, LumiSection 1 on stream 0 at 31-Jul-2022 22:36:30.402 KST
+Begin processing the 172nd record. Run 1, Event 172, LumiSection 1 on stream 0 at 31-Jul-2022 22:36:32.625 KST
+Begin processing the 173rd record. Run 1, Event 173, LumiSection 1 on stream 0 at 31-Jul-2022 22:36:37.700 KST
+Begin processing the 174th record. Run 1, Event 174, LumiSection 1 on stream 0 at 31-Jul-2022 22:36:41.532 KST
+Begin processing the 175th record. Run 1, Event 175, LumiSection 1 on stream 0 at 31-Jul-2022 22:36:44.734 KST
+Begin processing the 176th record. Run 1, Event 176, LumiSection 1 on stream 0 at 31-Jul-2022 22:36:47.657 KST
+Begin processing the 177th record. Run 1, Event 177, LumiSection 1 on stream 0 at 31-Jul-2022 22:36:49.536 KST
+Begin processing the 178th record. Run 1, Event 178, LumiSection 1 on stream 0 at 31-Jul-2022 22:36:51.498 KST
+Begin processing the 179th record. Run 1, Event 179, LumiSection 1 on stream 0 at 31-Jul-2022 22:36:53.988 KST
+Begin processing the 180th record. Run 1, Event 180, LumiSection 1 on stream 0 at 31-Jul-2022 22:36:56.286 KST
+Begin processing the 181st record. Run 1, Event 181, LumiSection 1 on stream 0 at 31-Jul-2022 22:37:01.682 KST
+Begin processing the 182nd record. Run 1, Event 182, LumiSection 1 on stream 0 at 31-Jul-2022 22:37:06.249 KST
+Begin processing the 183rd record. Run 1, Event 183, LumiSection 1 on stream 0 at 31-Jul-2022 22:37:08.147 KST
+Begin processing the 184th record. Run 1, Event 184, LumiSection 1 on stream 0 at 31-Jul-2022 22:37:11.796 KST
+Begin processing the 185th record. Run 1, Event 185, LumiSection 1 on stream 0 at 31-Jul-2022 22:37:14.515 KST
+Begin processing the 186th record. Run 1, Event 186, LumiSection 1 on stream 0 at 31-Jul-2022 22:37:21.844 KST
+Begin processing the 187th record. Run 1, Event 187, LumiSection 1 on stream 0 at 31-Jul-2022 22:37:42.859 KST
+Begin processing the 188th record. Run 1, Event 188, LumiSection 1 on stream 0 at 31-Jul-2022 22:37:45.172 KST
+Begin processing the 189th record. Run 1, Event 189, LumiSection 1 on stream 0 at 31-Jul-2022 22:37:48.921 KST
+Begin processing the 190th record. Run 1, Event 190, LumiSection 1 on stream 0 at 31-Jul-2022 22:37:51.247 KST
+Begin processing the 191st record. Run 1, Event 191, LumiSection 1 on stream 0 at 31-Jul-2022 22:37:54.049 KST
+Begin processing the 192nd record. Run 1, Event 192, LumiSection 1 on stream 0 at 31-Jul-2022 22:37:57.088 KST
+Begin processing the 193rd record. Run 1, Event 193, LumiSection 1 on stream 0 at 31-Jul-2022 22:38:01.049 KST
+Begin processing the 194th record. Run 1, Event 194, LumiSection 1 on stream 0 at 31-Jul-2022 22:38:03.334 KST
+Begin processing the 195th record. Run 1, Event 195, LumiSection 1 on stream 0 at 31-Jul-2022 22:38:05.845 KST
+Begin processing the 196th record. Run 1, Event 196, LumiSection 1 on stream 0 at 31-Jul-2022 22:38:16.539 KST
+Begin processing the 197th record. Run 1, Event 197, LumiSection 1 on stream 0 at 31-Jul-2022 22:38:22.521 KST
+Begin processing the 198th record. Run 1, Event 198, LumiSection 1 on stream 0 at 31-Jul-2022 22:38:24.183 KST
+Begin processing the 199th record. Run 1, Event 199, LumiSection 1 on stream 0 at 31-Jul-2022 22:38:25.996 KST
+Begin processing the 200th record. Run 1, Event 200, LumiSection 1 on stream 0 at 31-Jul-2022 22:38:29.005 KST
+Begin processing the 201st record. Run 1, Event 201, LumiSection 1 on stream 0 at 31-Jul-2022 22:38:31.560 KST
+Begin processing the 202nd record. Run 1, Event 202, LumiSection 1 on stream 0 at 31-Jul-2022 22:38:33.176 KST
+Begin processing the 203rd record. Run 1, Event 203, LumiSection 1 on stream 0 at 31-Jul-2022 22:38:41.210 KST
+Begin processing the 204th record. Run 1, Event 204, LumiSection 1 on stream 0 at 31-Jul-2022 22:38:46.253 KST
+Begin processing the 205th record. Run 1, Event 205, LumiSection 1 on stream 0 at 31-Jul-2022 22:38:48.415 KST
+Begin processing the 206th record. Run 1, Event 206, LumiSection 1 on stream 0 at 31-Jul-2022 22:38:50.361 KST
+Begin processing the 207th record. Run 1, Event 207, LumiSection 1 on stream 0 at 31-Jul-2022 22:38:56.570 KST
+Begin processing the 208th record. Run 1, Event 208, LumiSection 1 on stream 0 at 31-Jul-2022 22:39:00.917 KST
+Begin processing the 209th record. Run 1, Event 209, LumiSection 1 on stream 0 at 31-Jul-2022 22:39:02.947 KST
+Begin processing the 210th record. Run 1, Event 210, LumiSection 1 on stream 0 at 31-Jul-2022 22:39:06.022 KST
+Begin processing the 211th record. Run 1, Event 211, LumiSection 1 on stream 0 at 31-Jul-2022 22:39:08.625 KST
+Begin processing the 212th record. Run 1, Event 212, LumiSection 1 on stream 0 at 31-Jul-2022 22:39:10.723 KST
+Begin processing the 213th record. Run 1, Event 213, LumiSection 1 on stream 0 at 31-Jul-2022 22:39:13.582 KST
+Begin processing the 214th record. Run 1, Event 214, LumiSection 1 on stream 0 at 31-Jul-2022 22:39:17.217 KST
+Begin processing the 215th record. Run 1, Event 215, LumiSection 1 on stream 0 at 31-Jul-2022 22:39:29.676 KST
+Begin processing the 216th record. Run 1, Event 216, LumiSection 1 on stream 0 at 31-Jul-2022 22:39:31.438 KST
+Begin processing the 217th record. Run 1, Event 217, LumiSection 1 on stream 0 at 31-Jul-2022 22:39:33.301 KST
+Begin processing the 218th record. Run 1, Event 218, LumiSection 1 on stream 0 at 31-Jul-2022 22:39:35.129 KST
+Begin processing the 219th record. Run 1, Event 219, LumiSection 1 on stream 0 at 31-Jul-2022 22:39:37.396 KST
+Begin processing the 220th record. Run 1, Event 220, LumiSection 1 on stream 0 at 31-Jul-2022 22:39:41.880 KST
+Begin processing the 221st record. Run 1, Event 221, LumiSection 1 on stream 0 at 31-Jul-2022 22:39:55.404 KST
+Begin processing the 222nd record. Run 1, Event 222, LumiSection 1 on stream 0 at 31-Jul-2022 22:39:59.197 KST
+Begin processing the 223rd record. Run 1, Event 223, LumiSection 1 on stream 0 at 31-Jul-2022 22:40:01.778 KST
+Begin processing the 224th record. Run 1, Event 224, LumiSection 1 on stream 0 at 31-Jul-2022 22:40:04.705 KST
+Begin processing the 225th record. Run 1, Event 225, LumiSection 1 on stream 0 at 31-Jul-2022 22:40:06.427 KST
+Begin processing the 226th record. Run 1, Event 226, LumiSection 1 on stream 0 at 31-Jul-2022 22:40:08.042 KST
+Begin processing the 227th record. Run 1, Event 227, LumiSection 1 on stream 0 at 31-Jul-2022 22:40:12.927 KST
+Begin processing the 228th record. Run 1, Event 228, LumiSection 1 on stream 0 at 31-Jul-2022 22:40:15.504 KST
+Begin processing the 229th record. Run 1, Event 229, LumiSection 1 on stream 0 at 31-Jul-2022 22:40:17.299 KST
+Begin processing the 230th record. Run 1, Event 230, LumiSection 1 on stream 0 at 31-Jul-2022 22:40:18.973 KST
+Begin processing the 231st record. Run 1, Event 231, LumiSection 1 on stream 0 at 31-Jul-2022 22:40:21.345 KST
+Begin processing the 232nd record. Run 1, Event 232, LumiSection 1 on stream 0 at 31-Jul-2022 22:40:24.750 KST
+Begin processing the 233rd record. Run 1, Event 233, LumiSection 1 on stream 0 at 31-Jul-2022 22:40:28.079 KST
+Begin processing the 234th record. Run 1, Event 234, LumiSection 1 on stream 0 at 31-Jul-2022 22:40:31.807 KST
+Begin processing the 235th record. Run 1, Event 235, LumiSection 1 on stream 0 at 31-Jul-2022 22:40:34.154 KST
+Begin processing the 236th record. Run 1, Event 236, LumiSection 1 on stream 0 at 31-Jul-2022 22:40:36.829 KST
+Begin processing the 237th record. Run 1, Event 237, LumiSection 1 on stream 0 at 31-Jul-2022 22:40:40.224 KST
+Begin processing the 238th record. Run 1, Event 238, LumiSection 1 on stream 0 at 31-Jul-2022 22:40:42.165 KST
+Begin processing the 239th record. Run 1, Event 239, LumiSection 1 on stream 0 at 31-Jul-2022 22:40:44.991 KST
+Begin processing the 240th record. Run 1, Event 240, LumiSection 1 on stream 0 at 31-Jul-2022 22:40:47.984 KST
+Begin processing the 241st record. Run 1, Event 241, LumiSection 1 on stream 0 at 31-Jul-2022 22:40:50.358 KST
+Begin processing the 242nd record. Run 1, Event 242, LumiSection 1 on stream 0 at 31-Jul-2022 22:40:53.739 KST
+Begin processing the 243rd record. Run 1, Event 243, LumiSection 1 on stream 0 at 31-Jul-2022 22:40:56.177 KST
+Begin processing the 244th record. Run 1, Event 244, LumiSection 1 on stream 0 at 31-Jul-2022 22:41:00.394 KST
+Begin processing the 245th record. Run 1, Event 245, LumiSection 1 on stream 0 at 31-Jul-2022 22:41:03.279 KST
+Begin processing the 246th record. Run 1, Event 246, LumiSection 1 on stream 0 at 31-Jul-2022 22:41:05.761 KST
+Begin processing the 247th record. Run 1, Event 247, LumiSection 1 on stream 0 at 31-Jul-2022 22:41:07.429 KST
+Begin processing the 248th record. Run 1, Event 248, LumiSection 1 on stream 0 at 31-Jul-2022 22:41:09.477 KST
+Begin processing the 249th record. Run 1, Event 249, LumiSection 1 on stream 0 at 31-Jul-2022 22:41:13.075 KST
+Begin processing the 250th record. Run 1, Event 250, LumiSection 1 on stream 0 at 31-Jul-2022 22:41:15.461 KST
+Begin processing the 251st record. Run 1, Event 251, LumiSection 1 on stream 0 at 31-Jul-2022 22:41:18.366 KST
+Begin processing the 252nd record. Run 1, Event 252, LumiSection 1 on stream 0 at 31-Jul-2022 22:41:20.754 KST
+Begin processing the 253rd record. Run 1, Event 253, LumiSection 1 on stream 0 at 31-Jul-2022 22:41:35.929 KST
+Begin processing the 254th record. Run 1, Event 254, LumiSection 1 on stream 0 at 31-Jul-2022 22:41:38.433 KST
+Begin processing the 255th record. Run 1, Event 255, LumiSection 1 on stream 0 at 31-Jul-2022 22:41:41.712 KST
+Begin processing the 256th record. Run 1, Event 256, LumiSection 1 on stream 0 at 31-Jul-2022 22:41:44.067 KST
+Begin processing the 257th record. Run 1, Event 257, LumiSection 1 on stream 0 at 31-Jul-2022 22:41:46.785 KST
+Begin processing the 258th record. Run 1, Event 258, LumiSection 1 on stream 0 at 31-Jul-2022 22:41:48.557 KST
+Begin processing the 259th record. Run 1, Event 259, LumiSection 1 on stream 0 at 31-Jul-2022 22:41:50.279 KST
+Begin processing the 260th record. Run 1, Event 260, LumiSection 1 on stream 0 at 31-Jul-2022 22:41:54.704 KST
+Begin processing the 261st record. Run 1, Event 261, LumiSection 1 on stream 0 at 31-Jul-2022 22:41:57.596 KST
+Begin processing the 262nd record. Run 1, Event 262, LumiSection 1 on stream 0 at 31-Jul-2022 22:41:59.624 KST
+Begin processing the 263rd record. Run 1, Event 263, LumiSection 1 on stream 0 at 31-Jul-2022 22:42:01.458 KST
+Begin processing the 264th record. Run 1, Event 264, LumiSection 1 on stream 0 at 31-Jul-2022 22:42:04.227 KST
+Begin processing the 265th record. Run 1, Event 265, LumiSection 1 on stream 0 at 31-Jul-2022 22:42:09.008 KST
+Begin processing the 266th record. Run 1, Event 266, LumiSection 1 on stream 0 at 31-Jul-2022 22:42:11.803 KST
+Begin processing the 267th record. Run 1, Event 267, LumiSection 1 on stream 0 at 31-Jul-2022 22:42:15.337 KST
+Begin processing the 268th record. Run 1, Event 268, LumiSection 1 on stream 0 at 31-Jul-2022 22:42:17.895 KST
+Begin processing the 269th record. Run 1, Event 269, LumiSection 1 on stream 0 at 31-Jul-2022 22:42:22.194 KST
+%MSG-w SimG4CoreApplication:  (NoModuleName) 31-Jul-2022 22:42:23 KST pre-events
+
+-------- WWWW ------- G4Exception-START -------- WWWW -------
+*** G4Exception : GeomNav0003
+      issued by : G4Navigator::GetGlobalExitNormal()
+ WARNING> Expected normal-global-frame to be valid,  i.e. a unit vector!
+  - but |normal|   = 0  - and |normal|^2 = 0
+ which differs from 1.0 by -1
+   n = (0,0,-0)
+ Global point: (-566.8647197,384.8137285,-3338.274326)
+ Volume: HGCalEEConnector10Fine
+============================================================
+   State of Navigator: 
+The current state of G4Navigator is: 
+  ValidExitNormal= 1
+  ExitNormal     = (0,0,0)
+  Exiting        = 1
+  Entering       = 0
+  BlockedPhysicalVolume= None
+  BlockedReplicaNo     = -1
+  LastStepWasZero      = 1
+
+ Current Localpoint = (-19.17808,-50.210231,-1.8656736)
+ PreviousSftOrigin  = (-566.86472,384.81373,-3338.2743)
+ PreviousSafety     = 0
+Current History: 
+History depth=11
+Level=[0]: Phys Name=[DDDWorld] Type=[N]
+Level=[1]: Phys Name=[CMSE] Type=[N]
+Level=[2]: Phys Name=[CALO] Type=[N]
+Level=[3]: Phys Name=[CALOEC] Type=[N]
+Level=[4]: Phys Name=[CALOECTSRear] Type=[N]
+Level=[5]: Phys Name=[CALOECRear] Type=[N]
+Level=[6]: Phys Name=[HGCalService] Type=[N]
+Level=[7]: Phys Name=[HGCal] Type=[N]
+Level=[8]: Phys Name=[HGCalEE] Type=[N]
+Level=[9]: Phys Name=[HGCalEELayerF9] Type=[N]
+Level=[10]: Phys Name=[HGCalEEWafer10Fine] Type=[N]
+Level=[11]: Phys Name=[HGCalEEConnector10Fine] Type=[N]
+
+============================================================
+Value obtained from stored global-normal is not a unit vector.
+
+TrackID=101623 ParentID=6  e-; Ekin(MeV)=0.0250302; time(ns)=11.5241; status=0
+   position(mm): (-566.664,384.913,-3339.19); direction: (-0.456465,0.536772,0.709588)
+   PhysicalVolume: HGCalEEConnector10Fine; material: HGC_EEConnector
+   stepNumber=25; stepLength(mm)=3.63296; weight=1; creatorProcess: muIoni; modelID=-1 
+*** This is just a warning message. ***
+-------- WWWW -------- G4Exception-END --------- WWWW -------
+
+%MSG
+Begin processing the 270th record. Run 1, Event 270, LumiSection 1 on stream 0 at 31-Jul-2022 22:42:25.579 KST
+Begin processing the 271st record. Run 1, Event 271, LumiSection 1 on stream 0 at 31-Jul-2022 22:42:27.978 KST
+Begin processing the 272nd record. Run 1, Event 272, LumiSection 1 on stream 0 at 31-Jul-2022 22:42:30.761 KST
+Begin processing the 273rd record. Run 1, Event 273, LumiSection 1 on stream 0 at 31-Jul-2022 22:42:33.795 KST
+Begin processing the 274th record. Run 1, Event 274, LumiSection 1 on stream 0 at 31-Jul-2022 22:42:37.138 KST
+Begin processing the 275th record. Run 1, Event 275, LumiSection 1 on stream 0 at 31-Jul-2022 22:42:39.186 KST
+Begin processing the 276th record. Run 1, Event 276, LumiSection 1 on stream 0 at 31-Jul-2022 22:42:41.256 KST
+Begin processing the 277th record. Run 1, Event 277, LumiSection 1 on stream 0 at 31-Jul-2022 22:42:45.256 KST
+Begin processing the 278th record. Run 1, Event 278, LumiSection 1 on stream 0 at 31-Jul-2022 22:42:48.090 KST
+Begin processing the 279th record. Run 1, Event 279, LumiSection 1 on stream 0 at 31-Jul-2022 22:42:50.960 KST
+Begin processing the 280th record. Run 1, Event 280, LumiSection 1 on stream 0 at 31-Jul-2022 22:42:53.373 KST
+Begin processing the 281st record. Run 1, Event 281, LumiSection 1 on stream 0 at 31-Jul-2022 22:42:55.386 KST
+Begin processing the 282nd record. Run 1, Event 282, LumiSection 1 on stream 0 at 31-Jul-2022 22:42:57.944 KST
+Begin processing the 283rd record. Run 1, Event 283, LumiSection 1 on stream 0 at 31-Jul-2022 22:42:59.510 KST
+Begin processing the 284th record. Run 1, Event 284, LumiSection 1 on stream 0 at 31-Jul-2022 22:43:02.427 KST
+Begin processing the 285th record. Run 1, Event 285, LumiSection 1 on stream 0 at 31-Jul-2022 22:43:05.177 KST
+Begin processing the 286th record. Run 1, Event 286, LumiSection 1 on stream 0 at 31-Jul-2022 22:43:07.737 KST
+Begin processing the 287th record. Run 1, Event 287, LumiSection 1 on stream 0 at 31-Jul-2022 22:43:15.632 KST
+Begin processing the 288th record. Run 1, Event 288, LumiSection 1 on stream 0 at 31-Jul-2022 22:43:18.431 KST
+Begin processing the 289th record. Run 1, Event 289, LumiSection 1 on stream 0 at 31-Jul-2022 22:43:20.857 KST
+Begin processing the 290th record. Run 1, Event 290, LumiSection 1 on stream 0 at 31-Jul-2022 22:43:23.126 KST
+Begin processing the 291st record. Run 1, Event 291, LumiSection 1 on stream 0 at 31-Jul-2022 22:43:25.002 KST
+Begin processing the 292nd record. Run 1, Event 292, LumiSection 1 on stream 0 at 31-Jul-2022 22:43:28.974 KST
+Begin processing the 293rd record. Run 1, Event 293, LumiSection 1 on stream 0 at 31-Jul-2022 22:43:31.220 KST
+Begin processing the 294th record. Run 1, Event 294, LumiSection 1 on stream 0 at 31-Jul-2022 22:43:33.899 KST
+Begin processing the 295th record. Run 1, Event 295, LumiSection 1 on stream 0 at 31-Jul-2022 22:43:36.857 KST
+Begin processing the 296th record. Run 1, Event 296, LumiSection 1 on stream 0 at 31-Jul-2022 22:43:38.917 KST
+Begin processing the 297th record. Run 1, Event 297, LumiSection 1 on stream 0 at 31-Jul-2022 22:43:40.571 KST
+Begin processing the 298th record. Run 1, Event 298, LumiSection 1 on stream 0 at 31-Jul-2022 22:43:42.650 KST
+Begin processing the 299th record. Run 1, Event 299, LumiSection 1 on stream 0 at 31-Jul-2022 22:43:45.786 KST
+Begin processing the 300th record. Run 1, Event 300, LumiSection 1 on stream 0 at 31-Jul-2022 22:43:48.558 KST
+Begin processing the 301st record. Run 1, Event 301, LumiSection 1 on stream 0 at 31-Jul-2022 22:43:51.005 KST
+Begin processing the 302nd record. Run 1, Event 302, LumiSection 1 on stream 0 at 31-Jul-2022 22:43:52.653 KST
+Begin processing the 303rd record. Run 1, Event 303, LumiSection 1 on stream 0 at 31-Jul-2022 22:43:55.170 KST
+Begin processing the 304th record. Run 1, Event 304, LumiSection 1 on stream 0 at 31-Jul-2022 22:44:00.022 KST
+Begin processing the 305th record. Run 1, Event 305, LumiSection 1 on stream 0 at 31-Jul-2022 22:44:03.527 KST
+Begin processing the 306th record. Run 1, Event 306, LumiSection 1 on stream 0 at 31-Jul-2022 22:44:06.821 KST
+Begin processing the 307th record. Run 1, Event 307, LumiSection 1 on stream 0 at 31-Jul-2022 22:44:11.032 KST
+Begin processing the 308th record. Run 1, Event 308, LumiSection 1 on stream 0 at 31-Jul-2022 22:44:15.727 KST
+Begin processing the 309th record. Run 1, Event 309, LumiSection 1 on stream 0 at 31-Jul-2022 22:44:28.529 KST
+Begin processing the 310th record. Run 1, Event 310, LumiSection 1 on stream 0 at 31-Jul-2022 22:44:32.165 KST
+Begin processing the 311th record. Run 1, Event 311, LumiSection 1 on stream 0 at 31-Jul-2022 22:44:36.630 KST
+Begin processing the 312th record. Run 1, Event 312, LumiSection 1 on stream 0 at 31-Jul-2022 22:44:42.181 KST
+Begin processing the 313th record. Run 1, Event 313, LumiSection 1 on stream 0 at 31-Jul-2022 22:44:46.783 KST
+Begin processing the 314th record. Run 1, Event 314, LumiSection 1 on stream 0 at 31-Jul-2022 22:44:51.700 KST
+Begin processing the 315th record. Run 1, Event 315, LumiSection 1 on stream 0 at 31-Jul-2022 22:44:56.998 KST
+Begin processing the 316th record. Run 1, Event 316, LumiSection 1 on stream 0 at 31-Jul-2022 22:45:10.362 KST
+Begin processing the 317th record. Run 1, Event 317, LumiSection 1 on stream 0 at 31-Jul-2022 22:45:12.764 KST
+Begin processing the 318th record. Run 1, Event 318, LumiSection 1 on stream 0 at 31-Jul-2022 22:45:15.851 KST
+Begin processing the 319th record. Run 1, Event 319, LumiSection 1 on stream 0 at 31-Jul-2022 22:45:19.802 KST
+Begin processing the 320th record. Run 1, Event 320, LumiSection 1 on stream 0 at 31-Jul-2022 22:45:22.261 KST
+Begin processing the 321st record. Run 1, Event 321, LumiSection 1 on stream 0 at 31-Jul-2022 22:45:24.619 KST
+Begin processing the 322nd record. Run 1, Event 322, LumiSection 1 on stream 0 at 31-Jul-2022 22:45:27.586 KST
+Begin processing the 323rd record. Run 1, Event 323, LumiSection 1 on stream 0 at 31-Jul-2022 22:45:30.761 KST
+Begin processing the 324th record. Run 1, Event 324, LumiSection 1 on stream 0 at 31-Jul-2022 22:45:34.297 KST
+Begin processing the 325th record. Run 1, Event 325, LumiSection 1 on stream 0 at 31-Jul-2022 22:45:37.232 KST
+Begin processing the 326th record. Run 1, Event 326, LumiSection 1 on stream 0 at 31-Jul-2022 22:45:40.952 KST
+Begin processing the 327th record. Run 1, Event 327, LumiSection 1 on stream 0 at 31-Jul-2022 22:45:46.742 KST
+Begin processing the 328th record. Run 1, Event 328, LumiSection 1 on stream 0 at 31-Jul-2022 22:45:48.930 KST
+Begin processing the 329th record. Run 1, Event 329, LumiSection 1 on stream 0 at 31-Jul-2022 22:45:51.086 KST
+Begin processing the 330th record. Run 1, Event 330, LumiSection 1 on stream 0 at 31-Jul-2022 22:46:03.515 KST
+Begin processing the 331st record. Run 1, Event 331, LumiSection 1 on stream 0 at 31-Jul-2022 22:46:07.070 KST
+Begin processing the 332nd record. Run 1, Event 332, LumiSection 1 on stream 0 at 31-Jul-2022 22:46:10.478 KST
+Begin processing the 333rd record. Run 1, Event 333, LumiSection 1 on stream 0 at 31-Jul-2022 22:46:14.762 KST
+Begin processing the 334th record. Run 1, Event 334, LumiSection 1 on stream 0 at 31-Jul-2022 22:46:18.403 KST
+Begin processing the 335th record. Run 1, Event 335, LumiSection 1 on stream 0 at 31-Jul-2022 22:46:21.240 KST
+Begin processing the 336th record. Run 1, Event 336, LumiSection 1 on stream 0 at 31-Jul-2022 22:46:27.071 KST
+Begin processing the 337th record. Run 1, Event 337, LumiSection 1 on stream 0 at 31-Jul-2022 22:46:30.100 KST
+Begin processing the 338th record. Run 1, Event 338, LumiSection 1 on stream 0 at 31-Jul-2022 22:46:32.924 KST
+Begin processing the 339th record. Run 1, Event 339, LumiSection 1 on stream 0 at 31-Jul-2022 22:46:34.652 KST
+Begin processing the 340th record. Run 1, Event 340, LumiSection 1 on stream 0 at 31-Jul-2022 22:46:37.203 KST
+Begin processing the 341st record. Run 1, Event 341, LumiSection 1 on stream 0 at 31-Jul-2022 22:46:40.696 KST
+Begin processing the 342nd record. Run 1, Event 342, LumiSection 1 on stream 0 at 31-Jul-2022 22:46:46.415 KST
+Begin processing the 343rd record. Run 1, Event 343, LumiSection 1 on stream 0 at 31-Jul-2022 22:46:48.534 KST
+Begin processing the 344th record. Run 1, Event 344, LumiSection 1 on stream 0 at 31-Jul-2022 22:46:51.064 KST
+Begin processing the 345th record. Run 1, Event 345, LumiSection 1 on stream 0 at 31-Jul-2022 22:46:55.296 KST
+Begin processing the 346th record. Run 1, Event 346, LumiSection 1 on stream 0 at 31-Jul-2022 22:46:59.139 KST
+Begin processing the 347th record. Run 1, Event 347, LumiSection 1 on stream 0 at 31-Jul-2022 22:47:01.339 KST
+Begin processing the 348th record. Run 1, Event 348, LumiSection 1 on stream 0 at 31-Jul-2022 22:47:05.015 KST
+Begin processing the 349th record. Run 1, Event 349, LumiSection 1 on stream 0 at 31-Jul-2022 22:47:06.938 KST
+Begin processing the 350th record. Run 1, Event 350, LumiSection 1 on stream 0 at 31-Jul-2022 22:47:10.470 KST
+Begin processing the 351st record. Run 1, Event 351, LumiSection 1 on stream 0 at 31-Jul-2022 22:47:14.471 KST
+Begin processing the 352nd record. Run 1, Event 352, LumiSection 1 on stream 0 at 31-Jul-2022 22:47:16.526 KST
+Begin processing the 353rd record. Run 1, Event 353, LumiSection 1 on stream 0 at 31-Jul-2022 22:47:18.907 KST
+Begin processing the 354th record. Run 1, Event 354, LumiSection 1 on stream 0 at 31-Jul-2022 22:47:21.577 KST
+Begin processing the 355th record. Run 1, Event 355, LumiSection 1 on stream 0 at 31-Jul-2022 22:47:24.273 KST
+Begin processing the 356th record. Run 1, Event 356, LumiSection 1 on stream 0 at 31-Jul-2022 22:47:27.780 KST
+Begin processing the 357th record. Run 1, Event 357, LumiSection 1 on stream 0 at 31-Jul-2022 22:47:31.362 KST
+Begin processing the 358th record. Run 1, Event 358, LumiSection 1 on stream 0 at 31-Jul-2022 22:47:34.564 KST
+Begin processing the 359th record. Run 1, Event 359, LumiSection 1 on stream 0 at 31-Jul-2022 22:47:38.890 KST
+Begin processing the 360th record. Run 1, Event 360, LumiSection 1 on stream 0 at 31-Jul-2022 22:47:40.858 KST
+Begin processing the 361st record. Run 1, Event 361, LumiSection 1 on stream 0 at 31-Jul-2022 22:47:43.823 KST
+Begin processing the 362nd record. Run 1, Event 362, LumiSection 1 on stream 0 at 31-Jul-2022 22:47:46.288 KST
+Begin processing the 363rd record. Run 1, Event 363, LumiSection 1 on stream 0 at 31-Jul-2022 22:47:52.730 KST
+Begin processing the 364th record. Run 1, Event 364, LumiSection 1 on stream 0 at 31-Jul-2022 22:47:55.583 KST
+Begin processing the 365th record. Run 1, Event 365, LumiSection 1 on stream 0 at 31-Jul-2022 22:47:57.587 KST
+Begin processing the 366th record. Run 1, Event 366, LumiSection 1 on stream 0 at 31-Jul-2022 22:48:04.578 KST
+Begin processing the 367th record. Run 1, Event 367, LumiSection 1 on stream 0 at 31-Jul-2022 22:48:07.270 KST
+Begin processing the 368th record. Run 1, Event 368, LumiSection 1 on stream 0 at 31-Jul-2022 22:48:10.947 KST
+Begin processing the 369th record. Run 1, Event 369, LumiSection 1 on stream 0 at 31-Jul-2022 22:48:15.758 KST
+Begin processing the 370th record. Run 1, Event 370, LumiSection 1 on stream 0 at 31-Jul-2022 22:48:18.959 KST
+Begin processing the 371st record. Run 1, Event 371, LumiSection 1 on stream 0 at 31-Jul-2022 22:48:21.500 KST
+Begin processing the 372nd record. Run 1, Event 372, LumiSection 1 on stream 0 at 31-Jul-2022 22:48:26.785 KST
+Begin processing the 373rd record. Run 1, Event 373, LumiSection 1 on stream 0 at 31-Jul-2022 22:48:29.082 KST
+Begin processing the 374th record. Run 1, Event 374, LumiSection 1 on stream 0 at 31-Jul-2022 22:48:32.038 KST
+Begin processing the 375th record. Run 1, Event 375, LumiSection 1 on stream 0 at 31-Jul-2022 22:48:35.738 KST
+Begin processing the 376th record. Run 1, Event 376, LumiSection 1 on stream 0 at 31-Jul-2022 22:48:38.745 KST
+Begin processing the 377th record. Run 1, Event 377, LumiSection 1 on stream 0 at 31-Jul-2022 22:48:41.454 KST
+Begin processing the 378th record. Run 1, Event 378, LumiSection 1 on stream 0 at 31-Jul-2022 22:48:45.145 KST
+Begin processing the 379th record. Run 1, Event 379, LumiSection 1 on stream 0 at 31-Jul-2022 22:48:47.351 KST
+Begin processing the 380th record. Run 1, Event 380, LumiSection 1 on stream 0 at 31-Jul-2022 22:48:50.499 KST
+Begin processing the 381st record. Run 1, Event 381, LumiSection 1 on stream 0 at 31-Jul-2022 22:48:57.715 KST
+Begin processing the 382nd record. Run 1, Event 382, LumiSection 1 on stream 0 at 31-Jul-2022 22:49:07.839 KST
+Begin processing the 383rd record. Run 1, Event 383, LumiSection 1 on stream 0 at 31-Jul-2022 22:49:10.361 KST
+Begin processing the 384th record. Run 1, Event 384, LumiSection 1 on stream 0 at 31-Jul-2022 22:49:12.494 KST
+Begin processing the 385th record. Run 1, Event 385, LumiSection 1 on stream 0 at 31-Jul-2022 22:49:14.595 KST
+Begin processing the 386th record. Run 1, Event 386, LumiSection 1 on stream 0 at 31-Jul-2022 22:49:22.028 KST
+Begin processing the 387th record. Run 1, Event 387, LumiSection 1 on stream 0 at 31-Jul-2022 22:49:24.059 KST
+Begin processing the 388th record. Run 1, Event 388, LumiSection 1 on stream 0 at 31-Jul-2022 22:49:26.906 KST
+Begin processing the 389th record. Run 1, Event 389, LumiSection 1 on stream 0 at 31-Jul-2022 22:49:29.568 KST
+Begin processing the 390th record. Run 1, Event 390, LumiSection 1 on stream 0 at 31-Jul-2022 22:49:36.499 KST
+Begin processing the 391st record. Run 1, Event 391, LumiSection 1 on stream 0 at 31-Jul-2022 22:49:40.531 KST
+Begin processing the 392nd record. Run 1, Event 392, LumiSection 1 on stream 0 at 31-Jul-2022 22:49:43.802 KST
+Begin processing the 393rd record. Run 1, Event 393, LumiSection 1 on stream 0 at 31-Jul-2022 22:49:46.715 KST
+Begin processing the 394th record. Run 1, Event 394, LumiSection 1 on stream 0 at 31-Jul-2022 22:49:48.811 KST
+Begin processing the 395th record. Run 1, Event 395, LumiSection 1 on stream 0 at 31-Jul-2022 22:49:51.136 KST
+Begin processing the 396th record. Run 1, Event 396, LumiSection 1 on stream 0 at 31-Jul-2022 22:49:54.356 KST
+Begin processing the 397th record. Run 1, Event 397, LumiSection 1 on stream 0 at 31-Jul-2022 22:50:00.200 KST
+Begin processing the 398th record. Run 1, Event 398, LumiSection 1 on stream 0 at 31-Jul-2022 22:50:08.381 KST
+Begin processing the 399th record. Run 1, Event 399, LumiSection 1 on stream 0 at 31-Jul-2022 22:50:11.025 KST
+Begin processing the 400th record. Run 1, Event 400, LumiSection 1 on stream 0 at 31-Jul-2022 22:50:13.121 KST
+Begin processing the 401st record. Run 1, Event 401, LumiSection 1 on stream 0 at 31-Jul-2022 22:50:15.573 KST
+Begin processing the 402nd record. Run 1, Event 402, LumiSection 1 on stream 0 at 31-Jul-2022 22:50:20.149 KST
+Begin processing the 403rd record. Run 1, Event 403, LumiSection 1 on stream 0 at 31-Jul-2022 22:50:23.164 KST
+Begin processing the 404th record. Run 1, Event 404, LumiSection 1 on stream 0 at 31-Jul-2022 22:50:26.729 KST
+Begin processing the 405th record. Run 1, Event 405, LumiSection 1 on stream 0 at 31-Jul-2022 22:50:29.246 KST
+Begin processing the 406th record. Run 1, Event 406, LumiSection 1 on stream 0 at 31-Jul-2022 22:50:32.485 KST
+Begin processing the 407th record. Run 1, Event 407, LumiSection 1 on stream 0 at 31-Jul-2022 22:50:34.044 KST
+Begin processing the 408th record. Run 1, Event 408, LumiSection 1 on stream 0 at 31-Jul-2022 22:50:36.666 KST
+Begin processing the 409th record. Run 1, Event 409, LumiSection 1 on stream 0 at 31-Jul-2022 22:50:40.754 KST
+Begin processing the 410th record. Run 1, Event 410, LumiSection 1 on stream 0 at 31-Jul-2022 22:50:43.906 KST
+Begin processing the 411th record. Run 1, Event 411, LumiSection 1 on stream 0 at 31-Jul-2022 22:50:46.336 KST
+Begin processing the 412th record. Run 1, Event 412, LumiSection 1 on stream 0 at 31-Jul-2022 22:50:48.583 KST
+Begin processing the 413th record. Run 1, Event 413, LumiSection 1 on stream 0 at 31-Jul-2022 22:50:50.899 KST
+Begin processing the 414th record. Run 1, Event 414, LumiSection 1 on stream 0 at 31-Jul-2022 22:51:08.633 KST
+Begin processing the 415th record. Run 1, Event 415, LumiSection 1 on stream 0 at 31-Jul-2022 22:51:11.230 KST
+Begin processing the 416th record. Run 1, Event 416, LumiSection 1 on stream 0 at 31-Jul-2022 22:51:13.452 KST
+Begin processing the 417th record. Run 1, Event 417, LumiSection 1 on stream 0 at 31-Jul-2022 22:51:15.585 KST
+Begin processing the 418th record. Run 1, Event 418, LumiSection 1 on stream 0 at 31-Jul-2022 22:51:18.794 KST
+Begin processing the 419th record. Run 1, Event 419, LumiSection 1 on stream 0 at 31-Jul-2022 22:51:21.270 KST
+Begin processing the 420th record. Run 1, Event 420, LumiSection 1 on stream 0 at 31-Jul-2022 22:51:23.765 KST
+Begin processing the 421st record. Run 1, Event 421, LumiSection 1 on stream 0 at 31-Jul-2022 22:51:26.530 KST
+Begin processing the 422nd record. Run 1, Event 422, LumiSection 1 on stream 0 at 31-Jul-2022 22:51:43.222 KST
+Begin processing the 423rd record. Run 1, Event 423, LumiSection 1 on stream 0 at 31-Jul-2022 22:51:46.703 KST
+Begin processing the 424th record. Run 1, Event 424, LumiSection 1 on stream 0 at 31-Jul-2022 22:52:02.300 KST
+Begin processing the 425th record. Run 1, Event 425, LumiSection 1 on stream 0 at 31-Jul-2022 22:52:04.572 KST
+Begin processing the 426th record. Run 1, Event 426, LumiSection 1 on stream 0 at 31-Jul-2022 22:52:08.268 KST
+Begin processing the 427th record. Run 1, Event 427, LumiSection 1 on stream 0 at 31-Jul-2022 22:52:11.349 KST
+Begin processing the 428th record. Run 1, Event 428, LumiSection 1 on stream 0 at 31-Jul-2022 22:52:16.661 KST
+Begin processing the 429th record. Run 1, Event 429, LumiSection 1 on stream 0 at 31-Jul-2022 22:52:19.264 KST
+Begin processing the 430th record. Run 1, Event 430, LumiSection 1 on stream 0 at 31-Jul-2022 22:52:24.198 KST
+Begin processing the 431st record. Run 1, Event 431, LumiSection 1 on stream 0 at 31-Jul-2022 22:52:26.811 KST
+Begin processing the 432nd record. Run 1, Event 432, LumiSection 1 on stream 0 at 31-Jul-2022 22:52:30.312 KST
+Begin processing the 433rd record. Run 1, Event 433, LumiSection 1 on stream 0 at 31-Jul-2022 22:52:41.492 KST
+Begin processing the 434th record. Run 1, Event 434, LumiSection 1 on stream 0 at 31-Jul-2022 22:52:45.850 KST
+Begin processing the 435th record. Run 1, Event 435, LumiSection 1 on stream 0 at 31-Jul-2022 22:52:49.682 KST
+Begin processing the 436th record. Run 1, Event 436, LumiSection 1 on stream 0 at 31-Jul-2022 22:52:53.772 KST
+Begin processing the 437th record. Run 1, Event 437, LumiSection 1 on stream 0 at 31-Jul-2022 22:52:57.093 KST
+Begin processing the 438th record. Run 1, Event 438, LumiSection 1 on stream 0 at 31-Jul-2022 22:52:59.297 KST
+Begin processing the 439th record. Run 1, Event 439, LumiSection 1 on stream 0 at 31-Jul-2022 22:53:04.138 KST
+Begin processing the 440th record. Run 1, Event 440, LumiSection 1 on stream 0 at 31-Jul-2022 22:53:05.852 KST
+Begin processing the 441st record. Run 1, Event 441, LumiSection 1 on stream 0 at 31-Jul-2022 22:53:08.996 KST
+Begin processing the 442nd record. Run 1, Event 442, LumiSection 1 on stream 0 at 31-Jul-2022 22:53:10.894 KST
+Begin processing the 443rd record. Run 1, Event 443, LumiSection 1 on stream 0 at 31-Jul-2022 22:53:15.933 KST
+Begin processing the 444th record. Run 1, Event 444, LumiSection 1 on stream 0 at 31-Jul-2022 22:53:24.646 KST
+Begin processing the 445th record. Run 1, Event 445, LumiSection 1 on stream 0 at 31-Jul-2022 22:53:26.897 KST
+Begin processing the 446th record. Run 1, Event 446, LumiSection 1 on stream 0 at 31-Jul-2022 22:53:29.443 KST
+Begin processing the 447th record. Run 1, Event 447, LumiSection 1 on stream 0 at 31-Jul-2022 22:53:32.465 KST
+Begin processing the 448th record. Run 1, Event 448, LumiSection 1 on stream 0 at 31-Jul-2022 22:53:37.829 KST
+Begin processing the 449th record. Run 1, Event 449, LumiSection 1 on stream 0 at 31-Jul-2022 22:53:47.486 KST
+Begin processing the 450th record. Run 1, Event 450, LumiSection 1 on stream 0 at 31-Jul-2022 22:53:50.960 KST
+Begin processing the 451st record. Run 1, Event 451, LumiSection 1 on stream 0 at 31-Jul-2022 22:53:53.578 KST
+Begin processing the 452nd record. Run 1, Event 452, LumiSection 1 on stream 0 at 31-Jul-2022 22:53:56.572 KST
+Begin processing the 453rd record. Run 1, Event 453, LumiSection 1 on stream 0 at 31-Jul-2022 22:54:01.137 KST
+Begin processing the 454th record. Run 1, Event 454, LumiSection 1 on stream 0 at 31-Jul-2022 22:54:03.023 KST
+Begin processing the 455th record. Run 1, Event 455, LumiSection 1 on stream 0 at 31-Jul-2022 22:54:05.921 KST
+Begin processing the 456th record. Run 1, Event 456, LumiSection 1 on stream 0 at 31-Jul-2022 22:54:10.866 KST
+Begin processing the 457th record. Run 1, Event 457, LumiSection 1 on stream 0 at 31-Jul-2022 22:54:13.305 KST
+Begin processing the 458th record. Run 1, Event 458, LumiSection 1 on stream 0 at 31-Jul-2022 22:54:15.388 KST
+Begin processing the 459th record. Run 1, Event 459, LumiSection 1 on stream 0 at 31-Jul-2022 22:54:18.554 KST
+Begin processing the 460th record. Run 1, Event 460, LumiSection 1 on stream 0 at 31-Jul-2022 22:54:22.999 KST
+Begin processing the 461st record. Run 1, Event 461, LumiSection 1 on stream 0 at 31-Jul-2022 22:54:26.251 KST
+Begin processing the 462nd record. Run 1, Event 462, LumiSection 1 on stream 0 at 31-Jul-2022 22:54:29.199 KST
+Begin processing the 463rd record. Run 1, Event 463, LumiSection 1 on stream 0 at 31-Jul-2022 22:54:30.754 KST
+Begin processing the 464th record. Run 1, Event 464, LumiSection 1 on stream 0 at 31-Jul-2022 22:54:35.023 KST
+Begin processing the 465th record. Run 1, Event 465, LumiSection 1 on stream 0 at 31-Jul-2022 22:54:42.745 KST
+Begin processing the 466th record. Run 1, Event 466, LumiSection 1 on stream 0 at 31-Jul-2022 22:54:45.689 KST
+Begin processing the 467th record. Run 1, Event 467, LumiSection 1 on stream 0 at 31-Jul-2022 22:54:51.551 KST
+Begin processing the 468th record. Run 1, Event 468, LumiSection 1 on stream 0 at 31-Jul-2022 22:54:53.340 KST
+Begin processing the 469th record. Run 1, Event 469, LumiSection 1 on stream 0 at 31-Jul-2022 22:54:55.960 KST
+Begin processing the 470th record. Run 1, Event 470, LumiSection 1 on stream 0 at 31-Jul-2022 22:54:59.664 KST
+Begin processing the 471st record. Run 1, Event 471, LumiSection 1 on stream 0 at 31-Jul-2022 22:55:04.035 KST
+Begin processing the 472nd record. Run 1, Event 472, LumiSection 1 on stream 0 at 31-Jul-2022 22:55:10.882 KST
+Begin processing the 473rd record. Run 1, Event 473, LumiSection 1 on stream 0 at 31-Jul-2022 22:55:14.254 KST
+Begin processing the 474th record. Run 1, Event 474, LumiSection 1 on stream 0 at 31-Jul-2022 22:55:17.974 KST
+Begin processing the 475th record. Run 1, Event 475, LumiSection 1 on stream 0 at 31-Jul-2022 22:55:20.757 KST
+Begin processing the 476th record. Run 1, Event 476, LumiSection 1 on stream 0 at 31-Jul-2022 22:55:23.400 KST
+Begin processing the 477th record. Run 1, Event 477, LumiSection 1 on stream 0 at 31-Jul-2022 22:55:26.123 KST
+Begin processing the 478th record. Run 1, Event 478, LumiSection 1 on stream 0 at 31-Jul-2022 22:55:30.052 KST
+Begin processing the 479th record. Run 1, Event 479, LumiSection 1 on stream 0 at 31-Jul-2022 22:55:34.482 KST
+Begin processing the 480th record. Run 1, Event 480, LumiSection 1 on stream 0 at 31-Jul-2022 22:55:36.696 KST
+Begin processing the 481st record. Run 1, Event 481, LumiSection 1 on stream 0 at 31-Jul-2022 22:55:39.260 KST
+Begin processing the 482nd record. Run 1, Event 482, LumiSection 1 on stream 0 at 31-Jul-2022 22:55:48.206 KST
+Begin processing the 483rd record. Run 1, Event 483, LumiSection 1 on stream 0 at 31-Jul-2022 22:55:51.341 KST
+Begin processing the 484th record. Run 1, Event 484, LumiSection 1 on stream 0 at 31-Jul-2022 22:55:54.124 KST
+Begin processing the 485th record. Run 1, Event 485, LumiSection 1 on stream 0 at 31-Jul-2022 22:55:57.075 KST
+Begin processing the 486th record. Run 1, Event 486, LumiSection 1 on stream 0 at 31-Jul-2022 22:55:59.456 KST
+Begin processing the 487th record. Run 1, Event 487, LumiSection 1 on stream 0 at 31-Jul-2022 22:56:01.979 KST
+Begin processing the 488th record. Run 1, Event 488, LumiSection 1 on stream 0 at 31-Jul-2022 22:56:06.153 KST
+Begin processing the 489th record. Run 1, Event 489, LumiSection 1 on stream 0 at 31-Jul-2022 22:56:09.244 KST
+Begin processing the 490th record. Run 1, Event 490, LumiSection 1 on stream 0 at 31-Jul-2022 22:56:15.576 KST
+Begin processing the 491st record. Run 1, Event 491, LumiSection 1 on stream 0 at 31-Jul-2022 22:56:17.936 KST
+Begin processing the 492nd record. Run 1, Event 492, LumiSection 1 on stream 0 at 31-Jul-2022 22:56:20.841 KST
+Begin processing the 493rd record. Run 1, Event 493, LumiSection 1 on stream 0 at 31-Jul-2022 22:56:23.272 KST
+Begin processing the 494th record. Run 1, Event 494, LumiSection 1 on stream 0 at 31-Jul-2022 22:56:28.878 KST
+Begin processing the 495th record. Run 1, Event 495, LumiSection 1 on stream 0 at 31-Jul-2022 22:56:34.259 KST
+Begin processing the 496th record. Run 1, Event 496, LumiSection 1 on stream 0 at 31-Jul-2022 22:56:37.587 KST
+Begin processing the 497th record. Run 1, Event 497, LumiSection 1 on stream 0 at 31-Jul-2022 22:56:40.711 KST
+Begin processing the 498th record. Run 1, Event 498, LumiSection 1 on stream 0 at 31-Jul-2022 22:56:42.395 KST
+Begin processing the 499th record. Run 1, Event 499, LumiSection 1 on stream 0 at 31-Jul-2022 22:56:48.392 KST
+Begin processing the 500th record. Run 1, Event 500, LumiSection 1 on stream 0 at 31-Jul-2022 22:56:52.714 KST
+Begin processing the 501st record. Run 1, Event 501, LumiSection 1 on stream 0 at 31-Jul-2022 22:56:54.952 KST
+Begin processing the 502nd record. Run 1, Event 502, LumiSection 1 on stream 0 at 31-Jul-2022 22:56:58.178 KST
+Begin processing the 503rd record. Run 1, Event 503, LumiSection 1 on stream 0 at 31-Jul-2022 22:57:01.825 KST
+Begin processing the 504th record. Run 1, Event 504, LumiSection 1 on stream 0 at 31-Jul-2022 22:57:05.931 KST
+Begin processing the 505th record. Run 1, Event 505, LumiSection 1 on stream 0 at 31-Jul-2022 22:57:10.490 KST
+Begin processing the 506th record. Run 1, Event 506, LumiSection 1 on stream 0 at 31-Jul-2022 22:57:15.461 KST
+Begin processing the 507th record. Run 1, Event 507, LumiSection 1 on stream 0 at 31-Jul-2022 22:57:17.179 KST
+Begin processing the 508th record. Run 1, Event 508, LumiSection 1 on stream 0 at 31-Jul-2022 22:57:18.874 KST
+Begin processing the 509th record. Run 1, Event 509, LumiSection 1 on stream 0 at 31-Jul-2022 22:57:21.707 KST
+Begin processing the 510th record. Run 1, Event 510, LumiSection 1 on stream 0 at 31-Jul-2022 22:57:25.136 KST
+Begin processing the 511th record. Run 1, Event 511, LumiSection 1 on stream 0 at 31-Jul-2022 22:57:28.258 KST
+Begin processing the 512th record. Run 1, Event 512, LumiSection 1 on stream 0 at 31-Jul-2022 22:57:30.964 KST
+Begin processing the 513th record. Run 1, Event 513, LumiSection 1 on stream 0 at 31-Jul-2022 22:57:33.677 KST
+Begin processing the 514th record. Run 1, Event 514, LumiSection 1 on stream 0 at 31-Jul-2022 22:57:41.057 KST
+Begin processing the 515th record. Run 1, Event 515, LumiSection 1 on stream 0 at 31-Jul-2022 22:57:43.390 KST
+Begin processing the 516th record. Run 1, Event 516, LumiSection 1 on stream 0 at 31-Jul-2022 22:57:47.442 KST
+Begin processing the 517th record. Run 1, Event 517, LumiSection 1 on stream 0 at 31-Jul-2022 22:57:52.652 KST
+Begin processing the 518th record. Run 1, Event 518, LumiSection 1 on stream 0 at 31-Jul-2022 22:57:55.391 KST
+Begin processing the 519th record. Run 1, Event 519, LumiSection 1 on stream 0 at 31-Jul-2022 22:57:58.484 KST
+Begin processing the 520th record. Run 1, Event 520, LumiSection 1 on stream 0 at 31-Jul-2022 22:58:02.450 KST
+Begin processing the 521st record. Run 1, Event 521, LumiSection 1 on stream 0 at 31-Jul-2022 22:58:05.098 KST
+Begin processing the 522nd record. Run 1, Event 522, LumiSection 1 on stream 0 at 31-Jul-2022 22:58:07.903 KST
+Begin processing the 523rd record. Run 1, Event 523, LumiSection 1 on stream 0 at 31-Jul-2022 22:58:11.499 KST
+Begin processing the 524th record. Run 1, Event 524, LumiSection 1 on stream 0 at 31-Jul-2022 22:58:16.312 KST
+Begin processing the 525th record. Run 1, Event 525, LumiSection 1 on stream 0 at 31-Jul-2022 22:58:18.824 KST
+Begin processing the 526th record. Run 1, Event 526, LumiSection 1 on stream 0 at 31-Jul-2022 22:58:20.816 KST
+Begin processing the 527th record. Run 1, Event 527, LumiSection 1 on stream 0 at 31-Jul-2022 22:58:27.614 KST
+Begin processing the 528th record. Run 1, Event 528, LumiSection 1 on stream 0 at 31-Jul-2022 22:58:29.873 KST
+Begin processing the 529th record. Run 1, Event 529, LumiSection 1 on stream 0 at 31-Jul-2022 22:58:41.268 KST
+Begin processing the 530th record. Run 1, Event 530, LumiSection 1 on stream 0 at 31-Jul-2022 22:58:43.248 KST
+Begin processing the 531st record. Run 1, Event 531, LumiSection 1 on stream 0 at 31-Jul-2022 22:58:48.811 KST
+Begin processing the 532nd record. Run 1, Event 532, LumiSection 1 on stream 0 at 31-Jul-2022 22:58:52.327 KST
+Begin processing the 533rd record. Run 1, Event 533, LumiSection 1 on stream 0 at 31-Jul-2022 22:58:59.707 KST
+Begin processing the 534th record. Run 1, Event 534, LumiSection 1 on stream 0 at 31-Jul-2022 22:59:02.007 KST
+Begin processing the 535th record. Run 1, Event 535, LumiSection 1 on stream 0 at 31-Jul-2022 22:59:06.756 KST
+Begin processing the 536th record. Run 1, Event 536, LumiSection 1 on stream 0 at 31-Jul-2022 22:59:09.583 KST
+Begin processing the 537th record. Run 1, Event 537, LumiSection 1 on stream 0 at 31-Jul-2022 22:59:11.355 KST
+Begin processing the 538th record. Run 1, Event 538, LumiSection 1 on stream 0 at 31-Jul-2022 22:59:14.439 KST
+Begin processing the 539th record. Run 1, Event 539, LumiSection 1 on stream 0 at 31-Jul-2022 22:59:17.078 KST
+Begin processing the 540th record. Run 1, Event 540, LumiSection 1 on stream 0 at 31-Jul-2022 22:59:19.647 KST
+Begin processing the 541st record. Run 1, Event 541, LumiSection 1 on stream 0 at 31-Jul-2022 22:59:21.868 KST
+Begin processing the 542nd record. Run 1, Event 542, LumiSection 1 on stream 0 at 31-Jul-2022 22:59:27.353 KST
+Begin processing the 543rd record. Run 1, Event 543, LumiSection 1 on stream 0 at 31-Jul-2022 22:59:29.076 KST
+Begin processing the 544th record. Run 1, Event 544, LumiSection 1 on stream 0 at 31-Jul-2022 22:59:33.689 KST
+Begin processing the 545th record. Run 1, Event 545, LumiSection 1 on stream 0 at 31-Jul-2022 22:59:38.202 KST
+Begin processing the 546th record. Run 1, Event 546, LumiSection 1 on stream 0 at 31-Jul-2022 22:59:41.763 KST
+Begin processing the 547th record. Run 1, Event 547, LumiSection 1 on stream 0 at 31-Jul-2022 22:59:46.140 KST
+Begin processing the 548th record. Run 1, Event 548, LumiSection 1 on stream 0 at 31-Jul-2022 22:59:49.394 KST
+Begin processing the 549th record. Run 1, Event 549, LumiSection 1 on stream 0 at 31-Jul-2022 22:59:54.902 KST
+Begin processing the 550th record. Run 1, Event 550, LumiSection 1 on stream 0 at 31-Jul-2022 22:59:59.592 KST
+Begin processing the 551st record. Run 1, Event 551, LumiSection 1 on stream 0 at 31-Jul-2022 23:00:03.040 KST
+Begin processing the 552nd record. Run 1, Event 552, LumiSection 1 on stream 0 at 31-Jul-2022 23:00:07.107 KST
+Begin processing the 553rd record. Run 1, Event 553, LumiSection 1 on stream 0 at 31-Jul-2022 23:00:09.485 KST
+Begin processing the 554th record. Run 1, Event 554, LumiSection 1 on stream 0 at 31-Jul-2022 23:00:11.665 KST
+Begin processing the 555th record. Run 1, Event 555, LumiSection 1 on stream 0 at 31-Jul-2022 23:00:13.998 KST
+Begin processing the 556th record. Run 1, Event 556, LumiSection 1 on stream 0 at 31-Jul-2022 23:00:16.953 KST
+Begin processing the 557th record. Run 1, Event 557, LumiSection 1 on stream 0 at 31-Jul-2022 23:00:19.954 KST
+Begin processing the 558th record. Run 1, Event 558, LumiSection 1 on stream 0 at 31-Jul-2022 23:00:23.015 KST
+Begin processing the 559th record. Run 1, Event 559, LumiSection 1 on stream 0 at 31-Jul-2022 23:00:24.768 KST
+Begin processing the 560th record. Run 1, Event 560, LumiSection 1 on stream 0 at 31-Jul-2022 23:00:26.993 KST
+Begin processing the 561st record. Run 1, Event 561, LumiSection 1 on stream 0 at 31-Jul-2022 23:00:28.790 KST
+Begin processing the 562nd record. Run 1, Event 562, LumiSection 1 on stream 0 at 31-Jul-2022 23:00:33.382 KST
+Begin processing the 563rd record. Run 1, Event 563, LumiSection 1 on stream 0 at 31-Jul-2022 23:00:35.916 KST
+Begin processing the 564th record. Run 1, Event 564, LumiSection 1 on stream 0 at 31-Jul-2022 23:00:37.862 KST
+Begin processing the 565th record. Run 1, Event 565, LumiSection 1 on stream 0 at 31-Jul-2022 23:00:39.794 KST
+Begin processing the 566th record. Run 1, Event 566, LumiSection 1 on stream 0 at 31-Jul-2022 23:00:42.828 KST
+Begin processing the 567th record. Run 1, Event 567, LumiSection 1 on stream 0 at 31-Jul-2022 23:00:46.359 KST
+Begin processing the 568th record. Run 1, Event 568, LumiSection 1 on stream 0 at 31-Jul-2022 23:01:10.429 KST
+Begin processing the 569th record. Run 1, Event 569, LumiSection 1 on stream 0 at 31-Jul-2022 23:01:12.141 KST
+Begin processing the 570th record. Run 1, Event 570, LumiSection 1 on stream 0 at 31-Jul-2022 23:01:14.707 KST
+Begin processing the 571st record. Run 1, Event 571, LumiSection 1 on stream 0 at 31-Jul-2022 23:01:18.824 KST
+Begin processing the 572nd record. Run 1, Event 572, LumiSection 1 on stream 0 at 31-Jul-2022 23:01:22.123 KST
+Begin processing the 573rd record. Run 1, Event 573, LumiSection 1 on stream 0 at 31-Jul-2022 23:01:23.888 KST
+Begin processing the 574th record. Run 1, Event 574, LumiSection 1 on stream 0 at 31-Jul-2022 23:01:25.999 KST
+Begin processing the 575th record. Run 1, Event 575, LumiSection 1 on stream 0 at 31-Jul-2022 23:01:28.976 KST
+Begin processing the 576th record. Run 1, Event 576, LumiSection 1 on stream 0 at 31-Jul-2022 23:01:31.581 KST
+Begin processing the 577th record. Run 1, Event 577, LumiSection 1 on stream 0 at 31-Jul-2022 23:01:33.729 KST
+Begin processing the 578th record. Run 1, Event 578, LumiSection 1 on stream 0 at 31-Jul-2022 23:01:36.086 KST
+Begin processing the 579th record. Run 1, Event 579, LumiSection 1 on stream 0 at 31-Jul-2022 23:01:40.555 KST
+Begin processing the 580th record. Run 1, Event 580, LumiSection 1 on stream 0 at 31-Jul-2022 23:01:42.781 KST
+Begin processing the 581st record. Run 1, Event 581, LumiSection 1 on stream 0 at 31-Jul-2022 23:01:44.893 KST
+Begin processing the 582nd record. Run 1, Event 582, LumiSection 1 on stream 0 at 31-Jul-2022 23:01:47.774 KST
+Begin processing the 583rd record. Run 1, Event 583, LumiSection 1 on stream 0 at 31-Jul-2022 23:01:50.139 KST
+Begin processing the 584th record. Run 1, Event 584, LumiSection 1 on stream 0 at 31-Jul-2022 23:01:52.163 KST
+Begin processing the 585th record. Run 1, Event 585, LumiSection 1 on stream 0 at 31-Jul-2022 23:01:57.906 KST
+Begin processing the 586th record. Run 1, Event 586, LumiSection 1 on stream 0 at 31-Jul-2022 23:02:00.344 KST
+Begin processing the 587th record. Run 1, Event 587, LumiSection 1 on stream 0 at 31-Jul-2022 23:02:04.788 KST
+Begin processing the 588th record. Run 1, Event 588, LumiSection 1 on stream 0 at 31-Jul-2022 23:02:08.495 KST
+Begin processing the 589th record. Run 1, Event 589, LumiSection 1 on stream 0 at 31-Jul-2022 23:02:11.058 KST
+Begin processing the 590th record. Run 1, Event 590, LumiSection 1 on stream 0 at 31-Jul-2022 23:02:13.991 KST
+Begin processing the 591st record. Run 1, Event 591, LumiSection 1 on stream 0 at 31-Jul-2022 23:02:18.227 KST
+Begin processing the 592nd record. Run 1, Event 592, LumiSection 1 on stream 0 at 31-Jul-2022 23:02:22.217 KST
+Begin processing the 593rd record. Run 1, Event 593, LumiSection 1 on stream 0 at 31-Jul-2022 23:02:29.571 KST
+Begin processing the 594th record. Run 1, Event 594, LumiSection 1 on stream 0 at 31-Jul-2022 23:02:31.764 KST
+Begin processing the 595th record. Run 1, Event 595, LumiSection 1 on stream 0 at 31-Jul-2022 23:02:35.905 KST
+Begin processing the 596th record. Run 1, Event 596, LumiSection 1 on stream 0 at 31-Jul-2022 23:02:38.101 KST
+Begin processing the 597th record. Run 1, Event 597, LumiSection 1 on stream 0 at 31-Jul-2022 23:02:40.062 KST
+Begin processing the 598th record. Run 1, Event 598, LumiSection 1 on stream 0 at 31-Jul-2022 23:02:42.580 KST
+Begin processing the 599th record. Run 1, Event 599, LumiSection 1 on stream 0 at 31-Jul-2022 23:02:44.944 KST
+Begin processing the 600th record. Run 1, Event 600, LumiSection 1 on stream 0 at 31-Jul-2022 23:02:47.654 KST
+Begin processing the 601st record. Run 1, Event 601, LumiSection 1 on stream 0 at 31-Jul-2022 23:02:51.670 KST
+Begin processing the 602nd record. Run 1, Event 602, LumiSection 1 on stream 0 at 31-Jul-2022 23:02:53.919 KST
+Begin processing the 603rd record. Run 1, Event 603, LumiSection 1 on stream 0 at 31-Jul-2022 23:02:56.963 KST
+Begin processing the 604th record. Run 1, Event 604, LumiSection 1 on stream 0 at 31-Jul-2022 23:03:00.993 KST
+Begin processing the 605th record. Run 1, Event 605, LumiSection 1 on stream 0 at 31-Jul-2022 23:03:03.207 KST
+Begin processing the 606th record. Run 1, Event 606, LumiSection 1 on stream 0 at 31-Jul-2022 23:03:06.197 KST
+Begin processing the 607th record. Run 1, Event 607, LumiSection 1 on stream 0 at 31-Jul-2022 23:03:07.657 KST
+Begin processing the 608th record. Run 1, Event 608, LumiSection 1 on stream 0 at 31-Jul-2022 23:03:10.399 KST
+Begin processing the 609th record. Run 1, Event 609, LumiSection 1 on stream 0 at 31-Jul-2022 23:03:26.436 KST
+Begin processing the 610th record. Run 1, Event 610, LumiSection 1 on stream 0 at 31-Jul-2022 23:03:29.135 KST
+Begin processing the 611th record. Run 1, Event 611, LumiSection 1 on stream 0 at 31-Jul-2022 23:03:31.912 KST
+Begin processing the 612th record. Run 1, Event 612, LumiSection 1 on stream 0 at 31-Jul-2022 23:03:34.448 KST
+Begin processing the 613th record. Run 1, Event 613, LumiSection 1 on stream 0 at 31-Jul-2022 23:03:38.122 KST
+Begin processing the 614th record. Run 1, Event 614, LumiSection 1 on stream 0 at 31-Jul-2022 23:03:41.012 KST
+Begin processing the 615th record. Run 1, Event 615, LumiSection 1 on stream 0 at 31-Jul-2022 23:03:44.427 KST
+Begin processing the 616th record. Run 1, Event 616, LumiSection 1 on stream 0 at 31-Jul-2022 23:03:46.816 KST
+Begin processing the 617th record. Run 1, Event 617, LumiSection 1 on stream 0 at 31-Jul-2022 23:03:50.823 KST
+Begin processing the 618th record. Run 1, Event 618, LumiSection 1 on stream 0 at 31-Jul-2022 23:03:54.350 KST
+Begin processing the 619th record. Run 1, Event 619, LumiSection 1 on stream 0 at 31-Jul-2022 23:03:59.011 KST
+Begin processing the 620th record. Run 1, Event 620, LumiSection 1 on stream 0 at 31-Jul-2022 23:04:02.621 KST
+Begin processing the 621st record. Run 1, Event 621, LumiSection 1 on stream 0 at 31-Jul-2022 23:04:05.967 KST
+Begin processing the 622nd record. Run 1, Event 622, LumiSection 1 on stream 0 at 31-Jul-2022 23:04:10.518 KST
+Begin processing the 623rd record. Run 1, Event 623, LumiSection 1 on stream 0 at 31-Jul-2022 23:04:12.797 KST
+Begin processing the 624th record. Run 1, Event 624, LumiSection 1 on stream 0 at 31-Jul-2022 23:04:20.716 KST
+Begin processing the 625th record. Run 1, Event 625, LumiSection 1 on stream 0 at 31-Jul-2022 23:04:25.042 KST
+Begin processing the 626th record. Run 1, Event 626, LumiSection 1 on stream 0 at 31-Jul-2022 23:04:27.960 KST
+Begin processing the 627th record. Run 1, Event 627, LumiSection 1 on stream 0 at 31-Jul-2022 23:04:32.308 KST
+Begin processing the 628th record. Run 1, Event 628, LumiSection 1 on stream 0 at 31-Jul-2022 23:04:41.590 KST
+Begin processing the 629th record. Run 1, Event 629, LumiSection 1 on stream 0 at 31-Jul-2022 23:04:44.247 KST
+Begin processing the 630th record. Run 1, Event 630, LumiSection 1 on stream 0 at 31-Jul-2022 23:04:46.861 KST
+Begin processing the 631st record. Run 1, Event 631, LumiSection 1 on stream 0 at 31-Jul-2022 23:04:49.052 KST
+Begin processing the 632nd record. Run 1, Event 632, LumiSection 1 on stream 0 at 31-Jul-2022 23:04:51.889 KST
+Begin processing the 633rd record. Run 1, Event 633, LumiSection 1 on stream 0 at 31-Jul-2022 23:04:56.233 KST
+Begin processing the 634th record. Run 1, Event 634, LumiSection 1 on stream 0 at 31-Jul-2022 23:04:59.738 KST
+Begin processing the 635th record. Run 1, Event 635, LumiSection 1 on stream 0 at 31-Jul-2022 23:05:03.638 KST
+Begin processing the 636th record. Run 1, Event 636, LumiSection 1 on stream 0 at 31-Jul-2022 23:05:06.018 KST
+Begin processing the 637th record. Run 1, Event 637, LumiSection 1 on stream 0 at 31-Jul-2022 23:05:08.167 KST
+Begin processing the 638th record. Run 1, Event 638, LumiSection 1 on stream 0 at 31-Jul-2022 23:05:12.684 KST
+Begin processing the 639th record. Run 1, Event 639, LumiSection 1 on stream 0 at 31-Jul-2022 23:05:15.312 KST
+Begin processing the 640th record. Run 1, Event 640, LumiSection 1 on stream 0 at 31-Jul-2022 23:05:17.872 KST
+Begin processing the 641st record. Run 1, Event 641, LumiSection 1 on stream 0 at 31-Jul-2022 23:05:21.031 KST
+Begin processing the 642nd record. Run 1, Event 642, LumiSection 1 on stream 0 at 31-Jul-2022 23:05:27.713 KST
+Begin processing the 643rd record. Run 1, Event 643, LumiSection 1 on stream 0 at 31-Jul-2022 23:05:32.267 KST
+Begin processing the 644th record. Run 1, Event 644, LumiSection 1 on stream 0 at 31-Jul-2022 23:05:34.255 KST
+Begin processing the 645th record. Run 1, Event 645, LumiSection 1 on stream 0 at 31-Jul-2022 23:05:37.147 KST
+Begin processing the 646th record. Run 1, Event 646, LumiSection 1 on stream 0 at 31-Jul-2022 23:05:40.245 KST
+Begin processing the 647th record. Run 1, Event 647, LumiSection 1 on stream 0 at 31-Jul-2022 23:05:43.113 KST
+Begin processing the 648th record. Run 1, Event 648, LumiSection 1 on stream 0 at 31-Jul-2022 23:05:47.297 KST
+Begin processing the 649th record. Run 1, Event 649, LumiSection 1 on stream 0 at 31-Jul-2022 23:05:49.921 KST
+Begin processing the 650th record. Run 1, Event 650, LumiSection 1 on stream 0 at 31-Jul-2022 23:05:54.339 KST
+Begin processing the 651st record. Run 1, Event 651, LumiSection 1 on stream 0 at 31-Jul-2022 23:05:57.651 KST
+Begin processing the 652nd record. Run 1, Event 652, LumiSection 1 on stream 0 at 31-Jul-2022 23:05:59.654 KST
+Begin processing the 653rd record. Run 1, Event 653, LumiSection 1 on stream 0 at 31-Jul-2022 23:06:02.429 KST
+Begin processing the 654th record. Run 1, Event 654, LumiSection 1 on stream 0 at 31-Jul-2022 23:06:04.328 KST
+Begin processing the 655th record. Run 1, Event 655, LumiSection 1 on stream 0 at 31-Jul-2022 23:06:07.693 KST
+Begin processing the 656th record. Run 1, Event 656, LumiSection 1 on stream 0 at 31-Jul-2022 23:06:17.962 KST
+Begin processing the 657th record. Run 1, Event 657, LumiSection 1 on stream 0 at 31-Jul-2022 23:06:20.320 KST
+%MSG-w SimG4CoreApplication:  (NoModuleName) 31-Jul-2022 23:06:21 KST pre-events
+
+-------- WWWW ------- G4Exception-START -------- WWWW -------
+*** G4Exception : GeomNav0003
+      issued by : G4Navigator::GetGlobalExitNormal()
+ WARNING> Expected normal-global-frame to be valid,  i.e. a unit vector!
+  - but |normal|   = 0  - and |normal|^2 = 0
+ which differs from 1.0 by -1
+   n = (0,0,-0)
+ Global point: (-421.3449472,1286.354686,-3481.605198)
+ Volume: HGCalEEConnector03Coarse2
+============================================================
+   State of Navigator: 
+The current state of G4Navigator is: 
+  ValidExitNormal= 1
+  ExitNormal     = (0,0,0)
+  Exiting        = 1
+  Entering       = 0
+  BlockedPhysicalVolume= None
+  BlockedReplicaNo     = -1
+  LastStepWasZero      = 1
+
+ Current Localpoint = (2.7429472,-18.717192,1.8651983)
+ PreviousSftOrigin  = (-421.34495,1286.3547,-3481.6052)
+ PreviousSafety     = 0
+Current History: 
+History depth=11
+Level=[0]: Phys Name=[DDDWorld] Type=[N]
+Level=[1]: Phys Name=[CMSE] Type=[N]
+Level=[2]: Phys Name=[CALO] Type=[N]
+Level=[3]: Phys Name=[CALOEC] Type=[N]
+Level=[4]: Phys Name=[CALOECTSRear] Type=[N]
+Level=[5]: Phys Name=[CALOECRear] Type=[N]
+Level=[6]: Phys Name=[HGCalService] Type=[N]
+Level=[7]: Phys Name=[HGCal] Type=[N]
+Level=[8]: Phys Name=[HGCalEE] Type=[N]
+Level=[9]: Phys Name=[HGCalEELayerB18] Type=[N]
+Level=[10]: Phys Name=[HGCalEEWafer03Coarse2] Type=[N]
+Level=[11]: Phys Name=[HGCalEEConnector03Coarse2] Type=[N]
+
+============================================================
+Value obtained from stored global-normal is not a unit vector.
+
+TrackID=73187 ParentID=73160  e-; Ekin(MeV)=0.0311095; time(ns)=12.6315; status=0
+   position(mm): (-421.191,1286.48,-3481.18); direction: (-0.21565,0.975694,-0.0389317)
+   PhysicalVolume: HGCalEEConnector03Coarse2; material: HGC_EEConnector
+   stepNumber=32; stepLength(mm)=17.0148; weight=1; creatorProcess: compt; modelID=35 
+*** This is just a warning message. ***
+-------- WWWW -------- G4Exception-END --------- WWWW -------
+
+%MSG
+Begin processing the 658th record. Run 1, Event 658, LumiSection 1 on stream 0 at 31-Jul-2022 23:06:22.732 KST
+Begin processing the 659th record. Run 1, Event 659, LumiSection 1 on stream 0 at 31-Jul-2022 23:06:24.848 KST
+Begin processing the 660th record. Run 1, Event 660, LumiSection 1 on stream 0 at 31-Jul-2022 23:06:28.290 KST
+Begin processing the 661st record. Run 1, Event 661, LumiSection 1 on stream 0 at 31-Jul-2022 23:06:31.143 KST
+Begin processing the 662nd record. Run 1, Event 662, LumiSection 1 on stream 0 at 31-Jul-2022 23:06:34.604 KST
+Begin processing the 663rd record. Run 1, Event 663, LumiSection 1 on stream 0 at 31-Jul-2022 23:06:38.438 KST
+Begin processing the 664th record. Run 1, Event 664, LumiSection 1 on stream 0 at 31-Jul-2022 23:06:40.828 KST
+Begin processing the 665th record. Run 1, Event 665, LumiSection 1 on stream 0 at 31-Jul-2022 23:06:43.879 KST
+Begin processing the 666th record. Run 1, Event 666, LumiSection 1 on stream 0 at 31-Jul-2022 23:06:49.690 KST
+Begin processing the 667th record. Run 1, Event 667, LumiSection 1 on stream 0 at 31-Jul-2022 23:06:57.005 KST
+Begin processing the 668th record. Run 1, Event 668, LumiSection 1 on stream 0 at 31-Jul-2022 23:06:59.223 KST
+Begin processing the 669th record. Run 1, Event 669, LumiSection 1 on stream 0 at 31-Jul-2022 23:07:01.674 KST
+Begin processing the 670th record. Run 1, Event 670, LumiSection 1 on stream 0 at 31-Jul-2022 23:07:04.163 KST
+Begin processing the 671st record. Run 1, Event 671, LumiSection 1 on stream 0 at 31-Jul-2022 23:07:07.220 KST
+Begin processing the 672nd record. Run 1, Event 672, LumiSection 1 on stream 0 at 31-Jul-2022 23:07:10.257 KST
+Begin processing the 673rd record. Run 1, Event 673, LumiSection 1 on stream 0 at 31-Jul-2022 23:07:17.109 KST
+Begin processing the 674th record. Run 1, Event 674, LumiSection 1 on stream 0 at 31-Jul-2022 23:07:19.511 KST
+Begin processing the 675th record. Run 1, Event 675, LumiSection 1 on stream 0 at 31-Jul-2022 23:07:22.612 KST
+Begin processing the 676th record. Run 1, Event 676, LumiSection 1 on stream 0 at 31-Jul-2022 23:07:24.898 KST
+Begin processing the 677th record. Run 1, Event 677, LumiSection 1 on stream 0 at 31-Jul-2022 23:07:27.737 KST
+Begin processing the 678th record. Run 1, Event 678, LumiSection 1 on stream 0 at 31-Jul-2022 23:07:30.754 KST
+Begin processing the 679th record. Run 1, Event 679, LumiSection 1 on stream 0 at 31-Jul-2022 23:07:33.331 KST
+Begin processing the 680th record. Run 1, Event 680, LumiSection 1 on stream 0 at 31-Jul-2022 23:07:51.105 KST
+Begin processing the 681st record. Run 1, Event 681, LumiSection 1 on stream 0 at 31-Jul-2022 23:07:56.597 KST
+Begin processing the 682nd record. Run 1, Event 682, LumiSection 1 on stream 0 at 31-Jul-2022 23:08:11.141 KST
+Begin processing the 683rd record. Run 1, Event 683, LumiSection 1 on stream 0 at 31-Jul-2022 23:08:13.204 KST
+Begin processing the 684th record. Run 1, Event 684, LumiSection 1 on stream 0 at 31-Jul-2022 23:08:15.232 KST
+Begin processing the 685th record. Run 1, Event 685, LumiSection 1 on stream 0 at 31-Jul-2022 23:08:17.508 KST
+Begin processing the 686th record. Run 1, Event 686, LumiSection 1 on stream 0 at 31-Jul-2022 23:08:19.779 KST
+Begin processing the 687th record. Run 1, Event 687, LumiSection 1 on stream 0 at 31-Jul-2022 23:08:22.061 KST
+Begin processing the 688th record. Run 1, Event 688, LumiSection 1 on stream 0 at 31-Jul-2022 23:08:26.541 KST
+Begin processing the 689th record. Run 1, Event 689, LumiSection 1 on stream 0 at 31-Jul-2022 23:08:29.767 KST
+Begin processing the 690th record. Run 1, Event 690, LumiSection 1 on stream 0 at 31-Jul-2022 23:08:31.683 KST
+Begin processing the 691st record. Run 1, Event 691, LumiSection 1 on stream 0 at 31-Jul-2022 23:08:34.771 KST
+Begin processing the 692nd record. Run 1, Event 692, LumiSection 1 on stream 0 at 31-Jul-2022 23:08:37.590 KST
+Begin processing the 693rd record. Run 1, Event 693, LumiSection 1 on stream 0 at 31-Jul-2022 23:08:41.516 KST
+Begin processing the 694th record. Run 1, Event 694, LumiSection 1 on stream 0 at 31-Jul-2022 23:08:46.112 KST
+Begin processing the 695th record. Run 1, Event 695, LumiSection 1 on stream 0 at 31-Jul-2022 23:08:48.279 KST
+Begin processing the 696th record. Run 1, Event 696, LumiSection 1 on stream 0 at 31-Jul-2022 23:08:50.757 KST
+Begin processing the 697th record. Run 1, Event 697, LumiSection 1 on stream 0 at 31-Jul-2022 23:08:53.533 KST
+Begin processing the 698th record. Run 1, Event 698, LumiSection 1 on stream 0 at 31-Jul-2022 23:08:58.163 KST
+Begin processing the 699th record. Run 1, Event 699, LumiSection 1 on stream 0 at 31-Jul-2022 23:09:01.454 KST
+Begin processing the 700th record. Run 1, Event 700, LumiSection 1 on stream 0 at 31-Jul-2022 23:09:04.915 KST
+Begin processing the 701st record. Run 1, Event 701, LumiSection 1 on stream 0 at 31-Jul-2022 23:09:06.992 KST
+Begin processing the 702nd record. Run 1, Event 702, LumiSection 1 on stream 0 at 31-Jul-2022 23:09:09.930 KST
+Begin processing the 703rd record. Run 1, Event 703, LumiSection 1 on stream 0 at 31-Jul-2022 23:09:13.218 KST
+Begin processing the 704th record. Run 1, Event 704, LumiSection 1 on stream 0 at 31-Jul-2022 23:09:15.402 KST
+Begin processing the 705th record. Run 1, Event 705, LumiSection 1 on stream 0 at 31-Jul-2022 23:09:18.118 KST
+Begin processing the 706th record. Run 1, Event 706, LumiSection 1 on stream 0 at 31-Jul-2022 23:09:20.140 KST
+Begin processing the 707th record. Run 1, Event 707, LumiSection 1 on stream 0 at 31-Jul-2022 23:09:28.406 KST
+Begin processing the 708th record. Run 1, Event 708, LumiSection 1 on stream 0 at 31-Jul-2022 23:09:31.890 KST
+Begin processing the 709th record. Run 1, Event 709, LumiSection 1 on stream 0 at 31-Jul-2022 23:09:40.109 KST
+Begin processing the 710th record. Run 1, Event 710, LumiSection 1 on stream 0 at 31-Jul-2022 23:09:42.109 KST
+Begin processing the 711th record. Run 1, Event 711, LumiSection 1 on stream 0 at 31-Jul-2022 23:09:45.040 KST
+Begin processing the 712th record. Run 1, Event 712, LumiSection 1 on stream 0 at 31-Jul-2022 23:09:47.410 KST
+Begin processing the 713th record. Run 1, Event 713, LumiSection 1 on stream 0 at 31-Jul-2022 23:09:55.338 KST
+Begin processing the 714th record. Run 1, Event 714, LumiSection 1 on stream 0 at 31-Jul-2022 23:09:58.842 KST
+Begin processing the 715th record. Run 1, Event 715, LumiSection 1 on stream 0 at 31-Jul-2022 23:10:02.002 KST
+Begin processing the 716th record. Run 1, Event 716, LumiSection 1 on stream 0 at 31-Jul-2022 23:10:04.448 KST
+Begin processing the 717th record. Run 1, Event 717, LumiSection 1 on stream 0 at 31-Jul-2022 23:10:06.837 KST
+Begin processing the 718th record. Run 1, Event 718, LumiSection 1 on stream 0 at 31-Jul-2022 23:10:09.656 KST
+Begin processing the 719th record. Run 1, Event 719, LumiSection 1 on stream 0 at 31-Jul-2022 23:10:16.877 KST
+Begin processing the 720th record. Run 1, Event 720, LumiSection 1 on stream 0 at 31-Jul-2022 23:10:19.428 KST
+Begin processing the 721st record. Run 1, Event 721, LumiSection 1 on stream 0 at 31-Jul-2022 23:10:21.751 KST
+Begin processing the 722nd record. Run 1, Event 722, LumiSection 1 on stream 0 at 31-Jul-2022 23:10:24.184 KST
+Begin processing the 723rd record. Run 1, Event 723, LumiSection 1 on stream 0 at 31-Jul-2022 23:10:29.996 KST
+Begin processing the 724th record. Run 1, Event 724, LumiSection 1 on stream 0 at 31-Jul-2022 23:10:32.692 KST
+Begin processing the 725th record. Run 1, Event 725, LumiSection 1 on stream 0 at 31-Jul-2022 23:10:35.049 KST
+Begin processing the 726th record. Run 1, Event 726, LumiSection 1 on stream 0 at 31-Jul-2022 23:10:38.476 KST
+Begin processing the 727th record. Run 1, Event 727, LumiSection 1 on stream 0 at 31-Jul-2022 23:10:40.424 KST
+Begin processing the 728th record. Run 1, Event 728, LumiSection 1 on stream 0 at 31-Jul-2022 23:10:42.969 KST
+Begin processing the 729th record. Run 1, Event 729, LumiSection 1 on stream 0 at 31-Jul-2022 23:10:46.578 KST
+Begin processing the 730th record. Run 1, Event 730, LumiSection 1 on stream 0 at 31-Jul-2022 23:10:48.677 KST
+Begin processing the 731st record. Run 1, Event 731, LumiSection 1 on stream 0 at 31-Jul-2022 23:10:51.019 KST
+Begin processing the 732nd record. Run 1, Event 732, LumiSection 1 on stream 0 at 31-Jul-2022 23:10:57.234 KST
+Begin processing the 733rd record. Run 1, Event 733, LumiSection 1 on stream 0 at 31-Jul-2022 23:11:00.337 KST
+Begin processing the 734th record. Run 1, Event 734, LumiSection 1 on stream 0 at 31-Jul-2022 23:11:05.369 KST
+Begin processing the 735th record. Run 1, Event 735, LumiSection 1 on stream 0 at 31-Jul-2022 23:11:09.206 KST
+Begin processing the 736th record. Run 1, Event 736, LumiSection 1 on stream 0 at 31-Jul-2022 23:11:11.776 KST
+Begin processing the 737th record. Run 1, Event 737, LumiSection 1 on stream 0 at 31-Jul-2022 23:11:15.097 KST
+Begin processing the 738th record. Run 1, Event 738, LumiSection 1 on stream 0 at 31-Jul-2022 23:11:18.894 KST
+Begin processing the 739th record. Run 1, Event 739, LumiSection 1 on stream 0 at 31-Jul-2022 23:11:23.017 KST
+Begin processing the 740th record. Run 1, Event 740, LumiSection 1 on stream 0 at 31-Jul-2022 23:11:26.100 KST
+Begin processing the 741st record. Run 1, Event 741, LumiSection 1 on stream 0 at 31-Jul-2022 23:11:30.214 KST
+Begin processing the 742nd record. Run 1, Event 742, LumiSection 1 on stream 0 at 31-Jul-2022 23:11:32.813 KST
+Begin processing the 743rd record. Run 1, Event 743, LumiSection 1 on stream 0 at 31-Jul-2022 23:11:35.267 KST
+Begin processing the 744th record. Run 1, Event 744, LumiSection 1 on stream 0 at 31-Jul-2022 23:11:36.929 KST
+Begin processing the 745th record. Run 1, Event 745, LumiSection 1 on stream 0 at 31-Jul-2022 23:11:40.666 KST
+Begin processing the 746th record. Run 1, Event 746, LumiSection 1 on stream 0 at 31-Jul-2022 23:11:43.067 KST
+Begin processing the 747th record. Run 1, Event 747, LumiSection 1 on stream 0 at 31-Jul-2022 23:11:46.015 KST
+Begin processing the 748th record. Run 1, Event 748, LumiSection 1 on stream 0 at 31-Jul-2022 23:11:47.894 KST
+Begin processing the 749th record. Run 1, Event 749, LumiSection 1 on stream 0 at 31-Jul-2022 23:11:49.874 KST
+Begin processing the 750th record. Run 1, Event 750, LumiSection 1 on stream 0 at 31-Jul-2022 23:11:52.825 KST
+Begin processing the 751st record. Run 1, Event 751, LumiSection 1 on stream 0 at 31-Jul-2022 23:11:56.056 KST
+Begin processing the 752nd record. Run 1, Event 752, LumiSection 1 on stream 0 at 31-Jul-2022 23:11:58.361 KST
+Begin processing the 753rd record. Run 1, Event 753, LumiSection 1 on stream 0 at 31-Jul-2022 23:12:03.056 KST
+Begin processing the 754th record. Run 1, Event 754, LumiSection 1 on stream 0 at 31-Jul-2022 23:12:04.894 KST
+Begin processing the 755th record. Run 1, Event 755, LumiSection 1 on stream 0 at 31-Jul-2022 23:12:09.202 KST
+Begin processing the 756th record. Run 1, Event 756, LumiSection 1 on stream 0 at 31-Jul-2022 23:12:11.282 KST
+Begin processing the 757th record. Run 1, Event 757, LumiSection 1 on stream 0 at 31-Jul-2022 23:12:13.819 KST
+Begin processing the 758th record. Run 1, Event 758, LumiSection 1 on stream 0 at 31-Jul-2022 23:12:17.529 KST
+Begin processing the 759th record. Run 1, Event 759, LumiSection 1 on stream 0 at 31-Jul-2022 23:12:21.238 KST
+Begin processing the 760th record. Run 1, Event 760, LumiSection 1 on stream 0 at 31-Jul-2022 23:12:24.313 KST
+Begin processing the 761st record. Run 1, Event 761, LumiSection 1 on stream 0 at 31-Jul-2022 23:12:26.313 KST
+Begin processing the 762nd record. Run 1, Event 762, LumiSection 1 on stream 0 at 31-Jul-2022 23:12:31.015 KST
+Begin processing the 763rd record. Run 1, Event 763, LumiSection 1 on stream 0 at 31-Jul-2022 23:12:34.878 KST
+Begin processing the 764th record. Run 1, Event 764, LumiSection 1 on stream 0 at 31-Jul-2022 23:12:37.329 KST
+Begin processing the 765th record. Run 1, Event 765, LumiSection 1 on stream 0 at 31-Jul-2022 23:12:40.174 KST
+Begin processing the 766th record. Run 1, Event 766, LumiSection 1 on stream 0 at 31-Jul-2022 23:12:43.280 KST
+Begin processing the 767th record. Run 1, Event 767, LumiSection 1 on stream 0 at 31-Jul-2022 23:12:49.417 KST
+Begin processing the 768th record. Run 1, Event 768, LumiSection 1 on stream 0 at 31-Jul-2022 23:12:53.147 KST
+Begin processing the 769th record. Run 1, Event 769, LumiSection 1 on stream 0 at 31-Jul-2022 23:12:55.877 KST
+Begin processing the 770th record. Run 1, Event 770, LumiSection 1 on stream 0 at 31-Jul-2022 23:12:58.379 KST
+Begin processing the 771st record. Run 1, Event 771, LumiSection 1 on stream 0 at 31-Jul-2022 23:13:00.675 KST
+Begin processing the 772nd record. Run 1, Event 772, LumiSection 1 on stream 0 at 31-Jul-2022 23:13:03.164 KST
+Begin processing the 773rd record. Run 1, Event 773, LumiSection 1 on stream 0 at 31-Jul-2022 23:13:06.669 KST
+Begin processing the 774th record. Run 1, Event 774, LumiSection 1 on stream 0 at 31-Jul-2022 23:13:08.819 KST
+Begin processing the 775th record. Run 1, Event 775, LumiSection 1 on stream 0 at 31-Jul-2022 23:13:10.593 KST
+Begin processing the 776th record. Run 1, Event 776, LumiSection 1 on stream 0 at 31-Jul-2022 23:13:12.343 KST
+Begin processing the 777th record. Run 1, Event 777, LumiSection 1 on stream 0 at 31-Jul-2022 23:13:22.626 KST
+Begin processing the 778th record. Run 1, Event 778, LumiSection 1 on stream 0 at 31-Jul-2022 23:13:24.701 KST
+Begin processing the 779th record. Run 1, Event 779, LumiSection 1 on stream 0 at 31-Jul-2022 23:13:26.987 KST
+Begin processing the 780th record. Run 1, Event 780, LumiSection 1 on stream 0 at 31-Jul-2022 23:13:29.681 KST
+Begin processing the 781st record. Run 1, Event 781, LumiSection 1 on stream 0 at 31-Jul-2022 23:13:32.313 KST
+Begin processing the 782nd record. Run 1, Event 782, LumiSection 1 on stream 0 at 31-Jul-2022 23:13:34.711 KST
+Begin processing the 783rd record. Run 1, Event 783, LumiSection 1 on stream 0 at 31-Jul-2022 23:13:37.999 KST
+Begin processing the 784th record. Run 1, Event 784, LumiSection 1 on stream 0 at 31-Jul-2022 23:13:41.435 KST
+Begin processing the 785th record. Run 1, Event 785, LumiSection 1 on stream 0 at 31-Jul-2022 23:13:44.885 KST
+Begin processing the 786th record. Run 1, Event 786, LumiSection 1 on stream 0 at 31-Jul-2022 23:13:48.110 KST
+Begin processing the 787th record. Run 1, Event 787, LumiSection 1 on stream 0 at 31-Jul-2022 23:13:50.228 KST
+Begin processing the 788th record. Run 1, Event 788, LumiSection 1 on stream 0 at 31-Jul-2022 23:13:51.992 KST
+Begin processing the 789th record. Run 1, Event 789, LumiSection 1 on stream 0 at 31-Jul-2022 23:13:53.884 KST
+Begin processing the 790th record. Run 1, Event 790, LumiSection 1 on stream 0 at 31-Jul-2022 23:13:59.861 KST
+Begin processing the 791st record. Run 1, Event 791, LumiSection 1 on stream 0 at 31-Jul-2022 23:14:02.555 KST
+Begin processing the 792nd record. Run 1, Event 792, LumiSection 1 on stream 0 at 31-Jul-2022 23:14:05.202 KST
+Begin processing the 793rd record. Run 1, Event 793, LumiSection 1 on stream 0 at 31-Jul-2022 23:14:08.837 KST
+Begin processing the 794th record. Run 1, Event 794, LumiSection 1 on stream 0 at 31-Jul-2022 23:14:12.093 KST
+Begin processing the 795th record. Run 1, Event 795, LumiSection 1 on stream 0 at 31-Jul-2022 23:14:23.427 KST
+Begin processing the 796th record. Run 1, Event 796, LumiSection 1 on stream 0 at 31-Jul-2022 23:14:25.859 KST
+Begin processing the 797th record. Run 1, Event 797, LumiSection 1 on stream 0 at 31-Jul-2022 23:14:30.017 KST
+Begin processing the 798th record. Run 1, Event 798, LumiSection 1 on stream 0 at 31-Jul-2022 23:14:33.097 KST
+Begin processing the 799th record. Run 1, Event 799, LumiSection 1 on stream 0 at 31-Jul-2022 23:14:35.193 KST
+Begin processing the 800th record. Run 1, Event 800, LumiSection 1 on stream 0 at 31-Jul-2022 23:14:47.019 KST
+Begin processing the 801st record. Run 1, Event 801, LumiSection 1 on stream 0 at 31-Jul-2022 23:14:49.643 KST
+Begin processing the 802nd record. Run 1, Event 802, LumiSection 1 on stream 0 at 31-Jul-2022 23:14:52.282 KST
+Begin processing the 803rd record. Run 1, Event 803, LumiSection 1 on stream 0 at 31-Jul-2022 23:14:53.978 KST
+Begin processing the 804th record. Run 1, Event 804, LumiSection 1 on stream 0 at 31-Jul-2022 23:14:57.504 KST
+Begin processing the 805th record. Run 1, Event 805, LumiSection 1 on stream 0 at 31-Jul-2022 23:15:03.068 KST
+Begin processing the 806th record. Run 1, Event 806, LumiSection 1 on stream 0 at 31-Jul-2022 23:15:06.692 KST
+Begin processing the 807th record. Run 1, Event 807, LumiSection 1 on stream 0 at 31-Jul-2022 23:15:09.051 KST
+Begin processing the 808th record. Run 1, Event 808, LumiSection 1 on stream 0 at 31-Jul-2022 23:15:19.437 KST
+Begin processing the 809th record. Run 1, Event 809, LumiSection 1 on stream 0 at 31-Jul-2022 23:15:22.665 KST
+Begin processing the 810th record. Run 1, Event 810, LumiSection 1 on stream 0 at 31-Jul-2022 23:15:24.800 KST
+Begin processing the 811th record. Run 1, Event 811, LumiSection 1 on stream 0 at 31-Jul-2022 23:15:36.131 KST
+Begin processing the 812th record. Run 1, Event 812, LumiSection 1 on stream 0 at 31-Jul-2022 23:15:38.535 KST
+Begin processing the 813th record. Run 1, Event 813, LumiSection 1 on stream 0 at 31-Jul-2022 23:15:45.975 KST
+Begin processing the 814th record. Run 1, Event 814, LumiSection 1 on stream 0 at 31-Jul-2022 23:15:52.471 KST
+Begin processing the 815th record. Run 1, Event 815, LumiSection 1 on stream 0 at 31-Jul-2022 23:15:55.137 KST
+Begin processing the 816th record. Run 1, Event 816, LumiSection 1 on stream 0 at 31-Jul-2022 23:16:01.854 KST
+Begin processing the 817th record. Run 1, Event 817, LumiSection 1 on stream 0 at 31-Jul-2022 23:16:04.820 KST
+Begin processing the 818th record. Run 1, Event 818, LumiSection 1 on stream 0 at 31-Jul-2022 23:16:13.757 KST
+Begin processing the 819th record. Run 1, Event 819, LumiSection 1 on stream 0 at 31-Jul-2022 23:16:15.869 KST
+Begin processing the 820th record. Run 1, Event 820, LumiSection 1 on stream 0 at 31-Jul-2022 23:16:19.059 KST
+Begin processing the 821st record. Run 1, Event 821, LumiSection 1 on stream 0 at 31-Jul-2022 23:16:23.795 KST
+Begin processing the 822nd record. Run 1, Event 822, LumiSection 1 on stream 0 at 31-Jul-2022 23:16:26.818 KST
+Begin processing the 823rd record. Run 1, Event 823, LumiSection 1 on stream 0 at 31-Jul-2022 23:16:29.137 KST
+Begin processing the 824th record. Run 1, Event 824, LumiSection 1 on stream 0 at 31-Jul-2022 23:16:30.948 KST
+Begin processing the 825th record. Run 1, Event 825, LumiSection 1 on stream 0 at 31-Jul-2022 23:16:34.607 KST
+Begin processing the 826th record. Run 1, Event 826, LumiSection 1 on stream 0 at 31-Jul-2022 23:16:38.025 KST
+Begin processing the 827th record. Run 1, Event 827, LumiSection 1 on stream 0 at 31-Jul-2022 23:16:42.028 KST
+Begin processing the 828th record. Run 1, Event 828, LumiSection 1 on stream 0 at 31-Jul-2022 23:16:46.388 KST
+Begin processing the 829th record. Run 1, Event 829, LumiSection 1 on stream 0 at 31-Jul-2022 23:16:49.005 KST
+Begin processing the 830th record. Run 1, Event 830, LumiSection 1 on stream 0 at 31-Jul-2022 23:16:51.316 KST
+Begin processing the 831st record. Run 1, Event 831, LumiSection 1 on stream 0 at 31-Jul-2022 23:16:53.662 KST
+Begin processing the 832nd record. Run 1, Event 832, LumiSection 1 on stream 0 at 31-Jul-2022 23:16:57.384 KST
+Begin processing the 833rd record. Run 1, Event 833, LumiSection 1 on stream 0 at 31-Jul-2022 23:16:58.964 KST
+Begin processing the 834th record. Run 1, Event 834, LumiSection 1 on stream 0 at 31-Jul-2022 23:17:01.554 KST
+Begin processing the 835th record. Run 1, Event 835, LumiSection 1 on stream 0 at 31-Jul-2022 23:17:03.565 KST
+Begin processing the 836th record. Run 1, Event 836, LumiSection 1 on stream 0 at 31-Jul-2022 23:17:06.525 KST
+Begin processing the 837th record. Run 1, Event 837, LumiSection 1 on stream 0 at 31-Jul-2022 23:17:22.577 KST
+Begin processing the 838th record. Run 1, Event 838, LumiSection 1 on stream 0 at 31-Jul-2022 23:17:25.258 KST
+Begin processing the 839th record. Run 1, Event 839, LumiSection 1 on stream 0 at 31-Jul-2022 23:17:27.136 KST
+Begin processing the 840th record. Run 1, Event 840, LumiSection 1 on stream 0 at 31-Jul-2022 23:17:29.674 KST
+Begin processing the 841st record. Run 1, Event 841, LumiSection 1 on stream 0 at 31-Jul-2022 23:17:32.045 KST
+Begin processing the 842nd record. Run 1, Event 842, LumiSection 1 on stream 0 at 31-Jul-2022 23:17:34.957 KST
+Begin processing the 843rd record. Run 1, Event 843, LumiSection 1 on stream 0 at 31-Jul-2022 23:17:37.549 KST
+Begin processing the 844th record. Run 1, Event 844, LumiSection 1 on stream 0 at 31-Jul-2022 23:17:41.406 KST
+Begin processing the 845th record. Run 1, Event 845, LumiSection 1 on stream 0 at 31-Jul-2022 23:17:43.817 KST
+Begin processing the 846th record. Run 1, Event 846, LumiSection 1 on stream 0 at 31-Jul-2022 23:17:57.882 KST
+Begin processing the 847th record. Run 1, Event 847, LumiSection 1 on stream 0 at 31-Jul-2022 23:18:00.462 KST
+Begin processing the 848th record. Run 1, Event 848, LumiSection 1 on stream 0 at 31-Jul-2022 23:18:02.715 KST
+Begin processing the 849th record. Run 1, Event 849, LumiSection 1 on stream 0 at 31-Jul-2022 23:18:05.320 KST
+Begin processing the 850th record. Run 1, Event 850, LumiSection 1 on stream 0 at 31-Jul-2022 23:18:08.327 KST
+Begin processing the 851st record. Run 1, Event 851, LumiSection 1 on stream 0 at 31-Jul-2022 23:18:12.454 KST
+Begin processing the 852nd record. Run 1, Event 852, LumiSection 1 on stream 0 at 31-Jul-2022 23:18:14.920 KST
+Begin processing the 853rd record. Run 1, Event 853, LumiSection 1 on stream 0 at 31-Jul-2022 23:18:19.005 KST
+Begin processing the 854th record. Run 1, Event 854, LumiSection 1 on stream 0 at 31-Jul-2022 23:18:21.327 KST
+Begin processing the 855th record. Run 1, Event 855, LumiSection 1 on stream 0 at 31-Jul-2022 23:18:23.407 KST
+Begin processing the 856th record. Run 1, Event 856, LumiSection 1 on stream 0 at 31-Jul-2022 23:18:27.195 KST
+%MSG-w SimG4CoreApplication:  (NoModuleName) 31-Jul-2022 23:18:28 KST pre-events
+
+-------- WWWW ------- G4Exception-START -------- WWWW -------
+*** G4Exception : GeomNav0003
+      issued by : G4Navigator::GetGlobalExitNormal()
+ WARNING> Expected normal-global-frame to be valid,  i.e. a unit vector!
+  - but |normal|   = 0  - and |normal|^2 = 0
+ which differs from 1.0 by -1
+   n = (0,0,0)
+ Global point: (-1044.350822,-487.9148954,3798.96187)
+ Volume: HGCalHEAirGap11Coarse2
+============================================================
+   State of Navigator: 
+The current state of G4Navigator is: 
+  ValidExitNormal= 1
+  ExitNormal     = (0,0,0)
+  Exiting        = 1
+  Entering       = 0
+  BlockedPhysicalVolume= None
+  BlockedReplicaNo     = -1
+  LastStepWasZero      = 1
+
+ Current Localpoint = (44.014378,-52.890936,0.20187022)
+ PreviousSftOrigin  = (-1044.3508,-487.9149,3798.9619)
+ PreviousSafety     = 0
+Current History: 
+History depth=11
+Level=[0]: Phys Name=[DDDWorld] Type=[N]
+Level=[1]: Phys Name=[CMSE] Type=[N]
+Level=[2]: Phys Name=[CALO] Type=[N]
+Level=[3]: Phys Name=[CALOEC] Type=[N]
+Level=[4]: Phys Name=[CALOECTSRear] Type=[N]
+Level=[5]: Phys Name=[CALOECRear] Type=[N]
+Level=[6]: Phys Name=[HGCalService] Type=[N]
+Level=[7]: Phys Name=[HGCal] Type=[N]
+Level=[8]: Phys Name=[HGCalHEsil] Type=[N]
+Level=[9]: Phys Name=[HGCalHESiliconLayer3] Type=[N]
+Level=[10]: Phys Name=[HGCalHEWafer11Coarse2] Type=[N]
+Level=[11]: Phys Name=[HGCalHEAirGap11Coarse2] Type=[N]
+
+============================================================
+Value obtained from stored global-normal is not a unit vector.
+
+TrackID=158637 ParentID=158602  e-; Ekin(MeV)=0.0471874; time(ns)=13.3437; status=0
+   position(mm): (-1044.47,-488.1,3798.56); direction: (0.548201,-0.127858,0.826516)
+   PhysicalVolume: HGCalHEAirGap11Coarse2; material: Air
+   stepNumber=28; stepLength(mm)=7.95232e-06; weight=1; creatorProcess: compt; modelID=35 
+*** This is just a warning message. ***
+-------- WWWW -------- G4Exception-END --------- WWWW -------
+
+%MSG
+Begin processing the 857th record. Run 1, Event 857, LumiSection 1 on stream 0 at 31-Jul-2022 23:18:29.061 KST
+Begin processing the 858th record. Run 1, Event 858, LumiSection 1 on stream 0 at 31-Jul-2022 23:18:31.743 KST
+Begin processing the 859th record. Run 1, Event 859, LumiSection 1 on stream 0 at 31-Jul-2022 23:18:36.705 KST
+Begin processing the 860th record. Run 1, Event 860, LumiSection 1 on stream 0 at 31-Jul-2022 23:18:39.647 KST
+Begin processing the 861st record. Run 1, Event 861, LumiSection 1 on stream 0 at 31-Jul-2022 23:18:42.056 KST
+Begin processing the 862nd record. Run 1, Event 862, LumiSection 1 on stream 0 at 31-Jul-2022 23:18:45.349 KST
+Begin processing the 863rd record. Run 1, Event 863, LumiSection 1 on stream 0 at 31-Jul-2022 23:18:47.360 KST
+Begin processing the 864th record. Run 1, Event 864, LumiSection 1 on stream 0 at 31-Jul-2022 23:18:50.073 KST
+Begin processing the 865th record. Run 1, Event 865, LumiSection 1 on stream 0 at 31-Jul-2022 23:18:54.069 KST
+Begin processing the 866th record. Run 1, Event 866, LumiSection 1 on stream 0 at 31-Jul-2022 23:18:58.386 KST
+Begin processing the 867th record. Run 1, Event 867, LumiSection 1 on stream 0 at 31-Jul-2022 23:19:02.532 KST
+Begin processing the 868th record. Run 1, Event 868, LumiSection 1 on stream 0 at 31-Jul-2022 23:19:06.366 KST
+Begin processing the 869th record. Run 1, Event 869, LumiSection 1 on stream 0 at 31-Jul-2022 23:19:09.120 KST
+Begin processing the 870th record. Run 1, Event 870, LumiSection 1 on stream 0 at 31-Jul-2022 23:19:15.911 KST
+Begin processing the 871st record. Run 1, Event 871, LumiSection 1 on stream 0 at 31-Jul-2022 23:19:20.946 KST
+Begin processing the 872nd record. Run 1, Event 872, LumiSection 1 on stream 0 at 31-Jul-2022 23:19:24.419 KST
+Begin processing the 873rd record. Run 1, Event 873, LumiSection 1 on stream 0 at 31-Jul-2022 23:19:26.663 KST
+Begin processing the 874th record. Run 1, Event 874, LumiSection 1 on stream 0 at 31-Jul-2022 23:19:29.268 KST
+Begin processing the 875th record. Run 1, Event 875, LumiSection 1 on stream 0 at 31-Jul-2022 23:19:32.443 KST
+Begin processing the 876th record. Run 1, Event 876, LumiSection 1 on stream 0 at 31-Jul-2022 23:19:35.728 KST
+Begin processing the 877th record. Run 1, Event 877, LumiSection 1 on stream 0 at 31-Jul-2022 23:19:37.704 KST
+Begin processing the 878th record. Run 1, Event 878, LumiSection 1 on stream 0 at 31-Jul-2022 23:19:40.437 KST
+Begin processing the 879th record. Run 1, Event 879, LumiSection 1 on stream 0 at 31-Jul-2022 23:19:44.260 KST
+Begin processing the 880th record. Run 1, Event 880, LumiSection 1 on stream 0 at 31-Jul-2022 23:19:46.947 KST
+Begin processing the 881st record. Run 1, Event 881, LumiSection 1 on stream 0 at 31-Jul-2022 23:19:51.689 KST
+Begin processing the 882nd record. Run 1, Event 882, LumiSection 1 on stream 0 at 31-Jul-2022 23:19:54.589 KST
+Begin processing the 883rd record. Run 1, Event 883, LumiSection 1 on stream 0 at 31-Jul-2022 23:19:56.603 KST
+Begin processing the 884th record. Run 1, Event 884, LumiSection 1 on stream 0 at 31-Jul-2022 23:19:59.156 KST
+Begin processing the 885th record. Run 1, Event 885, LumiSection 1 on stream 0 at 31-Jul-2022 23:20:02.360 KST
+Begin processing the 886th record. Run 1, Event 886, LumiSection 1 on stream 0 at 31-Jul-2022 23:20:08.651 KST
+Begin processing the 887th record. Run 1, Event 887, LumiSection 1 on stream 0 at 31-Jul-2022 23:20:12.185 KST
+Begin processing the 888th record. Run 1, Event 888, LumiSection 1 on stream 0 at 31-Jul-2022 23:20:15.464 KST
+Begin processing the 889th record. Run 1, Event 889, LumiSection 1 on stream 0 at 31-Jul-2022 23:20:17.572 KST
+Begin processing the 890th record. Run 1, Event 890, LumiSection 1 on stream 0 at 31-Jul-2022 23:20:20.925 KST
+Begin processing the 891st record. Run 1, Event 891, LumiSection 1 on stream 0 at 31-Jul-2022 23:20:24.237 KST
+Begin processing the 892nd record. Run 1, Event 892, LumiSection 1 on stream 0 at 31-Jul-2022 23:20:29.600 KST
+Begin processing the 893rd record. Run 1, Event 893, LumiSection 1 on stream 0 at 31-Jul-2022 23:20:46.916 KST
+Begin processing the 894th record. Run 1, Event 894, LumiSection 1 on stream 0 at 31-Jul-2022 23:20:48.617 KST
+Begin processing the 895th record. Run 1, Event 895, LumiSection 1 on stream 0 at 31-Jul-2022 23:20:53.075 KST
+Begin processing the 896th record. Run 1, Event 896, LumiSection 1 on stream 0 at 31-Jul-2022 23:20:55.726 KST
+Begin processing the 897th record. Run 1, Event 897, LumiSection 1 on stream 0 at 31-Jul-2022 23:21:00.185 KST
+Begin processing the 898th record. Run 1, Event 898, LumiSection 1 on stream 0 at 31-Jul-2022 23:21:03.655 KST
+Begin processing the 899th record. Run 1, Event 899, LumiSection 1 on stream 0 at 31-Jul-2022 23:21:06.655 KST
+Begin processing the 900th record. Run 1, Event 900, LumiSection 1 on stream 0 at 31-Jul-2022 23:21:10.784 KST
+Begin processing the 901st record. Run 1, Event 901, LumiSection 1 on stream 0 at 31-Jul-2022 23:21:12.787 KST
+Begin processing the 902nd record. Run 1, Event 902, LumiSection 1 on stream 0 at 31-Jul-2022 23:21:14.857 KST
+Begin processing the 903rd record. Run 1, Event 903, LumiSection 1 on stream 0 at 31-Jul-2022 23:21:17.200 KST
+Begin processing the 904th record. Run 1, Event 904, LumiSection 1 on stream 0 at 31-Jul-2022 23:21:19.957 KST
+Begin processing the 905th record. Run 1, Event 905, LumiSection 1 on stream 0 at 31-Jul-2022 23:21:28.509 KST
+Begin processing the 906th record. Run 1, Event 906, LumiSection 1 on stream 0 at 31-Jul-2022 23:21:33.427 KST
+Begin processing the 907th record. Run 1, Event 907, LumiSection 1 on stream 0 at 31-Jul-2022 23:21:37.148 KST
+Begin processing the 908th record. Run 1, Event 908, LumiSection 1 on stream 0 at 31-Jul-2022 23:21:43.192 KST
+Begin processing the 909th record. Run 1, Event 909, LumiSection 1 on stream 0 at 31-Jul-2022 23:21:45.041 KST
+Begin processing the 910th record. Run 1, Event 910, LumiSection 1 on stream 0 at 31-Jul-2022 23:21:50.970 KST
+Begin processing the 911th record. Run 1, Event 911, LumiSection 1 on stream 0 at 31-Jul-2022 23:21:54.564 KST
+Begin processing the 912th record. Run 1, Event 912, LumiSection 1 on stream 0 at 31-Jul-2022 23:21:58.656 KST
+Begin processing the 913th record. Run 1, Event 913, LumiSection 1 on stream 0 at 31-Jul-2022 23:22:03.080 KST
+Begin processing the 914th record. Run 1, Event 914, LumiSection 1 on stream 0 at 31-Jul-2022 23:22:06.240 KST
+Begin processing the 915th record. Run 1, Event 915, LumiSection 1 on stream 0 at 31-Jul-2022 23:22:08.852 KST
+Begin processing the 916th record. Run 1, Event 916, LumiSection 1 on stream 0 at 31-Jul-2022 23:22:12.286 KST
+Begin processing the 917th record. Run 1, Event 917, LumiSection 1 on stream 0 at 31-Jul-2022 23:22:15.696 KST
+Begin processing the 918th record. Run 1, Event 918, LumiSection 1 on stream 0 at 31-Jul-2022 23:22:18.150 KST
+Begin processing the 919th record. Run 1, Event 919, LumiSection 1 on stream 0 at 31-Jul-2022 23:22:20.671 KST
+Begin processing the 920th record. Run 1, Event 920, LumiSection 1 on stream 0 at 31-Jul-2022 23:22:22.718 KST
+Begin processing the 921st record. Run 1, Event 921, LumiSection 1 on stream 0 at 31-Jul-2022 23:22:26.398 KST
+Begin processing the 922nd record. Run 1, Event 922, LumiSection 1 on stream 0 at 31-Jul-2022 23:22:28.552 KST
+Begin processing the 923rd record. Run 1, Event 923, LumiSection 1 on stream 0 at 31-Jul-2022 23:22:30.342 KST
+Begin processing the 924th record. Run 1, Event 924, LumiSection 1 on stream 0 at 31-Jul-2022 23:22:32.475 KST
+Begin processing the 925th record. Run 1, Event 925, LumiSection 1 on stream 0 at 31-Jul-2022 23:22:35.824 KST
+Begin processing the 926th record. Run 1, Event 926, LumiSection 1 on stream 0 at 31-Jul-2022 23:22:39.037 KST
+Begin processing the 927th record. Run 1, Event 927, LumiSection 1 on stream 0 at 31-Jul-2022 23:22:42.706 KST
+Begin processing the 928th record. Run 1, Event 928, LumiSection 1 on stream 0 at 31-Jul-2022 23:22:45.049 KST
+Begin processing the 929th record. Run 1, Event 929, LumiSection 1 on stream 0 at 31-Jul-2022 23:22:50.416 KST
+Begin processing the 930th record. Run 1, Event 930, LumiSection 1 on stream 0 at 31-Jul-2022 23:22:52.725 KST
+Begin processing the 931st record. Run 1, Event 931, LumiSection 1 on stream 0 at 31-Jul-2022 23:22:56.435 KST
+Begin processing the 932nd record. Run 1, Event 932, LumiSection 1 on stream 0 at 31-Jul-2022 23:22:59.622 KST
+Begin processing the 933rd record. Run 1, Event 933, LumiSection 1 on stream 0 at 31-Jul-2022 23:23:02.148 KST
+Begin processing the 934th record. Run 1, Event 934, LumiSection 1 on stream 0 at 31-Jul-2022 23:23:05.957 KST
+Begin processing the 935th record. Run 1, Event 935, LumiSection 1 on stream 0 at 31-Jul-2022 23:23:07.472 KST
+Begin processing the 936th record. Run 1, Event 936, LumiSection 1 on stream 0 at 31-Jul-2022 23:23:12.648 KST
+Begin processing the 937th record. Run 1, Event 937, LumiSection 1 on stream 0 at 31-Jul-2022 23:23:16.176 KST
+Begin processing the 938th record. Run 1, Event 938, LumiSection 1 on stream 0 at 31-Jul-2022 23:23:20.547 KST
+Begin processing the 939th record. Run 1, Event 939, LumiSection 1 on stream 0 at 31-Jul-2022 23:23:23.111 KST
+Begin processing the 940th record. Run 1, Event 940, LumiSection 1 on stream 0 at 31-Jul-2022 23:23:30.948 KST
+Begin processing the 941st record. Run 1, Event 941, LumiSection 1 on stream 0 at 31-Jul-2022 23:23:36.046 KST
+Begin processing the 942nd record. Run 1, Event 942, LumiSection 1 on stream 0 at 31-Jul-2022 23:23:40.077 KST
+Begin processing the 943rd record. Run 1, Event 943, LumiSection 1 on stream 0 at 31-Jul-2022 23:23:46.974 KST
+Begin processing the 944th record. Run 1, Event 944, LumiSection 1 on stream 0 at 31-Jul-2022 23:23:48.982 KST
+Begin processing the 945th record. Run 1, Event 945, LumiSection 1 on stream 0 at 31-Jul-2022 23:23:52.648 KST
+Begin processing the 946th record. Run 1, Event 946, LumiSection 1 on stream 0 at 31-Jul-2022 23:23:56.505 KST
+Begin processing the 947th record. Run 1, Event 947, LumiSection 1 on stream 0 at 31-Jul-2022 23:23:59.082 KST
+Begin processing the 948th record. Run 1, Event 948, LumiSection 1 on stream 0 at 31-Jul-2022 23:24:01.541 KST
+Begin processing the 949th record. Run 1, Event 949, LumiSection 1 on stream 0 at 31-Jul-2022 23:24:04.941 KST
+Begin processing the 950th record. Run 1, Event 950, LumiSection 1 on stream 0 at 31-Jul-2022 23:24:08.263 KST
+Begin processing the 951st record. Run 1, Event 951, LumiSection 1 on stream 0 at 31-Jul-2022 23:24:23.550 KST
+Begin processing the 952nd record. Run 1, Event 952, LumiSection 1 on stream 0 at 31-Jul-2022 23:24:26.972 KST
+Begin processing the 953rd record. Run 1, Event 953, LumiSection 1 on stream 0 at 31-Jul-2022 23:24:28.855 KST
+Begin processing the 954th record. Run 1, Event 954, LumiSection 1 on stream 0 at 31-Jul-2022 23:24:35.095 KST
+Begin processing the 955th record. Run 1, Event 955, LumiSection 1 on stream 0 at 31-Jul-2022 23:24:40.736 KST
+Begin processing the 956th record. Run 1, Event 956, LumiSection 1 on stream 0 at 31-Jul-2022 23:24:43.535 KST
+Begin processing the 957th record. Run 1, Event 957, LumiSection 1 on stream 0 at 31-Jul-2022 23:24:45.785 KST
+Begin processing the 958th record. Run 1, Event 958, LumiSection 1 on stream 0 at 31-Jul-2022 23:24:48.982 KST
+Begin processing the 959th record. Run 1, Event 959, LumiSection 1 on stream 0 at 31-Jul-2022 23:24:52.828 KST
+Begin processing the 960th record. Run 1, Event 960, LumiSection 1 on stream 0 at 31-Jul-2022 23:24:55.021 KST
+Begin processing the 961st record. Run 1, Event 961, LumiSection 1 on stream 0 at 31-Jul-2022 23:24:57.382 KST
+Begin processing the 962nd record. Run 1, Event 962, LumiSection 1 on stream 0 at 31-Jul-2022 23:25:02.374 KST
+Begin processing the 963rd record. Run 1, Event 963, LumiSection 1 on stream 0 at 31-Jul-2022 23:25:04.650 KST
+Begin processing the 964th record. Run 1, Event 964, LumiSection 1 on stream 0 at 31-Jul-2022 23:25:06.449 KST
+Begin processing the 965th record. Run 1, Event 965, LumiSection 1 on stream 0 at 31-Jul-2022 23:25:09.713 KST
+Begin processing the 966th record. Run 1, Event 966, LumiSection 1 on stream 0 at 31-Jul-2022 23:25:12.974 KST
+Begin processing the 967th record. Run 1, Event 967, LumiSection 1 on stream 0 at 31-Jul-2022 23:25:14.769 KST
+Begin processing the 968th record. Run 1, Event 968, LumiSection 1 on stream 0 at 31-Jul-2022 23:25:18.236 KST
+Begin processing the 969th record. Run 1, Event 969, LumiSection 1 on stream 0 at 31-Jul-2022 23:25:20.288 KST
+Begin processing the 970th record. Run 1, Event 970, LumiSection 1 on stream 0 at 31-Jul-2022 23:25:22.428 KST
+Begin processing the 971st record. Run 1, Event 971, LumiSection 1 on stream 0 at 31-Jul-2022 23:25:25.486 KST
+Begin processing the 972nd record. Run 1, Event 972, LumiSection 1 on stream 0 at 31-Jul-2022 23:25:29.633 KST
+Begin processing the 973rd record. Run 1, Event 973, LumiSection 1 on stream 0 at 31-Jul-2022 23:25:33.075 KST
+Begin processing the 974th record. Run 1, Event 974, LumiSection 1 on stream 0 at 31-Jul-2022 23:25:38.026 KST
+Begin processing the 975th record. Run 1, Event 975, LumiSection 1 on stream 0 at 31-Jul-2022 23:25:41.272 KST
+Begin processing the 976th record. Run 1, Event 976, LumiSection 1 on stream 0 at 31-Jul-2022 23:25:44.678 KST
+Begin processing the 977th record. Run 1, Event 977, LumiSection 1 on stream 0 at 31-Jul-2022 23:25:49.411 KST
+Begin processing the 978th record. Run 1, Event 978, LumiSection 1 on stream 0 at 31-Jul-2022 23:25:56.204 KST
+Begin processing the 979th record. Run 1, Event 979, LumiSection 1 on stream 0 at 31-Jul-2022 23:25:59.560 KST
+Begin processing the 980th record. Run 1, Event 980, LumiSection 1 on stream 0 at 31-Jul-2022 23:26:03.048 KST
+Begin processing the 981st record. Run 1, Event 981, LumiSection 1 on stream 0 at 31-Jul-2022 23:26:05.605 KST
+Begin processing the 982nd record. Run 1, Event 982, LumiSection 1 on stream 0 at 31-Jul-2022 23:26:08.048 KST
+Begin processing the 983rd record. Run 1, Event 983, LumiSection 1 on stream 0 at 31-Jul-2022 23:26:10.224 KST
+Begin processing the 984th record. Run 1, Event 984, LumiSection 1 on stream 0 at 31-Jul-2022 23:26:14.908 KST
+Begin processing the 985th record. Run 1, Event 985, LumiSection 1 on stream 0 at 31-Jul-2022 23:26:17.297 KST
+Begin processing the 986th record. Run 1, Event 986, LumiSection 1 on stream 0 at 31-Jul-2022 23:26:20.718 KST
+Begin processing the 987th record. Run 1, Event 987, LumiSection 1 on stream 0 at 31-Jul-2022 23:26:23.185 KST
+Begin processing the 988th record. Run 1, Event 988, LumiSection 1 on stream 0 at 31-Jul-2022 23:26:26.107 KST
+Begin processing the 989th record. Run 1, Event 989, LumiSection 1 on stream 0 at 31-Jul-2022 23:26:28.351 KST
+Begin processing the 990th record. Run 1, Event 990, LumiSection 1 on stream 0 at 31-Jul-2022 23:26:32.792 KST
+Begin processing the 991st record. Run 1, Event 991, LumiSection 1 on stream 0 at 31-Jul-2022 23:26:35.844 KST
+Begin processing the 992nd record. Run 1, Event 992, LumiSection 1 on stream 0 at 31-Jul-2022 23:26:41.297 KST
+Begin processing the 993rd record. Run 1, Event 993, LumiSection 1 on stream 0 at 31-Jul-2022 23:26:46.324 KST
+Begin processing the 994th record. Run 1, Event 994, LumiSection 1 on stream 0 at 31-Jul-2022 23:26:50.055 KST
+Begin processing the 995th record. Run 1, Event 995, LumiSection 1 on stream 0 at 31-Jul-2022 23:26:53.593 KST
+Begin processing the 996th record. Run 1, Event 996, LumiSection 1 on stream 0 at 31-Jul-2022 23:26:56.369 KST
+Begin processing the 997th record. Run 1, Event 997, LumiSection 1 on stream 0 at 31-Jul-2022 23:26:59.006 KST
+Begin processing the 998th record. Run 1, Event 998, LumiSection 1 on stream 0 at 31-Jul-2022 23:27:03.060 KST
+Begin processing the 999th record. Run 1, Event 999, LumiSection 1 on stream 0 at 31-Jul-2022 23:27:05.666 KST
+Begin processing the 1000th record. Run 1, Event 1000, LumiSection 1 on stream 0 at 31-Jul-2022 23:27:08.605 KST
+
+ *-------  PYTHIA Error and Warning Messages Statistics  ----------------------------------------------------------* 
+ |                                                                                                                 | 
+ |  times   message                                                                                                | 
+ |                                                                                                                 | 
+ |      0   no errors or warnings to report                                                                        | 
+ |                                                                                                                 | 
+ *-------  End PYTHIA Error and Warning Messages Statistics  ------------------------------------------------------* 
+
+ *-------  PYTHIA Error and Warning Messages Statistics  ----------------------------------------------------------* 
+ |                                                                                                                 | 
+ |  times   message                                                                                                | 
+ |                                                                                                                 | 
+ |      0   no errors or warnings to report                                                                        | 
+ |                                                                                                                 | 
+ *-------  End PYTHIA Error and Warning Messages Statistics  ------------------------------------------------------* 
+
+------------------------------------
+GenXsecAnalyzer:
+------------------------------------
+Before Filter: total cross section = 0.000e+00 +- 0.000e+00 pb
+Filter efficiency (taking into account weights)= (1000) / (1000) = 1.000e+00 +- 0.000e+00
+Filter efficiency (event-level)= (1000) / (1000) = 1.000e+00 +- 0.000e+00    [TO BE USED IN MCM]
+
+After filter: final cross section = 0.000e+00 +- 0.000e+00 pb
+After filter: final fraction of events with negative weights = 0.000e+00 +- 0.000e+00
+After filter: final equivalent lumi for 1M events (1/fb) = 0.000e+00 +- 0.000e+00
