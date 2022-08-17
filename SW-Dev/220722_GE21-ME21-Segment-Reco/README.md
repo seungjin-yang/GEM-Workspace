@@ -11,4 +11,6 @@ cd ${CMSSW_VERSION}/src
 # eval `scramv1 runtime -sh`
 cmsenv
 git-cms-addpkg RecoLocalMuon/GEMCSCSegment
+git-cms-addpkg DQM/GEM
+git-cms-addpkg DQM/Integration
 ```
