@@ -8,9 +8,13 @@ config.section_('JobType')
 config.JobType.pluginName = 'Analysis'
 
 config.section_('Data')
-config.Data.unitsPerJob = 1
+config.Data.publication = False
+
+# config.Data.splitting = 'Automatic'
+
 config.Data.splitting = 'FileBased'
-config.Data.publication = True
+config.Data.unitsPerJob = 1
+
 
 config.section_('Site')
 config.Site.storageSite = 'T3_KR_UOS'

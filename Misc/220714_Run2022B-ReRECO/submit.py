@@ -90,7 +90,7 @@ def submit(request_path, dry_run=False):
             continue
         run_range = ','.join(map(str, run_list))
 
-        output_dataset_tag = f'GEM-reRECO-GEM-only__{processed_dataset}__{data_tier}'
+        output_dataset_tag = f'GEM-RECO__from-{processed_dataset}__{data_tier}'
         request_name = output_dataset_tag
 
         args = (

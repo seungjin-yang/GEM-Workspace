@@ -7,7 +7,7 @@
         354509
     ],
     "dataset": [
-        "/MinimumBias/TODO/TODO"
+        "/MinimumBias/Run2022B-v1/RAW"
     ],
-    "pset_name": "./reRECO_ppEra_Run3_cfg.py"
+    "pset_name": "./RunExpressProcessingCfg.py"
 }
