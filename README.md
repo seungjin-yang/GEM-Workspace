@@ -29,6 +29,7 @@ process.MessageLogger.debugModules = ["*"]
 from FWCore.ParameterSet.VarParsing import VarParsing
 options = VarParsing('analysis')
 options.parseArguments()
+process.maxEvents.input = options.maxEvents
 process.source.fileNames = options.inputFiles
 ```
 
