@@ -1,3 +1,9 @@
+-  /afs/cern.ch/user/f/fivone/public/HV_Fetch_Data/DCS_Fetcher 
+- `python GEMDCSP5Monitor.pyc 2022-04-01_15:22:31 2022-04-02_15:22:31 HV 0 -c all`
+- https://github.com/gem-dpg-pfa/PFA_MaskGenerator
+
+
+
 ## [Email thread] Tool to retrieve HV data from database 
 ### From: [Francesco Ivone](francesco.ivone@cern.ch); Sent: Wednesday, August 17, 2022 1:36 AM
 > Hi, </br>
