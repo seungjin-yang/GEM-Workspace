@@ -6,9 +6,18 @@ conda activate python-decompiler-py39
 pip install uncompyle6
 ```
 
-### decompile and translate to python3.9
+### decompile
 ```bash
 uncompyle6 GEMDCSP5Monitor.pyc > GEMDCSP5Monitor.py
-2to3-3.9 GEMDCSP5Monitor.py --write --nobackups --no-diffs
+```
+
+the output code has the wrong indent but `dbName` and `dbAccount` have been successfully restored.
+
+- https://github.com/gem-dpg-pfa/P5GEMOfflineMonitor/blob/master/GEMDCSP5Monitor.py
+
+
+```yaml
+dbName: cms_omds_adg
+dbAccount: CMS_COND_GENERAL_R/p3105rof@
 ```
 
