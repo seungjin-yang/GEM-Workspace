@@ -2,6 +2,10 @@
 
 # https://cms-pdmv.cern.ch/relval/api/relvals/get_cmsdriver/CMSSW_12_5_0_pre4__AUTOMATED_fullsim_PU_2022_14TeV_RECOonly-ZMM_14-00002
 
+cd ../../../CMSSW_12_5_0_pre4
+eval `scramv1 runtime -sh`
+cd -
+
 cmsDriver.py step2 \
 	--conditions auto:phase1_2022_realistic \
 	--datatier GEN-SIM-RECO \
@@ -12,5 +16,5 @@ cmsDriver.py step2 \
 	--geometry DB:Extended \
 	--no_exec \
 	--number -1 \
-	--python_filename step_2_cfg.py \
+	--python_filename runRecoWithPSimHit.py \
 	--step RAW2DIGI,L1Reco,RECO,RECOSIM
