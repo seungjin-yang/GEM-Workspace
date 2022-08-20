@@ -10,6 +10,7 @@ $ dasgoclient -query="file dataset=/Muon/Run2022C-v1/RAW run=357442" | head -n 1
 /store/data/Run2022C/Muon/RAW/v1/000/357/442/00000/ede3683c-0a20-495c-9e70-df0958fa2256.root
 $ dasgoclient -query="site file=/store/data/Run2022C/Muon/RAW/v1/000/357/442/00000/ede3683c-0a20-495c-9e70-df0958fa2256.root"
 T0_CH_CERN_Disk
+$ xrdcp -v root://eoscms.cern.ch//eos/cms/tier0//store/data/Run2022C/Muon/RAW/v1/000/357/442/00000/ede3683c-0a20-495c-9e70-df0958fa2256.root .
 ```
 
 ```python
@@ -29,4 +30,3 @@ python3 ${CMSSW_RELEASE_BASE}/src/Configuration/DataProcessing/test/RunPromptRec
     --reco \
     --lfn /store/whatever
 ```
-

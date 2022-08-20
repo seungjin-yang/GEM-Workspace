@@ -1,6 +1,12 @@
 # GEM-Workspace
-git config --local status.showUntrackedFiles no
-https://cmsweb.cern.ch/dqm/relval/data/browse/ROOT/
+
+## Unseful links
+- https://cmsweb.cern.ch/dqm/offline/data/browse/ROOT/OfflineData/
+- https://cmsoms.cern.ch/agg/api/v1/version/endpoints
+
+
+
+
 
 
 ## Snippents
@@ -39,4 +45,10 @@ process.RECOSIMoutput.outputCommands.extend([
     'keep *_*GEM*_*_*',
     'keep *_*gem*_*_*',
 ])
+```
+
+
+### how to disable GPUs?
+```python
+process.options.accelerators = ["cpu"]
 ```

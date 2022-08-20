@@ -17,5 +17,5 @@
         "/SingleMuon/Run2022B-ZMu-PromptReco-v1/RAW-RECO",
         "/SingleMuon/Run2022B-LogError-PromptReco-v1/RAW-RECO"
     ],
-    "pset_name": "./reRECO_ppEra_Run3_cfg.py"
+    "pset_name": "./cfg/adding-GEM_ppEra_Run3_cfg.py"
 }
