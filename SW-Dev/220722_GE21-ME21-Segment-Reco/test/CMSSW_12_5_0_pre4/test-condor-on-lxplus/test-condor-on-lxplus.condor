@@ -15,4 +15,4 @@ requirements = (OpSysAndVer =?= "CentOS7")
 +JobFlavour = "espresso"
 RequestCpus = 1
 
-queue input_file_lfn from ./filelist.txt
+queue input_file_lfn from ../reco-with-relval/filelist.txt
