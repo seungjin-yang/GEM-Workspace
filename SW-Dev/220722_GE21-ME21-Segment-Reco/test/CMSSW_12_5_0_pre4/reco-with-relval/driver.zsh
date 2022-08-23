@@ -16,5 +16,4 @@ cmsDriver.py step2 \
 	--geometry DB:Extended \
 	--no_exec \
 	--number -1 \
-	--python_filename runRecoWithPSimHit.py \
-	--step RAW2DIGI,L1Reco,RECO,RECOSIM
+	--step RAW2DIGI,L1Reco,RECO
