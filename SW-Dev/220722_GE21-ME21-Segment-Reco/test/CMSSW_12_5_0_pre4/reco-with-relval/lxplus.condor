@@ -1,0 +1,18 @@
+JobBatchName          = "GEM_DQM_step2_RAW2DIGI_L1Reco_RECO_GEMCSCSegment"
+executable            = ./run.sh
+arguments             = $(input_file_lfn)
+transfer_input_files  = ./step2_RAW2DIGI_L1Reco_RECO_GEMCSCSegment.py
+
+output_destination = root://eosuser.cern.ch//eos/user/s/seyang/store/GEM/SW-Dev/220722_GE21-ME21-Segment-Reco/test/CMSSW_12_5_0_pre4/reco-with-relval
+MY.XRDCP_CREATE_DIR = True
+
+log_dir = ./logs/
+output                = $(log_dir)/$Fn(input_file_lfn).out
+error                 = $(log_dir)/$Fn(input_file_lfn).err
+log                   = $(log_dir)/$Fn(input_file_lfn).log
+
+requirements = (OpSysAndVer =?= "CentOS7")
++JobFlavour = "tomorrow"
+RequestCpus = 1
+
+queue input_file_lfn from ./filelist.txt
