@@ -1,0 +1,1237 @@
+{
+    "data": [
+        {
+            "id": "2011A",
+            "type": "eras",
+            "attributes": {
+                "start_time": "2011-03-13T16:01:57Z",
+                "start_run": 160401,
+                "end_fill": 2040,
+                "start_fill": 1613,
+                "name": "2011A",
+                "end_time": "2011-08-22T16:10:13Z",
+                "end_run": 173692
+            },
+            "relationships": {
+                "fills": {
+                    "links": {
+                        "self": "https://cmsoms.cern.ch/agg/api/v1/eras/2011A/relationships/fills",
+                        "related": "https://cmsoms.cern.ch/agg/api/v1/eras/2011A/fills"
+                    }
+                }
+            },
+            "links": {
+                "self": "https://cmsoms.cern.ch/agg/api/v1/eras/2011A"
+            }
+        },
+        {
+            "id": "2011B",
+            "type": "eras",
+            "attributes": {
+                "start_time": "2011-09-07T11:28:51Z",
+                "start_run": 175828,
+                "end_fill": 2267,
+                "start_fill": 2083,
+                "name": "2011B",
+                "end_time": "2011-10-30T16:31:31Z",
+                "end_run": 180255
+            },
+            "relationships": {
+                "fills": {
+                    "links": {
+                        "self": "https://cmsoms.cern.ch/agg/api/v1/eras/2011B/relationships/fills",
+                        "related": "https://cmsoms.cern.ch/agg/api/v1/eras/2011B/fills"
+                    }
+                }
+            },
+            "links": {
+                "self": "https://cmsoms.cern.ch/agg/api/v1/eras/2011B"
+            }
+        },
+        {
+            "id": "2011HI",
+            "type": "eras",
+            "attributes": {
+                "start_time": "2011-11-12T04:50:18Z",
+                "start_run": 181529,
+                "end_fill": 2351,
+                "start_fill": 2290,
+                "name": "2011HI",
+                "end_time": "2011-12-07T09:25:51Z",
+                "end_run": 183126
+            },
+            "relationships": {
+                "fills": {
+                    "links": {
+                        "self": "https://cmsoms.cern.ch/agg/api/v1/eras/2011HI/relationships/fills",
+                        "related": "https://cmsoms.cern.ch/agg/api/v1/eras/2011HI/fills"
+                    }
+                }
+            },
+            "links": {
+                "self": "https://cmsoms.cern.ch/agg/api/v1/eras/2011HI"
+            }
+        },
+        {
+            "id": "2012A",
+            "type": "eras",
+            "attributes": {
+                "start_time": "2012-04-05T07:56:28Z",
+                "start_run": 190415,
+                "end_fill": 2596,
+                "start_fill": 2471,
+                "name": "2012A",
+                "end_time": "2012-05-08T07:20:06Z",
+                "end_run": 193621
+            },
+            "relationships": {
+                "fills": {
+                    "links": {
+                        "self": "https://cmsoms.cern.ch/agg/api/v1/eras/2012A/relationships/fills",
+                        "related": "https://cmsoms.cern.ch/agg/api/v1/eras/2012A/fills"
+                    }
+                }
+            },
+            "links": {
+                "self": "https://cmsoms.cern.ch/agg/api/v1/eras/2012A"
+            }
+        },
+        {
+            "id": "2012B",
+            "type": "eras",
+            "attributes": {
+                "start_time": "2012-05-10T03:50:22Z",
+                "start_run": 193825,
+                "end_fill": 2739,
+                "start_fill": 2605,
+                "name": "2012B",
+                "end_time": "2012-06-18T11:10:14Z",
+                "end_run": 196536
+            },
+            "relationships": {
+                "fills": {
+                    "links": {
+                        "self": "https://cmsoms.cern.ch/agg/api/v1/eras/2012B/relationships/fills",
+                        "related": "https://cmsoms.cern.ch/agg/api/v1/eras/2012B/fills"
+                    }
+                }
+            },
+            "links": {
+                "self": "https://cmsoms.cern.ch/agg/api/v1/eras/2012B"
+            }
+        },
+        {
+            "id": "2012C",
+            "type": "eras",
+            "attributes": {
+                "start_time": "2012-07-01T23:04:16Z",
+                "start_run": 198022,
+                "end_fill": 3102,
+                "start_fill": 2795,
+                "name": "2012C",
+                "end_time": "2012-09-27T09:57:48Z",
+                "end_run": 203742
+            },
+            "relationships": {
+                "fills": {
+                    "links": {
+                        "self": "https://cmsoms.cern.ch/agg/api/v1/eras/2012C/relationships/fills",
+                        "related": "https://cmsoms.cern.ch/agg/api/v1/eras/2012C/fills"
+                    }
+                }
+            },
+            "links": {
+                "self": "https://cmsoms.cern.ch/agg/api/v1/eras/2012C"
+            }
+        },
+        {
+            "id": "2012D",
+            "type": "eras",
+            "attributes": {
+                "start_time": "2012-09-28T05:22:35Z",
+                "start_run": 203777,
+                "end_fill": 3453,
+                "start_fill": 3108,
+                "name": "2012D",
+                "end_time": "2012-12-16T22:08:59Z",
+                "end_run": 209151
+            },
+            "relationships": {
+                "fills": {
+                    "links": {
+                        "self": "https://cmsoms.cern.ch/agg/api/v1/eras/2012D/relationships/fills",
+                        "related": "https://cmsoms.cern.ch/agg/api/v1/eras/2012D/fills"
+                    }
+                }
+            },
+            "links": {
+                "self": "https://cmsoms.cern.ch/agg/api/v1/eras/2012D"
+            }
+        },
+        {
+            "id": "2013HI",
+            "type": "eras",
+            "attributes": {
+                "start_time": "2013-01-20T09:56:16Z",
+                "start_run": 210491,
+                "end_fill": 3544,
+                "start_fill": 3474,
+                "name": "2013HI",
+                "end_time": "2013-02-10T05:11:51Z",
+                "end_run": 211633
+            },
+            "relationships": {
+                "fills": {
+                    "links": {
+                        "self": "https://cmsoms.cern.ch/agg/api/v1/eras/2013HI/relationships/fills",
+                        "related": "https://cmsoms.cern.ch/agg/api/v1/eras/2013HI/fills"
+                    }
+                }
+            },
+            "links": {
+                "self": "https://cmsoms.cern.ch/agg/api/v1/eras/2013HI"
+            }
+        },
+        {
+            "id": "2013A",
+            "type": "eras",
+            "attributes": {
+                "start_time": "2013-02-11T16:33:54Z",
+                "start_run": 211730,
+                "end_fill": 3564,
+                "start_fill": 3555,
+                "name": "2013A",
+                "end_time": "2013-02-14T06:26:26Z",
+                "end_run": 211831
+            },
+            "relationships": {
+                "fills": {
+                    "links": {
+                        "self": "https://cmsoms.cern.ch/agg/api/v1/eras/2013A/relationships/fills",
+                        "related": "https://cmsoms.cern.ch/agg/api/v1/eras/2013A/fills"
+                    }
+                }
+            },
+            "links": {
+                "self": "https://cmsoms.cern.ch/agg/api/v1/eras/2013A"
+            }
+        },
+        {
+            "id": "2015A",
+            "type": "eras",
+            "attributes": {
+                "start_time": "2015-06-09T20:17:04Z",
+                "start_run": 247595,
+                "end_fill": 3965,
+                "start_fill": 3846,
+                "name": "2015A",
+                "end_time": "2015-07-06T00:55:16Z",
+                "end_run": 250932
+            },
+            "relationships": {
+                "fills": {
+                    "links": {
+                        "self": "https://cmsoms.cern.ch/agg/api/v1/eras/2015A/relationships/fills",
+                        "related": "https://cmsoms.cern.ch/agg/api/v1/eras/2015A/fills"
+                    }
+                }
+            },
+            "links": {
+                "self": "https://cmsoms.cern.ch/agg/api/v1/eras/2015A"
+            }
+        },
+        {
+            "id": "2015B",
+            "type": "eras",
+            "attributes": {
+                "start_time": "2015-07-06T09:04:03Z",
+                "start_run": 250943,
+                "end_fill": 4167,
+                "start_fill": 3968,
+                "name": "2015B",
+                "end_time": "2015-08-07T06:33:14Z",
+                "end_run": 253620
+            },
+            "relationships": {
+                "fills": {
+                    "links": {
+                        "self": "https://cmsoms.cern.ch/agg/api/v1/eras/2015B/relationships/fills",
+                        "related": "https://cmsoms.cern.ch/agg/api/v1/eras/2015B/fills"
+                    }
+                }
+            },
+            "links": {
+                "self": "https://cmsoms.cern.ch/agg/api/v1/eras/2015B"
+            }
+        },
+        {
+            "id": "2015C",
+            "type": "eras",
+            "attributes": {
+                "start_time": "2015-08-07T12:15:11Z",
+                "start_run": 253659,
+                "end_fill": 4364,
+                "start_fill": 4170,
+                "name": "2015C",
+                "end_time": "2015-09-15T03:17:05Z",
+                "end_run": 256467
+            },
+            "relationships": {
+                "fills": {
+                    "links": {
+                        "self": "https://cmsoms.cern.ch/agg/api/v1/eras/2015C/relationships/fills",
+                        "related": "https://cmsoms.cern.ch/agg/api/v1/eras/2015C/fills"
+                    }
+                }
+            },
+            "links": {
+                "self": "https://cmsoms.cern.ch/agg/api/v1/eras/2015C"
+            }
+        },
+        {
+            "id": "2015D",
+            "type": "eras",
+            "attributes": {
+                "start_time": "2015-09-16T10:08:26Z",
+                "start_run": 256620,
+                "end_fill": 4569,
+                "start_fill": 4376,
+                "name": "2015D",
+                "end_time": "2015-11-03T07:16:10Z",
+                "end_run": 260648
+            },
+            "relationships": {
+                "fills": {
+                    "links": {
+                        "self": "https://cmsoms.cern.ch/agg/api/v1/eras/2015D/relationships/fills",
+                        "related": "https://cmsoms.cern.ch/agg/api/v1/eras/2015D/fills"
+                    }
+                }
+            },
+            "links": {
+                "self": "https://cmsoms.cern.ch/agg/api/v1/eras/2015D"
+            }
+        },
+        {
+            "id": "2016A",
+            "type": "eras",
+            "attributes": {
+                "start_time": "2016-04-22T21:41:30Z",
+                "start_run": 271031,
+                "end_fill": 4874,
+                "start_fill": 4851,
+                "name": "2016A",
+                "end_time": "2016-04-27T10:19:54Z",
+                "end_run": 271660
+            },
+            "relationships": {
+                "fills": {
+                    "links": {
+                        "self": "https://cmsoms.cern.ch/agg/api/v1/eras/2016A/relationships/fills",
+                        "related": "https://cmsoms.cern.ch/agg/api/v1/eras/2016A/fills"
+                    }
+                }
+            },
+            "links": {
+                "self": "https://cmsoms.cern.ch/agg/api/v1/eras/2016A"
+            }
+        },
+        {
+            "id": "2016B",
+            "type": "eras",
+            "attributes": {
+                "start_time": "2016-04-28T20:33:55Z",
+                "start_run": 272006,
+                "end_fill": 5030,
+                "start_fill": 4879,
+                "name": "2016B",
+                "end_time": "2016-06-21T07:02:01Z",
+                "end_run": 275376
+            },
+            "relationships": {
+                "fills": {
+                    "links": {
+                        "self": "https://cmsoms.cern.ch/agg/api/v1/eras/2016B/relationships/fills",
+                        "related": "https://cmsoms.cern.ch/agg/api/v1/eras/2016B/fills"
+                    }
+                }
+            },
+            "links": {
+                "self": "https://cmsoms.cern.ch/agg/api/v1/eras/2016B"
+            }
+        },
+        {
+            "id": "2016C",
+            "type": "eras",
+            "attributes": {
+                "start_time": "2016-06-24T00:50:03Z",
+                "start_run": 275653,
+                "end_fill": 5071,
+                "start_fill": 5038,
+                "name": "2016C",
+                "end_time": "2016-07-04T08:18:15Z",
+                "end_run": 276283
+            },
+            "relationships": {
+                "fills": {
+                    "links": {
+                        "self": "https://cmsoms.cern.ch/agg/api/v1/eras/2016C/relationships/fills",
+                        "related": "https://cmsoms.cern.ch/agg/api/v1/eras/2016C/fills"
+                    }
+                }
+            },
+            "links": {
+                "self": "https://cmsoms.cern.ch/agg/api/v1/eras/2016C"
+            }
+        },
+        {
+            "id": "2016D",
+            "type": "eras",
+            "attributes": {
+                "start_time": "2016-07-04T08:33:45Z",
+                "start_run": 276288,
+                "end_fill": 5095,
+                "start_fill": 5072,
+                "name": "2016D",
+                "end_time": "2016-07-15T04:56:16Z",
+                "end_run": 276811
+            },
+            "relationships": {
+                "fills": {
+                    "links": {
+                        "self": "https://cmsoms.cern.ch/agg/api/v1/eras/2016D/relationships/fills",
+                        "related": "https://cmsoms.cern.ch/agg/api/v1/eras/2016D/fills"
+                    }
+                }
+            },
+            "links": {
+                "self": "https://cmsoms.cern.ch/agg/api/v1/eras/2016D"
+            }
+        },
+        {
+            "id": "2016E",
+            "type": "eras",
+            "attributes": {
+                "start_time": "2016-07-15T05:43:36Z",
+                "start_run": 276824,
+                "end_fill": 5117,
+                "start_fill": 5096,
+                "name": "2016E",
+                "end_time": "2016-07-25T21:28:13Z",
+                "end_run": 277420
+            },
+            "relationships": {
+                "fills": {
+                    "links": {
+                        "self": "https://cmsoms.cern.ch/agg/api/v1/eras/2016E/relationships/fills",
+                        "related": "https://cmsoms.cern.ch/agg/api/v1/eras/2016E/fills"
+                    }
+                }
+            },
+            "links": {
+                "self": "https://cmsoms.cern.ch/agg/api/v1/eras/2016E"
+            }
+        },
+        {
+            "id": "2016F",
+            "type": "eras",
+            "attributes": {
+                "start_time": "2016-07-29T20:12:14Z",
+                "start_run": 277772,
+                "end_fill": 5198,
+                "start_fill": 5134,
+                "name": "2016F",
+                "end_time": "2016-08-14T07:05:15Z",
+                "end_run": 278808
+            },
+            "relationships": {
+                "fills": {
+                    "links": {
+                        "self": "https://cmsoms.cern.ch/agg/api/v1/eras/2016F/relationships/fills",
+                        "related": "https://cmsoms.cern.ch/agg/api/v1/eras/2016F/fills"
+                    }
+                }
+            },
+            "links": {
+                "self": "https://cmsoms.cern.ch/agg/api/v1/eras/2016F"
+            }
+        },
+        {
+            "id": "2016G",
+            "type": "eras",
+            "attributes": {
+                "start_time": "2016-08-14T07:33:30Z",
+                "start_run": 278809,
+                "end_fill": 5303,
+                "start_fill": 5199,
+                "name": "2016G",
+                "end_time": "2016-09-10T08:00:11Z",
+                "end_run": 280407
+            },
+            "relationships": {
+                "fills": {
+                    "links": {
+                        "self": "https://cmsoms.cern.ch/agg/api/v1/eras/2016G/relationships/fills",
+                        "related": "https://cmsoms.cern.ch/agg/api/v1/eras/2016G/fills"
+                    }
+                }
+            },
+            "links": {
+                "self": "https://cmsoms.cern.ch/agg/api/v1/eras/2016G"
+            }
+        },
+        {
+            "id": "2016H",
+            "type": "eras",
+            "attributes": {
+                "start_time": "2016-09-13T08:21:23Z",
+                "start_run": 280525,
+                "end_fill": 5471,
+                "start_fill": 5304,
+                "name": "2016H",
+                "end_time": "2016-10-29T08:37:27Z",
+                "end_run": 284180
+            },
+            "relationships": {
+                "fills": {
+                    "links": {
+                        "self": "https://cmsoms.cern.ch/agg/api/v1/eras/2016H/relationships/fills",
+                        "related": "https://cmsoms.cern.ch/agg/api/v1/eras/2016H/fills"
+                    }
+                }
+            },
+            "links": {
+                "self": "https://cmsoms.cern.ch/agg/api/v1/eras/2016H"
+            }
+        },
+        {
+            "id": "PARun2016A",
+            "type": "eras",
+            "attributes": {
+                "start_time": "2016-10-29T08:44:47Z",
+                "start_run": 284190,
+                "end_fill": 5493,
+                "start_fill": 5476,
+                "name": "PARun2016A",
+                "end_time": "2016-11-07T10:50:37Z",
+                "end_run": 284770
+            },
+            "relationships": {
+                "fills": {
+                    "links": {
+                        "self": "https://cmsoms.cern.ch/agg/api/v1/eras/PARun2016A/relationships/fills",
+                        "related": "https://cmsoms.cern.ch/agg/api/v1/eras/PARun2016A/fills"
+                    }
+                }
+            },
+            "links": {
+                "self": "https://cmsoms.cern.ch/agg/api/v1/eras/PARun2016A"
+            }
+        },
+        {
+            "id": "PARun2016B",
+            "type": "eras",
+            "attributes": {
+                "start_time": "2016-11-07T11:00:33Z",
+                "start_run": 284776,
+                "end_fill": 5515,
+                "start_fill": 5494,
+                "name": "PARun2016B",
+                "end_time": "2016-11-17T13:26:34Z",
+                "end_run": 285420
+            },
+            "relationships": {
+                "fills": {
+                    "links": {
+                        "self": "https://cmsoms.cern.ch/agg/api/v1/eras/PARun2016B/relationships/fills",
+                        "related": "https://cmsoms.cern.ch/agg/api/v1/eras/PARun2016B/fills"
+                    }
+                }
+            },
+            "links": {
+                "self": "https://cmsoms.cern.ch/agg/api/v1/eras/PARun2016B"
+            }
+        },
+        {
+            "id": "PARun2016C",
+            "type": "eras",
+            "attributes": {
+                "start_time": "2016-11-17T13:32:47Z",
+                "start_run": 285424,
+                "end_fill": 5676,
+                "start_fill": 5516,
+                "name": "PARun2016C",
+                "end_time": "2017-05-19T23:55:58Z",
+                "end_run": 294644
+            },
+            "relationships": {
+                "fills": {
+                    "links": {
+                        "self": "https://cmsoms.cern.ch/agg/api/v1/eras/PARun2016C/relationships/fills",
+                        "related": "https://cmsoms.cern.ch/agg/api/v1/eras/PARun2016C/fills"
+                    }
+                }
+            },
+            "links": {
+                "self": "https://cmsoms.cern.ch/agg/api/v1/eras/PARun2016C"
+            }
+        },
+        {
+            "id": "2017A",
+            "type": "eras",
+            "attributes": {
+                "start_time": "2017-05-19T23:58:14Z",
+                "start_run": 294645,
+                "end_fill": 5838,
+                "start_fill": 5677,
+                "name": "2017A",
+                "end_time": "2017-06-16T16:04:29Z",
+                "end_run": 297020
+            },
+            "relationships": {
+                "fills": {
+                    "links": {
+                        "self": "https://cmsoms.cern.ch/agg/api/v1/eras/2017A/relationships/fills",
+                        "related": "https://cmsoms.cern.ch/agg/api/v1/eras/2017A/fills"
+                    }
+                }
+            },
+            "links": {
+                "self": "https://cmsoms.cern.ch/agg/api/v1/eras/2017A"
+            }
+        },
+        {
+            "id": "2017B",
+            "type": "eras",
+            "attributes": {
+                "start_time": "2017-06-16T16:27:17Z",
+                "start_run": 297024,
+                "end_fill": 5960,
+                "start_fill": 5839,
+                "name": "2017B",
+                "end_time": "2017-07-18T09:35:29Z",
+                "end_run": 299329
+            },
+            "relationships": {
+                "fills": {
+                    "links": {
+                        "self": "https://cmsoms.cern.ch/agg/api/v1/eras/2017B/relationships/fills",
+                        "related": "https://cmsoms.cern.ch/agg/api/v1/eras/2017B/fills"
+                    }
+                }
+            },
+            "links": {
+                "self": "https://cmsoms.cern.ch/agg/api/v1/eras/2017B"
+            }
+        },
+        {
+            "id": "2017C",
+            "type": "eras",
+            "attributes": {
+                "start_time": "2017-07-18T10:36:46Z",
+                "start_run": 299335,
+                "end_fill": 6147,
+                "start_fill": 5961,
+                "name": "2017C",
+                "end_time": "2017-08-30T21:20:22Z",
+                "end_run": 302044
+            },
+            "relationships": {
+                "fills": {
+                    "links": {
+                        "self": "https://cmsoms.cern.ch/agg/api/v1/eras/2017C/relationships/fills",
+                        "related": "https://cmsoms.cern.ch/agg/api/v1/eras/2017C/fills"
+                    }
+                }
+            },
+            "links": {
+                "self": "https://cmsoms.cern.ch/agg/api/v1/eras/2017C"
+            }
+        },
+        {
+            "id": "2017D",
+            "type": "eras",
+            "attributes": {
+                "start_time": "2017-08-30T21:24:43Z",
+                "start_run": 302046,
+                "end_fill": 6222,
+                "start_fill": 6148,
+                "name": "2017D",
+                "end_time": "2017-09-21T04:43:17Z",
+                "end_run": 303443
+            },
+            "relationships": {
+                "fills": {
+                    "links": {
+                        "self": "https://cmsoms.cern.ch/agg/api/v1/eras/2017D/relationships/fills",
+                        "related": "https://cmsoms.cern.ch/agg/api/v1/eras/2017D/fills"
+                    }
+                }
+            },
+            "links": {
+                "self": "https://cmsoms.cern.ch/agg/api/v1/eras/2017D"
+            }
+        },
+        {
+            "id": "2017E",
+            "type": "eras",
+            "attributes": {
+                "start_time": "2017-09-21T04:46:06Z",
+                "start_run": 303444,
+                "end_fill": 6293,
+                "start_fill": 6223,
+                "name": "2017E",
+                "end_time": "2017-10-12T07:40:41Z",
+                "end_run": 304830
+            },
+            "relationships": {
+                "fills": {
+                    "links": {
+                        "self": "https://cmsoms.cern.ch/agg/api/v1/eras/2017E/relationships/fills",
+                        "related": "https://cmsoms.cern.ch/agg/api/v1/eras/2017E/fills"
+                    }
+                }
+            },
+            "links": {
+                "self": "https://cmsoms.cern.ch/agg/api/v1/eras/2017E"
+            }
+        },
+        {
+            "id": "XeXeRun2017",
+            "type": "eras",
+            "attributes": {
+                "start_time": "2017-10-12T08:49:49Z",
+                "start_run": 304838,
+                "end_fill": 6296,
+                "start_fill": 6294,
+                "name": "XeXeRun2017",
+                "end_time": "2017-10-13T15:18:49Z",
+                "end_run": 305008
+            },
+            "relationships": {
+                "fills": {
+                    "links": {
+                        "self": "https://cmsoms.cern.ch/agg/api/v1/eras/XeXeRun2017/relationships/fills",
+                        "related": "https://cmsoms.cern.ch/agg/api/v1/eras/XeXeRun2017/fills"
+                    }
+                }
+            },
+            "links": {
+                "self": "https://cmsoms.cern.ch/agg/api/v1/eras/XeXeRun2017"
+            }
+        },
+        {
+            "id": "2017F",
+            "type": "eras",
+            "attributes": {
+                "start_time": "2017-10-13T15:34:35Z",
+                "start_run": 305017,
+                "end_fill": 6371,
+                "start_fill": 6297,
+                "name": "2017F",
+                "end_time": "2017-11-10T14:12:49Z",
+                "end_run": 306462
+            },
+            "relationships": {
+                "fills": {
+                    "links": {
+                        "self": "https://cmsoms.cern.ch/agg/api/v1/eras/2017F/relationships/fills",
+                        "related": "https://cmsoms.cern.ch/agg/api/v1/eras/2017F/fills"
+                    }
+                }
+            },
+            "links": {
+                "self": "https://cmsoms.cern.ch/agg/api/v1/eras/2017F"
+            }
+        },
+        {
+            "id": "2017G",
+            "type": "eras",
+            "attributes": {
+                "start_time": "2017-11-10T14:42:32Z",
+                "start_run": 306464,
+                "end_fill": 6399,
+                "start_fill": 6372,
+                "name": "2017G",
+                "end_time": "2017-11-21T06:04:13Z",
+                "end_run": 306826
+            },
+            "relationships": {
+                "fills": {
+                    "links": {
+                        "self": "https://cmsoms.cern.ch/agg/api/v1/eras/2017G/relationships/fills",
+                        "related": "https://cmsoms.cern.ch/agg/api/v1/eras/2017G/fills"
+                    }
+                }
+            },
+            "links": {
+                "self": "https://cmsoms.cern.ch/agg/api/v1/eras/2017G"
+            }
+        },
+        {
+            "id": "2017H",
+            "type": "eras",
+            "attributes": {
+                "start_time": "2017-11-21T06:11:50Z",
+                "start_run": 306828,
+                "end_fill": 6466,
+                "start_fill": 6400,
+                "name": "2017H",
+                "end_time": "2017-12-04T07:37:42Z",
+                "end_run": 307509
+            },
+            "relationships": {
+                "fills": {
+                    "links": {
+                        "self": "https://cmsoms.cern.ch/agg/api/v1/eras/2017H/relationships/fills",
+                        "related": "https://cmsoms.cern.ch/agg/api/v1/eras/2017H/fills"
+                    }
+                }
+            },
+            "links": {
+                "self": "https://cmsoms.cern.ch/agg/api/v1/eras/2017H"
+            }
+        },
+        {
+            "id": "Commissioning2018",
+            "type": "eras",
+            "attributes": {
+                "start_time": "2017-12-04T07:41:17Z",
+                "start_run": 307510,
+                "end_fill": 6614,
+                "start_fill": 6467,
+                "name": "Commissioning2018",
+                "end_time": "2018-04-26T07:13:45Z",
+                "end_run": 315190
+            },
+            "relationships": {
+                "fills": {
+                    "links": {
+                        "self": "https://cmsoms.cern.ch/agg/api/v1/eras/Commissioning2018/relationships/fills",
+                        "related": "https://cmsoms.cern.ch/agg/api/v1/eras/Commissioning2018/fills"
+                    }
+                }
+            },
+            "links": {
+                "self": "https://cmsoms.cern.ch/agg/api/v1/eras/Commissioning2018"
+            }
+        },
+        {
+            "id": "2018A",
+            "type": "eras",
+            "attributes": {
+                "start_time": "2018-04-26T07:23:31Z",
+                "start_run": 315193,
+                "end_fill": 6733,
+                "start_fill": 6615,
+                "name": "2018A",
+                "end_time": "2018-05-28T09:14:05Z",
+                "end_run": 316995
+            },
+            "relationships": {
+                "fills": {
+                    "links": {
+                        "self": "https://cmsoms.cern.ch/agg/api/v1/eras/2018A/relationships/fills",
+                        "related": "https://cmsoms.cern.ch/agg/api/v1/eras/2018A/fills"
+                    }
+                }
+            },
+            "links": {
+                "self": "https://cmsoms.cern.ch/agg/api/v1/eras/2018A"
+            }
+        },
+        {
+            "id": "2018B",
+            "type": "eras",
+            "attributes": {
+                "start_time": "2018-05-28T09:19:29Z",
+                "start_run": 316998,
+                "end_fill": 6892,
+                "start_fill": 6734,
+                "name": "2018B",
+                "end_time": "2018-07-07T12:03:24Z",
+                "end_run": 319311
+            },
+            "relationships": {
+                "fills": {
+                    "links": {
+                        "self": "https://cmsoms.cern.ch/agg/api/v1/eras/2018B/relationships/fills",
+                        "related": "https://cmsoms.cern.ch/agg/api/v1/eras/2018B/fills"
+                    }
+                }
+            },
+            "links": {
+                "self": "https://cmsoms.cern.ch/agg/api/v1/eras/2018B"
+            }
+        },
+        {
+            "id": "2018C",
+            "type": "eras",
+            "attributes": {
+                "start_time": "2018-07-07T12:16:12Z",
+                "start_run": 319313,
+                "end_fill": 6991,
+                "start_fill": 6893,
+                "name": "2018C",
+                "end_time": "2018-07-27T10:40:18Z",
+                "end_run": 320396
+            },
+            "relationships": {
+                "fills": {
+                    "links": {
+                        "self": "https://cmsoms.cern.ch/agg/api/v1/eras/2018C/relationships/fills",
+                        "related": "https://cmsoms.cern.ch/agg/api/v1/eras/2018C/fills"
+                    }
+                }
+            },
+            "links": {
+                "self": "https://cmsoms.cern.ch/agg/api/v1/eras/2018C"
+            }
+        },
+        {
+            "id": "2018D",
+            "type": "eras",
+            "attributes": {
+                "start_time": "2018-07-27T13:13:38Z",
+                "start_run": 320406,
+                "end_fill": 7349,
+                "start_fill": 6993,
+                "name": "2018D",
+                "end_time": "2018-10-25T12:21:22Z",
+                "end_run": 325277
+            },
+            "relationships": {
+                "fills": {
+                    "links": {
+                        "self": "https://cmsoms.cern.ch/agg/api/v1/eras/2018D/relationships/fills",
+                        "related": "https://cmsoms.cern.ch/agg/api/v1/eras/2018D/fills"
+                    }
+                }
+            },
+            "links": {
+                "self": "https://cmsoms.cern.ch/agg/api/v1/eras/2018D"
+            }
+        },
+        {
+            "id": "2018E",
+            "type": "eras",
+            "attributes": {
+                "start_time": "2018-10-25T13:27:11Z",
+                "start_run": 325283,
+                "end_fill": 7394,
+                "start_fill": 7351,
+                "name": "2018E",
+                "end_time": "2018-10-31T09:03:44Z",
+                "end_run": 325529
+            },
+            "relationships": {
+                "fills": {
+                    "links": {
+                        "self": "https://cmsoms.cern.ch/agg/api/v1/eras/2018E/relationships/fills",
+                        "related": "https://cmsoms.cern.ch/agg/api/v1/eras/2018E/fills"
+                    }
+                }
+            },
+            "links": {
+                "self": "https://cmsoms.cern.ch/agg/api/v1/eras/2018E"
+            }
+        },
+        {
+            "id": "HIRun2018",
+            "type": "eras",
+            "attributes": {
+                "start_time": "2018-10-31T09:27:32Z",
+                "start_run": 325530,
+                "end_fill": 7419,
+                "start_fill": 7395,
+                "name": "HIRun2018",
+                "end_time": "2018-11-07T14:33:27Z",
+                "end_run": 326268
+            },
+            "relationships": {
+                "fills": {
+                    "links": {
+                        "self": "https://cmsoms.cern.ch/agg/api/v1/eras/HIRun2018/relationships/fills",
+                        "related": "https://cmsoms.cern.ch/agg/api/v1/eras/HIRun2018/fills"
+                    }
+                }
+            },
+            "links": {
+                "self": "https://cmsoms.cern.ch/agg/api/v1/eras/HIRun2018"
+            }
+        },
+        {
+            "id": "HIRun2018A",
+            "type": "eras",
+            "attributes": {
+                "start_time": "2018-11-07T14:43:51Z",
+                "start_run": 326269,
+                "end_fill": 7494,
+                "start_fill": 7420,
+                "name": "HIRun2018A",
+                "end_time": "2018-12-07T19:27:52Z",
+                "end_run": 327802
+            },
+            "relationships": {
+                "fills": {
+                    "links": {
+                        "self": "https://cmsoms.cern.ch/agg/api/v1/eras/HIRun2018A/relationships/fills",
+                        "related": "https://cmsoms.cern.ch/agg/api/v1/eras/HIRun2018A/fills"
+                    }
+                }
+            },
+            "links": {
+                "self": "https://cmsoms.cern.ch/agg/api/v1/eras/HIRun2018A"
+            }
+        },
+        {
+            "id": "Commissioning2021",
+            "type": "eras",
+            "attributes": {
+                "start_time": "2020-08-24T17:43:53Z",
+                "start_run": 336790,
+                "end_fill": 7530,
+                "start_fill": 7495,
+                "name": "Commissioning2021",
+                "end_time": "2022-02-15T18:19:02Z",
+                "end_run": 347682
+            },
+            "relationships": {
+                "fills": {
+                    "links": {
+                        "self": "https://cmsoms.cern.ch/agg/api/v1/eras/Commissioning2021/relationships/fills",
+                        "related": "https://cmsoms.cern.ch/agg/api/v1/eras/Commissioning2021/fills"
+                    }
+                }
+            },
+            "links": {
+                "self": "https://cmsoms.cern.ch/agg/api/v1/eras/Commissioning2021"
+            }
+        },
+        {
+            "id": "TransferTest2022",
+            "type": "eras",
+            "attributes": {
+                "start_time": "2022-02-21T13:59:36Z",
+                "start_run": 347998,
+                "end_fill": 7597,
+                "start_fill": 7531,
+                "name": "TransferTest2022",
+                "end_time": "2022-05-12T07:30:56Z",
+                "end_run": 351475
+            },
+            "relationships": {
+                "fills": {
+                    "links": {
+                        "self": "https://cmsoms.cern.ch/agg/api/v1/eras/TransferTest2022/relationships/fills",
+                        "related": "https://cmsoms.cern.ch/agg/api/v1/eras/TransferTest2022/fills"
+                    }
+                }
+            },
+            "links": {
+                "self": "https://cmsoms.cern.ch/agg/api/v1/eras/TransferTest2022"
+            }
+        },
+        {
+            "id": "EOSTest_May2022",
+            "type": "eras",
+            "attributes": {
+                "start_time": "2022-05-12T07:34:33Z",
+                "start_run": 351476,
+                "end_fill": 7640,
+                "start_fill": 7598,
+                "name": "EOSTest_May2022",
+                "end_time": "2022-05-25T11:08:42Z",
+                "end_run": 352300
+            },
+            "relationships": {
+                "fills": {
+                    "links": {
+                        "self": "https://cmsoms.cern.ch/agg/api/v1/eras/EOSTest_May2022/relationships/fills",
+                        "related": "https://cmsoms.cern.ch/agg/api/v1/eras/EOSTest_May2022/fills"
+                    }
+                }
+            },
+            "links": {
+                "self": "https://cmsoms.cern.ch/agg/api/v1/eras/EOSTest_May2022"
+            }
+        },
+        {
+            "id": "Run2022A",
+            "type": "eras",
+            "attributes": {
+                "start_time": "2022-05-25T16:07:57Z",
+                "start_run": 352322,
+                "end_fill": 7916,
+                "start_fill": 7641,
+                "name": "Run2022A",
+                "end_time": "2022-07-05T06:45:13Z",
+                "end_run": 355065
+            },
+            "relationships": {
+                "fills": {
+                    "links": {
+                        "self": "https://cmsoms.cern.ch/agg/api/v1/eras/Run2022A/relationships/fills",
+                        "related": "https://cmsoms.cern.ch/agg/api/v1/eras/Run2022A/fills"
+                    }
+                }
+            },
+            "links": {
+                "self": "https://cmsoms.cern.ch/agg/api/v1/eras/Run2022A"
+            }
+        },
+        {
+            "id": "Run2022B",
+            "type": "eras",
+            "attributes": {
+                "start_time": "2022-07-05T06:51:10Z",
+                "start_run": 355066,
+                "end_fill": 8009,
+                "start_fill": 7917,
+                "name": "Run2022B",
+                "end_time": "2022-07-18T11:41:49Z",
+                "end_run": 355796
+            },
+            "relationships": {
+                "fills": {
+                    "links": {
+                        "self": "https://cmsoms.cern.ch/agg/api/v1/eras/Run2022B/relationships/fills",
+                        "related": "https://cmsoms.cern.ch/agg/api/v1/eras/Run2022B/fills"
+                    }
+                }
+            },
+            "links": {
+                "self": "https://cmsoms.cern.ch/agg/api/v1/eras/Run2022B"
+            }
+        },
+        {
+            "id": "Run2022C",
+            "type": "eras",
+            "attributes": {
+                "start_time": "2022-07-18T12:42:04Z",
+                "start_run": 355797,
+                "end_fill": 8128,
+                "start_fill": 8010,
+                "name": "Run2022C",
+                "end_time": "2022-08-15T14:34:07Z",
+                "end_run": 357504
+            },
+            "relationships": {
+                "fills": {
+                    "links": {
+                        "self": "https://cmsoms.cern.ch/agg/api/v1/eras/Run2022C/relationships/fills",
+                        "related": "https://cmsoms.cern.ch/agg/api/v1/eras/Run2022C/fills"
+                    }
+                }
+            },
+            "links": {
+                "self": "https://cmsoms.cern.ch/agg/api/v1/eras/Run2022C"
+            }
+        },
+        {
+            "id": "Run2022D",
+            "type": "eras",
+            "attributes": {
+                "start_time": "2022-08-15T13:45:36Z",
+                "start_run": 357498,
+                "end_fill": 8152,
+                "start_fill": 8129,
+                "name": "Run2022D",
+                "end_time": null,
+                "end_run": 358072
+            },
+            "relationships": {
+                "fills": {
+                    "links": {
+                        "self": "https://cmsoms.cern.ch/agg/api/v1/eras/Run2022D/relationships/fills",
+                        "related": "https://cmsoms.cern.ch/agg/api/v1/eras/Run2022D/fills"
+                    }
+                }
+            },
+            "links": {
+                "self": "https://cmsoms.cern.ch/agg/api/v1/eras/Run2022D"
+            }
+        },
+        {
+            "id": "Commissioning2020",
+            "type": "eras",
+            "attributes": {
+                "start_time": "2020-02-19T13:08:27Z",
+                "start_run": 335443,
+                "end_fill": null,
+                "start_fill": null,
+                "name": "Commissioning2020",
+                "end_time": "2020-11-20T13:39:28Z",
+                "end_run": 338760
+            },
+            "relationships": {
+                "fills": {
+                    "links": {
+                        "self": "https://cmsoms.cern.ch/agg/api/v1/eras/Commissioning2020/relationships/fills",
+                        "related": "https://cmsoms.cern.ch/agg/api/v1/eras/Commissioning2020/fills"
+                    }
+                }
+            },
+            "links": {
+                "self": "https://cmsoms.cern.ch/agg/api/v1/eras/Commissioning2020"
+            }
+        },
+        {
+            "id": "Commissioning2019",
+            "type": "eras",
+            "attributes": {
+                "start_time": "2019-03-20T09:57:43Z",
+                "start_run": 328570,
+                "end_fill": null,
+                "start_fill": null,
+                "name": "Commissioning2019",
+                "end_time": "2020-01-31T15:39:51Z",
+                "end_run": 334869
+            },
+            "relationships": {
+                "fills": {
+                    "links": {
+                        "self": "https://cmsoms.cern.ch/agg/api/v1/eras/Commissioning2019/relationships/fills",
+                        "related": "https://cmsoms.cern.ch/agg/api/v1/eras/Commissioning2019/fills"
+                    }
+                }
+            },
+            "links": {
+                "self": "https://cmsoms.cern.ch/agg/api/v1/eras/Commissioning2019"
+            }
+        },
+        {
+            "id": "Commissioning2022",
+            "type": "eras",
+            "attributes": {
+                "start_time": "2022-02-15T18:20:56Z",
+                "start_run": 347683,
+                "end_fill": null,
+                "start_fill": null,
+                "name": "Commissioning2022",
+                "end_time": "2022-05-25T16:00:51Z",
+                "end_run": 352318
+            },
+            "relationships": {
+                "fills": {
+                    "links": {
+                        "self": "https://cmsoms.cern.ch/agg/api/v1/eras/Commissioning2022/relationships/fills",
+                        "related": "https://cmsoms.cern.ch/agg/api/v1/eras/Commissioning2022/fills"
+                    }
+                }
+            },
+            "links": {
+                "self": "https://cmsoms.cern.ch/agg/api/v1/eras/Commissioning2022"
+            }
+        }
+    ],
+    "links": {
+        "first": "https://cmsoms.cern.ch/agg/api/v1/eras?page[limit]=1000",
+        "last": "https://cmsoms.cern.ch/agg/api/v1/eras?page[limit]=1000",
+        "next": null,
+        "prev": null
+    },
+    "meta": {
+        "totalResourceCount": 51
+    }
+}
