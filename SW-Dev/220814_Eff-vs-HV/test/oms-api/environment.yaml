@@ -1,8 +1,0 @@
-name: oms-api-client-py39
-channels:
-    - conda-forge
-dependencies:
-    - python=3.9
-    - pip
-    - pip:
-        - git+ssh://git@gitlab.cern.ch:7999/cmsoms/oms-api-client.git
