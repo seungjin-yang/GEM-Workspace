@@ -1,0 +1,17 @@
+JobBatchName          = "GEM_DQM_TestGEMCSCSegmentAnalyzer"
+executable            = ./run.sh
+arguments             = $(input_file_lfn) $Fn(input_file_lfn).root
+transfer_input_files  = ./TestGEMCSCSegmentAnalyzer_cfg.py
+
+output_destination = root://eosuser.cern.ch//eos/user/s/seyang/store/GEM/SW-Dev/220722_GE21-ME21-Segment-Reco/test/CMSSW_12_5_0_pre4/TestGEMCSCSegmentAnalyzer
+MY.XRDCP_CREATE_DIR = True
+
+output                = $Fn(input_file_lfn).out
+error                 = $Fn(input_file_lfn).err
+log                   = $Fn(input_file_lfn).log
+
+requirements = (OpSysAndVer =?= "CentOS7")
++JobFlavour = "tomorrow"
+RequestCpus = 1
+
+queue input_file_lfn from ./input-files.txt
