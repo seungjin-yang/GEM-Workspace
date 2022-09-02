@@ -1,0 +1,17 @@
+/store/data/Run2022D/Muon/RAW-RECO/ZMu-PromptReco-v2/000/357/900/00000/ce92e6d9-caad-4a5b-a916-006202d6e105.root
+/store/data/Run2022D/Muon/RAW-RECO/ZMu-PromptReco-v2/000/357/900/00000/b41cb30d-9f72-4160-903e-51b3d7a9ee09.root
+/store/data/Run2022D/Muon/RAW-RECO/ZMu-PromptReco-v2/000/357/900/00000/0503dff1-4dff-4e3c-8ee1-476f0ca0b3a4.root
+/store/data/Run2022D/Muon/RAW-RECO/ZMu-PromptReco-v2/000/357/900/00000/80d796b1-a2f1-4d25-a8e0-5e07dccb843d.root
+/store/data/Run2022D/Muon/RAW-RECO/ZMu-PromptReco-v2/000/357/900/00000/0f33635c-2960-4062-a36c-b68cb9db6550.root
+/store/data/Run2022D/Muon/RAW-RECO/ZMu-PromptReco-v2/000/357/900/00000/ed75dde8-07f0-4b92-ae05-ede8bf50b2cd.root
+/store/data/Run2022D/Muon/RAW-RECO/ZMu-PromptReco-v2/000/357/900/00000/1350890a-782c-49b3-8e89-09bbf5d11f86.root
+/store/data/Run2022D/Muon/RAW-RECO/ZMu-PromptReco-v2/000/357/900/00000/16e39b58-a949-454f-872f-1b8e544f1b5b.root
+/store/data/Run2022D/Muon/RAW-RECO/ZMu-PromptReco-v2/000/357/900/00000/c1a4c9f2-0799-4f41-a2a0-2f97c36c034c.root
+/store/data/Run2022D/Muon/RAW-RECO/ZMu-PromptReco-v2/000/357/900/00000/12b3e789-ad81-49dd-9799-c53e58089fe5.root
+/store/data/Run2022D/Muon/RAW-RECO/ZMu-PromptReco-v2/000/357/900/00000/47fc9320-c2d7-4bd6-8f6f-fb6ad40bf09b.root
+/store/data/Run2022D/Muon/RAW-RECO/ZMu-PromptReco-v2/000/357/900/00000/2ee126de-0de2-4e24-964f-d8abf8272fd2.root
+/store/data/Run2022D/Muon/RAW-RECO/ZMu-PromptReco-v2/000/357/900/00000/c1aef134-d06b-477c-901c-7c94e9491e31.root
+/store/data/Run2022D/Muon/RAW-RECO/ZMu-PromptReco-v2/000/357/900/00000/bd5a1f9a-de88-4253-9349-6c6a2933381b.root
+/store/data/Run2022D/Muon/RAW-RECO/ZMu-PromptReco-v2/000/357/900/00000/5fc8c8ee-45f3-4002-8042-ec6497ffa98c.root
+/store/data/Run2022D/Muon/RAW-RECO/ZMu-PromptReco-v2/000/357/900/00000/a24ee30b-3634-406f-8e36-3bb8945b9323.root
+/store/data/Run2022D/Muon/RAW-RECO/ZMu-PromptReco-v2/000/357/900/00000/3a0157b4-1de5-400c-a5aa-f5a1ba814ef0.root
