@@ -1,7 +1,7 @@
 cfg_file           = ./gemcscSegments_cfg.py
 input_file         = $(input_file_lfn)
 output_file        = $BASENAME(input_file_lfn)
-file_prepend       = root://ccxrdcms.in2p3.fr:1094//pnfs/in2p3.fr/data/cms/disk/data/
+file_prepend       = root://ccxrdcms.in2p3.fr:1094/
 cmssw_version      = CMSSW_12_4_7
 branch             = slowmoyang:ge21-me21-seg-reco__from-CMSSW_12_4_7
 
@@ -20,4 +20,4 @@ requirements = (OpSysAndVer =?= "CentOS7")
 RequestCpus = 1
 
 
-queue input_file_lfn from ./input-files.txt
+queue input_file_lfn from ./input-files-ext1.txt
