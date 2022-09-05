@@ -1,0 +1,200 @@
+run_number=357900, event_number=405823612
+	segment_idx=2: gem_hit_size=1
+		hit_idx=0: GEMDetId(region=1, ring=1, station=2, layer=2, chamber=16, ieta=8)
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+run_number=357900, event_number=422985281
+	segment_idx=4: gem_hit_size=1
+		hit_idx=0: GEMDetId(region=1, ring=1, station=2, layer=2, chamber=16, ieta=4)
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+run_number=357900, event_number=422985281
+	segment_idx=5: gem_hit_size=1
+		hit_idx=0: GEMDetId(region=1, ring=1, station=2, layer=2, chamber=16, ieta=4)
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+run_number=357900, event_number=461641381
+	segment_idx=3: gem_hit_size=1
+		hit_idx=0: GEMDetId(region=1, ring=1, station=2, layer=2, chamber=16, ieta=8)
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+run_number=357900, event_number=260042555
+	segment_idx=1: gem_hit_size=1
+		hit_idx=0: GEMDetId(region=1, ring=1, station=2, layer=2, chamber=16, ieta=8)
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+run_number=357900, event_number=53273134
+	segment_idx=4: gem_hit_size=1
+		hit_idx=0: GEMDetId(region=1, ring=1, station=2, layer=2, chamber=16, ieta=8)
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+run_number=357900, event_number=270176599
+	segment_idx=4: gem_hit_size=1
+		hit_idx=0: GEMDetId(region=1, ring=1, station=2, layer=2, chamber=16, ieta=7)
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+run_number=357900, event_number=130233775
+	segment_idx=6: gem_hit_size=1
+		hit_idx=0: GEMDetId(region=1, ring=1, station=2, layer=2, chamber=16, ieta=5)
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+run_number=357900, event_number=182885187
+	segment_idx=10: gem_hit_size=1
+		hit_idx=0: GEMDetId(region=1, ring=1, station=2, layer=2, chamber=16, ieta=8)
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+run_number=357900, event_number=433340747
+	segment_idx=8: gem_hit_size=1
+		hit_idx=0: GEMDetId(region=1, ring=1, station=2, layer=2, chamber=16, ieta=8)
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+run_number=357900, event_number=433340747
+	segment_idx=12: gem_hit_size=1
+		hit_idx=0: GEMDetId(region=1, ring=1, station=2, layer=2, chamber=16, ieta=8)
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+run_number=357900, event_number=443274226
+	segment_idx=4: gem_hit_size=1
+		hit_idx=0: GEMDetId(region=1, ring=1, station=2, layer=2, chamber=16, ieta=8)
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+run_number=357900, event_number=342161451
+	segment_idx=3: gem_hit_size=1
+		hit_idx=0: GEMDetId(region=1, ring=1, station=2, layer=2, chamber=16, ieta=8)
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+run_number=357900, event_number=351415011
+	segment_idx=1: gem_hit_size=1
+		hit_idx=0: GEMDetId(region=1, ring=1, station=2, layer=2, chamber=16, ieta=8)
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+run_number=357900, event_number=115068609
+	segment_idx=4: gem_hit_size=1
+		hit_idx=0: GEMDetId(region=1, ring=1, station=2, layer=2, chamber=16, ieta=8)
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+run_number=357900, event_number=115068609
+	segment_idx=5: gem_hit_size=1
+		hit_idx=0: GEMDetId(region=1, ring=1, station=2, layer=2, chamber=16, ieta=8)
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+run_number=357900, event_number=115068609
+	segment_idx=6: gem_hit_size=1
+		hit_idx=0: GEMDetId(region=1, ring=1, station=2, layer=2, chamber=16, ieta=8)
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+run_number=357900, event_number=205710881
+	segment_idx=4: gem_hit_size=1
+		hit_idx=0: GEMDetId(region=1, ring=1, station=2, layer=2, chamber=16, ieta=8)
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+run_number=357900, event_number=217891940
+	segment_idx=2: gem_hit_size=1
+		hit_idx=0: GEMDetId(region=1, ring=1, station=2, layer=2, chamber=16, ieta=8)
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+run_number=357900, event_number=487696431
+	segment_idx=1: gem_hit_size=1
+		hit_idx=0: GEMDetId(region=1, ring=1, station=2, layer=2, chamber=16, ieta=8)
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+run_number=357900, event_number=352949586
+	segment_idx=2: gem_hit_size=1
+		hit_idx=0: GEMDetId(region=1, ring=1, station=2, layer=2, chamber=16, ieta=8)
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+run_number=357900, event_number=472483718
+	segment_idx=3: gem_hit_size=1
+		hit_idx=0: GEMDetId(region=1, ring=1, station=2, layer=2, chamber=16, ieta=8)
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+run_number=357900, event_number=319906630
+	segment_idx=2: gem_hit_size=1
+		hit_idx=0: GEMDetId(region=1, ring=1, station=2, layer=2, chamber=16, ieta=8)
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+run_number=357900, event_number=319906630
+	segment_idx=3: gem_hit_size=1
+		hit_idx=0: GEMDetId(region=1, ring=1, station=2, layer=2, chamber=16, ieta=8)
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+run_number=357900, event_number=338838238
+	segment_idx=3: gem_hit_size=1
+		hit_idx=0: GEMDetId(region=1, ring=1, station=2, layer=2, chamber=16, ieta=8)
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+run_number=357900, event_number=402985181
+	segment_idx=9: gem_hit_size=1
+		hit_idx=0: GEMDetId(region=1, ring=1, station=2, layer=2, chamber=16, ieta=4)
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+run_number=357900, event_number=403569261
+	segment_idx=3: gem_hit_size=1
+		hit_idx=0: GEMDetId(region=1, ring=1, station=2, layer=2, chamber=16, ieta=8)
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+run_number=357900, event_number=403569261
+	segment_idx=4: gem_hit_size=1
+		hit_idx=0: GEMDetId(region=1, ring=1, station=2, layer=2, chamber=16, ieta=8)
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+run_number=357900, event_number=61722113
+	segment_idx=5: gem_hit_size=1
+		hit_idx=0: GEMDetId(region=1, ring=1, station=2, layer=2, chamber=16, ieta=4)
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+run_number=357900, event_number=61973614
+	segment_idx=2: gem_hit_size=1
+		hit_idx=0: GEMDetId(region=1, ring=1, station=2, layer=2, chamber=16, ieta=10)
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+run_number=357900, event_number=357583782
+	segment_idx=3: gem_hit_size=1
+		hit_idx=0: GEMDetId(region=1, ring=1, station=2, layer=2, chamber=16, ieta=8)
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+run_number=357900, event_number=358060846
+	segment_idx=1: gem_hit_size=1
+		hit_idx=0: GEMDetId(region=1, ring=1, station=2, layer=2, chamber=16, ieta=7)
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+run_number=357900, event_number=427667882
+	segment_idx=3: gem_hit_size=1
+		hit_idx=0: GEMDetId(region=1, ring=1, station=2, layer=2, chamber=16, ieta=8)
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+run_number=357900, event_number=419195100
+	segment_idx=2: gem_hit_size=1
+		hit_idx=0: GEMDetId(region=1, ring=1, station=2, layer=2, chamber=16, ieta=8)
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+run_number=357900, event_number=94969202
+	segment_idx=1: gem_hit_size=1
+		hit_idx=0: GEMDetId(region=1, ring=1, station=2, layer=2, chamber=16, ieta=8)
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+run_number=357900, event_number=362535490
+	segment_idx=2: gem_hit_size=1
+		hit_idx=0: GEMDetId(region=1, ring=1, station=2, layer=2, chamber=16, ieta=8)
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+run_number=357900, event_number=479724618
+	segment_idx=1: gem_hit_size=1
+		hit_idx=0: GEMDetId(region=1, ring=1, station=2, layer=2, chamber=16, ieta=8)
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+run_number=357900, event_number=480387903
+	segment_idx=10: gem_hit_size=1
+		hit_idx=0: GEMDetId(region=1, ring=1, station=2, layer=2, chamber=16, ieta=6)
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+run_number=357900, event_number=480387903
+	segment_idx=11: gem_hit_size=1
+		hit_idx=0: GEMDetId(region=1, ring=1, station=2, layer=2, chamber=16, ieta=6)
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+run_number=357900, event_number=636390909
+	segment_idx=6: gem_hit_size=1
+		hit_idx=0: GEMDetId(region=1, ring=1, station=2, layer=2, chamber=16, ieta=8)
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+run_number=357900, event_number=636390909
+	segment_idx=7: gem_hit_size=1
+		hit_idx=0: GEMDetId(region=1, ring=1, station=2, layer=2, chamber=16, ieta=8)
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+run_number=357900, event_number=636390909
+	segment_idx=8: gem_hit_size=1
+		hit_idx=0: GEMDetId(region=1, ring=1, station=2, layer=2, chamber=16, ieta=8)
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+run_number=357900, event_number=437017754
+	segment_idx=10: gem_hit_size=1
+		hit_idx=0: GEMDetId(region=1, ring=1, station=2, layer=2, chamber=16, ieta=8)
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+run_number=357900, event_number=438855788
+	segment_idx=4: gem_hit_size=1
+		hit_idx=0: GEMDetId(region=1, ring=1, station=2, layer=2, chamber=16, ieta=8)
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+run_number=357900, event_number=449450328
+	segment_idx=1: gem_hit_size=1
+		hit_idx=0: GEMDetId(region=1, ring=1, station=2, layer=2, chamber=16, ieta=8)
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+run_number=357900, event_number=476261449
+	segment_idx=1: gem_hit_size=1
+		hit_idx=0: GEMDetId(region=1, ring=1, station=2, layer=2, chamber=16, ieta=8)
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+run_number=357900, event_number=135917563
+	segment_idx=4: gem_hit_size=1
+		hit_idx=0: GEMDetId(region=1, ring=1, station=2, layer=2, chamber=16, ieta=8)
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+run_number=357900, event_number=135917563
+	segment_idx=5: gem_hit_size=1
+		hit_idx=0: GEMDetId(region=1, ring=1, station=2, layer=2, chamber=16, ieta=8)
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+run_number=357900, event_number=135917563
+	segment_idx=6: gem_hit_size=1
+		hit_idx=0: GEMDetId(region=1, ring=1, station=2, layer=2, chamber=16, ieta=8)
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+run_number=357900, event_number=301619122
+	segment_idx=0: gem_hit_size=1
+		hit_idx=0: GEMDetId(region=1, ring=1, station=2, layer=2, chamber=16, ieta=8)
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@

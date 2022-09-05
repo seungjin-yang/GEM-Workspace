@@ -18,21 +18,30 @@ ls -lha ./
 ###############################################################################
 # arguments
 ###############################################################################
-input_file=${1}
-output_file=${2}
+config_file=${1}
+input_file=${2}
+file_prepend=${3}
+output_file=${4}
+cmssw_version=${5}
+branch=${6}
 
+checkvar config_file
 checkvar input_file
+checkvar file_prepend
 checkvar output_file
+checkvar cmssw_version
+checkvar branch
 
 ###############################################################################
 # setup
 ###############################################################################
-CMSSW_VERSION=CMSSW_12_5_0_pre4
 source /cvmfs/cms.cern.ch/cmsset_default.sh
-cmsrel ${CMSSW_VERSION}
-cd ${CMSSW_VERSION}/src
+cmsrel ${cmssw_version}
+cd ${cmssw_version}/src
 eval `scramv1 runtime -sh`
-git-cms-merge-topic slowmoyang:ge21-me21-seg-reco__from-CMSSW_12_5_0_pre4
+if [ ! -z ${branch} ]; then
+    git-cms-merge-topic ${branch}
+fi
 scram b
 cd -
 
@@ -43,10 +52,7 @@ checkvar CMSSW_BASE
 ###############################################################################
 # run
 ###############################################################################
-cfg_file=step2_RAW2DIGI_L1Reco_RECO_GEMCSCSegment.py
-file_prepend="root://eoscms.cern.ch//eos/cms"
-
-cmsRun ${cfg_file} \
+cmsRun ${config_file} \
     inputFiles=${input_file} \
     filePrepend=${file_prepend} \
     outputFile=${output_file}

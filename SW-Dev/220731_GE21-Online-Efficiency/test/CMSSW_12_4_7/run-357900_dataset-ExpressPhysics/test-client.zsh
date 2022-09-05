@@ -1,13 +1,18 @@
 #!/usr/bin/env zsh
 
 cmssw_base=../../../CMSSW_12_4_7
-cfg_file=gemcscSegments_cfg.py
-input_file=$(head -n 1 ./input-files.txt)
-file_prepend=root://eoscms.cern.ch//eos/cms/
+cfg_file=./gemEffByGEMCSCSegmentClient_cfg.py
+input_file=./output.root
+file_prepend="file:"
 max_events=-1
 
 if [ ! -d ${cmssw_base} ]; then
     print -- "cmssw_base not found: ${cmssw_base}"
+    return 1
+fi
+
+if [ ! -f ${cfg_file} ]; then
+    print -- "cfg_file not found: ${cfg_file}"
     return 1
 fi
 

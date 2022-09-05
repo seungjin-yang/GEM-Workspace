@@ -2,13 +2,12 @@
 # using: 
 # Revision: 1.19 
 # Source: /local/reps/CMSSW/CMSSW/Configuration/Applications/python/ConfigBuilder.py,v 
-# with command line options: gemcscSegments --conditions 124X_dataRun3_Express_v5 --era Run3 --eventcontent RAWRECO --filein file:input.root --fileout file:output.root --geometry DB:Extended --no_exec --number -1 --step RECO --python_filename gemcscSegments_cfg.py
-import FWCore.ParameterSet.Config as cms # type: ignore
+# with command line options: gemEffByGEMCSCSegmentSource --conditions 124X_dataRun3_Express_v5 --datatier DQMIO --era Run3 --eventcontent DQM --filein file:input.root --fileout file:output.root --geometry DB:Extended --no_exec --number -1 --step DQM:gemEffByGEMCSCSegmentSource --python_filename gemEffByGEMCSCSegmentSource_cfg.py
+import FWCore.ParameterSet.Config as cms
 
-from Configuration.Eras.Era_Run3_cff import Run3 # type: ignore
+from Configuration.Eras.Era_Run3_cff import Run3
 
-process_name = 'GEMCSCSegmentRECO'
-process = cms.Process(process_name, Run3)
+process = cms.Process('DQM',Run3)
 
 # import of standard configurations
 process.load('Configuration.StandardSequences.Services_cff')
@@ -17,12 +16,9 @@ process.load('FWCore.MessageService.MessageLogger_cfi')
 process.load('Configuration.EventContent.EventContent_cff')
 process.load('Configuration.StandardSequences.GeometryRecoDB_cff')
 process.load('Configuration.StandardSequences.MagneticField_cff')
-# process.load('Configuration.StandardSequences.Reconstruction_Data_cff')
-process.load('Configuration.StandardSequences.EndOfProcess_cff')
+process.load('DQMServices.Core.DQMStoreNonLegacy_cff')
+process.load('DQMOffline.Configuration.DQMOffline_cff')
 process.load('Configuration.StandardSequences.FrontierConditions_GlobalTag_cff')
-
-process.load('RecoLocalMuon.GEMRecHit.gemRecHits_cfi')
-process.load('RecoLocalMuon.GEMCSCSegment.gemcscSegments_cff')
 
 process.maxEvents = cms.untracked.PSet(
     input = cms.untracked.int32(-1),
@@ -67,79 +63,47 @@ process.options = cms.untracked.PSet(
 
 # Production Info
 process.configurationMetadata = cms.untracked.PSet(
-    annotation = cms.untracked.string('gemcscSegments nevts:-1'),
+    annotation = cms.untracked.string('gemEffByGEMCSCSegmentSource nevts:-1'),
     name = cms.untracked.string('Applications'),
     version = cms.untracked.string('$Revision: 1.19 $')
 )
 
 # Output definition
 
-process.RECOoutput = cms.OutputModule("PoolOutputModule",
+process.DQMoutput = cms.OutputModule("DQMRootOutputModule",
     dataset = cms.untracked.PSet(
-        dataTier = cms.untracked.string(''),
+        dataTier = cms.untracked.string('DQMIO'),
         filterName = cms.untracked.string('')
     ),
     fileName = cms.untracked.string('file:output.root'),
-    outputCommands = process.RAWRECOEventContent.outputCommands,
+    outputCommands = process.DQMEventContent.outputCommands,
     splitLevel = cms.untracked.int32(0)
 )
-process.RECOoutput.outputCommands.extend([
-    'keep  *_gemRecHits_*_*' ,
-    'keep  *_gemcscSegments_*_*' ,
-    'drop  *_rawDataCollector_*_*',
-    'drop  *_hltGtStage2ObjectMap_*_*',
-    'drop  *_TriggerResults_*_*',
-    'drop  *_hltTriggerSummaryAOD_*_*',
-    'drop  *_*Digis_*_*',
-    'drop  *_*particleFlow*_*_*',
-    'drop  *_si*Clusters_*_*',
-    'drop  *_hbhereco_*_*',
-    'drop  *_hfprereco_*_*',
-    'drop  *_hfreco_*_*',
-    'drop  *_towerMaker_*_*',
-    'drop  *_*Jet*_*_*',
-])
-
 
 # Additional output definition
 
 # Other statements
-from Configuration.AlCa.GlobalTag import GlobalTag # type: ignore
-global_tag = '124X_dataRun3_Express_v5'
-process.GlobalTag = GlobalTag(process.GlobalTag, global_tag, '')
+from Configuration.AlCa.GlobalTag import GlobalTag
+process.GlobalTag = GlobalTag(process.GlobalTag, '124X_dataRun3_Express_v5', '')
 process.GlobalTag.connect = 'frontier://PromptProd/CMS_CONDITIONS'
 
 # Path and EndPath definitions
-process.gemRecHits = process.gemRecHits.clone(ge21Off=False)
-process.gemcscSegments.inputObjectsGEM = cms.InputTag("gemRecHits", "", process_name)
-
-process.gemSeq = cms.Sequence(
-    process.gemRecHits *
-    process.gemcscSegments,
-)
-
-process.gemSeq_step = cms.Path(process.gemSeq)
-process.endjob_step = cms.EndPath(process.endOfProcess)
-process.RECOoutput_step = cms.EndPath(process.RECOoutput)
+process.dqmoffline_step = cms.EndPath(process.gemEffByGEMCSCSegmentSource)
+process.DQMoutput_step = cms.EndPath(process.DQMoutput)
 
 # Schedule definition
-process.schedule = cms.Schedule(
-    process.gemSeq_step,
-    process.endjob_step,
-    process.RECOoutput_step
-)
+process.schedule = cms.Schedule(process.dqmoffline_step,process.DQMoutput_step)
+from PhysicsTools.PatAlgos.tools.helpers import associatePatAlgosToolsTask
+associatePatAlgosToolsTask(process)
+
+
 
 # Customisation from command line
 
-#Have logErrorHarvester wait for the same EDProducers to finish as those providing data for the OutputModule
-from FWCore.Modules.logErrorHarvester_cff import customiseLogErrorHarvesterUsingOutputCommands # type: ignore
-process = customiseLogErrorHarvesterUsingOutputCommands(process)
-
 # Add early deletion of temporary data products to reduce peak memory need
-from Configuration.StandardSequences.earlyDeleteSettings_cff import customiseEarlyDelete # type: ignore
+from Configuration.StandardSequences.earlyDeleteSettings_cff import customiseEarlyDelete
 process = customiseEarlyDelete(process)
 # End adding early deletion
-
 
 
 from FWCore.ParameterSet.VarParsing import VarParsing # type: ignore
@@ -147,4 +111,4 @@ options = VarParsing('analysis')
 options.parseArguments()
 process.maxEvents.input = options.maxEvents
 process.source.fileNames = options.inputFiles
-process.RECOoutput.fileName = options.outputFile
+process.DQMoutput.fileName = options.outputFile
