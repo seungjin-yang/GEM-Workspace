@@ -1,0 +1,41 @@
+cfg_file           = ./gemEffByGEMCSCSegmentSource_cfg.py
+
+input_file         = $(input_file_lfn)
+# T2_CH_CERN: root://eoscms.cern.ch//eos/cms
+# T3_CH_CERNBOX: root://eosuser.cern.ch/
+file_prepend       = root://eosuser.cern.ch/
+
+output_file        = $BASENAME(input_file_lfn)
+
+# cmssw
+cmssw_version      = CMSSW_12_4_7
+# git-cms-merge-topic
+user               = slowmoyang
+branch             = online-ge21-eff__from-$(cmssw_version)
+merge_topic_arg    = $(user):$(branch)
+
+output_destination = root://eosuser.cern.ch//eos/user/s/seyang/store/GEM/SW-Dev/220731_GE21-Online-Efficiency/test/CMSSW_12_4_7/run-357900_dataset-ExpressPhysics
+JobBatchName       = "GEM_DQM_g21-me21-eff"
+
+executable            = ./run.sh
+arguments             = $BASENAME(cfg_file) $(input_file) $(file_prepend) $(output_file) $(cmssw_version) $(merge_topic_arg)
+transfer_input_files  = $(cfg_file)
+MY.XRDCP_CREATE_DIR = True
+output                = $Fn(input_file_lfn).out
+error                 = $Fn(input_file_lfn).err
+log                   = $Fn(input_file_lfn).log
+requirements = (OpSysAndVer =?= "CentOS7")
+
+# espresso     = 20 minutes
+# microcentury = 1 hour
+# longlunch    = 2 hours
+# workday      = 8 hours
+# tomorrow     = 1 day
+# testmatch    = 3 days
+# nextweek     = 1 week
++JobFlavour = "microcentury"
+RequestCpus = 1
+
+
+# queue input_file_lfn from ./input-files/x00.txt
+queue input_file_lfn from $(input_file_list)
