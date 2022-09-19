@@ -1,0 +1,241 @@
+Querying DAS for files...
+the query is file run=355380 dataset=/ExpressPhysics/Run2022B-Express-v1/FEVT lumi=19
+DAS succeeded after 1 attempts 0
+found files:  ['/store/express/Run2022B/ExpressPhysics/FEVT/Express-v1/000/355/380/00000/b8a57fc4-5656-42b4-9b7b-2e647baf65e8.root']
+edmFileUtil --events /store/express/Run2022B/ExpressPhysics/FEVT/Express-v1/000/355/380/00000/b8a57fc4-5656-42b4-9b7b-2e647baf65e8.root | tail -n +9 | head -n -5 | awk '{ print $3 }'
+the query is file run=355380 dataset=/ExpressPhysics/Run2022B-Express-v1/FEVT lumi=20
+DAS succeeded after 1 attempts 0
+found files:  ['/store/express/Run2022B/ExpressPhysics/FEVT/Express-v1/000/355/380/00000/2b3f408f-883a-4f64-8083-9e5786589069.root']
+edmFileUtil --events /store/express/Run2022B/ExpressPhysics/FEVT/Express-v1/000/355/380/00000/2b3f408f-883a-4f64-8083-9e5786589069.root | tail -n +9 | head -n -5 | awk '{ print $3 }'
+Got 2 files.
+Loaded configuration file from: []
+dqmRunConfig: cms.PSet(
+    collectorHost = cms.untracked.string('127.0.0.1'),
+    collectorPort = cms.untracked.int32(9190),
+    type = cms.untracked.string('userarea')
+)
+Final Source settings: cms.Source("PoolSource",
+    dropDescendantsOfDroppedBranches = cms.untracked.bool(True),
+    eventsToProcess = cms.untracked.VEventRange("355380:19:26663826-355380:19:26787083", "355380:20:28055744-355380:20:28172312"),
+    fileNames = cms.untracked.vstring(
+        '/store/express/Run2022B/ExpressPhysics/FEVT/Express-v1/000/355/380/00000/b8a57fc4-5656-42b4-9b7b-2e647baf65e8.root',
+        '/store/express/Run2022B/ExpressPhysics/FEVT/Express-v1/000/355/380/00000/2b3f408f-883a-4f64-8083-9e5786589069.root'
+    ),
+    inputCommands = cms.untracked.vstring(
+        'drop *',
+        'keep FEDRawDataCollection_rawDataCollector_*_*',
+        'keep GlobalObjectMapRecord_hltGtStage2ObjectMap_*_*',
+        'keep edmTriggerResults_TriggerResults_*_*'
+    ),
+    secondaryFileNames = cms.untracked.vstring()
+)
+
+Monitoring file not found, disabling.
+18-Sep-2022 08:01:33 CEST  Initiating request to open file root://eoscms.cern.ch//eos/cms/store/express/Run2022B/ExpressPhysics/FEVT/Express-v1/000/355/380/00000/b8a57fc4-5656-42b4-9b7b-2e647baf65e8.root
+18-Sep-2022 08:01:39 CEST  Successfully opened file root://eoscms.cern.ch//eos/cms/store/express/Run2022B/ExpressPhysics/FEVT/Express-v1/000/355/380/00000/b8a57fc4-5656-42b4-9b7b-2e647baf65e8.root
+Begin processing the 1st record. Run 355380, Event 26716348, LumiSection 19 on stream 0 at 18-Sep-2022 08:01:45.112 CEST
+Begin processing the 2nd record. Run 355380, Event 26769137, LumiSection 19 on stream 0 at 18-Sep-2022 08:01:45.895 CEST
+Begin processing the 3rd record. Run 355380, Event 26764873, LumiSection 19 on stream 0 at 18-Sep-2022 08:01:45.909 CEST
+Begin processing the 4th record. Run 355380, Event 26667765, LumiSection 19 on stream 0 at 18-Sep-2022 08:01:45.915 CEST
+Begin processing the 5th record. Run 355380, Event 26779772, LumiSection 19 on stream 0 at 18-Sep-2022 08:01:46.250 CEST
+Begin processing the 6th record. Run 355380, Event 26707752, LumiSection 19 on stream 0 at 18-Sep-2022 08:01:46.259 CEST
+Begin processing the 7th record. Run 355380, Event 26754180, LumiSection 19 on stream 0 at 18-Sep-2022 08:01:46.270 CEST
+Begin processing the 8th record. Run 355380, Event 26703037, LumiSection 19 on stream 0 at 18-Sep-2022 08:01:46.281 CEST
+Begin processing the 9th record. Run 355380, Event 26775870, LumiSection 19 on stream 0 at 18-Sep-2022 08:01:46.595 CEST
+Begin processing the 10th record. Run 355380, Event 26675070, LumiSection 19 on stream 0 at 18-Sep-2022 08:01:46.601 CEST
+Begin processing the 11th record. Run 355380, Event 26705472, LumiSection 19 on stream 0 at 18-Sep-2022 08:01:46.606 CEST
+Begin processing the 12th record. Run 355380, Event 26728909, LumiSection 19 on stream 0 at 18-Sep-2022 08:01:47.262 CEST
+Begin processing the 13th record. Run 355380, Event 26684999, LumiSection 19 on stream 0 at 18-Sep-2022 08:01:47.269 CEST
+Begin processing the 14th record. Run 355380, Event 26744211, LumiSection 19 on stream 0 at 18-Sep-2022 08:01:47.663 CEST
+Begin processing the 15th record. Run 355380, Event 26680220, LumiSection 19 on stream 0 at 18-Sep-2022 08:01:47.672 CEST
+Begin processing the 16th record. Run 355380, Event 26779722, LumiSection 19 on stream 0 at 18-Sep-2022 08:01:47.680 CEST
+Begin processing the 17th record. Run 355380, Event 26782921, LumiSection 19 on stream 0 at 18-Sep-2022 08:01:48.098 CEST
+Begin processing the 18th record. Run 355380, Event 26693456, LumiSection 19 on stream 0 at 18-Sep-2022 08:01:48.106 CEST
+Begin processing the 19th record. Run 355380, Event 26759066, LumiSection 19 on stream 0 at 18-Sep-2022 08:01:48.114 CEST
+Begin processing the 20th record. Run 355380, Event 26702362, LumiSection 19 on stream 0 at 18-Sep-2022 08:01:48.119 CEST
+Begin processing the 21st record. Run 355380, Event 26699968, LumiSection 19 on stream 0 at 18-Sep-2022 08:01:48.466 CEST
+Begin processing the 22nd record. Run 355380, Event 26696765, LumiSection 19 on stream 0 at 18-Sep-2022 08:01:48.474 CEST
+Begin processing the 23rd record. Run 355380, Event 26751148, LumiSection 19 on stream 0 at 18-Sep-2022 08:01:48.483 CEST
+Begin processing the 24th record. Run 355380, Event 26722373, LumiSection 19 on stream 0 at 18-Sep-2022 08:01:48.493 CEST
+Begin processing the 25th record. Run 355380, Event 26776190, LumiSection 19 on stream 0 at 18-Sep-2022 08:01:48.500 CEST
+Begin processing the 26th record. Run 355380, Event 26667370, LumiSection 19 on stream 0 at 18-Sep-2022 08:01:48.803 CEST
+Begin processing the 27th record. Run 355380, Event 26764975, LumiSection 19 on stream 0 at 18-Sep-2022 08:01:48.812 CEST
+Begin processing the 28th record. Run 355380, Event 26780984, LumiSection 19 on stream 0 at 18-Sep-2022 08:01:48.817 CEST
+Begin processing the 29th record. Run 355380, Event 26699391, LumiSection 19 on stream 0 at 18-Sep-2022 08:01:48.824 CEST
+Begin processing the 30th record. Run 355380, Event 26743741, LumiSection 19 on stream 0 at 18-Sep-2022 08:01:49.153 CEST
+Begin processing the 31st record. Run 355380, Event 26676150, LumiSection 19 on stream 0 at 18-Sep-2022 08:01:49.163 CEST
+Begin processing the 32nd record. Run 355380, Event 26669760, LumiSection 19 on stream 0 at 18-Sep-2022 08:01:49.170 CEST
+Begin processing the 33rd record. Run 355380, Event 26676232, LumiSection 19 on stream 0 at 18-Sep-2022 08:01:49.175 CEST
+Begin processing the 34th record. Run 355380, Event 26745051, LumiSection 19 on stream 0 at 18-Sep-2022 08:01:49.413 CEST
+Begin processing the 35th record. Run 355380, Event 26735436, LumiSection 19 on stream 0 at 18-Sep-2022 08:01:49.421 CEST
+Begin processing the 36th record. Run 355380, Event 26729500, LumiSection 19 on stream 0 at 18-Sep-2022 08:01:49.426 CEST
+Begin processing the 37th record. Run 355380, Event 26779087, LumiSection 19 on stream 0 at 18-Sep-2022 08:01:49.432 CEST
+Begin processing the 38th record. Run 355380, Event 26678294, LumiSection 19 on stream 0 at 18-Sep-2022 08:01:49.441 CEST
+Begin processing the 39th record. Run 355380, Event 26723088, LumiSection 19 on stream 0 at 18-Sep-2022 08:01:49.829 CEST
+Begin processing the 40th record. Run 355380, Event 26739552, LumiSection 19 on stream 0 at 18-Sep-2022 08:01:49.835 CEST
+Begin processing the 41st record. Run 355380, Event 26787083, LumiSection 19 on stream 0 at 18-Sep-2022 08:01:49.841 CEST
+Begin processing the 42nd record. Run 355380, Event 26744358, LumiSection 19 on stream 0 at 18-Sep-2022 08:01:49.852 CEST
+Begin processing the 43rd record. Run 355380, Event 26711251, LumiSection 19 on stream 0 at 18-Sep-2022 08:01:50.114 CEST
+Begin processing the 44th record. Run 355380, Event 26708823, LumiSection 19 on stream 0 at 18-Sep-2022 08:01:50.122 CEST
+Begin processing the 45th record. Run 355380, Event 26758467, LumiSection 19 on stream 0 at 18-Sep-2022 08:01:50.127 CEST
+Begin processing the 46th record. Run 355380, Event 26782551, LumiSection 19 on stream 0 at 18-Sep-2022 08:01:50.133 CEST
+Begin processing the 47th record. Run 355380, Event 26686555, LumiSection 19 on stream 0 at 18-Sep-2022 08:01:50.355 CEST
+Begin processing the 48th record. Run 355380, Event 26740914, LumiSection 19 on stream 0 at 18-Sep-2022 08:01:50.363 CEST
+Begin processing the 49th record. Run 355380, Event 26720725, LumiSection 19 on stream 0 at 18-Sep-2022 08:01:50.619 CEST
+Begin processing the 50th record. Run 355380, Event 26715911, LumiSection 19 on stream 0 at 18-Sep-2022 08:01:50.626 CEST
+Begin processing the 51st record. Run 355380, Event 26736735, LumiSection 19 on stream 0 at 18-Sep-2022 08:01:50.632 CEST
+Begin processing the 52nd record. Run 355380, Event 26770295, LumiSection 19 on stream 0 at 18-Sep-2022 08:01:50.850 CEST
+Begin processing the 53rd record. Run 355380, Event 26667883, LumiSection 19 on stream 0 at 18-Sep-2022 08:01:50.862 CEST
+Begin processing the 54th record. Run 355380, Event 26683519, LumiSection 19 on stream 0 at 18-Sep-2022 08:01:51.084 CEST
+Begin processing the 55th record. Run 355380, Event 26717107, LumiSection 19 on stream 0 at 18-Sep-2022 08:01:51.092 CEST
+Begin processing the 56th record. Run 355380, Event 26734013, LumiSection 19 on stream 0 at 18-Sep-2022 08:01:51.101 CEST
+Begin processing the 57th record. Run 355380, Event 26767932, LumiSection 19 on stream 0 at 18-Sep-2022 08:01:51.332 CEST
+Begin processing the 58th record. Run 355380, Event 26678311, LumiSection 19 on stream 0 at 18-Sep-2022 08:01:51.338 CEST
+Begin processing the 59th record. Run 355380, Event 26752593, LumiSection 19 on stream 0 at 18-Sep-2022 08:01:51.613 CEST
+Begin processing the 60th record. Run 355380, Event 26754914, LumiSection 19 on stream 0 at 18-Sep-2022 08:01:51.866 CEST
+Begin processing the 61st record. Run 355380, Event 26770888, LumiSection 19 on stream 0 at 18-Sep-2022 08:01:51.873 CEST
+Begin processing the 62nd record. Run 355380, Event 26743692, LumiSection 19 on stream 0 at 18-Sep-2022 08:01:51.880 CEST
+Begin processing the 63rd record. Run 355380, Event 26782098, LumiSection 19 on stream 0 at 18-Sep-2022 08:01:51.890 CEST
+Begin processing the 64th record. Run 355380, Event 26716600, LumiSection 19 on stream 0 at 18-Sep-2022 08:01:51.901 CEST
+Begin processing the 65th record. Run 355380, Event 26745394, LumiSection 19 on stream 0 at 18-Sep-2022 08:01:52.112 CEST
+Begin processing the 66th record. Run 355380, Event 26707011, LumiSection 19 on stream 0 at 18-Sep-2022 08:01:52.122 CEST
+Begin processing the 67th record. Run 355380, Event 26742830, LumiSection 19 on stream 0 at 18-Sep-2022 08:01:52.128 CEST
+Begin processing the 68th record. Run 355380, Event 26734841, LumiSection 19 on stream 0 at 18-Sep-2022 08:01:52.334 CEST
+Begin processing the 69th record. Run 355380, Event 26705868, LumiSection 19 on stream 0 at 18-Sep-2022 08:01:52.545 CEST
+Begin processing the 70th record. Run 355380, Event 26675671, LumiSection 19 on stream 0 at 18-Sep-2022 08:01:52.553 CEST
+Begin processing the 71st record. Run 355380, Event 26704975, LumiSection 19 on stream 0 at 18-Sep-2022 08:01:52.860 CEST
+Begin processing the 72nd record. Run 355380, Event 26674572, LumiSection 19 on stream 0 at 18-Sep-2022 08:01:52.867 CEST
+Begin processing the 73rd record. Run 355380, Event 26701960, LumiSection 19 on stream 0 at 18-Sep-2022 08:01:52.875 CEST
+Begin processing the 74th record. Run 355380, Event 26764381, LumiSection 19 on stream 0 at 18-Sep-2022 08:01:52.882 CEST
+Begin processing the 75th record. Run 355380, Event 26766378, LumiSection 19 on stream 0 at 18-Sep-2022 08:01:53.121 CEST
+Begin processing the 76th record. Run 355380, Event 26700787, LumiSection 19 on stream 0 at 18-Sep-2022 08:01:53.130 CEST
+Begin processing the 77th record. Run 355380, Event 26740785, LumiSection 19 on stream 0 at 18-Sep-2022 08:01:53.137 CEST
+Begin processing the 78th record. Run 355380, Event 26681577, LumiSection 19 on stream 0 at 18-Sep-2022 08:01:53.143 CEST
+Begin processing the 79th record. Run 355380, Event 26762014, LumiSection 19 on stream 0 at 18-Sep-2022 08:01:53.401 CEST
+Begin processing the 80th record. Run 355380, Event 26740323, LumiSection 19 on stream 0 at 18-Sep-2022 08:01:53.408 CEST
+Begin processing the 81st record. Run 355380, Event 26684297, LumiSection 19 on stream 0 at 18-Sep-2022 08:01:53.415 CEST
+Begin processing the 82nd record. Run 355380, Event 26746710, LumiSection 19 on stream 0 at 18-Sep-2022 08:01:53.421 CEST
+Begin processing the 83rd record. Run 355380, Event 26687508, LumiSection 19 on stream 0 at 18-Sep-2022 08:01:53.675 CEST
+Begin processing the 84th record. Run 355380, Event 26679194, LumiSection 19 on stream 0 at 18-Sep-2022 08:01:53.684 CEST
+Begin processing the 85th record. Run 355380, Event 26738394, LumiSection 19 on stream 0 at 18-Sep-2022 08:01:53.688 CEST
+Begin processing the 86th record. Run 355380, Event 26759176, LumiSection 19 on stream 0 at 18-Sep-2022 08:01:53.916 CEST
+Begin processing the 87th record. Run 355380, Event 26746495, LumiSection 19 on stream 0 at 18-Sep-2022 08:01:53.921 CEST
+Begin processing the 88th record. Run 355380, Event 26730483, LumiSection 19 on stream 0 at 18-Sep-2022 08:01:53.925 CEST
+Begin processing the 89th record. Run 355380, Event 26701682, LumiSection 19 on stream 0 at 18-Sep-2022 08:01:54.181 CEST
+Begin processing the 90th record. Run 355380, Event 26758223, LumiSection 19 on stream 0 at 18-Sep-2022 08:01:54.188 CEST
+Begin processing the 91st record. Run 355380, Event 26663826, LumiSection 19 on stream 0 at 18-Sep-2022 08:01:54.194 CEST
+Begin processing the 92nd record. Run 355380, Event 26699031, LumiSection 19 on stream 0 at 18-Sep-2022 08:01:54.200 CEST
+Begin processing the 93rd record. Run 355380, Event 26691022, LumiSection 19 on stream 0 at 18-Sep-2022 08:01:54.405 CEST
+Begin processing the 94th record. Run 355380, Event 26723025, LumiSection 19 on stream 0 at 18-Sep-2022 08:01:54.410 CEST
+Begin processing the 95th record. Run 355380, Event 26771027, LumiSection 19 on stream 0 at 18-Sep-2022 08:01:54.417 CEST
+Begin processing the 96th record. Run 355380, Event 26711826, LumiSection 19 on stream 0 at 18-Sep-2022 08:01:54.425 CEST
+Begin processing the 97th record. Run 355380, Event 26673258, LumiSection 19 on stream 0 at 18-Sep-2022 08:01:54.433 CEST
+Begin processing the 98th record. Run 355380, Event 26705277, LumiSection 19 on stream 0 at 18-Sep-2022 08:01:54.438 CEST
+Begin processing the 99th record. Run 355380, Event 26732456, LumiSection 19 on stream 0 at 18-Sep-2022 08:01:54.508 CEST
+Begin processing the 100th record. Run 355380, Event 26785259, LumiSection 19 on stream 0 at 18-Sep-2022 08:01:54.514 CEST
+18-Sep-2022 08:01:54 CEST  Closed file root://eoscms.cern.ch//eos/cms/store/express/Run2022B/ExpressPhysics/FEVT/Express-v1/000/355/380/00000/b8a57fc4-5656-42b4-9b7b-2e647baf65e8.root
+18-Sep-2022 08:01:54 CEST  Initiating request to open file root://eoscms.cern.ch//eos/cms/store/express/Run2022B/ExpressPhysics/FEVT/Express-v1/000/355/380/00000/2b3f408f-883a-4f64-8083-9e5786589069.root
+18-Sep-2022 08:01:56 CEST  Successfully opened file root://eoscms.cern.ch//eos/cms/store/express/Run2022B/ExpressPhysics/FEVT/Express-v1/000/355/380/00000/2b3f408f-883a-4f64-8083-9e5786589069.root
+Begin processing the 101st record. Run 355380, Event 28125362, LumiSection 20 on stream 0 at 18-Sep-2022 08:01:57.273 CEST
+Begin processing the 102nd record. Run 355380, Event 28155771, LumiSection 20 on stream 0 at 18-Sep-2022 08:01:57.285 CEST
+Begin processing the 103rd record. Run 355380, Event 28094962, LumiSection 20 on stream 0 at 18-Sep-2022 08:01:57.290 CEST
+Begin processing the 104th record. Run 355380, Event 28151691, LumiSection 20 on stream 0 at 18-Sep-2022 08:01:57.626 CEST
+Begin processing the 105th record. Run 355380, Event 28090805, LumiSection 20 on stream 0 at 18-Sep-2022 08:01:57.636 CEST
+Begin processing the 106th record. Run 355380, Event 28065222, LumiSection 20 on stream 0 at 18-Sep-2022 08:01:57.643 CEST
+Begin processing the 107th record. Run 355380, Event 28162822, LumiSection 20 on stream 0 at 18-Sep-2022 08:01:58.016 CEST
+Begin processing the 108th record. Run 355380, Event 28170017, LumiSection 20 on stream 0 at 18-Sep-2022 08:01:58.023 CEST
+Begin processing the 109th record. Run 355380, Event 28139620, LumiSection 20 on stream 0 at 18-Sep-2022 08:01:58.029 CEST
+Begin processing the 110th record. Run 355380, Event 28112846, LumiSection 20 on stream 0 at 18-Sep-2022 08:01:58.404 CEST
+Begin processing the 111th record. Run 355380, Event 28068212, LumiSection 20 on stream 0 at 18-Sep-2022 08:01:58.820 CEST
+Begin processing the 112th record. Run 355380, Event 28091406, LumiSection 20 on stream 0 at 18-Sep-2022 08:01:59.241 CEST
+Begin processing the 113th record. Run 355380, Event 28163422, LumiSection 20 on stream 0 at 18-Sep-2022 08:01:59.248 CEST
+Begin processing the 114th record. Run 355380, Event 28074148, LumiSection 20 on stream 0 at 18-Sep-2022 08:01:59.597 CEST
+Begin processing the 115th record. Run 355380, Event 28096472, LumiSection 20 on stream 0 at 18-Sep-2022 08:01:59.993 CEST
+Begin processing the 116th record. Run 355380, Event 28110270, LumiSection 20 on stream 0 at 18-Sep-2022 08:02:00.001 CEST
+Begin processing the 117th record. Run 355380, Event 28103867, LumiSection 20 on stream 0 at 18-Sep-2022 08:02:00.008 CEST
+Begin processing the 118th record. Run 355380, Event 28073451, LumiSection 20 on stream 0 at 18-Sep-2022 08:02:00.389 CEST
+Begin processing the 119th record. Run 355380, Event 28062258, LumiSection 20 on stream 0 at 18-Sep-2022 08:02:00.399 CEST
+Begin processing the 120th record. Run 355380, Event 28130391, LumiSection 20 on stream 0 at 18-Sep-2022 08:02:00.834 CEST
+Begin processing the 121st record. Run 355380, Event 28066399, LumiSection 20 on stream 0 at 18-Sep-2022 08:02:00.841 CEST
+Begin processing the 122nd record. Run 355380, Event 28151516, LumiSection 20 on stream 0 at 18-Sep-2022 08:02:01.192 CEST
+Begin processing the 123rd record. Run 355380, Event 28060306, LumiSection 20 on stream 0 at 18-Sep-2022 08:02:01.198 CEST
+Begin processing the 124th record. Run 355380, Event 28172312, LumiSection 20 on stream 0 at 18-Sep-2022 08:02:01.207 CEST
+Begin processing the 125th record. Run 355380, Event 28079513, LumiSection 20 on stream 0 at 18-Sep-2022 08:02:01.214 CEST
+Begin processing the 126th record. Run 355380, Event 28101608, LumiSection 20 on stream 0 at 18-Sep-2022 08:02:01.609 CEST
+Begin processing the 127th record. Run 355380, Event 28120761, LumiSection 20 on stream 0 at 18-Sep-2022 08:02:01.617 CEST
+Begin processing the 128th record. Run 355380, Event 28079161, LumiSection 20 on stream 0 at 18-Sep-2022 08:02:01.623 CEST
+Begin processing the 129th record. Run 355380, Event 28127155, LumiSection 20 on stream 0 at 18-Sep-2022 08:02:01.631 CEST
+Begin processing the 130th record. Run 355380, Event 28071153, LumiSection 20 on stream 0 at 18-Sep-2022 08:02:01.639 CEST
+Begin processing the 131st record. Run 355380, Event 28097948, LumiSection 20 on stream 0 at 18-Sep-2022 08:02:02.095 CEST
+Begin processing the 132nd record. Run 355380, Event 28085130, LumiSection 20 on stream 0 at 18-Sep-2022 08:02:02.110 CEST
+Begin processing the 133rd record. Run 355380, Event 28128236, LumiSection 20 on stream 0 at 18-Sep-2022 08:02:02.121 CEST
+Begin processing the 134th record. Run 355380, Event 28156881, LumiSection 20 on stream 0 at 18-Sep-2022 08:02:02.582 CEST
+Begin processing the 135th record. Run 355380, Event 28123436, LumiSection 20 on stream 0 at 18-Sep-2022 08:02:02.594 CEST
+Begin processing the 136th record. Run 355380, Event 28118650, LumiSection 20 on stream 0 at 18-Sep-2022 08:02:02.603 CEST
+Begin processing the 137th record. Run 355380, Event 28101180, LumiSection 20 on stream 0 at 18-Sep-2022 08:02:02.920 CEST
+Begin processing the 138th record. Run 355380, Event 28120194, LumiSection 20 on stream 0 at 18-Sep-2022 08:02:02.928 CEST
+Begin processing the 139th record. Run 355380, Event 28141852, LumiSection 20 on stream 0 at 18-Sep-2022 08:02:02.936 CEST
+Begin processing the 140th record. Run 355380, Event 28100994, LumiSection 20 on stream 0 at 18-Sep-2022 08:02:03.432 CEST
+Begin processing the 141st record. Run 355380, Event 28144943, LumiSection 20 on stream 0 at 18-Sep-2022 08:02:03.804 CEST
+Begin processing the 142nd record. Run 355380, Event 28115225, LumiSection 20 on stream 0 at 18-Sep-2022 08:02:03.812 CEST
+Begin processing the 143rd record. Run 355380, Event 28120012, LumiSection 20 on stream 0 at 18-Sep-2022 08:02:03.819 CEST
+Begin processing the 144th record. Run 355380, Event 28131354, LumiSection 20 on stream 0 at 18-Sep-2022 08:02:03.829 CEST
+Begin processing the 145th record. Run 355380, Event 28168727, LumiSection 20 on stream 0 at 18-Sep-2022 08:02:04.171 CEST
+Begin processing the 146th record. Run 355380, Event 28146319, LumiSection 20 on stream 0 at 18-Sep-2022 08:02:04.185 CEST
+Begin processing the 147th record. Run 355380, Event 28133076, LumiSection 20 on stream 0 at 18-Sep-2022 08:02:04.587 CEST
+Begin processing the 148th record. Run 355380, Event 28141947, LumiSection 20 on stream 0 at 18-Sep-2022 08:02:04.994 CEST
+Begin processing the 149th record. Run 355380, Event 28123486, LumiSection 20 on stream 0 at 18-Sep-2022 08:02:05.004 CEST
+Begin processing the 150th record. Run 355380, Event 28095554, LumiSection 20 on stream 0 at 18-Sep-2022 08:02:05.014 CEST
+Begin processing the 151st record. Run 355380, Event 28166333, LumiSection 20 on stream 0 at 18-Sep-2022 08:02:05.022 CEST
+Begin processing the 152nd record. Run 355380, Event 28159923, LumiSection 20 on stream 0 at 18-Sep-2022 08:02:05.375 CEST
+Begin processing the 153rd record. Run 355380, Event 28103926, LumiSection 20 on stream 0 at 18-Sep-2022 08:02:05.382 CEST
+Begin processing the 154th record. Run 355380, Event 28056310, LumiSection 20 on stream 0 at 18-Sep-2022 08:02:05.387 CEST
+Begin processing the 155th record. Run 355380, Event 28152326, LumiSection 20 on stream 0 at 18-Sep-2022 08:02:05.392 CEST
+Begin processing the 156th record. Run 355380, Event 28055744, LumiSection 20 on stream 0 at 18-Sep-2022 08:02:05.705 CEST
+Begin processing the 157th record. Run 355380, Event 28127750, LumiSection 20 on stream 0 at 18-Sep-2022 08:02:05.987 CEST
+Begin processing the 158th record. Run 355380, Event 28148528, LumiSection 20 on stream 0 at 18-Sep-2022 08:02:05.994 CEST
+Begin processing the 159th record. Run 355380, Event 28169336, LumiSection 20 on stream 0 at 18-Sep-2022 08:02:05.999 CEST
+Begin processing the 160th record. Run 355380, Event 28066784, LumiSection 20 on stream 0 at 18-Sep-2022 08:02:06.297 CEST
+Begin processing the 161st record. Run 355380, Event 28121179, LumiSection 20 on stream 0 at 18-Sep-2022 08:02:06.306 CEST
+Begin processing the 162nd record. Run 355380, Event 28121189, LumiSection 20 on stream 0 at 18-Sep-2022 08:02:06.313 CEST
+Begin processing the 163rd record. Run 355380, Event 28074858, LumiSection 20 on stream 0 at 18-Sep-2022 08:02:06.324 CEST
+Begin processing the 164th record. Run 355380, Event 28067261, LumiSection 20 on stream 0 at 18-Sep-2022 08:02:06.698 CEST
+Begin processing the 165th record. Run 355380, Event 28067644, LumiSection 20 on stream 0 at 18-Sep-2022 08:02:06.709 CEST
+Begin processing the 166th record. Run 355380, Event 28166390, LumiSection 20 on stream 0 at 18-Sep-2022 08:02:07.034 CEST
+Begin processing the 167th record. Run 355380, Event 28137574, LumiSection 20 on stream 0 at 18-Sep-2022 08:02:07.364 CEST
+Begin processing the 168th record. Run 355380, Event 28073561, LumiSection 20 on stream 0 at 18-Sep-2022 08:02:07.377 CEST
+Begin processing the 169th record. Run 355380, Event 28145550, LumiSection 20 on stream 0 at 18-Sep-2022 08:02:07.385 CEST
+Begin processing the 170th record. Run 355380, Event 28163687, LumiSection 20 on stream 0 at 18-Sep-2022 08:02:07.392 CEST
+Begin processing the 171st record. Run 355380, Event 28124760, LumiSection 20 on stream 0 at 18-Sep-2022 08:02:07.398 CEST
+Begin processing the 172nd record. Run 355380, Event 28136514, LumiSection 20 on stream 0 at 18-Sep-2022 08:02:07.404 CEST
+Begin processing the 173rd record. Run 355380, Event 28150910, LumiSection 20 on stream 0 at 18-Sep-2022 08:02:07.409 CEST
+Begin processing the 174th record. Run 355380, Event 28101287, LumiSection 20 on stream 0 at 18-Sep-2022 08:02:07.414 CEST
+Begin processing the 175th record. Run 355380, Event 28110915, LumiSection 20 on stream 0 at 18-Sep-2022 08:02:07.420 CEST
+Begin processing the 176th record. Run 355380, Event 28069293, LumiSection 20 on stream 0 at 18-Sep-2022 08:02:07.738 CEST
+Begin processing the 177th record. Run 355380, Event 28109287, LumiSection 20 on stream 0 at 18-Sep-2022 08:02:07.746 CEST
+Begin processing the 178th record. Run 355380, Event 28103327, LumiSection 20 on stream 0 at 18-Sep-2022 08:02:07.751 CEST
+Begin processing the 179th record. Run 355380, Event 28148132, LumiSection 20 on stream 0 at 18-Sep-2022 08:02:07.756 CEST
+Begin processing the 180th record. Run 355380, Event 28074531, LumiSection 20 on stream 0 at 18-Sep-2022 08:02:07.765 CEST
+Begin processing the 181st record. Run 355380, Event 28154508, LumiSection 20 on stream 0 at 18-Sep-2022 08:02:07.771 CEST
+Begin processing the 182nd record. Run 355380, Event 28071286, LumiSection 20 on stream 0 at 18-Sep-2022 08:02:08.075 CEST
+Begin processing the 183rd record. Run 355380, Event 28061697, LumiSection 20 on stream 0 at 18-Sep-2022 08:02:08.084 CEST
+Begin processing the 184th record. Run 355380, Event 28074486, LumiSection 20 on stream 0 at 18-Sep-2022 08:02:08.090 CEST
+Begin processing the 185th record. Run 355380, Event 28146500, LumiSection 20 on stream 0 at 18-Sep-2022 08:02:08.099 CEST
+Begin processing the 186th record. Run 355380, Event 28128893, LumiSection 20 on stream 0 at 18-Sep-2022 08:02:08.107 CEST
+Begin processing the 187th record. Run 355380, Event 28139016, LumiSection 20 on stream 0 at 18-Sep-2022 08:02:08.113 CEST
+Begin processing the 188th record. Run 355380, Event 28150216, LumiSection 20 on stream 0 at 18-Sep-2022 08:02:08.433 CEST
+Begin processing the 189th record. Run 355380, Event 28170679, LumiSection 20 on stream 0 at 18-Sep-2022 08:02:08.705 CEST
+Begin processing the 190th record. Run 355380, Event 28073360, LumiSection 20 on stream 0 at 18-Sep-2022 08:02:09.036 CEST
+Begin processing the 191st record. Run 355380, Event 28097362, LumiSection 20 on stream 0 at 18-Sep-2022 08:02:09.048 CEST
+Begin processing the 192nd record. Run 355380, Event 28081706, LumiSection 20 on stream 0 at 18-Sep-2022 08:02:09.340 CEST
+Begin processing the 193rd record. Run 355380, Event 28146829, LumiSection 20 on stream 0 at 18-Sep-2022 08:02:09.670 CEST
+Begin processing the 194th record. Run 355380, Event 28157478, LumiSection 20 on stream 0 at 18-Sep-2022 08:02:09.681 CEST
+Begin processing the 195th record. Run 355380, Event 28142023, LumiSection 20 on stream 0 at 18-Sep-2022 08:02:09.687 CEST
+Begin processing the 196th record. Run 355380, Event 28085471, LumiSection 20 on stream 0 at 18-Sep-2022 08:02:09.694 CEST
+Begin processing the 197th record. Run 355380, Event 28107848, LumiSection 20 on stream 0 at 18-Sep-2022 08:02:10.060 CEST
+Begin processing the 198th record. Run 355380, Event 28136630, LumiSection 20 on stream 0 at 18-Sep-2022 08:02:10.070 CEST
+Begin processing the 199th record. Run 355380, Event 28079031, LumiSection 20 on stream 0 at 18-Sep-2022 08:02:10.076 CEST
+Begin processing the 200th record. Run 355380, Event 28171822, LumiSection 20 on stream 0 at 18-Sep-2022 08:02:10.082 CEST
+18-Sep-2022 08:02:10 CEST  Writing DQM Root file: ./upload/DQM_V0001_GEM_R000355380.root
+DQMFileSaver::globalEndRun()
+18-Sep-2022 08:02:11 CEST  Closed file root://eoscms.cern.ch//eos/cms/store/express/Run2022B/ExpressPhysics/FEVT/Express-v1/000/355/380/00000/2b3f408f-883a-4f64-8083-9e5786589069.root
