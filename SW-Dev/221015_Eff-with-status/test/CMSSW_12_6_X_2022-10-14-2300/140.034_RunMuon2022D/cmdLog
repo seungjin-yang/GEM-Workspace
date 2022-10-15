@@ -1,0 +1,22 @@
+
+# in: /eos/home-s/seyang/workspace/GEM/SW-Dev/221015_Eff-with-status/test/CMSSW_12_6_X_2022-10-14-2300 dryRun for 'cd 140.034_RunMuon2022D+RunMuon2022D+HLTRUN3+RECONANORUN3+HARVESTRUN3
+ echo '{
+"357538" : [[39, 63]]
+}' > step1_lumiRanges.log  2>&1
+ 
+
+# in: /eos/home-s/seyang/workspace/GEM/SW-Dev/221015_Eff-with-status/test/CMSSW_12_6_X_2022-10-14-2300 dryRun for 'cd 140.034_RunMuon2022D+RunMuon2022D+HLTRUN3+RECONANORUN3+HARVESTRUN3
+ (dasgoclient --limit 0 --query 'lumi,file dataset=/Muon/Run2022D-v1/RAW run=357538' --format json | das-selected-lumis.py 39,63 ) | sort -u > step1_dasquery.log  2>&1
+ 
+
+# in: /eos/home-s/seyang/workspace/GEM/SW-Dev/221015_Eff-with-status/test/CMSSW_12_6_X_2022-10-14-2300 dryRun for 'cd 140.034_RunMuon2022D+RunMuon2022D+HLTRUN3+RECONANORUN3+HARVESTRUN3
+ cmsDriver.py step2  --process reHLT -s L1REPACK:Full,HLT:@relval2022 --conditions auto:run3_hlt_relval --data  --eventcontent FEVTDEBUGHLT --datatier FEVTDEBUGHLT --era Run3 -n 100  --filein filelist:step1_dasquery.log --lumiToProcess step1_lumiRanges.log --fileout file:step2.root  > step2_RunMuon2022D+RunMuon2022D+HLTRUN3+RECONANORUN3+HARVESTRUN3.log  2>&1
+ 
+
+# in: /eos/home-s/seyang/workspace/GEM/SW-Dev/221015_Eff-with-status/test/CMSSW_12_6_X_2022-10-14-2300 dryRun for 'cd 140.034_RunMuon2022D+RunMuon2022D+HLTRUN3+RECONANORUN3+HARVESTRUN3
+ cmsDriver.py step3  --conditions auto:run3_data_relval -s RAW2DIGI,L1Reco,RECO,PAT,NANO:PhysicsTools/NanoAOD/V10/nano_cff,DQM:@miniAODDQM+@nanoAODDQM --datatier RECO,MINIAOD,DQMIO --eventcontent RECO,MINIAOD,DQM --data  --process reRECO --scenario pp --era Run3 --customise Configuration/DataProcessing/RecoTLR.customisePostEra_Run3 -n 100  --filein  file:step2.root  --fileout file:step3.root  > step3_RunMuon2022D+RunMuon2022D+HLTRUN3+RECONANORUN3+HARVESTRUN3.log  2>&1
+ 
+
+# in: /eos/home-s/seyang/workspace/GEM/SW-Dev/221015_Eff-with-status/test/CMSSW_12_6_X_2022-10-14-2300 dryRun for 'cd 140.034_RunMuon2022D+RunMuon2022D+HLTRUN3+RECONANORUN3+HARVESTRUN3
+ cmsDriver.py step4  -s HARVESTING:@miniAODDQM+@nanoAODDQM --conditions auto:run3_data --data  --filetype DQM --scenario pp -n 100  --filein file:step3_inDQM.root --fileout file:step4.root  > step4_RunMuon2022D+RunMuon2022D+HLTRUN3+RECONANORUN3+HARVESTRUN3.log  2>&1
+ 
