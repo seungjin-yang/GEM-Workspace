@@ -105,3 +105,15 @@ associatePatAlgosToolsTask(process)
 from Configuration.StandardSequences.earlyDeleteSettings_cff import customiseEarlyDelete
 process = customiseEarlyDelete(process)
 # End adding early deletion
+
+process.load("FWCore.MessageService.MessageLogger_cfi")
+process.MessageLogger.cerr.threshold = "DEBUG"
+process.MessageLogger.debugModules = ["*"]
+process.MessageLogger.files = cms.untracked.PSet(
+    step4_DQM = cms.untracked.PSet(
+        default = cms.untracked.PSet(
+            limit = cms.untracked.int32(-1)
+        ),
+        threshold = cms.untracked.string('DEBUG')
+    )
+)
