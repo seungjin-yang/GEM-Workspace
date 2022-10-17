@@ -123,3 +123,8 @@ process = customiseLogErrorHarvesterUsingOutputCommands(process)
 from Configuration.StandardSequences.earlyDeleteSettings_cff import customiseEarlyDelete
 process = customiseEarlyDelete(process)
 # End adding early deletion
+
+process.RECOoutput.outputCommands.extend([
+    'keep *_*GEM*_*_*',
+    'keep *_*gem*_*_*',
+])

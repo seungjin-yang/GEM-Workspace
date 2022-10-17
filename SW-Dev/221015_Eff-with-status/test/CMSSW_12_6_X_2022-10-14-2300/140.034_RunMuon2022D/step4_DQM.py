@@ -7,7 +7,7 @@ import FWCore.ParameterSet.Config as cms
 
 from Configuration.Eras.Era_Run3_cff import Run3
 
-process = cms.Process('reRECO',Run3)
+process = cms.Process('DQM',Run3)
 
 # import of standard configurations
 process.load('Configuration.StandardSequences.Services_cff')
