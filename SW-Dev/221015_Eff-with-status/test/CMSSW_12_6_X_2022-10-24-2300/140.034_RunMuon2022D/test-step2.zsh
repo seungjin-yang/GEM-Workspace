@@ -4,4 +4,4 @@ input_file=$(head -n 1 ./step1_dasquery.log)
 typeset -m cfg_file
 typeset -m input_file
 
-cmsRun -n 5 ${cfg_file} inputFiles=${input_file} maxEvents=100
+cmsRun -n 10 ${cfg_file} inputFiles=${input_file} maxEvents=-1
