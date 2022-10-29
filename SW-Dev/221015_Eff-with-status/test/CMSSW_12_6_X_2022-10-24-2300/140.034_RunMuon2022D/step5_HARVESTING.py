@@ -19,6 +19,7 @@ process.load('Configuration.StandardSequences.MagneticField_cff')
 process.load('Configuration.StandardSequences.DQMSaverAtRunEnd_cff')
 process.load('Configuration.StandardSequences.Harvesting_cff')
 process.load('Configuration.StandardSequences.FrontierConditions_GlobalTag_cff')
+process.load('DQM.GEM.gemEffByGEMCSCSegment_cff')
 
 process.maxEvents = cms.untracked.PSet(
     input = cms.untracked.int32(-1),
@@ -78,25 +79,24 @@ from Configuration.AlCa.GlobalTag import GlobalTag
 process.GlobalTag = GlobalTag(process.GlobalTag, 'auto:run3_data', '')
 
 # Path and EndPath definitions
-process.alcaHarvesting = cms.Path()
-process.dqmHarvesting = cms.Path(process.DQMOffline_SecondStep+process.DQMOffline_Certification)
-process.dqmHarvestingExtraHLT = cms.Path(process.DQMOffline_SecondStep_ExtraHLT+process.DQMOffline_Certification)
-process.dqmHarvestingFakeHLT = cms.Path(process.DQMOffline_SecondStep_FakeHLT+process.DQMOffline_Certification)
-process.dqmHarvestingPOGMC = cms.Path(process.DQMOffline_SecondStep_PrePOGMC)
-process.genHarvesting = cms.Path(process.postValidation_gen)
-process.validationHarvesting = cms.Path(process.postValidation+process.hltpostvalidation+process.postValidation_gen)
-process.validationHarvestingFS = cms.Path(process.recoMuonPostProcessors+process.postValidationTracking+process.MuIsoValPostProcessor+process.calotowersPostProcessor+process.hcalSimHitsPostProcessor+process.hcaldigisPostProcessor+process.hcalrechitsPostProcessor+process.electronPostValidationSequence+process.photonPostProcessor+process.pfJetClient+process.pfMETClient+process.pfJetResClient+process.pfElectronClient+process.rpcRecHitPostValidation_step+process.makeBetterPlots+process.bTagCollectorSequenceMCbcl+process.METPostProcessor+process.L1GenPostProcessor+process.bdHadronTrackPostProcessor+process.MuonCSCDigisPostProcessors+process.postValidation_gen)
-process.validationHarvestingHI = cms.Path(process.postValidationHI)
-process.validationHarvestingMiniAOD = cms.Path(process.JetPostProcessor+process.METPostProcessorHarvesting+process.bTagMiniValidationHarvesting+process.postValidationMiniAOD)
-process.validationHarvestingNoHLT = cms.Path(process.postValidation+process.postValidation_gen)
-process.validationpreprodHarvesting = cms.Path(process.postValidation_preprod+process.hltpostvalidation_preprod+process.postValidation_gen)
-process.validationpreprodHarvestingNoHLT = cms.Path(process.postValidation_preprod+process.postValidation_gen)
-process.validationprodHarvesting = cms.Path(process.hltpostvalidation_prod+process.postValidation_gen)
+process.gemEffByGEMCSCSegmentClientSeq = cms.Sequence(
+    process.gemEffByGEMCSCSegmentClient +
+    process.gemEffByGEMCSCSegmentClientNoChErr,
+)
+
+
 process.gemClients_step = cms.Path(process.gemClients)
+process.gemEffByGEMCSCSegmentClient_step = cms.Path(process.gemEffByGEMCSCSegmentClientSeq)
 process.dqmsave_step = cms.Path(process.DQMSaver)
 
 # Schedule definition
-process.schedule = cms.Schedule(process.gemClients_step,process.dqmsave_step)
+process.schedule = cms.Schedule(
+    process.gemClients_step,
+    process.gemEffByGEMCSCSegmentClient_step,
+    process.dqmsave_step
+)
+
+
 from PhysicsTools.PatAlgos.tools.helpers import associatePatAlgosToolsTask
 associatePatAlgosToolsTask(process)
 

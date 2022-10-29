@@ -1,0 +1,32 @@
+cfg_file           = ./step2_L1REPACK_HLT.py
+# T3_CH_CERNBOX: root://eosuser.cern.ch/
+output_destination = root://eosuser.cern.ch//eos/user/s/seyang/store/GEM/step2
+JobBatchName       = "221015_Eff-with-status"
+
+input_file         = $(input_file_lfn)
+output_file        = $BASENAME(input_file_lfn)
+cmssw_version      = CMSSW_12_6_X_2022-10-24-2300
+# author             = slowmoyang
+# branch             = 
+
+executable            = ./run.sh
+# arguments             = $BASENAME(cfg_file) $(input_file) $(output_file) $(cmssw_version) $(author) $(branch)
+arguments             = $BASENAME(cfg_file) $(input_file) $(output_file) $(cmssw_version)
+transfer_input_files  = $(cfg_file)
+MY.XRDCP_CREATE_DIR = True
+output                = $Fn(input_file_lfn).out
+error                 = $Fn(input_file_lfn).err
+log                   = $Fn(input_file_lfn).log
+requirements = (OpSysAndVer =?= "CentOS7")
+
+# espresso     = 20 minutes
+# microcentury = 1 hour
+# longlunch    = 2 hours
+# workday      = 8 hours
+# tomorrow     = 1 day
+# testmatch    = 3 days
+# nextweek     = 1 week
++JobFlavour = "workday"
+RequestCpus = 1
+
+queue input_file_lfn from ./step1_dasquery.log

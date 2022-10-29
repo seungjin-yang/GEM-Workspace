@@ -21,6 +21,7 @@ process.load('Configuration.StandardSequences.L1Reco_cff')
 process.load('Configuration.StandardSequences.Reconstruction_Data_cff')
 process.load('Configuration.StandardSequences.EndOfProcess_cff')
 process.load('Configuration.StandardSequences.FrontierConditions_GlobalTag_cff')
+process.load('RecoLocalMuon.GEMCSCSegment.gemcscSegments_cfi')
 
 process.maxEvents = cms.untracked.PSet(
     input = cms.untracked.int32(-1),
@@ -94,11 +95,19 @@ process.GlobalTag = GlobalTag(process.GlobalTag, 'auto:run3_data_relval', '')
 process.raw2digi_step = cms.Path(process.RawToDigi)
 process.L1Reco_step = cms.Path(process.L1Reco)
 process.reconstruction_step = cms.Path(process.reconstruction)
+process.gemcscSegments_step = cms.Path(process.gemcscSegments)
 process.endjob_step = cms.EndPath(process.endOfProcess)
 process.RECOoutput_step = cms.EndPath(process.RECOoutput)
 
 # Schedule definition
-process.schedule = cms.Schedule(process.raw2digi_step,process.L1Reco_step,process.reconstruction_step,process.endjob_step,process.RECOoutput_step)
+process.schedule = cms.Schedule(
+    process.raw2digi_step,
+    process.L1Reco_step,
+    process.reconstruction_step,
+    process.gemcscSegments_step,
+    process.endjob_step,
+    process.RECOoutput_step
+)
 from PhysicsTools.PatAlgos.tools.helpers import associatePatAlgosToolsTask
 associatePatAlgosToolsTask(process)
 
@@ -136,3 +145,11 @@ process.RECOoutput.outputCommands.extend([
     'keep *_offlinePrimaryVertices_*_*',
     'keep *_offlineBeamSpot_*_*',
 ])
+
+
+from FWCore.ParameterSet.VarParsing import VarParsing
+options = VarParsing('analysis')
+options.parseArguments()
+process.maxEvents.input = options.maxEvents
+process.source.fileNames = options.inputFiles
+process.RECOoutput.fileName = options.outputFile

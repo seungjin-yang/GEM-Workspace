@@ -19,8 +19,6 @@ process.load('Configuration.StandardSequences.MagneticField_cff')
 process.load('DQMServices.Core.DQMStoreNonLegacy_cff')
 process.load('DQMOffline.Configuration.DQMOffline_cff')
 process.load('Configuration.StandardSequences.FrontierConditions_GlobalTag_cff')
-process.load('DQM.GEM.gemEffByGEMCSCSegment_cff')
-
 
 process.maxEvents = cms.untracked.PSet(
     input = cms.untracked.int32(-1),
@@ -91,21 +89,11 @@ from Configuration.AlCa.GlobalTag import GlobalTag
 process.GlobalTag = GlobalTag(process.GlobalTag, 'auto:run3_data_relval', '')
 
 # Path and EndPath definitions
-process.gemEffByGEMCSCSegmentSourceSeq = cms.Sequence(
-    process.gemEffByGEMCSCSegmentSource +
-    process.gemEffByGEMCSCSegmentSourceNoChErr,
-)
-
 process.dqmoffline_step = cms.EndPath(process.gemSources)
-process.gemEffByGEMCSCSegment_step = cms.EndPath(process.gemEffByGEMCSCSegmentSourceSeq)
 process.DQMoutput_step = cms.EndPath(process.DQMoutput)
 
 # Schedule definition
-process.schedule = cms.Schedule(
-    process.dqmoffline_step,
-    process.gemEffByGEMCSCSegment_step,
-    process.DQMoutput_step
-)
+process.schedule = cms.Schedule(process.dqmoffline_step,process.DQMoutput_step)
 from PhysicsTools.PatAlgos.tools.helpers import associatePatAlgosToolsTask
 associatePatAlgosToolsTask(process)
 
@@ -126,11 +114,3 @@ process = customisePostEra_Run3(process)
 from Configuration.StandardSequences.earlyDeleteSettings_cff import customiseEarlyDelete
 process = customiseEarlyDelete(process)
 # End adding early deletion
-
-
-from FWCore.ParameterSet.VarParsing import VarParsing
-options = VarParsing('analysis')
-options.parseArguments()
-process.maxEvents.input = options.maxEvents
-process.source.fileNames = options.inputFiles
-process.DQMoutput.fileName = options.outputFile

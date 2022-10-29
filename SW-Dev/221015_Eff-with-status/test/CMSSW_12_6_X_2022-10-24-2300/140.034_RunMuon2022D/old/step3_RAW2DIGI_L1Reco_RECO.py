@@ -2,12 +2,12 @@
 # using: 
 # Revision: 1.19 
 # Source: /local/reps/CMSSW/CMSSW/Configuration/Applications/python/ConfigBuilder.py,v 
-# with command line options: step4 --conditions auto:run3_data_relval --step DQM:gemSources --datatier DQMIO --eventcontent DQM --data --process reRECO --scenario pp --era Run3 --customise Configuration/DataProcessing/RecoTLR.customisePostEra_Run3 --number -1 --filein file:step3.root --fileout file:step4.root --no_exec
+# with command line options: step3 --conditions auto:run3_data_relval --step RAW2DIGI,L1Reco,RECO --datatier RECO --eventcontent RECO --data --process reRECO --scenario pp --era Run3 --customise Configuration/DataProcessing/RecoTLR.customisePostEra_Run3 --number -1 --filein file:step2.root --fileout file:step3.root --no_exec
 import FWCore.ParameterSet.Config as cms
 
 from Configuration.Eras.Era_Run3_cff import Run3
 
-process = cms.Process('DQM',Run3)
+process = cms.Process('reRECO',Run3)
 
 # import of standard configurations
 process.load('Configuration.StandardSequences.Services_cff')
@@ -16,11 +16,11 @@ process.load('FWCore.MessageService.MessageLogger_cfi')
 process.load('Configuration.EventContent.EventContent_cff')
 process.load('Configuration.StandardSequences.GeometryRecoDB_cff')
 process.load('Configuration.StandardSequences.MagneticField_cff')
-process.load('DQMServices.Core.DQMStoreNonLegacy_cff')
-process.load('DQMOffline.Configuration.DQMOffline_cff')
+process.load('Configuration.StandardSequences.RawToDigi_Data_cff')
+process.load('Configuration.StandardSequences.L1Reco_cff')
+process.load('Configuration.StandardSequences.Reconstruction_Data_cff')
+process.load('Configuration.StandardSequences.EndOfProcess_cff')
 process.load('Configuration.StandardSequences.FrontierConditions_GlobalTag_cff')
-process.load('DQM.GEM.gemEffByGEMCSCSegment_cff')
-
 
 process.maxEvents = cms.untracked.PSet(
     input = cms.untracked.int32(-1),
@@ -29,7 +29,7 @@ process.maxEvents = cms.untracked.PSet(
 
 # Input source
 process.source = cms.Source("PoolSource",
-    fileNames = cms.untracked.vstring('file:step3.root'),
+    fileNames = cms.untracked.vstring('file:step2.root'),
     secondaryFileNames = cms.untracked.vstring()
 )
 
@@ -67,20 +67,20 @@ process.options = cms.untracked.PSet(
 
 # Production Info
 process.configurationMetadata = cms.untracked.PSet(
-    annotation = cms.untracked.string('step4 nevts:-1'),
+    annotation = cms.untracked.string('step3 nevts:-1'),
     name = cms.untracked.string('Applications'),
     version = cms.untracked.string('$Revision: 1.19 $')
 )
 
 # Output definition
 
-process.DQMoutput = cms.OutputModule("DQMRootOutputModule",
+process.RECOoutput = cms.OutputModule("PoolOutputModule",
     dataset = cms.untracked.PSet(
-        dataTier = cms.untracked.string('DQMIO'),
+        dataTier = cms.untracked.string('RECO'),
         filterName = cms.untracked.string('')
     ),
-    fileName = cms.untracked.string('file:step4.root'),
-    outputCommands = process.DQMEventContent.outputCommands,
+    fileName = cms.untracked.string('file:step3.root'),
+    outputCommands = process.RECOEventContent.outputCommands,
     splitLevel = cms.untracked.int32(0)
 )
 
@@ -91,21 +91,14 @@ from Configuration.AlCa.GlobalTag import GlobalTag
 process.GlobalTag = GlobalTag(process.GlobalTag, 'auto:run3_data_relval', '')
 
 # Path and EndPath definitions
-process.gemEffByGEMCSCSegmentSourceSeq = cms.Sequence(
-    process.gemEffByGEMCSCSegmentSource +
-    process.gemEffByGEMCSCSegmentSourceNoChErr,
-)
-
-process.dqmoffline_step = cms.EndPath(process.gemSources)
-process.gemEffByGEMCSCSegment_step = cms.EndPath(process.gemEffByGEMCSCSegmentSourceSeq)
-process.DQMoutput_step = cms.EndPath(process.DQMoutput)
+process.raw2digi_step = cms.Path(process.RawToDigi)
+process.L1Reco_step = cms.Path(process.L1Reco)
+process.reconstruction_step = cms.Path(process.reconstruction)
+process.endjob_step = cms.EndPath(process.endOfProcess)
+process.RECOoutput_step = cms.EndPath(process.RECOoutput)
 
 # Schedule definition
-process.schedule = cms.Schedule(
-    process.dqmoffline_step,
-    process.gemEffByGEMCSCSegment_step,
-    process.DQMoutput_step
-)
+process.schedule = cms.Schedule(process.raw2digi_step,process.L1Reco_step,process.reconstruction_step,process.endjob_step,process.RECOoutput_step)
 from PhysicsTools.PatAlgos.tools.helpers import associatePatAlgosToolsTask
 associatePatAlgosToolsTask(process)
 
@@ -122,15 +115,17 @@ process = customisePostEra_Run3(process)
 
 # Customisation from command line
 
+#Have logErrorHarvester wait for the same EDProducers to finish as those providing data for the OutputModule
+from FWCore.Modules.logErrorHarvester_cff import customiseLogErrorHarvesterUsingOutputCommands
+process = customiseLogErrorHarvesterUsingOutputCommands(process)
+
 # Add early deletion of temporary data products to reduce peak memory need
 from Configuration.StandardSequences.earlyDeleteSettings_cff import customiseEarlyDelete
 process = customiseEarlyDelete(process)
 # End adding early deletion
 
 
-from FWCore.ParameterSet.VarParsing import VarParsing
-options = VarParsing('analysis')
-options.parseArguments()
-process.maxEvents.input = options.maxEvents
-process.source.fileNames = options.inputFiles
-process.DQMoutput.fileName = options.outputFile
+process.RECOoutput.outputCommands.extend([
+    'keep *_*GEM*_*_*',
+    'keep *_*gem*_*_*',
+])
