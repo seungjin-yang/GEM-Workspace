@@ -1,0 +1,10 @@
+/eos/user/s/seyang/store/GEM/step4/f15d5ff4-b67f-4c85-b952-c25ad8f0468d.root
+/eos/user/s/seyang/store/GEM/step4/e787cf74-273a-4e4f-9012-cc860559fa4c.root
+/eos/user/s/seyang/store/GEM/step4/e0b991ef-6cc5-4e74-9407-124e4894797c.root
+/eos/user/s/seyang/store/GEM/step4/deee0bb6-ffb4-4376-ba5c-777e7ff340f2.root
+/eos/user/s/seyang/store/GEM/step4/b9bc4b83-86cf-4a73-8c23-27a20fbef398.root
+/eos/user/s/seyang/store/GEM/step4/93f5a8a8-19d4-4557-ae10-62f505a0aff7.root
+/eos/user/s/seyang/store/GEM/step4/6e2e415f-7787-48d2-abef-8a8a9c82fdeb.root
+/eos/user/s/seyang/store/GEM/step4/5e5a5ee0-6035-4f56-b156-d1592b552ab1.root
+/eos/user/s/seyang/store/GEM/step4/1e360ddd-aec3-4cb2-9b27-ed6691059377.root
+/eos/user/s/seyang/store/GEM/step4/07ecabd8-37cb-4554-abed-c67247854b40.root
